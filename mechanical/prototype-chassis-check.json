@@ -1,0 +1,47 @@
+{
+  "revision": "chassis-attachment-prototype",
+  "meshes": [
+    {
+      "part": "mount-left",
+      "triangles": 1696,
+      "closed": true,
+      "connected": true,
+      "size_mm": [
+        66,
+        59,
+        33
+      ],
+      "volume_mm3": 24819.529847490798,
+      "solid_PETG_g": 31.520802906313314
+    },
+    {
+      "part": "mount-right",
+      "triangles": 1696,
+      "closed": true,
+      "connected": true,
+      "size_mm": [
+        66,
+        59,
+        33
+      ],
+      "volume_mm3": 24819.529849410977,
+      "solid_PETG_g": 31.52080290875194
+    },
+    {
+      "part": "deck",
+      "triangles": 2124,
+      "closed": true,
+      "connected": true,
+      "size_mm": [
+        180,
+        110,
+        4
+      ],
+      "volume_mm3": 78588.19570943998,
+      "solid_PETG_g": 99.80700855098878
+    }
+  ],
+  "physical_fit_verified": false,
+  "loaded_strength_verified": false,
+  "mass_note": "Solid CAD estimate, not slicer or measured print mass."
+}

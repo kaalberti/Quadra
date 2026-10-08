@@ -8,6 +8,12 @@ The supply's model/transient behavior and board header/revision remain unknown.
 
 ## Before buying a full set
 
+MEC-156 found passive-support rib interference in the existing bench adapter.
+Wait for its clearance correction before printing that adapter; unaffected
+coupons may still be printed. The new working chassis mounts include rib pockets.
+When trying a chassis mount, verify the four existing fixing slots, pivot access,
+flange fasteners and actual servo cable route; test stiffness with support first.
+
 1. **Servo identity and fit:** buy one positional MG996R with supplied horn and
    original centre screw. Measure case, mounting ears, shaft/horn height and
    horn bolt pattern. Print the four manufacturing fit coupons; check624

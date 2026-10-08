@@ -1,11 +1,10 @@
-# MEC-156 — removable prototype chassis attachment
+# MEC-157 — correct bench adapter rib clearance and build checkpoint
 
-Design a simple printable connection from the current J1 cradle/support mounting
-slots to the provisional body deck. Use common M3 through fasteners and retain
-servo, pivot and cable access. Resolve deck height and mirrored attachment
-variants explicitly. Produce editable assembly/part CAD and working STLs;
-check print-bed fit, connected solids and nominal packaging interference.
-Update provisional dimensions and purchasing BOM with actual added quantities.
-Preserve individual-leg CAD and current manufacturing release; do not release
-a full robot print kit, optimize structures or add locomotion. Physical fit
-and strength remain deferred in PHYSICAL_TESTS.md.
+MEC-156 independently found127.65mm3 of bench-adapter/support-rib interference.
+Add small clearance pockets to the existing adapter while preserving its bolt
+slots, anchor locations and pivot opening. Check closed/connected print geometry,
+fixing access and adapter/support intersection excluding only intended contact.
+Update the affected bench manufacturing snapshot/STL, validation and hashes as
+a corrected prototype build checkpoint; retain the prior release in ARCHIVE.
+Keep the new chassis study separate. Update status and physical-test guidance;
+do not add a full robot kit, powered operation or locomotion.

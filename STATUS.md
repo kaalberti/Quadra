@@ -33,6 +33,8 @@ At2kg/three support legs, J1 neutral screen0.329Nm vs0.922Nm published stall;
 
 ## Prototype manufacturing checkpoint
 MFG-002 / three-dof-bench-1 is under manufacturing/.
+MEC-156 found a bench-adapter/support-rib clash; correct that adapter before
+printing it. Release integrity passes, but it does not establish mechanical fit.
 18 unique assembly STLs/29 pieces, four coupons, CAD snapshot, BOM, assembly
 instructions/image, print list, layout, validation and hashes:54 verified files.
 The prior two-DOF pack is archived intact at ARCHIVE/MFG-001-two-dof-pack/.
@@ -101,12 +103,16 @@ Four-leg placement study: mechanical/prototype-four-leg-study.scad and preview.
 Nominal reference footprint320 x174mm is symmetric; case/deck and inter-leg
 case intersections are empty. Raised deck and board blocks are placeholders;
 complete nominal printed-leg/deck intersection is also empty (CGAL).
-actual chassis attachments and mirrored print variants remain undesigned.
+Working chassis mount/deck CAD and STLs are now available; mirrored leg print
+variants remain undesigned. Two mounts per hand;16 added M3 x16 deck fixings.
+Mount ribs have clearance pockets; closed connected/bed/hole checks pass.
+Corrected full nominal mount/leg intersection is empty, excluding intended contact.
 Original geometry serves one diagonal; the other needs mirrored assembly review.
 Rear local pitch directions differ from global forward; no powered mapping added.
 Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
-Next: removable chassis attachment to existing J1 mounting slots, with simple
-common fasteners and access checks. No new manufacturing release or purchases yet.
+Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
+Next: correct the older bench adapter's confirmed support-rib interference and
+prepare the corresponding corrected build checkpoint. No powered operation.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

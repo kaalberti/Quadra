@@ -106,3 +106,20 @@ Four-leg placement study: `mechanical/prototype-four-leg-study.scad`.
 The raised deck and board blocks are placeholders; chassis brackets and mirrored
 print variants are not released. No new purchases or chassis fastener counts
 are established by MEC-155. Bench fixtures are not four-leg chassis components.
+
+## Working chassis attachment — MEC-156, not yet a released robot kit
+
+Print two left/two right chassis mounts and one deck from the working CAD.
+Existing joint hardware stays with each leg; the bracket replaces the bench
+adapter and reuses its four M3 x20 mounting bolts. Do not buy bench anchors
+or standoffs for the robot. Actual mirrored leg parts remain under review.
+
+| Added purchased item | One mount | Complete four-mount chassis |
+| --- | ---: | ---: |
+| M3 x16 through bolts | 4 | 16 |
+| M3 nuts | 4 | 16 |
+| M3 flat washers | 8 | 32 |
+
+These quantities are additional deck fixings, not replacements for the bench
+leg BOM. Use existing packs where possible; retail price remains unverified,
+with no change to the approved overall budget. Guide: docs/prototype-chassis-attachment.md.
