@@ -1,0 +1,31 @@
+{
+  "file": "prototype-fork-fit-coupon.stl",
+  "sha256": "295cf71a475821b42066c8783f7d42f906b9e5b275a335afe0cdb758238179b2",
+  "source_sha256": {
+    "prototype-fork-fit-coupon.scad": "683fbc9d5e733c3e77a57856720019b07d6579b4d750adba4025f19a2e7ea5ab",
+    "prototype-pitch-fork.scad": "6a6724740ac8f6d61c3aed04909fa016c5f2adc136fddda3384f547778806a70",
+    "prototype-upper-leg.scad": "1a20e2e9bb8c5bf02cb28f97db8f7a758852184c697e5828805be2cc8ec7d174",
+    "prototype-lower-leg.scad": "845f8b5879cce11f77aba9a4db3b3cc6d770f38375f7599b2356d1e8e94ca746",
+    "hobby-joint-rear-arm.scad": "c84f5ba566c40cf0a2bd06945cef88e811ea70cb2a37f3d12e84ea850f69b70f",
+    "hobby-joint-common.scad": "0c37c71030c97eced89a45d261b30d71beb2ed9b7bd97c0b4500814e46bb6d94"
+  },
+  "closed": true,
+  "connected": true,
+  "bed_origin": true,
+  "size_mm": [
+    36,
+    78.2,
+    32
+  ],
+  "solid_PETG_g": 17.621144444213396,
+  "interface_ray_checks": 27,
+  "seat_nominal_mm": {
+    "diameter": 13.2,
+    "depth": 5.2
+  },
+  "horn_bore_mm": 10,
+  "retainer_hole_pitch_mm": 22,
+  "print_performed": false,
+  "fit_performed": false,
+  "strength_test_coupon": false
+}

@@ -66,6 +66,9 @@ load the assembled pair and inspect the web/plate junctions for flex or cracking
 These tests are NOT_PERFORMED; the flat-print coupons do not qualify this new
 orientation. Use docs/tasks/MEC-161.md; wait for whole-leg clearance integration
 before replacing the supported bench parts.
+First use the smaller side-on coupon: mechanical/prototype-fork-fit-coupon.stl.
+Print/support, bearing/retainer and actual horn fit are NOT_PERFORMED; procedure
+is docs/fork-fit-coupon.md. The coupon does not qualify loaded strength.
 
 - **MG996R:** all12 weight-bearing joints; three for the first leg. Current CAD
   already uses its size class. Manufacturer stall torque9.4kgf·cm at4.8V is

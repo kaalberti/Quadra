@@ -137,8 +137,11 @@ Experimental full leg: mechanical/prototype-fork-leg-assembly.scad and PNG.
 It uses25 rigidly placed prints, including two physically mirrored forks.
 Fresh source/placed exports agree within0.001005mm; five sampled J1/carrier
 intersections are empty. No fork geometry/BOM correction was needed.
-Next: prepare a small side-on fork fit coupon before a full experimental print.
-Details: docs/tasks/MEC-162.md. Supported bench manufacturing kit unchanged.
+Side-on fork fit coupon: mechanical/prototype-fork-fit-coupon.stl,36 x78.2 x32mm.
+Closed/connected/bed and27 interface ray checks pass; print/fit NOT_PERFORMED.
+Procedure: docs/fork-fit-coupon.md. No new hardware purchase or mass/BOM change.
+Next: prepare measured-calibration profile tooling for the first leg tests.
+Details: docs/tasks/MEC-162.md and MEC-163.md. Manufacturing kit unchanged.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.
