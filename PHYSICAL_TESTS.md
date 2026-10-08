@@ -60,6 +60,11 @@ flange fasteners and actual servo cable route; test stiffness with support first
 
 ## Provisional servo choices
 
+After actual first-leg calibration, use docs/measured-calibration-profiles.md
+to validate a separate measured JSON record and preview mappings offline.
+All current profiles remain unmeasured; exporting does not activate firmware
+or approve wider powered travel.
+
 Experimental MEC-161 forks: print one upper/lower pair side-on, inspect support
 removal, bearing-seat fit, horn/retainer and saddle/foot assembly access. Gradually
 load the assembled pair and inspect the web/plate junctions for flex or cracking.

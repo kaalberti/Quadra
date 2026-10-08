@@ -140,7 +140,10 @@ intersections are empty. No fork geometry/BOM correction was needed.
 Side-on fork fit coupon: mechanical/prototype-fork-fit-coupon.stl,36 x78.2 x32mm.
 Closed/connected/bed and27 interface ray checks pass; print/fit NOT_PERFORMED.
 Procedure: docs/fork-fit-coupon.md. No new hardware purchase or mass/BOM change.
-Next: prepare measured-calibration profile tooling for the first leg tests.
+Measured-profile validator/exporter and offline angle preview are available;
+five new tests and full host regressions pass. All physical profiles stay unset.
+Workflow: docs/measured-calibration-profiles.md. No flash or powered activation.
+Next: expose the existing calibrated leg planner through an offline test CLI.
 Details: docs/tasks/MEC-162.md and MEC-163.md. Manufacturing kit unchanged.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.

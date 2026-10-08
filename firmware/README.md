@@ -101,6 +101,12 @@ Generic500..2500us validation bounds are only an absolute software screen,
 not approved servo travel. Tests use synthetic profiles; never copy them to
 hardware. Physical calibration and limits are listed in ../PHYSICAL_TESTS.md.
 
+FW-007 adds `calibration_profiles.py` for measured JSON validation, offline
+pulse previews and optional C++ header export. It requires all three measured
+profiles and keeps every anchor/limit within1450..1550us. It never connects to
+hardware or changes the firmware. The current unset template is rejected.
+Workflow and commands: ../docs/measured-calibration-profiles.md.
+
 ## Board-only diagnostic
 
 `timing rail-off no-servos` is a manual serial-monitor command while DISARMED.

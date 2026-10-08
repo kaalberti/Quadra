@@ -43,3 +43,5 @@ if ($LASTEXITCODE -ne 0) { throw 'CAD geometry comparison failed' }
 $env:PYTHONDONTWRITEBYTECODE='1'
 & $Python -m unittest discover -s (Join-Path $PSScriptRoot 'test') -p test_console.py -v
 if ($LASTEXITCODE -ne 0) { throw 'Console tests failed' }
+& $Python -m unittest discover -s (Join-Path $PSScriptRoot 'test') -p test_calibration_profiles.py -v
+if ($LASTEXITCODE -ne 0) { throw 'Measured calibration profile tooling tests failed' }
