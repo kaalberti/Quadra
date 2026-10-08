@@ -1,5 +1,7 @@
 # Purchasing BOM — Rev A, updated MEC-144–153 (2026-10-08)
 
+The bench adapter is corrected in three-dof-bench-2; purchased quantities are unchanged.
+
 Maintain this file when purchased parts or quantities change. This is a staged
 shopping list, not a purchase order. Prices are planning caps, not verified
 retail quotations. No purchases or new ownership are inferred. The user already

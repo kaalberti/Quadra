@@ -94,7 +94,7 @@
       "file": "mechanical/prototype-bench-base.stl",
       "quantity": 1,
       "fixture_only": true,
-      "sha256": "B4196B48CAC305C24B5427CBE05F003406B59852FBAA1ABE63829468F416DC48"
+      "sha256": "198C6E6F0B32AADA1B6B15897293E7D8708DAB39DD0CEB1CA81B8FB11A8BADFF"
     },
     {
       "file": "mechanical/hobby-joint-front-arm.stl",
@@ -110,7 +110,7 @@
     }
   ],
   "guide": "docs/three-dof-prototype-build.md",
-  "revision": "three-dof-bench-1",
+  "revision": "three-dof-bench-2",
   "bom": "docs/purchasing-bom.md",
   "physical_fit_verified": false
 }

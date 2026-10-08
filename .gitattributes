@@ -2,3 +2,5 @@
 /manufacturing/** -text whitespace=cr-at-eol
 /manufacturing/**/*.stl -diff
 /mechanical/*.stl -text -diff whitespace=cr-at-eol
+/ARCHIVE/MFG-002-three-dof-bench-1/** -text whitespace=cr-at-eol,-blank-at-eof
+/ARCHIVE/MFG-002-three-dof-bench-1/**/*.stl -diff

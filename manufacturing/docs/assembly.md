@@ -1,4 +1,4 @@
-# Supported three-DOF bench leg — three-dof-bench-1
+# Supported three-DOF bench leg — three-dof-bench-2
 
 ![Assembly](assembly.png)
 
@@ -71,3 +71,6 @@ the ESP32 board. Final robot mass and loaded range are unresolved.
 Next physical milestone: print the coupons, verify an actual servo and bearing,
 then assemble this leg unpowered. Electronics/chassis work has not begun.
 
+
+Bench adapter revision: use the current rib-relieved STL. Pockets face the passive
+support; verify free seating before tightening. Overall assembly image is unchanged.

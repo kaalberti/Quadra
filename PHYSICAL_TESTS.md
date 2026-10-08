@@ -8,9 +8,9 @@ The supply's model/transient behavior and board header/revision remain unknown.
 
 ## Before buying a full set
 
-MEC-156 found passive-support rib interference in the existing bench adapter.
-Wait for its clearance correction before printing that adapter; unaffected
-coupons may still be printed. The new working chassis mounts include rib pockets.
+Use the corrected MFG-002 / three-dof-bench-2 adapter with support-rib pockets;
+the older bench-1 adapter had a CAD clash and is archived. Confirm free seating
+on the actual printed support before tightening. Working chassis mounts also have rib pockets.
 When trying a chassis mount, verify the four existing fixing slots, pivot access,
 flange fasteners and actual servo cable route; test stiffness with support first.
 

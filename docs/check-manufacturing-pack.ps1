@@ -43,4 +43,9 @@ $assemblyParts=@($manifest.parts|Where-Object {-not $_.fit_coupon})
 $coupons=@($manifest.parts|Where-Object {$_.fit_coupon})
 $unique=if($threeDof){18}else{16};$pieces=if($threeDof){29}else{20}
 if($assemblyParts.Count -ne $unique -or ($assemblyParts|Measure-Object quantity -Sum).Sum -ne $pieces -or $coupons.Count -ne 4) {throw 'Release counts mismatch'}
+if($threeDof -and $manifest.revision -eq 'three-dof-bench-2') {
+ $fit=(Get-Content (Join-Path $pack 'validation.json') -Raw|ConvertFrom-Json).bench_adapter
+ if(-not $fit.closed -or -not $fit.connected -or -not $fit.fixing_and_pivot_paths_clear -or -not $fit.support_intersection_empty -or $fit.physical_fit_verified){throw 'Adapter validation incomplete'}
+ if($fit.stl_sha256 -ne (Get-FileHash (Join-Path $pack 'stl/prototype-bench-base.stl')).Hash -or $fit.cad_sha256 -ne (Get-FileHash (Join-Path $pack 'cad/prototype-bench-base.scad')).Hash){throw 'Adapter validation differs from released CAD/STL'}
+}
 Write-Output "PASS: $($actual.Count) release files, hashes/current CAD/dependencies/links/BOM; $unique assembly STLs/$pieces pieces and four coupons."

@@ -1,0 +1,19 @@
+{
+  "revision": "bench-adapter-rib-clearance-1",
+  "closed": true,
+  "connected": true,
+  "triangles": 2704,
+  "size_mm": [
+    67.75,
+    40.5,
+    7
+  ],
+  "volume_mm3": 15396.048413945393,
+  "fixing_and_pivot_paths_clear": true,
+  "support_intersection_empty": true,
+  "intended_contact_excluded_mm": 0.001,
+  "rib_clearance_mm": 0.2,
+  "physical_fit_verified": false,
+  "stl_sha256": "198C6E6F0B32AADA1B6B15897293E7D8708DAB39DD0CEB1CA81B8FB11A8BADFF",
+  "cad_sha256": "B212099E4D7FDAEB47FEB04A616C88145C62BB04B8870417159D6F9ABC51F0D3"
+}

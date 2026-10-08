@@ -1,5 +1,5 @@
 {
-  "bench_adapter_solid_mass_g": 19.75961450296044,
+  "bench_adapter_solid_mass_g": 19.55298148571065,
   "operating_mass_limit_kg": 2.0,
   "minimum_sampled_knee_bridge_margin_mm": 1.159445779910526,
   "actual_fit_verified": false,
@@ -43,8 +43,8 @@
       "closed": true,
       "components": 1,
       "part": "bench-base",
-      "triangles": 1992,
-      "volume_mm3": 15558.751577134204
+      "triangles": 2704,
+      "volume_mm3": 15396.048413945393
     }
   ],
   "printed_solid_volume_mm3": 123064.43215326141,

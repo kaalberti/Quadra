@@ -1,4 +1,4 @@
-# Supported three-DOF bench leg — three-dof-bench-1
+# Supported three-DOF bench leg — three-dof-bench-2
 
 ![Assembly](../mechanical/prototype-three-dof-leg-preview.png)
 
@@ -14,6 +14,11 @@ support, front arm, rear arm, retainer, 8mm front spacer, 3mm rear spacer,
 and the new J1 carrier. The existing bench adapter moves from J2 to J1;
 there is only one bench adapter. Do not print an extra J1 bridge: the carrier
 ties the front and rear fork arms together.
+
+Use the current rib-relieved adapter STL from the corrected bench-2 checkpoint.
+Its pockets face the passive support and provide0.2mm clearance around the ribs.
+Check that the support seats freely before tightening; the older adapter had a
+CAD clash. Bolt slots, anchors and hardware quantities are unchanged.
 
 Print fit coupons first. Print the carrier flat as exported, with its tabs
 upright. Start with PLA+/PETG, 0.4mm nozzle, 0.2mm layers, four walls and 30%

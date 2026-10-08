@@ -1,4 +1,4 @@
-# Print quantities — three-dof-bench-1
+# Print quantities — three-dof-bench-2
 
 Millimetres; print in exported orientation. Four fit coupons first, then29 assembly pieces from18 unique STL files.
 

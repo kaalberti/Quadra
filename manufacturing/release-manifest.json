@@ -143,7 +143,7 @@
       "fit_coupon": false,
       "cad": "cad/prototype-bench-base.scad",
       "selector": null,
-      "sha256": "B4196B48CAC305C24B5427CBE05F003406B59852FBAA1ABE63829468F416DC48"
+      "sha256": "198C6E6F0B32AADA1B6B15897293E7D8708DAB39DD0CEB1CA81B8FB11A8BADFF"
     },
     {
       "file": "coupons/hobby-servo-cradle-coupon.stl",
@@ -200,8 +200,8 @@
       "sha256": "4CCE5EACBA8D3852723F86C2AE33752C6BD7561C95A3C74002CA3D8477576452"
     }
   ],
-  "date": "2026-10-08",
-  "revision": "three-dof-bench-1",
+  "date": "2026-10-09",
+  "revision": "three-dof-bench-2",
   "files": [
     {
       "file": "bom-hardware.json",
@@ -217,11 +217,11 @@
     },
     {
       "file": "README.md",
-      "sha256": "88153356345C5C605BCF0787269055DFBA9480BEACDBE410928E93AE301D9AAC"
+      "sha256": "C710D25DEA912A64FA8AA1D446E35AE8F321F01AFAA77F209A40FF429370CA44"
     },
     {
       "file": "validation.json",
-      "sha256": "5B4E4E2BD7C4F4447309BE5F7610F1E3AA06EACD840DAED873DE2135DDFF6DCB"
+      "sha256": "32DE7E76F841F9034C1C28718404252E2732A4FBC5432E15FF5295E2525BC971"
     },
     {
       "file": "cad/hobby-joint-assembly.scad",
@@ -261,7 +261,7 @@
     },
     {
       "file": "cad/prototype-bench-base.scad",
-      "sha256": "619D434E6A9D27F3F856D478EB71E63B619ECC9B76B8D2799D70BE4603D41763"
+      "sha256": "B212099E4D7FDAEB47FEB04A616C88145C62BB04B8870417159D6F9ABC51F0D3"
     },
     {
       "file": "cad/prototype-cable-guide.scad",
@@ -325,7 +325,7 @@
     },
     {
       "file": "docs/assembly.md",
-      "sha256": "ADAB9722AF00EC49C35118609A5BC3A9FA9E409A33B5655C99D1529A56A103C8"
+      "sha256": "900601A702915CF624B31326DDB0C302F8892C3C02CD925CFA41218AB932F4CF"
     },
     {
       "file": "docs/assembly.png",
@@ -341,7 +341,7 @@
     },
     {
       "file": "docs/print-list.md",
-      "sha256": "4C0107BB0B4FE7E8AD4069E6ECFC6085221AA823E93135368F17FBF714071EF7"
+      "sha256": "74B7C4875C52D590A4A6A4032C4108584B4BEE3D3391DF4892914DB7B090BA0D"
     },
     {
       "file": "stl/hobby-joint-bridge.stl",
@@ -381,7 +381,7 @@
     },
     {
       "file": "stl/prototype-bench-base.stl",
-      "sha256": "B4196B48CAC305C24B5427CBE05F003406B59852FBAA1ABE63829468F416DC48"
+      "sha256": "198C6E6F0B32AADA1B6B15897293E7D8708DAB39DD0CEB1CA81B8FB11A8BADFF"
     },
     {
       "file": "stl/prototype-cable-guide.stl",

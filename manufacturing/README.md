@@ -1,4 +1,4 @@
-# Manufacturing pack — three-dof-bench-1 / MFG-002
+# Manufacturing pack — three-dof-bench-2 / MFG-002
 
 One supported three-DOF bench leg, for printing and unpowered fit assessment.
 No chassis, electronics, powered capacity or gait release is included.
@@ -20,3 +20,7 @@ it is not the old25mm-offset skeleton or a finalized four-leg chassis layout.
 J1 torque is screened against stall, not certified continuous operation.
 PCB/pinout/wiring/firmware checks are not applicable to this unpowered scope.
 The previous two-DOF manufacturing pack is retained in ARCHIVE/MFG-001-two-dof-pack.
+
+MEC-157 corrects adapter/support rib clearance with0.2mm pockets; interfaces,
+quantities and hardware are unchanged. Prior checkpoint: ARCHIVE/MFG-002-three-dof-bench-1.
+The prior adapter had a CAD clash; use this corrected adapter. Physical fit is untested.

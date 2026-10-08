@@ -32,12 +32,13 @@ At2kg/three support legs, J1 neutral screen0.329Nm vs0.922Nm published stall;
 +15deg0.525Nm and+30deg0.694Nm. Stall is not sustained torque or powered approval.
 
 ## Prototype manufacturing checkpoint
-MFG-002 / three-dof-bench-1 is under manufacturing/.
-MEC-156 found a bench-adapter/support-rib clash; correct that adapter before
-printing it. Release integrity passes, but it does not establish mechanical fit.
+Corrected MFG-002 / three-dof-bench-2 is under manufacturing/.
+Adapter rib clearance, fixing/pivot access and closed connected print checks pass;
+the old bench-1 adapter had a CAD clash and is archived. Physical fit is untested.
 18 unique assembly STLs/29 pieces, four coupons, CAD snapshot, BOM, assembly
 instructions/image, print list, layout, validation and hashes:54 verified files.
 The prior two-DOF pack is archived intact at ARCHIVE/MFG-001-two-dof-pack/.
+The prior bench-1 checkpoint is intact at ARCHIVE/MFG-002-three-dof-bench-1/.
 Source and validation tooling remain under mechanical/ and docs/.
 Manufacturing is updated for this build checkpoint, not during every design edit.
 
@@ -111,8 +112,8 @@ Original geometry serves one diagonal; the other needs mirrored assembly review.
 Rear local pitch directions differ from global forward; no powered mapping added.
 Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
 Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
-Next: correct the older bench adapter's confirmed support-rib interference and
-prepare the corresponding corrected build checkpoint. No powered operation.
+Next: resolve common and mirrored leg prints for the four-leg assembly, including
+actual rigid servo orientation assumptions. No powered operation.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

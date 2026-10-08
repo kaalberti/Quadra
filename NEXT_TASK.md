@@ -1,10 +1,10 @@
-# MEC-157 — correct bench adapter rib clearance and build checkpoint
+# MEC-158 — common and mirrored parts for the four-leg assembly
 
-MEC-156 independently found127.65mm3 of bench-adapter/support-rib interference.
-Add small clearance pockets to the existing adapter while preserving its bolt
-slots, anchor locations and pivot opening. Check closed/connected print geometry,
-fixing access and adapter/support intersection excluding only intended contact.
-Update the affected bench manufacturing snapshot/STL, validation and hashes as
-a corrected prototype build checkpoint; retain the prior release in ARCHIVE.
-Keep the new chassis study separate. Update status and physical-test guidance;
-do not add a full robot kit, powered operation or locomotion.
+Turn the reflected four-leg study into an explicit working printed-part plan.
+Identify which parts can be reused through rigid rotation and which require
+mirrored geometry. Represent commodity servo cases using actual rigid rotations
+where their assumed envelope permits; keep actual ears/horns/leads unverified.
+Generate only necessary handed working STLs in printable orientations and a
+four-leg working print manifest/BOM, checking geometry correspondence, closed
+connected meshes and assembly placement. Keep the supported bench manufacturing
+checkpoint intact; do not release a full robot kit or add powered locomotion.
