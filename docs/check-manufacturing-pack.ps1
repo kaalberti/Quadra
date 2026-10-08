@@ -34,7 +34,9 @@ foreach($file in Get-ChildItem $pack -Recurse -File -Filter '*.md') {
 }
 $hardware=Get-Content (Join-Path $pack 'bom-hardware.json') -Raw|ConvertFrom-Json
 $hardwareName=if($threeDof){'three-dof-hardware.json'}else{'pitch-leg-hardware.json'}
-if((Get-FileHash (Join-Path $pack 'bom-hardware.json')).Hash -ne (Get-FileHash (Join-Path $repo "mechanical/$hardwareName")).Hash) {throw 'Hardware BOM snapshot differs'}
+$releasedHardware=[IO.File]::ReadAllText((Join-Path $pack 'bom-hardware.json')).Replace("`r`n","`n").TrimEnd()
+$activeHardware=[IO.File]::ReadAllText((Join-Path $repo "mechanical/$hardwareName")).Replace("`r`n","`n").TrimEnd()
+if($releasedHardware -ne $activeHardware) {throw 'Hardware BOM snapshot differs'}
 $boltCount=if($threeDof){35}else{23}
 if(($hardware.M3_fastener_roles|Measure-Object quantity -Sum).Sum -ne $boltCount) {throw 'Hardware count mismatch'}
 $assemblyParts=@($manifest.parts|Where-Object {-not $_.fit_coupon})
