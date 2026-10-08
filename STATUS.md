@@ -59,4 +59,8 @@ The proposed isolated servo rail is5.2V, with a7.5A supply-capacity target for
 three servos and an external rated distribution/cutoff. Wire-only drop screen
 is0.189V; actual PSU and servo measurements remain pending.
 Wiring: electronics/bench-wiring.md; no powered test is claimed.
+Individual-servo firmware is compiled for provisional ESP32-S3-DevKitC-1-N8.
+Twelve host C++ scenarios pass for disabled startup, single-channel arming,
+1450..1550us commands, timeout, bus/configuration faults and explicit recovery.
+Source/commands: firmware/README.md. No flashing, calibration or gait code.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

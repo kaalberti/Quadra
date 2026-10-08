@@ -1,11 +1,10 @@
-# FW-001 — individual-servo bench controller
+# FW-002 — supervised single-servo bench console
 
-Implement and compile an ESP32-S3/PCA9685 bench controller using existing
-local tools. Startup must keep OE high and all channels off. Enable only one
-explicitly armed channel, initially1450..1550us at50Hz. Disarm on command
-timeout or I2C failure; do not automatically resume after a fault.
+Provide a host console for the FW-001 protocol: explicit operator arming and
+pulse commands, periodic keepalive only during an acknowledged armed session,
+and immediate shutdown on protocol failure, device reboot, fault or exit.
+Test with a fake serial transport, including dropped replies and unexpected
+state/channel changes. Do not auto-arm, auto-reset, flash or move hardware.
 
-Independently check controller state transitions and pulse conversion with
-host tests, and compile the actual embedded target. Document commands and
-unpowered bring-up. No flashing, servo motion, calibration, IK or gaits.
-Actual board/servo/PSU are pending, so pin and power assumptions stay provisional.
+Keep actual hardware commissioning pending. No wider servo limits, calibration,
+assembled-leg control, IK or locomotion in this task.

@@ -62,7 +62,6 @@ These are fixture parts, not multiplied into the robot BOM. The board face is
 40mm behind the adapter's back face. Confirm bench anchoring and fork clearance
 before any loading; this is not a powered-test stability approval.
 
-## Planned quantities — wait before buying totals
 ## Proposed bench control purchases — verify existing hardware first
 
 | Item | Quantity | Planning allowance NZ$ | Requirement |
