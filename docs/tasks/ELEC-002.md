@@ -1,17 +1,18 @@
-# ELEC-002 — commissioning evidence preparation
+# ELEC-002 — provisional12-servo harness and channel plan
 
-Completed2026-10-08. Added an unset operator measurement record and checker
-for actual hardware identity, voltage limits, OE behavior, physical cutoff and
-an optional subsequent horn-off servo trial. Seven tests pass; the actual
-record evaluates NOT_MEASURED. No measurements were inferred or written.
+Completed:2026-10-09. Named FL/FR/RL/RR joints use channels0..11;15 remains
+board-only timing and12..14 unused. Three AHCT125N buffers use all12 gates;
+public TI14-pin assignments and NXP OE/output behavior verified. One connection
+table, Mermaid power/signal diagram and machine-readable plan agree.
 
-The checker distinguishes missing evidence, failed setup/trial, readiness for
-one unmounted-servo trial and a recorded trial. It never approves assembled-leg
-motion or a three-servo supply. PWM timing is optional for the first horn-off
-trial; measurement is required before wider/mounted motion. A scope purchase
-does not block that initial test.
+Independent check confirms unique leg/joint channels/gates, manufacturer pin
+map, component totals, external power boundaries and provisional sizing math.
+Signal BOM totals/deltas distinguish reused bench parts.2A per servo plus25%
+capacity margin gives30A target; actual demand and full robot power hardware
+remain unselected. No bench wire/feed rating is applied to the24A main path.
 
-Reproducible local firmware setup was exercised; embedded build and the
-54-file MFG-002 release check pass. Actual hardware/printing information and
-physical tests now gate meaningful prototype advancement. No calibration,
-IK, robot battery/BEC or gait stage started.
+Sources:https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf and
+https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf.
+Check:node electronics/check-four-leg-harness.mjs.
+No supplier contact, firmware activation, manufacturing change or physical test.
+FIT-001 remains pending; next offline task is commodity power feasibility/cost.

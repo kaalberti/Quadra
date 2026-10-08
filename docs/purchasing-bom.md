@@ -1,7 +1,7 @@
 # Purchasing BOM — Rev A working plan (2026-10-09)
 
-Bench-3 includes the rib-relieved adapter and mirrored carrier/saddle selection;
-purchased quantities are unchanged.
+Current first-leg kit: MFG-003 integrated-bench-1; see manufacturing/BOM.md.
+Earlier bench-3 quantities below are an archived reference, not additional purchases.
 
 Maintain this file when purchased parts or quantities change. This is a staged
 shopping list, not a purchase order. Prices are planning caps, not verified
@@ -23,7 +23,7 @@ Bearing boundary source: [SKF624](https://www.skf.com/ro/products/rolling-bearin
 These were checked in previous public-manufacturer tasks. Actual delivered price,
 model, ear shape and horn fit are not locked. Test one before a quantity order.
 
-## Current supported three-DOF bench leg
+## Archived bench-3 hardware reference
 
 Counts include J1 and BOTH pitch joints, foot, guide and one bench adapter. They replace
 previous upper-leg/bench-joint lists; do not add those lists again. Chassis parts
@@ -192,3 +192,15 @@ to the16 leg cable ties if adopting this option; no extra screws or controller
 boards. Do not buy new packs if existing ties suit. Actual board mounts/fit are
 unverified. Guide:docs/electronics-deck.md; print one deck variant, not both.
 The current single-leg manufacturing/BOM and four-leg mass record are unchanged.
+
+## Provisional12-servo signal harness — ELEC-002
+
+Complete signal totals:3 SN74AHCT125N buffers,3 x100nF capacitors,13 x220ohm
+resistors,24 x10kohm pulldowns andone1kohm OE pull-up. Reuse the bench
+components: add2 buffers,2 capacitors,9 x220ohm and18 x10kohm, rather than
+buying the totals twice. Controller boards are owned; no replacements.
+12 signal paths/servo power branches andfour protected leg feeds are planned;
+main distribution, connector, fuse, wire and regulator purchases stay TBD.
+The30A capacity screen is provisional, not a selected supply or verified demand.
+Prices remain unverified; test one servo before full-harness purchases.
+Connections and manufacturer sources:electronics/four-leg-harness.md.

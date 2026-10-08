@@ -119,9 +119,6 @@ Only486g remains for all prints under those assumptions (37.4% of solid CAD
 mass). Current bench-kit replication is not a demonstrated2kg robot design.
 MEC-161 fork prototype: four handed STLs pass closed/connected/bed checks and
 retained-interface mesh rays. Six sampled local pitch case/support checks clear.
-Local assembly viewer uses proper print rotations; preview visually inspected.
-Experimental full leg: mechanical/prototype-fork-leg-assembly.scad and PNG.
-It uses25 rigidly placed prints, including two physically mirrored forks.
 Fresh source/placed exports agree within0.001005mm; five sampled J1/carrier
 intersections are empty. No fork geometry/BOM correction was needed.
 Side-on fork fit coupon: mechanical/prototype-fork-fit-coupon.stl,36 x78.2 x32mm.
@@ -145,5 +142,8 @@ Physical next: side-on coupon/fit and unpowered integrated-leg assembly remain p
 Offline deck option: prototype-electronics-deck.scad adds eight strap slots while
 retaining16 chassis fixings;169 mesh rays and minimum6.75mm ligament pass.
 Guide:docs/electronics-deck.md; four optional ties, actual board mounts unverified.
-Next offline task:12-servo harness/channel plan; no powered four-leg control.
+Provisional12-servo channel/pin plan passes:channels0..11,three AHCT125N buffers.
+Guide:electronics/four-leg-harness.md.30A capacity screen is provisional;
+robot battery/regulator/protection stay TBD. Bench firmware remains one-channel.
+Next offline task:commodity robot-power feasibility/cost shortlist.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.

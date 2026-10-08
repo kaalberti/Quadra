@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const p=JSON.parse(fs.readFileSync(new URL('four-leg-harness.json',import.meta.url)));
+assert.equal(p.channels.length,12);assert.deepEqual(p.channels.map(c=>c.channel).sort((a,b)=>a-b),Array.from({length:12},(_,i)=>i));
+const expectedPins=new Map([[1,[2,3,1]],[2,[5,6,4]],[3,[9,8,10]],[4,[12,11,13]]]);
+const endpoints=new Set();for(const c of p.channels){assert.deepEqual([c.input_pin,c.output_pin,c.oe_pin],expectedPins.get(c.gate));assert(!endpoints.has(c.buffer+':'+c.gate));endpoints.add(c.buffer+':'+c.gate);assert.equal(c.power_source,'external_switched_star');assert.equal(c.ground_source,'external_star');assert.equal(c.signal_series_ohm,220);assert.equal(c.input_pulldown_ohm,10000);assert.equal(c.connector_pulldown_ohm,10000);}
+for(const leg of ['FL','FR','RL','RR'])assert.deepEqual(p.channels.filter(c=>c.leg===leg).map(c=>c.joint).sort(),['J1','J2','J3']);
+for(const buffer of ['U1','U2','U3'])assert.deepEqual(p.channels.filter(c=>c.buffer===buffer).map(c=>c.gate).sort(),[1,2,3,4]);
+assert.equal(p.buffer_count,3);assert.equal(p.buffer_VCC_pin,14);assert.equal(p.buffer_GND_pin,7);assert.equal(p.logic_V,3.3);assert.equal(p.servo_rail_nominal_V,5.2);assert.equal(p.servo_rail_max_V,5.3);assert.equal(p.pca_Vplus_used,false);assert.equal(p.oe_pullup_source,'logic_3V3');assert.equal(p.timing_channel,15);assert.deepEqual(p.unused_channels,[12,13,14]);
+assert.deepEqual(p.parts,{AHCT125N:3,ceramic_100nF:3,resistor_220ohm:13,resistor_10kohm:24,resistor_1kohm:1,signal_outputs:12,external_servo_power_branches:12,protected_leg_feeds:4});
+assert.equal(p.planning.leg_A,3*p.planning.servo_A);assert.equal(p.planning.robot_A,12*p.planning.servo_A);assert.equal(p.planning.leg_capacity_A,p.planning.leg_A*p.planning.capacity_margin);assert.equal(p.planning.robot_capacity_A,p.planning.robot_A*p.planning.capacity_margin);for(const key of ['battery','regulator','main_fuse','main_wire','main_connector'])assert.equal(p.planning[key],null);
+assert.equal(p.physical_tested,false);assert.equal(p.firmware_enabled,false);console.log('PASS:12 unique leg/joint channels,12 correct14-pin gates,component counts,power boundaries and provisional capacity arithmetic.');

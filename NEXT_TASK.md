@@ -1,14 +1,14 @@
-# ELEC-002 — provisional12-servo harness and channel plan
+# ELEC-003 — commodity robot-power feasibility and cost shortlist
 
-Extend the verified bench wiring architecture to a provisional four-leg harness:
-assign12 PCA9685 channels to named leg/joint connections, use the existing
-buffer/distribution approach, and define separate signal/power branches and
-physical cutoff access. Reconcile conditional component counts in the buying BOM.
-Use public manufacturer documentation; no supplier contact. Leave measured
-servo current, battery/regulator selection and exact board headers provisional.
+Using public manufacturer/product information, compare a small number of
+commodity ways to supply the provisional5.2V/30A capacity target. Check actual
+published voltage/current limits, total quantity cost and realistic protection/
+main-feed implications. Consider split leg supplies only where outputs remain
+separate; do not assume regulators can be paralleled. Keep battery choice and
+measured current provisional. Do not contact suppliers or buy parts.
 
-Completion: one consistent connection table, diagram, commodity component
-counts and independent channel/pin/power-boundary checks. Keep the existing
-one-servo commissioning harness/firmware and MFG-003 unchanged. No powered
-four-leg commands, gait work, premium part selection or following stage.
-FIT-001 physical coupon and first-leg assembly remains pending in parallel.
+Completion: a short evidence-backed feasibility/cost comparison with one
+provisional direction and explicit unresolved measurements. Surface any project
+approval threshold before treating a part as selected; no premium component
+selection, wiring release, powered tests, firmware activation or following stage.
+Existing one-servo bench/MFG-003 stay unchanged. FIT-001 testing remains pending.
