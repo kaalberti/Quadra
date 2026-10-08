@@ -45,3 +45,5 @@ $env:PYTHONDONTWRITEBYTECODE='1'
 if ($LASTEXITCODE -ne 0) { throw 'Console tests failed' }
 & $Python -m unittest discover -s (Join-Path $PSScriptRoot 'test') -p test_calibration_profiles.py -v
 if ($LASTEXITCODE -ne 0) { throw 'Measured calibration profile tooling tests failed' }
+& $Python -m unittest discover -s (Join-Path $PSScriptRoot 'test') -p test_offline_leg_plan.py -v
+if ($LASTEXITCODE -ne 0) { throw 'Offline leg planner CLI tests failed' }

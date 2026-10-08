@@ -90,14 +90,10 @@ profiles, extrapolation and invalid data. Physical profiles remain unset;
 the bench controller still exposes only its narrow pulse commands.
 Offline forward kinematics agrees with current CAD transforms at five poses
 within0.001mm. Nominal reference [85,32,-120]mm; pad centre [85,33,-120]mm.
-The1mm distinction is within the existing pad, not a mechanical geometry change.
-Special-pose/invariant tests and N16R8 build pass; manufacturing remains unchanged.
-Offline inverse solving now returns explicit branches/errors and singular flags.
-Thirty-six trial-envelope round trips plus reach-boundary/branch tests pass.
-Candidates are checked against FK; targets are not projected into the workspace.
-Offline one-leg planning now prepares all three pulses atomically only after
-calibration, IK branch, angle and1450..1550us output checks. Failure leaves
-output unchanged; complete/partial-profile and explicit-branch tests pass.
+Offline IK returns explicit branches/errors/singular flags;36 trial-envelope
+round trips and boundary tests pass. Candidates are FK-checked, without projection.
+One-leg planning atomically checks calibration, IK branch, angle and1450..1550us
+limits. Failure leaves output unchanged; partial-profile/explicit-branch tests pass.
 No powered IK or gait commands are enabled; physical profiles remain unset.
 Board-only timing diagnostic is compiled/tested: explicit disarmed command,
 channel15-to-GPIO7 loopback at3.3V,50ms waits, per-sample timing screens and
@@ -143,7 +139,10 @@ Procedure: docs/fork-fit-coupon.md. No new hardware purchase or mass/BOM change.
 Measured-profile validator/exporter and offline angle preview are available;
 five new tests and full host regressions pass. All physical profiles stay unset.
 Workflow: docs/measured-calibration-profiles.md. No flash or powered activation.
-Next: expose the existing calibrated leg planner through an offline test CLI.
+Offline foot-target planner CLI is available; known CAD target/reversed mapping
+and rejection tests pass. No measured profiles, board flash or motion activation.
+Workflow: docs/offline-leg-planner.md. BOM/manufacturing unchanged.
+Next: support the existing board-only timing diagnostic in the host console.
 Details: docs/tasks/MEC-162.md and MEC-163.md. Manufacturing kit unchanged.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.

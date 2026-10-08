@@ -107,6 +107,12 @@ profiles and keeps every anchor/limit within1450..1550us. It never connects to
 hardware or changes the firmware. The current unset template is rejected.
 Workflow and commands: ../docs/measured-calibration-profiles.md.
 
+FW-008 adds `offline_leg_plan.py` to run the existing C++ calibrated planner
+against a requested foot reference position and explicit branch policy. It
+returns a complete offline plan only if measured profiles, trial bounds and
+bench pulse limits pass. Current unset records are rejected. No board connection
+or powered commands are added. Workflow: ../docs/offline-leg-planner.md.
+
 ## Board-only diagnostic
 
 `timing rail-off no-servos` is a manual serial-monitor command while DISARMED.
