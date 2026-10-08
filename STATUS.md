@@ -124,3 +124,8 @@ Optional voltage input:electronics/voltage-perfboard.md;150k/10k,100nF,GPIO8.
 Overlay172-pad/tolerance/power checks, host regressions and embedded build pass.
 Explicit disarmed16-sample diagnostic keeps outputs disabled; no flash or readings.
 Sense positive must disconnect before ESP32 power; calibration/cutoff remain unset.
+
+Optional mechanical carrier:docs/electronics-carrier.md;two printable tiers,
+four M3x12 fasteners,all16 chassis fixings accessible.384 mesh passage checks
+and nominal board intersection pass. Solid CAD PETG79.8g;actual mass/fit TBD.
+Not adopted in the robot mass/print manifest; manufacturing remains MFG-003.

@@ -225,3 +225,10 @@ unused perfboard pads and four spare header positions; no extra board is needed.
 This is additional to the buffer-only subtotal. Allow roughly NZ$2–3 passive
 parts before shipping, subject to checkout; exact delta price is not verified.
 Guide:electronics/voltage-perfboard.md. No battery or cutoff component selected.
+
+Optional two-tier carrier — MEC-167: add four M3 x12 bolts,four M3 nuts and
+four ordinary washers. Maximum eight narrow<=2.5mm ties (two carrier,two lower
+PCB,four upper boards) replace the earlier generic four-tie mount allowance;
+leg ties are separate. Reuse existing stock before buying more. Print base+
+shelf working STLs only if adopting the option; manufacturing remains MFG-003.
+Guide:docs/electronics-carrier.md. Board fit and actual print mass are unmeasured.

@@ -37,3 +37,8 @@ This does not qualify electronics clearance, stiffness or loaded operation.
 The option is not yet substituted into the93-piece four-leg plan or mass record.
 Use one deck, not both, if later adopting it. Manufacturing stays at MFG-003
 until a requested build checkpoint includes this chassis option.
+
+MEC-167 now provides an optional two-tier printed carrier:
+[electronics carrier](electronics-carrier.md). Its specific strap plan replaces
+the generic four-tie allowance when adopted. Actual board fit/mass remain
+pending; no manufacturing or robot-manifest substitution.

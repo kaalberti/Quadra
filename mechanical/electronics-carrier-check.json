@@ -1,0 +1,54 @@
+{
+  "closed_connected_bed_meshes": true,
+  "base_size_mm": [
+    162,
+    88,
+    40
+  ],
+  "shelf_size_mm": [
+    162,
+    88,
+    7
+  ],
+  "mesh_passage_checks": 384,
+  "retained_chassis_fixing_paths": 16,
+  "mounting_hardware": {
+    "M3x12_bolts": 4,
+    "M3_nuts": 4,
+    "M3_washers": 4
+  },
+  "board_space_claims": {
+    "perfboard_mm": [
+      100,
+      80,
+      21.6
+    ],
+    "esp32_mm": [
+      70,
+      35,
+      20
+    ],
+    "pca9685_mm": [
+      65,
+      30,
+      15
+    ]
+  },
+  "lower_board_underside_clearance_mm": 6,
+  "lower_board_to_shelf_clearance_mm": 8.4,
+  "upper_board_underside_clearance_mm": 3,
+  "base_solid_PETG_g": 52.236881940942105,
+  "shelf_solid_PETG_g": 27.561924483335687,
+  "total_solid_PETG_g": 79.7988064242778,
+  "nominal_board_intersection": "empty CGAL, intended support faces relieved0.001mm",
+  "source_sha256": {
+    "prototype-electronics-carrier.scad": "8a25d051b117539a5a98fadc7e5cf7dc6559aea956ce5ff239c53ed241c55408",
+    "prototype-electronics-deck.scad": "dfb04924bbbf03f91c72fa74247743f3b59cccfbe09ab37431fd8aa080b158c9",
+    "prototype-electronics-carrier-base.stl": "439cd6ee235eed4c92e7f05471e3d1d2932761209dcb355172f3d9b680f475f5",
+    "prototype-electronics-carrier-shelf.stl": "47eb4abc545adc70b003ae91f2391e7aa0daa12e686456628d4945d3ce02e04d"
+  },
+  "adopted_in_robot_manifest": false,
+  "physical_fit_verified": false,
+  "physical_strength_verified": false,
+  "actual_board_dimensions_measured": false
+}

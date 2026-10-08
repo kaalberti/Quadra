@@ -18,3 +18,4 @@
 /ARCHIVE/MFG-002-three-dof-bench-3/**/*.stl -diff
 
 /mechanical/prototype-electronics-deck.scad -text
+/mechanical/prototype-electronics-carrier.scad -text

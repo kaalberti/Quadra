@@ -8,19 +8,18 @@ The supply's model/transient behavior and board header/revision remain unknown.
 
 ## Before buying a full set
 
-Use the corrected MFG-002 / three-dof-bench-3 adapter with support-rib pockets;
-the older bench-1 adapter had a CAD clash and is archived. Confirm free seating
-on the actual printed support before tightening. Working chassis mounts also have rib pockets.
-Bench-3 also corrects carrier/saddle handed selection. Use its mirrored carrier
-and mirrored saddle, not the original files in archived bench-1/bench-2 kits.
-Working handed assignments: docs/four-leg-working-assembly.md. Verify actual
-servo ear/horn/lead orientation for each hand; a symmetric case box is insufficient.
-When trying a chassis mount, verify the four existing fixing slots, pivot access,
-flange fasteners and actual servo cable route; test stiffness with support first.
+Use the current MFG-003 / integrated-bench-1 manufacturing pack and its
+assembly/printing guide. It includes the integrated hip, mirrored pitch forks,
+mirrored knee saddle and five fit coupons. Bench-3 and earlier packs are
+archived fallback references, not the current first-leg buying/print list.
+Confirm actual servo ear/horn/lead orientation and free seating before
+fastening. The optional electronics deck/carrier is working CAD outside this
+single-leg release; dry fit actual boards, straps, connectors and jumpers
+before adopting it. See docs/electronics-carrier.md.
 
 1. **Servo identity and fit:** buy one positional MG996R with supplied horn and
    original centre screw. Measure case, mounting ears, shaft/horn height and
-   horn bolt pattern. Print the four manufacturing fit coupons; check624
+   horn bolt pattern. Print the five manufacturing fit coupons; check624
    bearing retention, M4 head recess and cradle fit. Record in
    mechanical/prototype-fit-record.json. Do not force a bearing into a tight print.
 2. **Print and assembly:** use the K2 Pro for the prescribed flat orientations.
@@ -53,8 +52,8 @@ flange fasteners and actual servo cable route; test stiffness with support first
    all-leg current and power distribution before supported standing. The5A
    bench supply is not assumed sufficient for three loaded joints or12 servos.
    Slow walking and IMU work follow stable hardware and calibrated joint control.
-   Enter slicer/scale masses in mechanical/robot-mass-inputs.json. The current
-   full working BOM's example is2.360kg, so actual print and power masses may
+   Enter slicer/scale masses in mechanical/integrated-robot-mass-inputs.json. The current
+   integrated working BOM's example is2.178kg, so actual print and power masses may
    change the robot design. Weigh fasteners and supplied horns/leads as well;
    do not infer printed mass from the infill percentage alone.
 

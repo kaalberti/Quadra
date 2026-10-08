@@ -1,18 +1,13 @@
-# ELEC-008 — Perfboard voltage input and disarmed diagnostic
+# MEC-167 — Removable two-tier electronics carrier
 
-Design an inexpensive, removable perfboard divider/filter for an explicitly
-limited0..25.2V positive test input, using GPIO8 provisionally after actual
-board pin verification. Check divider tolerance, ADC range and power-off wiring
-sequence against public Espressif data. Do not select a battery or treat this
-manual bench interface as an always-connected battery monitor.
+Create a simple printable working carrier for the provisional100 x80mm PAD2
+buffer board and owned ESP32/PCA9685 space claims. Use the current deck strap
+slots, insulating board supports, accessible underside wiring and modest M3
+hardware. Preserve all16 chassis fixing access paths. Do not invent actual
+board mounting-hole patterns or claim physical fit.
 
-Implement a bounded, explicit disarmed voltage diagnostic in existing firmware,
-reporting ADC/input estimates and sample spread without enabling servo outputs,
-changing calibration, extending armed sessions or adding a cutoff threshold.
-Add meaningful host checks for scale, limits, sample failure and state gating;
-compile using existing project tools. Record perfboard wiring, modest buying
-parts and the later multimeter comparison procedure.
-
-Completion: independently checked input geometry/rating, host regressions and
-embedded build pass. All physical voltage/accuracy tests remain NOT_PERFORMED.
-No flash, powered test, final SMT PCB, battery selection or gait work.
+Completion: separate bed-oriented connected STLs, source CAD, assembly preview,
+independent mesh/passage/envelope checks, nominal board separation and source
+mass. Update the conditional buying list and parameters. Manufacturing and the
+93-piece integrated robot manifest remain unchanged until a build checkpoint.
+No detailed stress analysis, joint optimization, powered test or final PCB.
