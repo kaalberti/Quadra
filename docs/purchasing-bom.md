@@ -88,7 +88,8 @@ Buy no battery, twelve-servo regulator or custom PCB at this stage.
 | Positional servos with horns | 3 | 12 | Architecture count; model/performance provisional |
 | Passive support bearings | 3 | 12 planned |624 currently used; J1 bench package exists; chassis fit unfinished |
 | Remaining fasteners, inserts, feet | TBD | TBD | Update as J1/chassis are designed; do not multiply bench kit by12 |
-| Battery, power distribution, BEC/regulator, controller/PWM, cables | TBD | TBD | Electrical stage deferred; check voltage/current/polarity before powered tests |
+| ESP32-S3 N16R8 and Adafruit PCA9685 | Owned | Owned | No additional controller/PWM purchase planned |
+| Battery, power distribution, BEC/regulator, cables | TBD | TBD | Robot electrical stage deferred; bench harness defined separately |
 
 Servo cap:3 x NZ$25–35 = NZ$75–105 per leg;12 x NZ$25–35 = NZ$300–420.
 The existing allocation remains NZ$300 for other parts plus NZ$80 reserve,
@@ -100,3 +101,8 @@ User increased maximum COMPLETE operating mass to2kg on2026-10-08, including
 battery/electronics. Twelve55g servos leave1340g for everything else. Historic
 1.2kg calculations remain historical; new knee screen uses2kg. Actual whole
 robot mass remains unknown. Never power servos through the ESP32 board.
+
+Four-leg placement study: `mechanical/prototype-four-leg-study.scad`.
+The raised deck and board blocks are placeholders; chassis brackets and mirrored
+print variants are not released. No new purchases or chassis fastener counts
+are established by MEC-155. Bench fixtures are not four-leg chassis components.

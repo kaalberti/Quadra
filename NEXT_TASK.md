@@ -1,10 +1,11 @@
-# MEC-155 — provisional four-leg placement and chassis interface study
+# MEC-156 — removable prototype chassis attachment
 
-Arrange the existing three-DOF leg geometry at four provisional body roots.
-Make front/rear and left/right transforms explicit, including which printed
-parts/servo placements would need mirroring or reorientation. Check nominal
-foot symmetry and obvious case/leg/body packaging clashes; produce an editable
-assembly view. Preserve individual-leg CAD and release pack. Use conservative
-body/board placeholders; actual board/servo fit remains a deferred physical test.
-Do not optimize structures, qualify standing, add gaits or release new print parts.
-Physical validation remains deferred in PHYSICAL_TESTS.md.
+Design a simple printable connection from the current J1 cradle/support mounting
+slots to the provisional body deck. Use common M3 through fasteners and retain
+servo, pivot and cable access. Resolve deck height and mirrored attachment
+variants explicitly. Produce editable assembly/part CAD and working STLs;
+check print-bed fit, connected solids and nominal packaging interference.
+Update provisional dimensions and purchasing BOM with actual added quantities.
+Preserve individual-leg CAD and current manufacturing release; do not release
+a full robot print kit, optimize structures or add locomotion. Physical fit
+and strength remain deferred in PHYSICAL_TESTS.md.

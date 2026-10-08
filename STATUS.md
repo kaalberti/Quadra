@@ -97,8 +97,16 @@ Board-only timing diagnostic is compiled/tested: explicit disarmed command,
 channel15-to-GPIO7 loopback at3.3V,50ms waits, per-sample timing screens and
 all-off/OE-high cleanup. Wiring/procedure: docs/board-pwm-timing-test.md.
 No diagnostic has been run on hardware; no timing/voltage result is inferred.
-Next: provisional four-leg placement study using existing leg geometry before
-designing chassis attachments. Keep symmetry and servo/printed-part assumptions explicit.
+Four-leg placement study: mechanical/prototype-four-leg-study.scad and preview.
+Nominal reference footprint320 x174mm is symmetric; case/deck and inter-leg
+case intersections are empty. Raised deck and board blocks are placeholders;
+complete nominal printed-leg/deck intersection is also empty (CGAL).
+actual chassis attachments and mirrored print variants remain undesigned.
+Original geometry serves one diagonal; the other needs mirrored assembly review.
+Rear local pitch directions differ from global forward; no powered mapping added.
+Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
+Next: removable chassis attachment to existing J1 mounting slots, with simple
+common fasteners and access checks. No new manufacturing release or purchases yet.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.
