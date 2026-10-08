@@ -62,7 +62,7 @@ is0.189V. Available supply is adjustable60V/5A (user reported): set near5.2V
 for MG996R, never60V. Its5A rating is below the7.5A three-servo planning target;
 reuse it for staged individual tests. Actual voltage/current remain unmeasured.
 Wiring: electronics/bench-wiring.md; no powered test is claimed.
-Individual-servo firmware is compiled for provisional ESP32-S3-DevKitC-1-N8.
+Individual-servo firmware is compiled for the owned ESP32-S3 N16R8 configuration.
 Twelve host C++ scenarios pass for disabled startup, single-channel arming,
 1450..1550us commands, timeout, bus/configuration faults and explicit recovery.
 Source/commands: firmware/README.md. No flashing, calibration or gait code.
@@ -71,7 +71,8 @@ automatic keepalive, disarm on protocol failure and no automatic recovery.
 Use firmware/console.ps1 with a verified port only after hardware setup.
 The electrical commissioning record/checker is ready under electronics/;
 seven tests pass and the real record remains NOT_MEASURED. Procedure:
-docs/bench-commissioning.md. Only physical results can advance the next stage.
+docs/bench-commissioning.md. Physical results gate powered hardware progression;
+offline development may continue with explicit provisional assumptions.
 
 ## Deferred physical validation and ongoing development
 Available: Creality K2 Pro access,60V/5A supply, ESP32-S3 N16R8 dev board,
@@ -81,8 +82,12 @@ User authorizes provisional development before parts selection and later rework.
 Offline calibration/limit mapping supports both directions and rejects unmeasured
 profiles, extrapolation and invalid data. Physical profiles remain unset;
 the bench controller still exposes only its narrow pulse commands.
-Next development: offline foot-position model reconciled with current CAD,
-not the historical25mm skeleton. No physical or loaded-duty result is inferred.
+Offline forward kinematics agrees with current CAD transforms at five poses
+within0.001mm. Nominal reference [85,32,-120]mm; pad centre [85,33,-120]mm.
+The1mm distinction is within the existing pad, not a mechanical geometry change.
+Special-pose/invariant tests and N16R8 build pass; manufacturing remains unchanged.
+Next: offline inverse position solving with explicit unreachable/ambiguous targets.
+No powered IK or gait commands are enabled.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

@@ -1,14 +1,10 @@
-# FW-003 — offline joint calibration and limit mapping
+# FW-005 — bounded offline inverse kinematics
 
-Develop a reusable angle-to-pulse mapping with two measured anchors, direction
-and separate usable limits. Reject missing calibration, invalid data and
-extrapolation. Default all physical profiles to unmeasured MG996R assumptions.
-Independently test both directions and rejection cases, compile for ESP32-S3.
-No angle commands enabled on real hardware, widened pulse window or gait work.
-Physical work is deferred explicitly in PHYSICAL_TESTS.md, not a development block.
-
-Completion: offline mapping and host tests are implemented; N16R8 target build
-is configured. Physical profiles remain unmeasured and no angle API is enabled.
-Following task: an offline forward-kinematics model checked against the actual
-three-DOF CAD frame transforms, retaining70/85mm links and current bench offsets.
-Do not use the historical25mm skeleton or enable hardware IK before calibration.
+Implement inverse solving for the current CAD-matched contact reference.
+Use the unpowered trial envelope as an explicit provisional search bound.
+Reject unreachable/nonfinite targets and report multiple branches explicitly.
+Verify round trips against forward kinematics, boundaries and branch cases;
+compile the offline library for N16R8. Do not clamp an unreachable target into
+a reachable one or enable foot-position commands on hardware.
+No gait, chassis mirroring or physical-workspace qualification in this task.
+Physical validation remains deferred in PHYSICAL_TESTS.md.
