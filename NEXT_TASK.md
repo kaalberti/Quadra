@@ -1,10 +1,11 @@
-# MEC-162 — integrate experimental forks into the physical leg
+# MEC-163 — side-on fork fit coupon
 
-Build a working three-DOF leg viewer using the experimental MEC-161 fork STLs
-with proper physical rotations and explicit print hands. Verify fork placement
-against intended source geometry and check new webs against J1/carrier parts
-at nominal and representative trial poses. Correct any actual interference
-with conservative geometry while retaining existing interfaces and70/85mm links.
-Update the conditional BOM/mass record only if geometry changes. Keep the
-supported manufacturing kit intact; no powered control, physical-test claims,
-complete2kg claim, detailed structural analysis or following stage.
+Create a small printable coupon extracted from the integrated fork's real
+bearing-seat/retainer and horn interfaces, in the same side-on orientation.
+Retain exact interface geometry and enough connecting material for a sensible
+print. Check closed/connected geometry, bed bounds and accessible holes; provide
+a short print/fit procedure for the K2 Pro that leaves results NOT_PERFORMED.
+This should allow inexpensive print/support/fit feedback before printing the
+full experimental forks. Keep manufacturing and the buying BOM unchanged
+unless a genuinely needed commodity test part is identified. No structural
+optimization, powered control, physical-test claims or following stage.

@@ -1,0 +1,90 @@
+{
+  "correspondence": [
+    {
+      "kind": "upper",
+      "max_bidirectional_vertex_difference_mm": 0.000999999999990564,
+      "relative_volume_difference": 3.5361899674375763e-7
+    },
+    {
+      "kind": "lower",
+      "max_bidirectional_vertex_difference_mm": 0.0010049875621171705,
+      "relative_volume_difference": 6.872555219799562e-7
+    }
+  ],
+  "vertex_tolerance_mm": 0.002,
+  "clearance": [
+    {
+      "angles_deg": [
+        0,
+        44.0486,
+        78.9786
+      ],
+      "intersection_empty": true
+    },
+    {
+      "angles_deg": [
+        -25,
+        20,
+        60
+      ],
+      "intersection_empty": true
+    },
+    {
+      "angles_deg": [
+        30,
+        55,
+        90
+      ],
+      "intersection_empty": true
+    },
+    {
+      "angles_deg": [
+        -25,
+        55,
+        60
+      ],
+      "intersection_empty": true
+    },
+    {
+      "angles_deg": [
+        30,
+        20,
+        90
+      ],
+      "intersection_empty": true
+    }
+  ],
+  "input_sha256": {
+    "fork-leg-parts.scad": "0c30236d080e6fbc998830ebf352387450ddbc7881b6dac1247ae1e53b3479b0",
+    "prototype-fork-leg-probe.scad": "734d035a1e902aa8fdcd067cc734f6b7f6fee6460c1408cfde5c2946f7f9982a",
+    "prototype-fork-placement-probe.scad": "a5a00d972056051e1445bd6aaeded2fb8762dd146729b5625f2cde548da1df81",
+    "prototype-pitch-fork.scad": "6a6724740ac8f6d61c3aed04909fa016c5f2adc136fddda3384f547778806a70",
+    "prototype-upper-leg.scad": "1a20e2e9bb8c5bf02cb28f97db8f7a758852184c697e5828805be2cc8ec7d174",
+    "prototype-lower-leg.scad": "845f8b5879cce11f77aba9a4db3b3cc6d770f38375f7599b2356d1e8e94ca746",
+    "hobby-joint-rear-arm.scad": "c84f5ba566c40cf0a2bd06945cef88e811ea70cb2a37f3d12e84ea850f69b70f",
+    "hobby-joint-common.scad": "0c37c71030c97eced89a45d261b30d71beb2ed9b7bd97c0b4500814e46bb6d94",
+    "prototype-j1-layout.scad": "c1b6a7ec07ff9a8da0c21c00c9fab6e69722c2302463de870d95ad0405ab65b8",
+    "hobby-servo-cradle-left.stl": "ac5b53bf4255dc9ea0f074fa2ab76c94f5bc489bb2cbf75bbb2863d141fa083a",
+    "hobby-servo-cradle-right.stl": "6f4fdfdcf84a73047037ad10b611b01a5fde09e71dccc434be84b0ec7afeea0c",
+    "hobby-joint-support.stl": "2a69d2433a7177b392f5c3536317f8435240a5cacccaa1223c8c2774c709df5d",
+    "hobby-joint-front-spacer.stl": "6ce50f98172cf975ef695d0279b6425bb343addb85ed0c3f8c7757e22c9addc5",
+    "hobby-joint-rear-spacer.stl": "0940367fead7ba1cd2a2bedc5331bf46721e04aee13461c8ac1471a80901157f",
+    "hobby-joint-front-arm.stl": "e9a84fd7e23db59616a1dc602b7937f7cdc0689e66ee06360c11483b96f2cc43",
+    "hobby-joint-rear-arm.stl": "fc7c1224c9a4c7cfeea1f577fd9ac96b21542dda6af4879abf2d2815dad6d719",
+    "hobby-joint-retainer.stl": "985dda709401ca86c1a2b91189786d927a622043ddba337c01215321ef727a38",
+    "prototype-j1-carrier-mirrored.stl": "ceb249a9121fc08e84614ff011e6cd64429f8a7fe1d54cfa08afdda5b0583a57",
+    "prototype-upper-leg-plate.stl": "757310c623965a3b2b6ce26dc9cb9979c6aae50d7c8271a8bf9d31c8b59920c1",
+    "hobby-joint-bridge.stl": "2e4645ce91ea1687ee6ece8a76b96e0e449f6320b8a6b8acbebe64a41cffb9a4",
+    "prototype-upper-leg-saddle-mirrored.stl": "ba88899920087eed5471bc0bbfbec2d44cb89ff01a5bb641f9d9f5af6a1dc870",
+    "prototype-cable-guide.stl": "6fff92555115fcc8b9fdcb8504f409bacf56d00548bda2e30ae177e25019aacb",
+    "prototype-knee-support.stl": "380877341e867cf8c52d94b76a8f48d7760dd8de147d04cf31a17d6289d836f8",
+    "prototype-knee-spacer.stl": "5fed377ad820f57f70389b16ca023230530773128bc9dd15c59f496b9dfddc12",
+    "prototype-lower-leg.stl": "4c7d2d05924903b7805d9ea35454a635f240f4628077f93501ba04c3fdf6494f",
+    "prototype-foot.stl": "36c7bb63f18990cc476c75b63bce6b8f9aedcc68173da12fc2cbc8ee6a306fbc",
+    "prototype-bench-base.stl": "198c6e6f0b32aada1b6b15897293e7d8708dab39dd0ceb1ca81b8fb11a8badff",
+    "prototype-pitch-fork-upper-mirrored.stl": "f9a69734feb1deaaff969b64656181833cd42f2461b447f15f13200fa6ddf57f",
+    "prototype-pitch-fork-lower-mirrored.stl": "384c9ca117100f0d1ca0fb15f42123937c2cad3c47e8ef6c654ec8266abd4966"
+  },
+  "scope": "New forks versus J1 fixed prints/case/bench adapter and moving arms/retainer/carrier at five sampled poses; not a continuous sweep or physical fit approval.",
+  "physical_tests_performed": false
+}

@@ -133,8 +133,12 @@ retained-interface mesh rays. Six sampled local pitch case/support checks clear.
 Local assembly viewer uses proper print rotations; preview visually inspected.
 Conditional BOM removes16 long bolts and16 printed pieces, saving an estimated
 143g; robot screen still2.217kg. Physical fit/strength remain untested.
-Next: integrate forks into the handed3-DOF assembly and check J1/carrier clearance.
-Details: docs/tasks/MEC-161.md. Supported bench manufacturing kit unchanged.
+Experimental full leg: mechanical/prototype-fork-leg-assembly.scad and PNG.
+It uses25 rigidly placed prints, including two physically mirrored forks.
+Fresh source/placed exports agree within0.001005mm; five sampled J1/carrier
+intersections are empty. No fork geometry/BOM correction was needed.
+Next: prepare a small side-on fork fit coupon before a full experimental print.
+Details: docs/tasks/MEC-162.md. Supported bench manufacturing kit unchanged.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

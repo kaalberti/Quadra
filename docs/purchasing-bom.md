@@ -163,3 +163,7 @@ remain unchanged. This saves approximately143g under the existing mass-screen
 assumptions, leaving approximately2.217kg. Whole-leg integration and physical
 print/load tests remain open. Keep the supported bench kit as the first purchase;
 do not buy the conditional complete robot quantities yet. Details: docs/tasks/MEC-161.md.
+MEC-162 integrated the pair into a25-piece experimental bench leg; physical
+placement/source correspondence and five sampled hip/carrier clearance checks
+pass. No additional hardware or quantity change resulted. Physical fit/load
+tests remain open; the supported bench purchase list is unchanged.

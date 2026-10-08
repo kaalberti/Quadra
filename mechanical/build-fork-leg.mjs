@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const root=new URL('./',import.meta.url);
+const old=JSON.parse(fs.readFileSync(new URL('rigid-bench-check.json',root)));
+const hash=file=>createHash('sha256').update(fs.readFileSync(new URL(file,root))).digest('hex').toUpperCase();
+for(const p of old.parts)assert.equal(hash(p.file.replace('mechanical/','')),p.sha256,'stale baseline print');
+const forkCheck=JSON.parse(fs.readFileSync(new URL('prototype-pitch-fork-check.json',root)));
+for(const p of forkCheck.meshes)assert.equal(hash(p.file),p.sha256.toUpperCase(),'stale fork print');
+const I=[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+const mul=(a,b)=>a.map(row=>b[0].map((_,j)=>row.reduce((s,n,k)=>s+n*b[k][j],0)));
+const T=(x,y,z)=>[[1,0,0,x],[0,1,0,y],[0,0,1,z],[0,0,0,1]];
+const R=(a,axis)=>{const c=Math.cos(a*Math.PI/180),s=Math.sin(a*Math.PI/180);return axis==='x'?[[1,0,0,0],[0,c,-s,0],[0,s,c,0],[0,0,0,1]]:[[c,-s,0,0],[s,c,0,0],[0,0,1,0],[0,0,0,1]];};
+const chain=(...m)=>m.reduce(mul,I);
+const P=[[0,-1,0,85],[0,0,1,-18],[1,0,0,0],[0,0,0,1]],S=[[1,0,0,0],[0,-1,0,0],[0,0,1,0],[0,0,0,1]];
+const q2=44.0486,q3=78.9786;
+const forks=[{role:'Upper fork',file:'prototype-pitch-fork-upper-mirrored.stl',matrix:chain(P,R(q2,'z'),S,R(90,'x'),T(0,0,-16))},{role:'Lower fork',file:'prototype-pitch-fork-lower-mirrored.stl',matrix:chain(P,R(q2,'z'),T(-70,0,0),R(-q3,'z'),S,R(90,'x'),T(0,0,-16))}];
+for(const {matrix:m} of forks){const det=m[0][0]*(m[1][1]*m[2][2]-m[1][2]*m[2][1])-m[0][1]*(m[1][0]*m[2][2]-m[1][2]*m[2][0])+m[0][2]*(m[1][0]*m[2][1]-m[1][1]*m[2][0]);assert.ok(Math.abs(det-1)<1e-8);}
+const removed=new Set(['J2 upper plate','J2 rear arm','J2 bridge','Lower plate','Knee rear arm','Knee bridge']);
+const parts=old.placements.filter(p=>!removed.has(p.role));assert.equal(parts.length,23);
+const groups={fixed:[],j1:[],j2:[],upper:[],lower:[]};
+function group(role){if(role==='Bench adapter'||/J1 (cradle|support|[83]mm spacer)/.test(role))return 'fixed';if(role.startsWith('J1 '))return 'j1';if(/J2 (cradle|support|[83]mm spacer)/.test(role))return 'j2';if(['Knee retainer','Foot carrier','Lower fork'].includes(role))return 'lower';return 'upper';}
+for(const p of [...parts,...forks])groups[group(p.role)].push(`multmatrix(${JSON.stringify(p.matrix)}) color("${p.role.includes('fork')?'royalblue':'gold'}") import("${p.file}"); // ${p.role}`);
+for(const p of old.servo_case_placements)groups[p.role==='J1'?'fixed':p.role==='J2'?'j2':'upper'].push(`multmatrix(${JSON.stringify(p.matrix)}) color([.25,.25,.25,.6]) translate([-10,-9.85,3]) cube([40.7,19.7,42.9]);`);
+let cad='// MEC-162 experimental leg; original supported manufacturing kit unchanged.\n';
+for(const [name,lines] of Object.entries(groups))cad+=`module fork_leg_${name}(){\n${lines.join('\n')}\n}\n`;
+cad+=`module upper_delta(q2){translate([85,-18,0]) rotate([0,-(q2-${q2}),0]) translate([-85,18,0]) children();}\n`;
+cad+=`module lower_delta(q3){translate([133.6687800266648,-18,-50.31252180835418]) rotate([0,q3-${q3},0]) translate([-133.6687800266648,18,50.31252180835418]) children();}\n`;
+cad+=`module fork_leg(q1=0,q2=${q2},q3=${q3}){fork_leg_fixed();rotate([q1,0,0]){fork_leg_j1();fork_leg_j2();upper_delta(q2){fork_leg_upper();lower_delta(q3) fork_leg_lower();}}}\n`;
+for(const p of forks)cad+=`module placed_${p.role==='Upper fork'?'upper':'lower'}(){multmatrix(${JSON.stringify(p.matrix)}) import("${p.file}");}\n`;
+cad+=`module only_forks(q1=0,q2=${q2},q3=${q3}){rotate([q1,0,0]) upper_delta(q2){placed_upper();lower_delta(q3) placed_lower();}}\n`;
+fs.writeFileSync(new URL('fork-leg-parts.scad',root),cad);
+fs.writeFileSync(new URL('prototype-fork-leg-assembly.scad',root),'use <fork-leg-parts.scad>\nfork_leg();\n');
+fs.writeFileSync(new URL('fork-leg-placement.json',root),JSON.stringify({forks,placements:[...parts,...forks],servo_case_placements:old.servo_case_placements,printed_pieces:25,removed_roles:[...removed],physical_fit_verified:false},null,2)+'\n');
+console.log('25 printed parts; two mirrored forks placed with proper rotations.');
