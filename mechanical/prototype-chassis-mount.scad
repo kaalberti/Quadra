@@ -31,7 +31,8 @@ module chassis_mount_world() {
 module chassis_mount_print(hand=1) {
     // Mount plate flat on the bed; deck flange becomes a vertical wall.
     // The right hand reflects world y; two of each serve the four corners.
-    multmatrix([[0,hand,0,0],[0,0,1,0],[-1,0,0,-3],[0,0,0,1]]) chassis_mount_world();
+    // For the original hand this is a proper rotation (determinant +1).
+    multmatrix([[0,hand,0,0],[0,0,-1,0],[-1,0,0,-3],[0,0,0,1]]) chassis_mount_world();
 }
 if(part=="left") chassis_mount_print(1);
 else if(part=="right") chassis_mount_print(-1);

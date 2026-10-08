@@ -1,0 +1,4021 @@
+{
+  "revision": "four-leg-working-1",
+  "scope": "Unpowered nominal assembly study, not manufacturing release",
+  "physical_fit_verified": false,
+  "parts": [
+    {
+      "file": "mechanical/hobby-servo-cradle-left.stl",
+      "quantity": 8,
+      "sha256": "AC5B53BF4255DC9EA0F074FA2AB76C94F5BC489BB2CBF75BBB2863D141FA083A"
+    },
+    {
+      "file": "mechanical/hobby-servo-cradle-right.stl",
+      "quantity": 8,
+      "sha256": "6F4FDFDCF84A73047037AD10B611B01A5FDE09E71DCCC434BE84B0EC7AFEEA0C"
+    },
+    {
+      "file": "mechanical/hobby-joint-support.stl",
+      "quantity": 8,
+      "sha256": "2A69D2433A7177B392F5C3536317F8435240A5CACCCAA1223C8C2774C709DF5D"
+    },
+    {
+      "file": "mechanical/hobby-joint-front-spacer.stl",
+      "quantity": 8,
+      "sha256": "6CE50F98172CF975EF695D0279B6425BB343ADDB85ED0C3F8C7757E22C9ADDC5"
+    },
+    {
+      "file": "mechanical/hobby-joint-rear-spacer.stl",
+      "quantity": 12,
+      "sha256": "0940367FEAD7BA1CD2A2BEDC5331BF46721E04AEE13461C8AC1471A80901157F"
+    },
+    {
+      "file": "mechanical/hobby-joint-front-arm.stl",
+      "quantity": 4,
+      "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43"
+    },
+    {
+      "file": "mechanical/hobby-joint-rear-arm.stl",
+      "quantity": 12,
+      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719"
+    },
+    {
+      "file": "mechanical/hobby-joint-retainer.stl",
+      "quantity": 12,
+      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38"
+    },
+    {
+      "file": "mechanical/prototype-j1-carrier-mirrored.stl",
+      "quantity": 2,
+      "sha256": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57"
+    },
+    {
+      "file": "mechanical/prototype-upper-leg-plate.stl",
+      "quantity": 4,
+      "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
+    },
+    {
+      "file": "mechanical/hobby-joint-bridge.stl",
+      "quantity": 8,
+      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4"
+    },
+    {
+      "file": "mechanical/prototype-upper-leg-saddle-mirrored.stl",
+      "quantity": 2,
+      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
+    },
+    {
+      "file": "mechanical/prototype-cable-guide.stl",
+      "quantity": 4,
+      "sha256": "6FFF92555115FCC8B9FDCB8504F409BACF56D00548BDA2E30AE177E25019AACB"
+    },
+    {
+      "file": "mechanical/prototype-knee-support.stl",
+      "quantity": 4,
+      "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8"
+    },
+    {
+      "file": "mechanical/prototype-knee-spacer.stl",
+      "quantity": 4,
+      "sha256": "5FED377AD820F57F70389B16CA023230530773128BC9DD15C59F496B9DFDDC12"
+    },
+    {
+      "file": "mechanical/prototype-lower-leg.stl",
+      "quantity": 4,
+      "sha256": "4C7D2D05924903B7805D9EA35454A635F240F4628077F93501BA04C3FDF6494F"
+    },
+    {
+      "file": "mechanical/prototype-foot.stl",
+      "quantity": 4,
+      "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
+    },
+    {
+      "file": "mechanical/prototype-chassis-mount-left.stl",
+      "quantity": 2,
+      "sha256": "F9112C24B72B818507C4D00ECACEA200E37B7065D4583A4DDAF06A9CE306CB5B"
+    },
+    {
+      "file": "mechanical/prototype-j1-carrier.stl",
+      "quantity": 2,
+      "sha256": "4CCE5EACBA8D3852723F86C2AE33752C6BD7561C95A3C74002CA3D8477576452"
+    },
+    {
+      "file": "mechanical/prototype-upper-leg-saddle.stl",
+      "quantity": 2,
+      "sha256": "9A72E19587F4ADD72F9139F8529E467D3E92E2DF40C08C612247824B281213A9"
+    },
+    {
+      "file": "mechanical/prototype-chassis-mount-right.stl",
+      "quantity": 2,
+      "sha256": "C1A7A95B389CD557CF01CFB415F720FAA06B226B6069AB40A835A6E75509F5EA"
+    },
+    {
+      "file": "mechanical/prototype-chassis-deck.stl",
+      "quantity": 1,
+      "sha256": "5010DFA4EBA8014AD5DCFEFA76C5EC89E32F43358ED8F9D8DAC028527C1D83C8"
+    }
+  ],
+  "placements": [
+    {
+      "role": "rear-right J1 cradle left",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -65.35
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 cradle right",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -65.35
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -65.35
+        ],
+        [
+          0,
+          -1,
+          -1.2246467991473532e-16,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -57
+        ],
+        [
+          -1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -49
+        ],
+        [
+          -1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 front arm",
+      "file": "hobby-joint-front-arm.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -125
+        ],
+        [
+          -6.123233995736766e-17,
+          1,
+          0,
+          -55
+        ],
+        [
+          1,
+          6.123233995736766e-17,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -58.8
+        ],
+        [
+          -6.123233995736766e-17,
+          -1,
+          -1.2246467991473532e-16,
+          -55
+        ],
+        [
+          1,
+          -6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -51.8
+        ],
+        [
+          -6.123233995736766e-17,
+          -1,
+          -1.2246467991473532e-16,
+          -55
+        ],
+        [
+          1,
+          -6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J1 carrier",
+      "file": "prototype-j1-carrier-mirrored.stl",
+      "matrix": [
+        [
+          -1,
+          0,
+          0,
+          -75
+        ],
+        [
+          0,
+          0,
+          -1,
+          -27
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 cradle left",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 cradle right",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          -1.2246467991473532e-16,
+          -160
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -19
+        ],
+        [
+          -1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -11
+        ],
+        [
+          -1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 upper plate",
+      "file": "prototype-upper-leg-plate.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          -92
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          -0.6952682860952113,
+          -0.7187503115479168,
+          8.802152684233192e-17,
+          -160
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          1,
+          -20.799999999999997
+        ],
+        [
+          -0.7187503115479168,
+          0.6952682860952113,
+          -8.514580811151667e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -119.67443940647775
+        ],
+        [
+          0,
+          0,
+          -1,
+          -20.799999999999997
+        ],
+        [
+          -0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          161.68751806977917
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          -8.802152684233191e-17,
+          -160
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -13.799999999999997
+        ],
+        [
+          -0.7187503115479167,
+          0.6952682860952114,
+          8.514580811151668e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Knee saddle",
+      "file": "prototype-upper-leg-saddle-mirrored.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -65
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Cable guide",
+      "file": "prototype-cable-guide.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          -177.03407300933267
+        ],
+        [
+          0,
+          0,
+          -1,
+          -92
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          0,
+          102.39061736707603
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Knee support",
+      "file": "prototype-knee-support.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -29
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Knee 10mm spacer",
+      "file": "prototype-knee-spacer.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -19
+        ],
+        [
+          -0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Knee 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -11
+        ],
+        [
+          -0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Lower plate",
+      "file": "prototype-lower-leg.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          0.8198521885840168,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          -92
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Knee rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          0.8198521885840168,
+          -1.0040293585233684e-16,
+          -208.6687800266648
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          1,
+          -20.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Knee bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          0.8198521885840168,
+          0,
+          -175.45941694677225
+        ],
+        [
+          0,
+          0,
+          -1,
+          -20.799999999999997
+        ],
+        [
+          -0.8198521885840168,
+          0.5725752255153884,
+          0,
+          22.136051253772848
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Knee retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          -0.8198521885840168,
+          -1.0040293585233684e-16,
+          -208.6687800266648
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -13.799999999999997
+        ],
+        [
+          -0.8198521885840168,
+          -0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right Foot carrier",
+      "file": "prototype-foot.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          -0.8198521885840168,
+          0,
+          -165.15306288749528
+        ],
+        [
+          0,
+          0,
+          -1,
+          -84
+        ],
+        [
+          0.8198521885840168,
+          -0.5725752255153884,
+          0,
+          7.378711859260562
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right chassis mount",
+      "file": "prototype-chassis-mount-left.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          -72
+        ],
+        [
+          -1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 cradle left",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -75
+        ],
+        [
+          1,
+          0,
+          0,
+          65.35
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 cradle right",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -75
+        ],
+        [
+          1,
+          0,
+          0,
+          65.35
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          1.2246467991473532e-16,
+          1,
+          -75
+        ],
+        [
+          1,
+          0,
+          0,
+          65.35
+        ],
+        [
+          0,
+          1,
+          -1.2246467991473532e-16,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -57
+        ],
+        [
+          -1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -49
+        ],
+        [
+          -1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 front arm",
+      "file": "hobby-joint-front-arm.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          -130
+        ],
+        [
+          6.123233995736766e-17,
+          -1,
+          0,
+          55
+        ],
+        [
+          1,
+          6.123233995736766e-17,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0,
+          1.2246467991473532e-16,
+          1,
+          -58.8
+        ],
+        [
+          6.123233995736766e-17,
+          -1,
+          1.2246467991473532e-16,
+          55
+        ],
+        [
+          1,
+          6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -51.8
+        ],
+        [
+          -6.123233995736766e-17,
+          1,
+          1.2246467991473532e-16,
+          55
+        ],
+        [
+          -1,
+          -6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1 carrier",
+      "file": "prototype-j1-carrier.stl",
+      "matrix": [
+        [
+          -1,
+          0,
+          0,
+          -75
+        ],
+        [
+          0,
+          0,
+          1,
+          27
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 cradle left",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 cradle right",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          -1.2246467991473532e-16,
+          -160
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          19
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          11
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 upper plate",
+      "file": "prototype-upper-leg-plate.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          87
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          -0.6952682860952113,
+          0.7187503115479168,
+          8.802152684233192e-17,
+          -160
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          20.799999999999997
+        ],
+        [
+          -0.7187503115479168,
+          -0.6952682860952113,
+          -8.514580811151667e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -119.67443940647775
+        ],
+        [
+          0,
+          0,
+          1,
+          20.799999999999997
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          161.68751806977917
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          -0.7187503115479167,
+          -8.802152684233191e-17,
+          -160
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          13.799999999999997
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          8.514580811151668e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Knee saddle",
+      "file": "prototype-upper-leg-saddle.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          65
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Cable guide",
+      "file": "prototype-cable-guide.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -177.03407300933267
+        ],
+        [
+          0,
+          0,
+          1,
+          92
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          102.39061736707603
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Knee support",
+      "file": "prototype-knee-support.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          29
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Knee 10mm spacer",
+      "file": "prototype-knee-spacer.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          19
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Knee 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          11
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Lower plate",
+      "file": "prototype-lower-leg.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          0.8198521885840168,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          87
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Knee rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          -0.8198521885840168,
+          -1.0040293585233684e-16,
+          -208.6687800266648
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          20.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          -0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Knee bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          0.8198521885840168,
+          0,
+          -175.45941694677225
+        ],
+        [
+          0,
+          0,
+          1,
+          20.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          22.136051253772848
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Knee retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          -0.8198521885840168,
+          -1.0040293585233684e-16,
+          -208.6687800266648
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          13.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          -0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left Foot carrier",
+      "file": "prototype-foot.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          0.8198521885840168,
+          0,
+          -165.15306288749528
+        ],
+        [
+          0,
+          0,
+          1,
+          84
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          7.378711859260562
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left chassis mount",
+      "file": "prototype-chassis-mount-right.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          -72
+        ],
+        [
+          -1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 cradle left",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -65.35
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 cradle right",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -65.35
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          -1.2246467991473532e-16,
+          -1,
+          75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -65.35
+        ],
+        [
+          0,
+          1,
+          -1.2246467991473532e-16,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          57
+        ],
+        [
+          1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          49
+        ],
+        [
+          1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 front arm",
+      "file": "hobby-joint-front-arm.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          130
+        ],
+        [
+          -6.123233995736766e-17,
+          1,
+          0,
+          -55
+        ],
+        [
+          1,
+          6.123233995736766e-17,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0,
+          -1.2246467991473532e-16,
+          -1,
+          58.8
+        ],
+        [
+          -6.123233995736766e-17,
+          1,
+          -1.2246467991473532e-16,
+          -55
+        ],
+        [
+          1,
+          6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          51.8
+        ],
+        [
+          6.123233995736766e-17,
+          -1,
+          -1.2246467991473532e-16,
+          -55
+        ],
+        [
+          -1,
+          -6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1 carrier",
+      "file": "prototype-j1-carrier.stl",
+      "matrix": [
+        [
+          1,
+          0,
+          0,
+          75
+        ],
+        [
+          0,
+          0,
+          -1,
+          -27
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 cradle left",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 cradle right",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          1.2246467991473532e-16,
+          160
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -19
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -11
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 upper plate",
+      "file": "prototype-upper-leg-plate.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -87
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0.6952682860952113,
+          -0.7187503115479168,
+          -8.802152684233192e-17,
+          160
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -20.799999999999997
+        ],
+        [
+          -0.7187503115479168,
+          -0.6952682860952113,
+          -8.514580811151667e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          119.67443940647775
+        ],
+        [
+          0,
+          0,
+          -1,
+          -20.799999999999997
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          161.68751806977917
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          8.802152684233191e-17,
+          160
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -13.799999999999997
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          8.514580811151668e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Knee saddle",
+      "file": "prototype-upper-leg-saddle.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -65
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Cable guide",
+      "file": "prototype-cable-guide.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          177.03407300933267
+        ],
+        [
+          0,
+          0,
+          -1,
+          -92
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          102.39061736707603
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Knee support",
+      "file": "prototype-knee-support.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -29
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Knee 10mm spacer",
+      "file": "prototype-knee-spacer.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -19
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Knee 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -11
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Lower plate",
+      "file": "prototype-lower-leg.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          -0.8198521885840168,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -87
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Knee rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          0.8198521885840168,
+          1.0040293585233684e-16,
+          208.6687800266648
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -20.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          -0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Knee bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          -0.8198521885840168,
+          0,
+          175.45941694677225
+        ],
+        [
+          0,
+          0,
+          -1,
+          -20.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          22.136051253772848
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Knee retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          0.8198521885840168,
+          1.0040293585233684e-16,
+          208.6687800266648
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          1,
+          -13.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          -0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right Foot carrier",
+      "file": "prototype-foot.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          -0.8198521885840168,
+          0,
+          165.15306288749528
+        ],
+        [
+          0,
+          0,
+          -1,
+          -84
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          7.378711859260562
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right chassis mount",
+      "file": "prototype-chassis-mount-right.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          72
+        ],
+        [
+          1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 cradle left",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          75
+        ],
+        [
+          1,
+          0,
+          0,
+          65.35
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 cradle right",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          75
+        ],
+        [
+          1,
+          0,
+          0,
+          65.35
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          75
+        ],
+        [
+          1,
+          0,
+          0,
+          65.35
+        ],
+        [
+          0,
+          -1,
+          -1.2246467991473532e-16,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          57
+        ],
+        [
+          1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          49
+        ],
+        [
+          1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 front arm",
+      "file": "hobby-joint-front-arm.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          125
+        ],
+        [
+          6.123233995736766e-17,
+          -1,
+          0,
+          55
+        ],
+        [
+          1,
+          6.123233995736766e-17,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          58.8
+        ],
+        [
+          6.123233995736766e-17,
+          1,
+          1.2246467991473532e-16,
+          55
+        ],
+        [
+          1,
+          -6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          51.8
+        ],
+        [
+          6.123233995736766e-17,
+          1,
+          1.2246467991473532e-16,
+          55
+        ],
+        [
+          1,
+          -6.123233995736766e-17,
+          -7.498798913309288e-33,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1 carrier",
+      "file": "prototype-j1-carrier-mirrored.stl",
+      "matrix": [
+        [
+          1,
+          0,
+          0,
+          75
+        ],
+        [
+          0,
+          0,
+          1,
+          27
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 cradle left",
+      "file": "hobby-servo-cradle-right.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 cradle right",
+      "file": "hobby-servo-cradle-left.stl",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 support",
+      "file": "hobby-joint-support.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          1.2246467991473532e-16,
+          160
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          -1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          130.35
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 8mm spacer",
+      "file": "hobby-joint-front-spacer.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          1,
+          19
+        ],
+        [
+          -1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          1,
+          11
+        ],
+        [
+          -1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 upper plate",
+      "file": "prototype-upper-leg-plate.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          92
+        ],
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0.6952682860952113,
+          0.7187503115479168,
+          -8.802152684233192e-17,
+          160
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          -1,
+          20.799999999999997
+        ],
+        [
+          -0.7187503115479168,
+          0.6952682860952113,
+          -8.514580811151667e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          119.67443940647775
+        ],
+        [
+          0,
+          0,
+          1,
+          20.799999999999997
+        ],
+        [
+          -0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          161.68751806977917
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2 retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          0.7187503115479167,
+          8.802152684233191e-17,
+          160
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          13.799999999999997
+        ],
+        [
+          -0.7187503115479167,
+          0.6952682860952114,
+          8.514580811151668e-17,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Knee saddle",
+      "file": "prototype-upper-leg-saddle-mirrored.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          1,
+          65
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Cable guide",
+      "file": "prototype-cable-guide.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          177.03407300933267
+        ],
+        [
+          0,
+          0,
+          1,
+          92
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          0,
+          102.39061736707603
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Knee support",
+      "file": "prototype-knee-support.stl",
+      "matrix": [
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          29
+        ],
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Knee 10mm spacer",
+      "file": "prototype-knee-spacer.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          19
+        ],
+        [
+          -0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Knee 3mm spacer",
+      "file": "hobby-joint-rear-spacer.stl",
+      "matrix": [
+        [
+          0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          11
+        ],
+        [
+          -0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Lower plate",
+      "file": "prototype-lower-leg.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          -0.8198521885840168,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          92
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Knee rear arm",
+      "file": "hobby-joint-rear-arm.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          -0.8198521885840168,
+          1.0040293585233684e-16,
+          208.6687800266648
+        ],
+        [
+          0,
+          -1.2246467991473532e-16,
+          -1,
+          20.799999999999997
+        ],
+        [
+          0.8198521885840168,
+          0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Knee bridge",
+      "file": "hobby-joint-bridge.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          -0.8198521885840168,
+          0,
+          175.45941694677225
+        ],
+        [
+          0,
+          0,
+          1,
+          20.799999999999997
+        ],
+        [
+          -0.8198521885840168,
+          0.5725752255153884,
+          0,
+          22.136051253772848
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Knee retainer",
+      "file": "hobby-joint-retainer.stl",
+      "matrix": [
+        [
+          -0.5725752255153884,
+          0.8198521885840168,
+          1.0040293585233684e-16,
+          208.6687800266648
+        ],
+        [
+          0,
+          1.2246467991473532e-16,
+          -1,
+          13.799999999999997
+        ],
+        [
+          -0.8198521885840168,
+          -0.5725752255153884,
+          -7.012024171984944e-17,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left Foot carrier",
+      "file": "prototype-foot.stl",
+      "matrix": [
+        [
+          0.5725752255153884,
+          0.8198521885840168,
+          0,
+          165.15306288749528
+        ],
+        [
+          0,
+          0,
+          1,
+          84
+        ],
+        [
+          0.8198521885840168,
+          -0.5725752255153884,
+          0,
+          7.378711859260562
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left chassis mount",
+      "file": "prototype-chassis-mount-left.stl",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          72
+        ],
+        [
+          1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "Deck",
+      "file": "prototype-chassis-deck.stl",
+      "matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          155
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "servo_case_placements": [
+    {
+      "role": "rear-right J1",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J2",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-right J3",
+      "matrix": [
+        [
+          0.7187503115479167,
+          0.6952682860952114,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J1",
+      "matrix": [
+        [
+          0,
+          0,
+          -1,
+          -75
+        ],
+        [
+          1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J2",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          -160
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "rear-left J3",
+      "matrix": [
+        [
+          0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          -208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J1",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          75
+        ],
+        [
+          -1,
+          0,
+          0,
+          -55
+        ],
+        [
+          0,
+          -1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J2",
+      "matrix": [
+        [
+          0,
+          -1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-right J3",
+      "matrix": [
+        [
+          -0.7187503115479167,
+          0.6952682860952114,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          -1,
+          -37
+        ],
+        [
+          -0.6952682860952114,
+          -0.7187503115479167,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J1",
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          75
+        ],
+        [
+          1,
+          0,
+          0,
+          55
+        ],
+        [
+          0,
+          1,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J2",
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          160
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          1,
+          0,
+          0,
+          120
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "role": "front-left J3",
+      "matrix": [
+        [
+          -0.7187503115479167,
+          -0.6952682860952114,
+          0,
+          208.6687800266648
+        ],
+        [
+          0,
+          0,
+          1,
+          37
+        ],
+        [
+          -0.6952682860952114,
+          0.7187503115479167,
+          0,
+          69.68747819164582
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "mirrored_variants": [
+    {
+      "source": "prototype-upper-leg-saddle.stl",
+      "variant": "prototype-upper-leg-saddle-mirrored.stl"
+    },
+    {
+      "source": "prototype-j1-carrier.stl",
+      "variant": "prototype-j1-carrier-mirrored.stl"
+    }
+  ],
+  "checks": {
+    "proper_part_poses": 117,
+    "proper_servo_poses": 12,
+    "mesh_coordinate_quantization_mm": 0.001,
+    "axis_aligned_reuse_orientations": 24
+  },
+  "new_mesh_checks": [
+    {
+      "file": "prototype-upper-leg-saddle-mirrored.stl",
+      "triangles": 1256,
+      "closed": true,
+      "connected": true,
+      "on_bed": true,
+      "size_mm": [
+        40,
+        60.7,
+        22
+      ]
+    },
+    {
+      "file": "prototype-j1-carrier-mirrored.stl",
+      "triangles": 2998,
+      "closed": true,
+      "connected": true,
+      "on_bed": true,
+      "size_mm": [
+        129.2,
+        101.35,
+        41
+      ]
+    }
+  ]
+}

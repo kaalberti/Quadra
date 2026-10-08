@@ -52,7 +52,7 @@ for(const part of ['mount-left','mount-right','deck']) {
       holes.push({centre:[f*(75+x),s*(55+y),-10],axis:2});
   } else {
     const hand=part==='mount-left'?1:-1;
-    for(const y of [-3.65,24.35]) for(const z of [-17.25,17.25]) holes.push({centre:[hand*y,z,-10],axis:2});
+    for(const y of [-3.65,24.35]) for(const z of [-17.25,17.25]) holes.push({centre:[hand*y,-z,-10],axis:2});
     for(const x of [-28,-16]) for(const y of [-25,-10]) holes.push({centre:[hand*y,-40,-x-3],axis:1});
     holes.push({centre:[0,0,-10],axis:2}); // Pivot access, not a fixing hole.
   }

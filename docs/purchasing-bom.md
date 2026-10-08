@@ -1,4 +1,4 @@
-# Purchasing BOM — Rev A, updated MEC-144–153 (2026-10-08)
+# Purchasing BOM — Rev A working plan (2026-10-09)
 
 The bench adapter is corrected in three-dof-bench-2; purchased quantities are unchanged.
 
@@ -125,3 +125,26 @@ or standoffs for the robot. Actual mirrored leg parts remain under review.
 These quantities are additional deck fixings, not replacements for the bench
 leg BOM. Use existing packs where possible; retail price remains unverified,
 with no change to the approved overall budget. Guide: docs/prototype-chassis-attachment.md.
+
+## Four-leg working hardware totals — MEC-158, wait for physical fit
+
+These are complete totals, including the16 deck fixings above; do not add them
+again. Bench adapters, board anchors and standoffs are excluded. Printed
+quantities/handed assignments: docs/four-leg-working-assembly.md and
+mechanical/four-leg-working-print-manifest.json. No new actuator or board selection.
+
+| Purchased item | Complete working robot quantity |
+| --- | ---: |
+| MG996R positional servos with horns/original centre screws | 12 provisional |
+| 624 bearings | 12 |
+| M3 x40 / x20 / x16 / x12 / x70 / x90 bolts | 16 /48 /52 /16 /8 /16 |
+| M3 nuts | 156;172 if bridge rods replace bolts |
+| M3 ordinary washers /12mm backing washers | 308 /4 |
+| M4 x35 pivots / locknuts / washers | 12 each |
+| M2 x10 horn bolts / nuts / washers | Up to48 /48 /96; actual horn sets count |
+| Rubber/EVA foot pads | 4,18 x8 x1mm assumed |
+| Small cable ties | 16 |
+
+Verify one servo and printed leg first. Battery, full-robot regulator/current
+capacity, board attachments and measured mass are still unresolved. Existing
+controller boards need no replacements. Cost targets remain unchanged.

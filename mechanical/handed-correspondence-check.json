@@ -1,0 +1,43 @@
+{
+  "method": "Fresh source CAD exports vs physically placed meshes; no coplanar Boolean operations",
+  "vertex_tolerance_mm": 0.002,
+  "tolerance_note": "Allows separate ASCII STL coordinate rounding; not manufacturing tolerance.",
+  "results": [
+    {
+      "part": "carrier",
+      "source_points": 1479,
+      "placed_points": 1479,
+      "max_bidirectional_vertex_difference_mm": 0.00010000000000331966,
+      "relative_volume_difference": 3.4129163078162284e-8,
+      "source_volume_mm3": 37139.473084871526,
+      "placed_volume_mm3": 37139.47435241066
+    },
+    {
+      "part": "saddle",
+      "source_points": 616,
+      "placed_points": 616,
+      "max_bidirectional_vertex_difference_mm": 0.0010049875621171705,
+      "relative_volume_difference": 3.9620532526559365e-7,
+      "source_volume_mm3": 6125.864141580025,
+      "placed_volume_mm3": 6125.86656868002
+    }
+  ],
+  "physical_fit_verified": false,
+  "dependency_sha256": {
+    "prototype-handed-correspondence-probe.scad": "DAE1A89236E998463ED3E1CAE6707DFA6B836071EAFC0C0B5968ED8B453184E9",
+    "working-handed-probe-data.scad": "99B092BDDEDFE1A443C7F1230012E3D5AE1963073EE7F4650650CE92C5663889",
+    "prototype-j1-layout.scad": "C1B6A7EC07FF9A8DA0C21C00C9FAB6E69722C2302463DE870D95AD0405AB65B8",
+    "prototype-j1-carrier.scad": "86554A84D6D4C4BE1ACB8ABE56D7EB0DA83C1D722E6BAB39BDF4D84255F89092",
+    "prototype-upper-leg.scad": "1A20E2E9BB8C5BF02CB28F97DB8F7A758852184C697E5828805BE2CC8EC7D174",
+    "hobby-joint-common.scad": "0C37C71030C97ECED89A45D261B30D71BEB2ED9B7BD97C0B4500814E46BB6D94",
+    "hobby-joint-support.scad": "966B2759AE84100DFA8612B511E259FAF3A7AD7950E220C47E075889E127E3F6",
+    "prototype-j1-carrier-mirrored.stl": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57",
+    "prototype-upper-leg-saddle-mirrored.stl": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
+  },
+  "export_sha256": {
+    "handed-carrier-source-probe.stl": "6AD23BC38C4D6A76833078A70D7BE8832D9440225DED0E581E2F060C7D843D51",
+    "handed-carrier-placed-probe.stl": "7CE1985D0AEC35E6A55EF98B052F4077EDAF23A3849F36DA4EA02222AB720DA9",
+    "handed-saddle-source-probe.stl": "53148A382BDC28E9CA0EAF67E81B4232BA0BF40497B81C5DD1073602816E2A3E",
+    "handed-saddle-placed-probe.stl": "9927F5EC7D9D61D94107F65CF6117D9638C48639B955161FB95A120403616F74"
+  }
+}

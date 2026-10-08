@@ -35,6 +35,8 @@ At2kg/three support legs, J1 neutral screen0.329Nm vs0.922Nm published stall;
 Corrected MFG-002 / three-dof-bench-2 is under manufacturing/.
 Adapter rib clearance, fixing/pivot access and closed connected print checks pass;
 the old bench-1 adapter had a CAD clash and is archived. Physical fit is untested.
+MEC-158 found reflected carrier/saddle placement in the bench view: correct their
+handed print selection before printing those two parts. Bench checkpoint unchanged.
 18 unique assembly STLs/29 pieces, four coupons, CAD snapshot, BOM, assembly
 instructions/image, print list, layout, validation and hashes:54 verified files.
 The prior two-DOF pack is archived intact at ARCHIVE/MFG-001-two-dof-pack/.
@@ -104,16 +106,23 @@ Four-leg placement study: mechanical/prototype-four-leg-study.scad and preview.
 Nominal reference footprint320 x174mm is symmetric; case/deck and inter-leg
 case intersections are empty. Raised deck and board blocks are placeholders;
 complete nominal printed-leg/deck intersection is also empty (CGAL).
-Working chassis mount/deck CAD and STLs are now available; mirrored leg print
-variants remain undesigned. Two mounts per hand;16 added M3 x16 deck fixings.
+Working chassis mount/deck CAD and STLs are available; mount print orientation
+now uses a proper rotation for the original hand. Two mounts per hand;
+16 added M3 x16 deck fixings. Carrier and saddle each have one new mirrored STL.
 Mount ribs have clearance pockets; closed connected/bed/hole checks pass.
 Corrected full nominal mount/leg intersection is empty, excluding intended contact.
-Original geometry serves one diagonal; the other needs mirrored assembly review.
+Working assembly: mechanical/prototype-four-leg-working-assembly.scad, with
+22 unique STLs/117 pieces and12 rigid servo envelopes. Every printed-piece pose
+is a proper rotation and matches intended meshes at0.001mm coordinate resolution.
+Front-left/rear-right use mirrored carrier/saddle; other diagonal uses originals.
+Closed connected/bed checks pass for the new mirrors; actual servo ears/leads unknown.
+Independent fresh source/placed exports agree within0.001005mm (STL rounding).
 Rear local pitch directions differ from global forward; no powered mapping added.
 Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
 Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
-Next: resolve common and mirrored leg prints for the four-leg assembly, including
-actual rigid servo orientation assumptions. No powered operation.
+Guide/counts: docs/four-leg-working-assembly.md and mechanical/four-leg-working-print-manifest.json.
+Next: correct the bench carrier/saddle handed-print selection and its build
+checkpoint, keeping nominal geometry unchanged. No powered operation.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

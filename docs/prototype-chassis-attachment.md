@@ -17,7 +17,9 @@ fit and strength remain untested.
 The left print serves front-left and rear-right; rotate180deg about body z
 for the rear-right. The right print serves front-right and rear-left, again
 rotating180deg for the rear-left. Handed leg components remain a separate
-unreleased requirement; these brackets alone do not make a four-leg build kit.
+working plan in docs/four-leg-working-assembly.md; these brackets alone do not
+make a four-leg build kit. MEC-158 corrects the mount print-to-world rotation;
+use current left/right STLs, which retain dimensions and fixing patterns.
 
 Replace the bench adapter with the bracket's7mm mounting plate. Its contact
 face sits at bench-frame x=-3mm, against the existing passive support base.
@@ -64,5 +66,5 @@ and PCA9685. Their attachment holes are not guessed. No battery mount, gait,
 powered standing or manufacturing release is included.
 
 The same rib check exposed127.65mm3 of interference with the older bench
-adapter. That release needs a separate adapter correction before printing
-its adapter. The fit coupons and unaffected leg parts remain useful.
+adapter, corrected in the bench-2 checkpoint by MEC-157. Its separate carrier/
+saddle handed-print selection still needs correction. Fit coupons remain useful.
