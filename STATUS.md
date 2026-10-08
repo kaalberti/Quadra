@@ -19,11 +19,10 @@ Physical assembly, fit and powered operation remain untested.
   retained as reference and does not describe this physical prototype.
 
 ## Validation and limits
-The carrier compiles as a simple solid and passes closed/connected/bed checks.
-Its solid PETG mass estimate is47.2g; actual slicing and measured mass supersede it.
+The integrated hip passes closed/connected/bed and30 interface-path checks.
+Its solid PETG CAD mass is73.6g; actual slicing and measured mass supersede it.
 The first support-rib clash was corrected with relief pockets.
-Six sampled checks have no solid intersections: J1 fixed-case probes -25/0/+30deg
-and carrier/J2 probes20/44.0486/55deg, with remaining joints at nominal angles.
+Three sampled integrated-leg poses have no modeled hip/fixed-case intersections.
 Carrier mating-face contact is permitted; full swept ranges and actual cables,
 fasteners, horns, board anchoring and servo limits remain unverified.
 Unpowered geometric trials: J1 -25..30deg, J2 20..55deg, J3 60..90deg; stop if binding.
@@ -42,7 +41,7 @@ bytes including its manifest are verified unchanged. Earlier packs stay archived
 Run docs/check-manufacturing-pack.ps1 for the active checkpoint.
 
 ## Purchases and immediate next objective
-Maintained buying BOM: docs/purchasing-bom.md; role data: mechanical/three-dof-hardware.json.
+Maintained buying BOM: docs/purchasing-bom.md; active roles: integrated-bench-hardware.json.
 Integrated prototype needs3 servos/3 bearings,27 M3 bolts/nuts and54 washers
 including one12mm backing washer. Bench-only anchors/standoffs are separate.
 MG996R is assumed for all weight-bearing joints; variant/prices remain provisional.
@@ -121,8 +120,6 @@ mass). Current bench-kit replication is not a demonstrated2kg robot design.
 MEC-161 fork prototype: four handed STLs pass closed/connected/bed checks and
 retained-interface mesh rays. Six sampled local pitch case/support checks clear.
 Local assembly viewer uses proper print rotations; preview visually inspected.
-Conditional BOM removes16 long bolts and16 printed pieces, saving an estimated
-143g; robot screen still2.217kg. Physical fit/strength remain untested.
 Experimental full leg: mechanical/prototype-fork-leg-assembly.scad and PNG.
 It uses25 rigidly placed prints, including two physically mirrored forks.
 Fresh source/placed exports agree within0.001005mm; five sampled J1/carrier
@@ -144,5 +141,9 @@ Integrated four-leg plan:21 unique STLs/93 pieces;12 new placements agree with
 source within0.000709mm and all60 nominal chassis pairs pass. Variant mass
 record remains NOT_MEASURED; screen2.178kg exceeds the unchanged2kg limit.
 Viewer: mechanical/prototype-integrated-four-leg-assembly.scad.
-Next: physical side-on coupon print/fit, followed by unpowered integrated-leg assembly.
+Physical next: side-on coupon/fit and unpowered integrated-leg assembly remain pending.
+Offline deck option: prototype-electronics-deck.scad adds eight strap slots while
+retaining16 chassis fixings;169 mesh rays and minimum6.75mm ligament pass.
+Guide:docs/electronics-deck.md; four optional ties, actual board mounts unverified.
+Next offline task:12-servo harness/channel plan; no powered four-leg control.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.

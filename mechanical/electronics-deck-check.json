@@ -1,0 +1,156 @@
+{
+  "closed": true,
+  "connected": true,
+  "on_bed": true,
+  "size_mm": [
+    180,
+    110,
+    4
+  ],
+  "slots": [
+    {
+      "centre_mm": [
+        -60,
+        -20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    },
+    {
+      "centre_mm": [
+        -60,
+        20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    },
+    {
+      "centre_mm": [
+        -15,
+        -20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    },
+    {
+      "centre_mm": [
+        -15,
+        20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    },
+    {
+      "centre_mm": [
+        15,
+        -20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    },
+    {
+      "centre_mm": [
+        15,
+        20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    },
+    {
+      "centre_mm": [
+        60,
+        -20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    },
+    {
+      "centre_mm": [
+        60,
+        20
+      ],
+      "length_mm": 8,
+      "width_mm": 3
+    }
+  ],
+  "retained_chassis_holes": [
+    [
+      -47,
+      -30
+    ],
+    [
+      -47,
+      -45
+    ],
+    [
+      -59,
+      -30
+    ],
+    [
+      -59,
+      -45
+    ],
+    [
+      -47,
+      30
+    ],
+    [
+      -47,
+      45
+    ],
+    [
+      -59,
+      30
+    ],
+    [
+      -59,
+      45
+    ],
+    [
+      47,
+      -30
+    ],
+    [
+      47,
+      -45
+    ],
+    [
+      59,
+      -30
+    ],
+    [
+      59,
+      -45
+    ],
+    [
+      47,
+      30
+    ],
+    [
+      47,
+      45
+    ],
+    [
+      59,
+      30
+    ],
+    [
+      59,
+      45
+    ]
+  ],
+  "mesh_ray_checks": 169,
+  "minimum_slot_to_fixing_ligament_mm": 6.75,
+  "solid_PETG_g": 98.91198012718053,
+  "removed_volume_mm3": 704.7467904002115,
+  "expected_removed_volume_mm3": 706.1946710584651,
+  "source_sha256": {
+    "prototype-electronics-deck.scad": "dfb04924bbbf03f91c72fa74247743f3b59cccfbe09ab37431fd8aa080b158c9",
+    "prototype-chassis-assembly.scad": "e7a4bd74f32e554f7250fa097e85c079701b21e1b77581856628b51ce10553a5",
+    "prototype-chassis-deck.stl": "5010dfa4eba8014ad5dcfefa76c5ec89e32f43358ed8f9d8dac028527c1d83c8",
+    "prototype-electronics-deck.stl": "fd092c5fdf58db05e1eb2fa6c0229347a4f2e0e9de750b210b26733a99e51f67"
+  },
+  "nominal_clearance_basis": "Subtractive variant of unchanged deck; no geometry added to its envelope. Existing nominal deck clearance is retained. Electronics reservations and actual mounts are unverified.",
+  "physical_fit_verified": false,
+  "loaded_strength_verified": false
+}

@@ -16,3 +16,5 @@
 
 /ARCHIVE/MFG-002-three-dof-bench-3/** -text whitespace=cr-at-eol,-blank-at-eof
 /ARCHIVE/MFG-002-three-dof-bench-3/**/*.stl -diff
+
+/mechanical/prototype-electronics-deck.scad -text

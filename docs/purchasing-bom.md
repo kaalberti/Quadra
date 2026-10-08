@@ -185,3 +185,10 @@ first-leg buying quantities above; do not add the two lists. M3 lengths are
 is unchanged. Buy/test one servo before ordering12; owned boards need no purchase.
 The original bench-3 fallback is archived intact. Physical fit/load remains
 NOT_PERFORMED; full robot quantities remain conditional and mass unmeasured.
+
+Optional chassis electronics deck — MEC-166: reuse four narrow cable ties
+(nominal width2.5mm or less) for removable insulating mounts. These are additional
+to the16 leg cable ties if adopting this option; no extra screws or controller
+boards. Do not buy new packs if existing ties suit. Actual board mounts/fit are
+unverified. Guide:docs/electronics-deck.md; print one deck variant, not both.
+The current single-leg manufacturing/BOM and four-leg mass record are unchanged.

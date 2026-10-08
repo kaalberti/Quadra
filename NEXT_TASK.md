@@ -1,13 +1,14 @@
-# FIT-001 — first integrated-leg physical print and fit
+# ELEC-002 — provisional12-servo harness and channel plan
 
-Print the small side-on fork coupon from the verified MFG-003 checkpoint using
-the K2 Pro and record material/settings, support removal and measured mass.
-When one MG996R/horn and624 bearing are available, check bearing/retainer,
-horn seating, fixing access and the remaining coupons. Assemble one integrated
-leg unpowered only after these fit checks pass, using manufacturing/docs/assembly.md.
+Extend the verified bench wiring architecture to a provisional four-leg harness:
+assign12 PCA9685 channels to named leg/joint connections, use the existing
+buffer/distribution approach, and define separate signal/power branches and
+physical cutoff access. Reconcile conditional component counts in the buying BOM.
+Use public manufacturer documentation; no supplier contact. Leave measured
+servo current, battery/regulator selection and exact board headers provisional.
 
-Completion requires actual recorded observations, not CAD inference: clean
-support removal, seated bearing/retainer, compatible horn/servo fit and free
-unpowered joint motion. Record failures for the minimum necessary revision;
-keep all unavailable results NOT_PERFORMED. No powered motion, bulk purchases,
-further geometry optimization or following stage.
+Completion: one consistent connection table, diagram, commodity component
+counts and independent channel/pin/power-boundary checks. Keep the existing
+one-servo commissioning harness/firmware and MFG-003 unchanged. No powered
+four-leg commands, gait work, premium part selection or following stage.
+FIT-001 physical coupon and first-leg assembly remains pending in parallel.
