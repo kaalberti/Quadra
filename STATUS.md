@@ -122,8 +122,14 @@ Rear local pitch directions differ from global forward; no powered mapping added
 Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
 Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
 Guide/counts: docs/four-leg-working-assembly.md and mechanical/four-leg-working-print-manifest.json.
-Next: screen complete working-BOM mass against2kg and identify remaining measured
-print/power mass inputs. Defer structural optimization until the first leg test.
+Working mass screen: approximately2.360kg at an assumed65% material fraction,
+including660g servos,484g estimated fasteners,40g reference bearings and330g
+other allowances. Actual complete mass remains NOT_MEASURED;2kg limit unchanged.
+Only486g remains for all prints under those assumptions (37.4% of solid CAD
+mass). Current bench-kit replication is not a demonstrated2kg robot design.
+Record/report: mechanical/robot-mass-inputs.json and docs/working-robot-mass.md.
+Next: prototype an integrated pitch output fork to reduce long bolts, part count
+and mass together. Keep the supported bench kit for the first physical leg test.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

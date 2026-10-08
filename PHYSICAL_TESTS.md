@@ -53,6 +53,10 @@ flange fasteners and actual servo cable route; test stiffness with support first
    all-leg current and power distribution before supported standing. The5A
    bench supply is not assumed sufficient for three loaded joints or12 servos.
    Slow walking and IMU work follow stable hardware and calibrated joint control.
+   Enter slicer/scale masses in mechanical/robot-mass-inputs.json. The current
+   full working BOM's example is2.360kg, so actual print and power masses may
+   change the robot design. Weigh fasteners and supplied horns/leads as well;
+   do not infer printed mass from the infill percentage alone.
 
 ## Provisional servo choices
 

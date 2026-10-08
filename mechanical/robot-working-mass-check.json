@@ -1,0 +1,399 @@
+{
+  "revision": "working-robot-mass-1",
+  "complete_limit_g": 2000,
+  "printed_pieces": 117,
+  "prints": [
+    {
+      "file": "hobby-servo-cradle-left.stl",
+      "quantity": 8,
+      "solid_unit_g": 13.100036781249477,
+      "assumed_unit_g": 8.51502390781216,
+      "chosen_unit_g": 8.51502390781216,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "AC5B53BF4255DC9EA0F074FA2AB76C94F5BC489BB2CBF75BBB2863D141FA083A"
+    },
+    {
+      "file": "hobby-servo-cradle-right.stl",
+      "quantity": 8,
+      "solid_unit_g": 13.10003678124948,
+      "assumed_unit_g": 8.515023907812163,
+      "chosen_unit_g": 8.515023907812163,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "6F4FDFDCF84A73047037AD10B611B01A5FDE09E71DCCC434BE84B0EC7AFEEA0C"
+    },
+    {
+      "file": "hobby-joint-support.stl",
+      "quantity": 8,
+      "solid_unit_g": 9.536972696854786,
+      "assumed_unit_g": 6.199032252955611,
+      "chosen_unit_g": 6.199032252955611,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "2A69D2433A7177B392F5C3536317F8435240A5CACCCAA1223C8C2774C709DF5D"
+    },
+    {
+      "file": "hobby-joint-front-spacer.stl",
+      "quantity": 8,
+      "solid_unit_g": 0.12054632020939161,
+      "assumed_unit_g": 0.07835510813610455,
+      "chosen_unit_g": 0.07835510813610455,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "6CE50F98172CF975EF695D0279B6425BB343ADDB85ED0C3F8C7757E22C9ADDC5"
+    },
+    {
+      "file": "hobby-joint-rear-spacer.stl",
+      "quantity": 12,
+      "solid_unit_g": 0.04520487007852206,
+      "assumed_unit_g": 0.02938316555103934,
+      "chosen_unit_g": 0.02938316555103934,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "0940367FEAD7BA1CD2A2BEDC5331BF46721E04AEE13461C8AC1471A80901157F"
+    },
+    {
+      "file": "hobby-joint-front-arm.stl",
+      "quantity": 4,
+      "solid_unit_g": 11.884529107302914,
+      "assumed_unit_g": 7.724943919746894,
+      "chosen_unit_g": 7.724943919746894,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43"
+    },
+    {
+      "file": "hobby-joint-rear-arm.stl",
+      "quantity": 12,
+      "solid_unit_g": 16.677906213191047,
+      "assumed_unit_g": 10.840639038574182,
+      "chosen_unit_g": 10.840639038574182,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719"
+    },
+    {
+      "file": "hobby-joint-retainer.stl",
+      "quantity": 12,
+      "solid_unit_g": 1.0969070950388775,
+      "assumed_unit_g": 0.7129896117752704,
+      "chosen_unit_g": 0.7129896117752704,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38"
+    },
+    {
+      "file": "prototype-j1-carrier-mirrored.stl",
+      "quantity": 2,
+      "solid_unit_g": 47.167132508073095,
+      "assumed_unit_g": 30.658636130247512,
+      "chosen_unit_g": 30.658636130247512,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57"
+    },
+    {
+      "file": "prototype-upper-leg-plate.stl",
+      "quantity": 4,
+      "solid_unit_g": 17.65362315380094,
+      "assumed_unit_g": 11.47485504997061,
+      "chosen_unit_g": 11.47485504997061,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
+    },
+    {
+      "file": "hobby-joint-bridge.stl",
+      "quantity": 8,
+      "solid_unit_g": 17.890463401715913,
+      "assumed_unit_g": 11.628801211115343,
+      "chosen_unit_g": 11.628801211115343,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4"
+    },
+    {
+      "file": "prototype-upper-leg-saddle-mirrored.stl",
+      "quantity": 2,
+      "solid_unit_g": 7.779801305552947,
+      "assumed_unit_g": 5.056870848609416,
+      "chosen_unit_g": 5.056870848609416,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
+    },
+    {
+      "file": "prototype-cable-guide.stl",
+      "quantity": 4,
+      "solid_unit_g": 1.3664231778922906,
+      "assumed_unit_g": 0.8881750656299889,
+      "chosen_unit_g": 0.8881750656299889,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "6FFF92555115FCC8B9FDCB8504F409BACF56D00548BDA2E30AE177E25019AACB"
+    },
+    {
+      "file": "prototype-knee-support.stl",
+      "quantity": 4,
+      "solid_unit_g": 7.995291194451037,
+      "assumed_unit_g": 5.1969392763931745,
+      "chosen_unit_g": 5.1969392763931745,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8"
+    },
+    {
+      "file": "prototype-knee-spacer.stl",
+      "quantity": 4,
+      "solid_unit_g": 0.15068290026174044,
+      "assumed_unit_g": 0.09794388517013129,
+      "chosen_unit_g": 0.09794388517013129,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "5FED377AD820F57F70389B16CA023230530773128BC9DD15C59F496B9DFDDC12"
+    },
+    {
+      "file": "prototype-lower-leg.stl",
+      "quantity": 4,
+      "solid_unit_g": 12.700375172737319,
+      "assumed_unit_g": 8.255243862279258,
+      "chosen_unit_g": 8.255243862279258,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "4C7D2D05924903B7805D9EA35454A635F240F4628077F93501BA04C3FDF6494F"
+    },
+    {
+      "file": "prototype-foot.stl",
+      "quantity": 4,
+      "solid_unit_g": 1.3670761903338924,
+      "assumed_unit_g": 0.8885995237170301,
+      "chosen_unit_g": 0.8885995237170301,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
+    },
+    {
+      "file": "prototype-chassis-mount-left.stl",
+      "quantity": 2,
+      "solid_unit_g": 31.520802906304755,
+      "assumed_unit_g": 20.48852188909809,
+      "chosen_unit_g": 20.48852188909809,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "F9112C24B72B818507C4D00ECACEA200E37B7065D4583A4DDAF06A9CE306CB5B"
+    },
+    {
+      "file": "prototype-j1-carrier.stl",
+      "quantity": 2,
+      "solid_unit_g": 47.167132508072655,
+      "assumed_unit_g": 30.658636130247228,
+      "chosen_unit_g": 30.658636130247228,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "4CCE5EACBA8D3852723F86C2AE33752C6BD7561C95A3C74002CA3D8477576452"
+    },
+    {
+      "file": "prototype-upper-leg-saddle.stl",
+      "quantity": 2,
+      "solid_unit_g": 7.77980130555294,
+      "assumed_unit_g": 5.056870848609411,
+      "chosen_unit_g": 5.056870848609411,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "9A72E19587F4ADD72F9139F8529E467D3E92E2DF40C08C612247824B281213A9"
+    },
+    {
+      "file": "prototype-chassis-mount-right.stl",
+      "quantity": 2,
+      "solid_unit_g": 31.520802908430515,
+      "assumed_unit_g": 20.488521890479834,
+      "chosen_unit_g": 20.488521890479834,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "C1A7A95B389CD557CF01CFB415F720FAA06B226B6069AB40A835A6E75509F5EA"
+    },
+    {
+      "file": "prototype-chassis-deck.stl",
+      "quantity": 1,
+      "solid_unit_g": 99.80700855098878,
+      "assumed_unit_g": 64.87455555814272,
+      "chosen_unit_g": 64.87455555814272,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "5010DFA4EBA8014AD5DCFEFA76C5EC89E32F43358ED8F9D8DAC028527C1D83C8"
+    }
+  ],
+  "fasteners": [
+    {
+      "item": "M3x40",
+      "quantity": 16,
+      "unit_g_estimated": 2.3686812275415723
+    },
+    {
+      "item": "M3x20",
+      "quantity": 48,
+      "unit_g_estimated": 1.4364764394418728
+    },
+    {
+      "item": "M3x16",
+      "quantity": 52,
+      "unit_g_estimated": 1.2500354818219328
+    },
+    {
+      "item": "M3x12",
+      "quantity": 16,
+      "unit_g_estimated": 1.0635945242019929
+    },
+    {
+      "item": "M3x70",
+      "quantity": 8,
+      "unit_g_estimated": 3.766988409691121
+    },
+    {
+      "item": "M3x90",
+      "quantity": 16,
+      "unit_g_estimated": 4.699193197790819
+    },
+    {
+      "item": "M3 nuts",
+      "quantity": 156,
+      "unit_g_estimated": 0.3603844252851181
+    },
+    {
+      "item": "M3 ordinary washers",
+      "quantity": 308,
+      "unit_g_estimated": 0.11948497879214398
+    },
+    {
+      "item": "M3 backing washers",
+      "quantity": 4,
+      "unit_g_estimated": 0.824680637937935
+    },
+    {
+      "item": "M4x35 pivots",
+      "quantity": 12,
+      "unit_g_estimated": 3.9862368987365255
+    },
+    {
+      "item": "M4 locknuts",
+      "quantity": 12,
+      "unit_g_estimated": 1.1723533112148237
+    },
+    {
+      "item": "M4 washers",
+      "quantity": 12,
+      "unit_g_estimated": 0.3083181021381598
+    },
+    {
+      "item": "M2x10 horn bolts (maximum)",
+      "quantity": 48,
+      "unit_g_estimated": 0.36991649271087695
+    },
+    {
+      "item": "M2 horn nuts (maximum)",
+      "quantity": 48,
+      "unit_g_estimated": 0.134578061415433
+    },
+    {
+      "item": "M2 horn washers (maximum)",
+      "quantity": 96,
+      "unit_g_estimated": 0.03728819152398797
+    }
+  ],
+  "fastener_estimate_g": 483.91049571167986,
+  "servos_g": 660,
+  "bearings_g": 39.599999999999994,
+  "extras": [
+    {
+      "item": "battery",
+      "g": 150,
+      "basis": "provisional allowance"
+    },
+    {
+      "item": "electronics_and_power",
+      "g": 100,
+      "basis": "provisional allowance"
+    },
+    {
+      "item": "distribution_wiring",
+      "g": 60,
+      "basis": "provisional allowance"
+    },
+    {
+      "item": "horns_feet_ties",
+      "g": 20,
+      "basis": "provisional allowance"
+    }
+  ],
+  "solid_CAD_prints_g": 1301.9746250120168,
+  "chosen_prints_g": 846.2835062578109,
+  "estimated_complete_g": 2359.7940019694906,
+  "estimated_margin_g": -359.79400196949075,
+  "available_print_mass_g": 486.4895042883202,
+  "required_max_material_fraction": 0.37365513500989317,
+  "all_component_masses_measured": false,
+  "measured_complete_robot_g": null,
+  "status": "NOT_MEASURED",
+  "sources": {
+    "servo": "https://towerpro.com.tw/product/mg996r/",
+    "bearing_reference": "https://www.skf.com/ro/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-624-2RS1?failover=true",
+    "M3_cap_reference": "https://www.accu.co.uk/api/product-datasheet?id=659829"
+  },
+  "limits": "Solid CAD mass is not printed mass; 65% material fraction is an example, not an infill setting. Fastener dimensions/thread factor are rough reference-based estimates, not product weights. Unselected power/battery hardware and actual materials can change this screen.",
+  "fastener_geometry_assumptions": {
+    "M3_cap_mm": {
+      "diameter": 5.5,
+      "height": 3,
+      "socket_AF": 2.5,
+      "socket_depth": 1.3
+    },
+    "M3_nut_mm": {
+      "AF": 5.5,
+      "height": 2.4,
+      "bore": 3
+    },
+    "M3_washer_mm": {
+      "bore": 3.2,
+      "OD": 7,
+      "thickness": 0.5
+    },
+    "M3_backing_washer_mm": {
+      "bore": 3.2,
+      "OD": 12,
+      "thickness": 1
+    },
+    "M4_cap_mm": {
+      "diameter": 7,
+      "height": 4,
+      "socket_AF": 3,
+      "socket_depth": 2
+    },
+    "M4_locknut_mm": {
+      "AF": 7,
+      "height": 5,
+      "bore": 4
+    },
+    "M4_washer_mm": {
+      "bore": 4.3,
+      "OD": 9,
+      "thickness": 0.8
+    },
+    "M2_cap_mm": {
+      "diameter": 3.8,
+      "height": 2,
+      "socket_AF": 1.5,
+      "socket_depth": 1
+    },
+    "M2_nut_mm": {
+      "AF": 4,
+      "height": 1.6,
+      "bore": 2
+    },
+    "M2_washer_mm": {
+      "bore": 2.2,
+      "OD": 5,
+      "thickness": 0.3
+    },
+    "note": "Rough reference envelopes; mixed/partial threads, locking inserts and actual washer sizes need weighing. Some close positions require6mm OD washers;7mm here conservatively screens mass."
+  },
+  "M3x40_reference_check": {
+    "estimated_unit_g": 2.3686812275415723,
+    "published_unit_g": 2.36
+  },
+  "independent_volume_spot_checks": [
+    {
+      "file": "prototype-j1-carrier.stl",
+      "reference": "prototype-three-dof-check.json",
+      "volume_difference_mm3": 7.275957614183426e-12
+    },
+    {
+      "file": "prototype-lower-leg.stl",
+      "reference": "prototype-pitch-leg-check.json",
+      "volume_difference_mm3": 1.8189894035458565e-12
+    },
+    {
+      "file": "prototype-chassis-deck.stl",
+      "reference": "prototype-chassis-check.json",
+      "volume_difference_mm3": 0
+    }
+  ]
+}

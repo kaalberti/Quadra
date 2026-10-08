@@ -1,10 +1,11 @@
-# MEC-160 — complete working robot mass screen
+# MEC-161 — integrated pitch output fork prototype
 
-Screen the current four-leg print and hardware BOM against the2kg complete mass
-limit. Use actual STL volumes, explicit rough standard-fastener assumptions and
-provisional battery/electronics/wiring allowances. Keep solid CAD mass, assumed
-printed mass and measured mass separate; create a small record for later slicer/
-scale inputs. Identify whether the current design leaves a plausible margin and
-which physical measurements can change that decision. Do not optimize structures,
-select expensive hardware or claim measured whole-robot mass. Preserve the bench
-manufacturing checkpoint; physical fit and loaded operation remain deferred.
+Prototype a simpler upper/lower pitch output-fork family that combines the
+front plate, rear bearing arm and bridge, removing the long coupling bolts.
+Retain current horn/bearing/link interfaces and70/85mm geometry; use conservative
+walls and a practical print orientation. Check proper physical placement,
+connected/closed bed-sized meshes and representative case clearances. Compare
+print/hardware mass and part counts with the old output assembly; record only
+the variant's verified changes to the working BOM. Keep the current supported
+bench manufacturing kit intact. Do not claim complete2kg compliance, perform
+detailed structural analysis, add powered control or begin another stage.

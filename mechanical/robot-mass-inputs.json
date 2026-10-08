@@ -1,0 +1,118 @@
+{
+  "scope": "Four-leg working BOM; excludes bench fixture",
+  "maximum_complete_mass_g": 2000,
+  "PETG_density_g_per_cm3_assumed": 1.27,
+  "assumed_printed_material_fraction": 0.65,
+  "steel_density_g_per_cm3_assumed": 7.85,
+  "threaded_shank_volume_fraction_assumed": 0.84,
+  "MG996R_unit_g_published": 55,
+  "624_unit_g_reference": 3.3,
+  "battery_allowance_g": 150,
+  "electronics_and_power_allowance_g": 100,
+  "distribution_wiring_allowance_g": 60,
+  "horns_feet_ties_allowance_g": 20,
+  "measured_servo_unit_g": null,
+  "measured_bearing_unit_g": null,
+  "measured_complete_fasteners_g": null,
+  "measured_battery_g": null,
+  "measured_electronics_and_power_g": null,
+  "measured_distribution_wiring_g": null,
+  "measured_horns_feet_ties_g": null,
+  "measured_complete_robot_g": null,
+  "print_unit_inputs": {
+    "hobby-servo-cradle-left.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-servo-cradle-right.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-joint-support.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-joint-front-spacer.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-joint-rear-spacer.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-joint-front-arm.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-joint-rear-arm.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-joint-retainer.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-j1-carrier-mirrored.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-upper-leg-plate.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "hobby-joint-bridge.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-upper-leg-saddle-mirrored.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-cable-guide.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-knee-support.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-knee-spacer.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-lower-leg.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-foot.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-chassis-mount-left.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-j1-carrier.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-upper-leg-saddle.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-chassis-mount-right.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    },
+    "prototype-chassis-deck.stl": {
+      "slicer_unit_g": null,
+      "measured_unit_g": null
+    }
+  },
+  "sources": {
+    "servo": "https://towerpro.com.tw/product/mg996r/",
+    "bearing_reference": "https://www.skf.com/ro/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-624-2RS1?failover=true",
+    "M3_cap_reference": "https://www.accu.co.uk/api/product-datasheet?id=659829"
+  },
+  "notes": "Printed material fraction is not infill percentage. Allowances are provisional, not selected battery/regulator masses. Distribution wiring excludes servo leads already in the servo reference mass assumption. Horn allowance is conservative because exact supplied contents/weight are unknown. SKF is a reference mass, not a bearing purchase selection."
+}

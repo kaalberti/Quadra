@@ -149,3 +149,9 @@ mechanical/four-leg-working-print-manifest.json. No new actuator or board select
 Verify one servo and printed leg first. Battery, full-robot regulator/current
 capacity, board attachments and measured mass are still unresolved. Existing
 controller boards need no replacements. Cost targets remain unchanged.
+
+MEC-160 mass screen: the current full working BOM estimates2.360kg with explicit
+print/power assumptions, exceeding the2kg limit by about360g. Actual mass is
+unmeasured. Do not treat these complete quantities as a ready-to-buy robot kit;
+the supported single-leg kit remains the first purchase/test. Mass record and
+next simplification: docs/working-robot-mass.md. No premium actuator is selected.
