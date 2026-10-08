@@ -108,8 +108,6 @@ Reference assembly: mechanical/prototype-four-leg-working-assembly.scad, with
 22 unique STLs/117 pieces and12 rigid servo envelopes. Every printed-piece pose
 is a proper rotation and matches intended meshes at0.001mm coordinate resolution.
 Front-left/rear-right use mirrored carrier/saddle; other diagonal uses originals.
-Closed connected/bed checks pass for the new mirrors; actual servo ears/leads unknown.
-Independent fresh source/placed exports agree within0.001005mm (STL rounding).
 Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
 Guide/counts: docs/four-leg-working-assembly.md and mechanical/four-leg-working-print-manifest.json.
 Reference mass screen: approximately2.360kg at an assumed65% material fraction,
@@ -145,5 +143,7 @@ Guide:docs/electronics-deck.md; four optional ties, actual board mounts unverifi
 Provisional12-servo channel/pin plan passes:channels0..11,three AHCT125N buffers.
 Guide:electronics/four-leg-harness.md.30A capacity screen is provisional;
 robot battery/regulator/protection stay TBD. Bench firmware remains one-channel.
-Next offline task:commodity robot-power feasibility/cost shortlist.
+Power shortlist:electronics/robot-power-shortlist.md; no regulator selected.
+25A candidate misses30A screen; split10A option costsNZ$260/out of stock.
+Keep common5.2V rail provisionally; measure actual demand before supply purchase.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.

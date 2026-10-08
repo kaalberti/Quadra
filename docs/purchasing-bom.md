@@ -204,3 +204,9 @@ main distribution, connector, fuse, wire and regulator purchases stay TBD.
 The30A capacity screen is provisional, not a selected supply or verified demand.
 Prices remain unverified; test one servo before full-harness purchases.
 Connections and manufacturer sources:electronics/four-leg-harness.md.
+
+Robot regulator purchase is still TBD after ELEC-003 comparison. Do not order
+four30603000 BECs from theNZ$259.96 out-of-stock reference, or substitute
+30603003 (6V minimum) into the5.3V-max buffer rail. The25A candidate is below
+the30A planning screen; peak rating does not close that gap. Compare actual
+leg demand and landed cost first. Reference:electronics/robot-power-shortlist.md.

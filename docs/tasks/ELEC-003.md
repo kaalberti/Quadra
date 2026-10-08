@@ -1,17 +1,14 @@
-# ELEC-003 — board-only timing diagnostic
+# ELEC-003 — commodity power feasibility and cost shortlist
 
-Completed2026-10-09. Added a manual, DISARMED-only diagnostic with explicit
-rail-off/no-servos acknowledgement. Only PCA channel15 is driven, at3.3V,
-with GPIO7 input loopback. Servo channels remain full-off; OE goes high before
-cleanup writes on every acquisition/preflight/write failure path.
+Completed:2026-10-09. Compared three primary-source regulator families and
+quantity-adjusted dated prices. Shortlist distinguishes aircraft30603000 from
+incompatible6V-minimum30603003. Single25A is below30A margin screen;
+four10A supplies costNZ$259.96 and are locally out of stock; two typical15A
+Pololu boards costUS$159.90 with tolerance/thermal caveats. Arithmetic independently
+checked. Peak current never counted as continuous, outputs never paralleled.
 
-Tests cover valid sequence, missing/stuck input, first-write/preflight errors,
-out-of-range samples, a single bad pulse, cleanup failure, acknowledgement
-parsing and channel15 isolation. Each pulseIn wait is50ms; three high/low
-pairs bound acquisition wait to300ms. The original40ms wait was increased
-because pulseIn waits out an existing pulse before measuring a complete one.
-Coarse timing is checked per pair, not merely on the average.
-
-All host checks and N16R8 compile pass (19,476bytes RAM;299,965bytes flash).
-No hardware flash, timing capture, voltage reading or servo motion. Existing
-owned boards and bench passives cover the test; no new component purchase.
+Provisional direction: retain simple common5.2V rail, qualify actual demand
+before locking supply. Split alternatives require revised buffer power domains.
+Repeated component cost exceeds approval threshold; no part is selected or bought.
+Battery/power ratings and measured current remain TBD. Source links and price
+context are in electronics/robot-power-shortlist.md. Bench/MFG-003 unchanged.
