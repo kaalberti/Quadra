@@ -100,3 +100,11 @@ template, not loaded by firmware. No angle command is enabled on hardware.
 Generic500..2500us validation bounds are only an absolute software screen,
 not approved servo travel. Tests use synthetic profiles; never copy them to
 hardware. Physical calibration and limits are listed in ../PHYSICAL_TESTS.md.
+
+## Board-only diagnostic
+
+`timing rail-off no-servos` is a manual serial-monitor command while DISARMED.
+It temporarily drives only channel15 for3.3V timing capture on GPIO7, then
+restores disabled/full-off outputs. It is not supported by the automatic host
+console; close that console for this check. Wiring, acknowledgements and limits:
+../docs/board-pwm-timing-test.md. No physical capture or flash was performed here.

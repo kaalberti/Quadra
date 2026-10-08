@@ -9,6 +9,7 @@
 #include "leg_plan.h" // side-effect-free preparation only; never sent to servos
 #include "bench_command.h"
 #include "pca9685.h"
+#include "pwm_timing.h"
 
 struct WireBus {
   bool write(uint8_t reg,const uint8_t* data,size_t n) {
@@ -34,6 +35,13 @@ struct Hardware {
   bool pulse(uint8_t c,uint16_t us){return pwm.pulse(c,us);}
 } hardware;
 bench::Controller<Hardware> controller(hardware);
+struct TimingHardware {
+  void disable(bool disabled){hardware.disable(disabled);}
+  bool healthy(){return pwm.healthy();}
+  bool allOff(){return pwm.allOff();}
+  bool testPulse(){return pwm.loopbackPulse();}
+  uint32_t measure(bool high,uint32_t timeout){return pulseIn(bench::TimingInput,high?HIGH:LOW,timeout);}
+} timingHardware;
 char line[48]; size_t used=0; bool overflow=false;
 
 void status() {
@@ -54,12 +62,23 @@ void command(const char* text) {
     case bench::Command::Keepalive:ok=controller.keepalive(now);break;
     case bench::Command::Arm:ok=controller.arm(uint8_t(parsed.value),now);break;
     case bench::Command::Pulse:ok=controller.move(parsed.value,now);break;
+    case bench::Command::Timing: {
+      if(controller.state()!=bench::State::Disarmed) {controller.badCommand();break;}
+      const auto result=bench::measurePwmTiming(timingHardware);
+      const char* names[]={"PASS","CONFIG_FAILED","WRITE_FAILED","NO_SIGNAL","OUT_OF_RANGE","CLEANUP_FAILED"};
+      if(result.status==bench::TimingStatus::ConfigFailed || result.status==bench::TimingStatus::WriteFailed ||
+         result.status==bench::TimingStatus::CleanupFailed)controller.externalBusFailure();
+      Serial.printf("TIMING result=%s high_us=%lu period_us=%lu samples=%u\n",
+        names[int(result.status)],(unsigned long)result.highUs,(unsigned long)result.periodUs,result.samples);
+      status();return;
+    }
     default:controller.badCommand();break;
   }
   Serial.println(ok?"OK":"REJECTED"); status();
 }
 void setup() {
   digitalWrite(bench::Oe,HIGH); pinMode(bench::Oe,OUTPUT);
+  pinMode(bench::TimingInput,INPUT_PULLDOWN);
   Serial.begin(115200);
   Wire.begin(bench::Sda,bench::Scl,100000); Wire.setTimeOut(10);
   controller.reset();

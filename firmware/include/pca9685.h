@@ -8,6 +8,7 @@ template<class Bus> class Pca9685 {
 public:
   explicit Pca9685(Bus& b):bus(b){}
   bool off(uint8_t channel) {
+    if(channel>=16)return false;
     const uint8_t data[]={0,0,0,0x10};
     return bus.write(uint8_t(6+4*channel),data,4);
   }
@@ -35,6 +36,11 @@ public:
     const uint16_t ticks=pulseTicks(us);
     const uint8_t data[]={0,0,uint8_t(ticks&0xff),uint8_t(ticks>>8)};
     return bus.write(uint8_t(6+4*channel),data,4);
+  }
+  bool loopbackPulse() {
+    const uint16_t ticks=pulseTicks(CenterPulseUs);
+    const uint8_t data[]={0,0,uint8_t(ticks&0xff),uint8_t(ticks>>8)};
+    return bus.write(uint8_t(6+4*TimingChannel),data,4);
   }
 };
 }

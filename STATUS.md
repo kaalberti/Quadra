@@ -93,8 +93,12 @@ Offline one-leg planning now prepares all three pulses atomically only after
 calibration, IK branch, angle and1450..1550us output checks. Failure leaves
 output unchanged; complete/partial-profile and explicit-branch tests pass.
 No powered IK or gait commands are enabled; physical profiles remain unset.
-Next: prepare a board-only PWM timing diagnostic for the owned ESP32/PCA9685,
-with servo power off and a3.3V loopback. No physical timing results are inferred.
+Board-only timing diagnostic is compiled/tested: explicit disarmed command,
+channel15-to-GPIO7 loopback at3.3V,50ms waits, per-sample timing screens and
+all-off/OE-high cleanup. Wiring/procedure: docs/board-pwm-timing-test.md.
+No diagnostic has been run on hardware; no timing/voltage result is inferred.
+Next: provisional four-leg placement study using existing leg geometry before
+designing chassis attachments. Keep symmetry and servo/printed-part assumptions explicit.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

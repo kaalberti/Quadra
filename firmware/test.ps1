@@ -25,6 +25,11 @@ $benchPlanExe=Join-Path $benchOutput 'plan-test.exe'
 if ($LASTEXITCODE -ne 0) { throw 'Planner compilation failed' }
 & $benchPlanExe
 if ($LASTEXITCODE -ne 0) { throw 'Planner tests failed' }
+$benchTimingExe=Join-Path $benchOutput 'timing-test.exe'
+& $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot 'test\timing_test.cpp') -o $benchTimingExe
+if ($LASTEXITCODE -ne 0) { throw 'Timing compilation failed' }
+& $benchTimingExe
+if ($LASTEXITCODE -ne 0) { throw 'Timing tests failed' }
 foreach ($benchSource in @('geometry_test','geometry_cli')) {
  $benchGeometryExe=Join-Path $benchOutput ($benchSource+'.exe')
  & $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot ('test\'+$benchSource+'.cpp')) -o $benchGeometryExe

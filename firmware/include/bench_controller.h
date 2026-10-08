@@ -56,6 +56,7 @@ public:
     lastCommand_=now; return true;
   }
   void badCommand() { if(state_==State::Armed) trip(Fault::Command); }
+  void externalBusFailure() { trip(Fault::Bus); }
   void tick(uint32_t now) {
     if(state_!=State::Armed) return;
     if(uint32_t(now-lastCommand_)>=TimeoutMs) { trip(Fault::Timeout); return; }

@@ -26,6 +26,9 @@ The supply's model/transient behavior and board header/revision remain unknown.
    disconnect/timeout behavior, rail voltage/current and heating. Measure PWM
    timing if possible before widening travel. Stop on current limiting/buzzing;
    diagnose rather than increasing current to overcome binding.
+   A board-only timing check can precede servo arrival: see
+   docs/board-pwm-timing-test.md. It uses3.3V channel15-to-GPIO7 loopback,
+   no connected servos/servo rail, and does not establish motor-power behavior.
 5. **Each joint's calibration:** establish mechanical reference, pulse direction,
    at least two measured angle/pulse points, and usable limits clear of stops,
    fasteners and cables. Centre before horn installation with power isolated
