@@ -5,6 +5,7 @@
 #include "joint_calibration.h" // offline model only; no angle command enabled
 #include <initializer_list>
 #include "leg_geometry.h" // offline FK only; no hardware position command
+#include "leg_inverse.h" // offline IK only; no hardware position command
 #include "bench_command.h"
 #include "pca9685.h"
 

@@ -15,6 +15,11 @@ $benchCalibrationExe=Join-Path $benchOutput 'calibration-test.exe'
 if ($LASTEXITCODE -ne 0) { throw 'Calibration compilation failed' }
 & $benchCalibrationExe
 if ($LASTEXITCODE -ne 0) { throw 'Calibration tests failed' }
+$benchInverseExe=Join-Path $benchOutput 'inverse-test.exe'
+& $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot 'test\inverse_test.cpp') -o $benchInverseExe
+if ($LASTEXITCODE -ne 0) { throw 'Inverse compilation failed' }
+& $benchInverseExe
+if ($LASTEXITCODE -ne 0) { throw 'Inverse tests failed' }
 foreach ($benchSource in @('geometry_test','geometry_cli')) {
  $benchGeometryExe=Join-Path $benchOutput ($benchSource+'.exe')
  & $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot ('test\'+$benchSource+'.cpp')) -o $benchGeometryExe

@@ -86,8 +86,11 @@ Offline forward kinematics agrees with current CAD transforms at five poses
 within0.001mm. Nominal reference [85,32,-120]mm; pad centre [85,33,-120]mm.
 The1mm distinction is within the existing pad, not a mechanical geometry change.
 Special-pose/invariant tests and N16R8 build pass; manufacturing remains unchanged.
-Next: offline inverse position solving with explicit unreachable/ambiguous targets.
-No powered IK or gait commands are enabled.
+Offline inverse solving now returns explicit branches/errors and singular flags.
+Thirty-six trial-envelope round trips plus reach-boundary/branch tests pass.
+Candidates are checked against FK; targets are not projected into the workspace.
+Next: offline one-leg request-to-pulse preparation using measured-profile gates.
+No powered IK or gait commands are enabled; physical profiles remain unset.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

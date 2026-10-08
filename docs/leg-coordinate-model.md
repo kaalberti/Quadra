@@ -30,3 +30,28 @@ independent OpenSCAD comparisons. The SCAD probe uses current layout transforms
 and upper-leg datum functions; the runner extracts the actual pad dimensions
 from pitch CAD. Agreement tolerance0.001mm accounts for OpenSCAD echo precision.
 This verifies model/transform agreement, not the assembly's physical fit.
+
+## Offline inverse solver — FW-005
+
+`firmware/include/leg_inverse.h` solves a requested nominal reference point,
+not the pad centre. It returns up to four branches from the two possible
+abduction-plane heights and two planar knee directions. Default bounds are
+the provisional unpowered envelope: J1 -25..30, J2 20..55, J3 60..90deg.
+A unique solution is distinguished from ambiguous, unreachable, outside-bounds,
+invalid-input and indeterminate-abduction results. No branch is silently chosen.
+
+The solver keeps the target unchanged and checks every candidate through FK
+with residual at most0.0000001mm. Machine-roundoff guards handle cosine/square-root
+domain noise; angle estimates within0.00000001deg of a bound may be snapped
+to that bound, then checked again. These are numerical tolerances, not permission
+to project an unreachable target into a physical workspace.
+
+Straight/folded chains and tangent abduction geometry are flagged singular
+even when finitely many angle solutions exist. When the target lies on the
+J1 axis and its nominal outward offset is zero, abduction is indeterminate;
+the solver returns Singular with no arbitrarily chosen angle.
+
+These are geometric solutions only. Bounds do not establish collision-free,
+loaded or servo-calibrated motion. There are no hardware IK commands. Host
+tests cover36 envelope round trips, four wide-bound branches, straight/folded
+deduplication, altered geometry, out-of-reach targets and invalid data.
