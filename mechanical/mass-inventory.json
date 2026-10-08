@@ -1,0 +1,24 @@
+{
+  "decision": "TOR-003",
+  "status": "Unmeasured inventory template, not a mass budget or placement decision",
+  "coverage_complete": false,
+  "components": [
+    {"id":"FL_actuator_q1","leg":"FL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"FL_actuator_q2","leg":"FL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"FL_actuator_q3","leg":"FL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"FR_actuator_q1","leg":"FR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"FR_actuator_q2","leg":"FR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"FR_actuator_q3","leg":"FR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"RL_actuator_q1","leg":"RL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"RL_actuator_q2","leg":"RL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"RL_actuator_q3","leg":"RL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"RR_actuator_q1","leg":"RR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"RR_actuator_q2","leg":"RR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"RR_actuator_q3","leg":"RR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Unknown actuator, mounting and COM"},
+    {"id":"FL_nonactuator_remainder","leg":"FL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Split by rigid attachment before use: structure, bearings, horns, fasteners, inserts, foot and allocated wiring; exclude actuator-row contents"},
+    {"id":"FR_nonactuator_remainder","leg":"FR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Split by rigid attachment before use: structure, bearings, horns, fasteners, inserts, foot and allocated wiring; exclude actuator-row contents"},
+    {"id":"RL_nonactuator_remainder","leg":"RL","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Split by rigid attachment before use: structure, bearings, horns, fasteners, inserts, foot and allocated wiring; exclude actuator-row contents"},
+    {"id":"RR_nonactuator_remainder","leg":"RR","attachment":null,"mass_kg":null,"com_local_mm":null,"evidence":"Split by rigid attachment before use: structure, bearings, horns, fasteners, inserts, foot and allocated wiring; exclude actuator-row contents"},
+    {"id":"body_nonactuator_remainder","leg":null,"attachment":"body","mass_kg":null,"com_local_mm":null,"evidence":"Unmeasured body-fixed chassis, battery, electronics, wiring and hardware; exclude every item allocated to another row"}
+  ]
+}

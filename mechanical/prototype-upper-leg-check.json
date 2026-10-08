@@ -1,0 +1,549 @@
+{
+  "knee_case_window_clearance_per_side_mm": 0.7,
+  "selected_q2_range_deg": [
+    -40,
+    85
+  ],
+  "upper_axis_spacing_mm": 70,
+  "upper_plate_solid_mass_g": 17.65362315380094,
+  "old_clamp_plus_support_solid_mass_g": 35.73704625935374,
+  "minimum_sampled_separating_axis_gap_mm": 10.480838923131842,
+  "case_holder_volume_reduction_percent": 70.30618525938633,
+  "hip_plate_case_axial_gap_mm": 4.1,
+  "limits": "Knee passive rear support and lower leg not designed here; no output loading. Prototype knee20–90deg is a provisional downstream packaging limit, not measured or a revision of historical desired20–130deg.",
+  "actual_fit_verified": false,
+  "old_clamp_alone_solid_mass_g": 26.200073562498954,
+  "mass_comparison_scope": "Case holder only; new knee passive rear support still required and excluded from saddle mass",
+  "knee_holder_gravity_at_70mm_with_55g_servo_Nm": 0.04311088955652321,
+  "knee_holder_solid_mass_g": 7.77980130555294,
+  "clearance_scope": "One-degree samples of saddle rectangle against conservative hip cradle/clamp rectangle; not a continuous proof or actual cable/ear/fastener check. Upper plate is axially above cases; bridge radial bound from previous joint remains valid.",
+  "meshes": [
+    {
+      "closed": true,
+      "components": 1,
+      "part": "plate",
+      "triangles": 2268,
+      "volume_mm3": 13900.490672284202
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "saddle",
+      "triangles": 1256,
+      "volume_mm3": 6125.827799647985
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "ear-coupon",
+      "triangles": 1240,
+      "volume_mm3": 4362.385448112003
+    }
+  ],
+  "clearance_samples": [
+    {
+      "q2_deg": -40,
+      "separating_axis_gap_mm": 10.647657398538968
+    },
+    {
+      "q2_deg": -39,
+      "separating_axis_gap_mm": 10.711095116710787
+    },
+    {
+      "q2_deg": -38,
+      "separating_axis_gap_mm": 10.78467295778691
+    },
+    {
+      "q2_deg": -37,
+      "separating_axis_gap_mm": 10.868368509244192
+    },
+    {
+      "q2_deg": -36,
+      "separating_axis_gap_mm": 10.962156276606876
+    },
+    {
+      "q2_deg": -35,
+      "separating_axis_gap_mm": 11.066007691212484
+    },
+    {
+      "q2_deg": -34,
+      "separating_axis_gap_mm": 11.1798911189141
+    },
+    {
+      "q2_deg": -33,
+      "separating_axis_gap_mm": 11.303771869716428
+    },
+    {
+      "q2_deg": -32,
+      "separating_axis_gap_mm": 11.437612208342706
+    },
+    {
+      "q2_deg": -31,
+      "separating_axis_gap_mm": 11.581371365729275
+    },
+    {
+      "q2_deg": -30,
+      "separating_axis_gap_mm": 11.73500555144414
+    },
+    {
+      "q2_deg": -29,
+      "separating_axis_gap_mm": 11.89846796702605
+    },
+    {
+      "q2_deg": -28,
+      "separating_axis_gap_mm": 12.071708820239728
+    },
+    {
+      "q2_deg": -27,
+      "separating_axis_gap_mm": 12.254675340243072
+    },
+    {
+      "q2_deg": -26,
+      "separating_axis_gap_mm": 12.447311793661633
+    },
+    {
+      "q2_deg": -25,
+      "separating_axis_gap_mm": 12.649559501565605
+    },
+    {
+      "q2_deg": -24,
+      "separating_axis_gap_mm": 12.861356857343925
+    },
+    {
+      "q2_deg": -23,
+      "separating_axis_gap_mm": 13.082639345470326
+    },
+    {
+      "q2_deg": -22,
+      "separating_axis_gap_mm": 13.313339561155288
+    },
+    {
+      "q2_deg": -21,
+      "separating_axis_gap_mm": 13.553387230878272
+    },
+    {
+      "q2_deg": -20,
+      "separating_axis_gap_mm": 13.802709233793696
+    },
+    {
+      "q2_deg": -19,
+      "separating_axis_gap_mm": 14.061229624004227
+    },
+    {
+      "q2_deg": -18,
+      "separating_axis_gap_mm": 14.32886965369466
+    },
+    {
+      "q2_deg": -17,
+      "separating_axis_gap_mm": 14.605547797119282
+    },
+    {
+      "q2_deg": -16,
+      "separating_axis_gap_mm": 14.891179775435361
+    },
+    {
+      "q2_deg": -15,
+      "separating_axis_gap_mm": 15.1856785823753
+    },
+    {
+      "q2_deg": -14,
+      "separating_axis_gap_mm": 15.48895451074965
+    },
+    {
+      "q2_deg": -13,
+      "separating_axis_gap_mm": 15.800915179772737
+    },
+    {
+      "q2_deg": -12,
+      "separating_axis_gap_mm": 16.121465563202726
+    },
+    {
+      "q2_deg": -11,
+      "separating_axis_gap_mm": 16.45050801828759
+    },
+    {
+      "q2_deg": -10,
+      "separating_axis_gap_mm": 16.787942315508005
+    },
+    {
+      "q2_deg": -9,
+      "separating_axis_gap_mm": 17.133665669108236
+    },
+    {
+      "q2_deg": -8,
+      "separating_axis_gap_mm": 17.48757276840569
+    },
+    {
+      "q2_deg": -7,
+      "separating_axis_gap_mm": 17.84955580986952
+    },
+    {
+      "q2_deg": -6,
+      "separating_axis_gap_mm": 18.219504529958716
+    },
+    {
+      "q2_deg": -5,
+      "separating_axis_gap_mm": 18.59730623870936
+    },
+    {
+      "q2_deg": -4,
+      "separating_axis_gap_mm": 18.9828458540611
+    },
+    {
+      "q2_deg": -3,
+      "separating_axis_gap_mm": 19.376005936912314
+    },
+    {
+      "q2_deg": -2,
+      "separating_axis_gap_mm": 19.776666726893136
+    },
+    {
+      "q2_deg": -1,
+      "separating_axis_gap_mm": 20.18470617884564
+    },
+    {
+      "q2_deg": 0,
+      "separating_axis_gap_mm": 20.6
+    },
+    {
+      "q2_deg": 1,
+      "separating_axis_gap_mm": 20.244250458135546
+    },
+    {
+      "q2_deg": 2,
+      "separating_axis_gap_mm": 19.875206454790195
+    },
+    {
+      "q2_deg": 3,
+      "separating_axis_gap_mm": 19.492980404342376
+    },
+    {
+      "q2_deg": 4,
+      "separating_axis_gap_mm": 19.097688736549756
+    },
+    {
+      "q2_deg": 5,
+      "separating_axis_gap_mm": 18.68945186108364
+    },
+    {
+      "q2_deg": 6,
+      "separating_axis_gap_mm": 18.268394130850957
+    },
+    {
+      "q2_deg": 7,
+      "separating_axis_gap_mm": 17.84955580986953
+    },
+    {
+      "q2_deg": 8,
+      "separating_axis_gap_mm": 17.487572768405684
+    },
+    {
+      "q2_deg": 9,
+      "separating_axis_gap_mm": 17.133665669108236
+    },
+    {
+      "q2_deg": 10,
+      "separating_axis_gap_mm": 16.787942315508005
+    },
+    {
+      "q2_deg": 11,
+      "separating_axis_gap_mm": 16.450508018287582
+    },
+    {
+      "q2_deg": 12,
+      "separating_axis_gap_mm": 16.121465563202733
+    },
+    {
+      "q2_deg": 13,
+      "separating_axis_gap_mm": 15.800915179772737
+    },
+    {
+      "q2_deg": 14,
+      "separating_axis_gap_mm": 15.488954510749657
+    },
+    {
+      "q2_deg": 15,
+      "separating_axis_gap_mm": 15.185678582375306
+    },
+    {
+      "q2_deg": 16,
+      "separating_axis_gap_mm": 14.891179775435361
+    },
+    {
+      "q2_deg": 17,
+      "separating_axis_gap_mm": 14.605547797119282
+    },
+    {
+      "q2_deg": 18,
+      "separating_axis_gap_mm": 14.328869653694667
+    },
+    {
+      "q2_deg": 19,
+      "separating_axis_gap_mm": 14.061229624004227
+    },
+    {
+      "q2_deg": 20,
+      "separating_axis_gap_mm": 13.802709233793696
+    },
+    {
+      "q2_deg": 21,
+      "separating_axis_gap_mm": 13.553387230878272
+    },
+    {
+      "q2_deg": 22,
+      "separating_axis_gap_mm": 13.313339561155288
+    },
+    {
+      "q2_deg": 23,
+      "separating_axis_gap_mm": 13.082639345470326
+    },
+    {
+      "q2_deg": 24,
+      "separating_axis_gap_mm": 12.861356857343932
+    },
+    {
+      "q2_deg": 25,
+      "separating_axis_gap_mm": 12.649559501565605
+    },
+    {
+      "q2_deg": 26,
+      "separating_axis_gap_mm": 12.447311793661633
+    },
+    {
+      "q2_deg": 27,
+      "separating_axis_gap_mm": 12.254675340243072
+    },
+    {
+      "q2_deg": 28,
+      "separating_axis_gap_mm": 12.071708820239735
+    },
+    {
+      "q2_deg": 29,
+      "separating_axis_gap_mm": 11.898467967026043
+    },
+    {
+      "q2_deg": 30,
+      "separating_axis_gap_mm": 11.73500555144414
+    },
+    {
+      "q2_deg": 31,
+      "separating_axis_gap_mm": 11.581371365729275
+    },
+    {
+      "q2_deg": 32,
+      "separating_axis_gap_mm": 11.437612208342706
+    },
+    {
+      "q2_deg": 33,
+      "separating_axis_gap_mm": 11.303771869716428
+    },
+    {
+      "q2_deg": 34,
+      "separating_axis_gap_mm": 11.1798911189141
+    },
+    {
+      "q2_deg": 35,
+      "separating_axis_gap_mm": 11.06600769121249
+    },
+    {
+      "q2_deg": 36,
+      "separating_axis_gap_mm": 10.962156276606876
+    },
+    {
+      "q2_deg": 37,
+      "separating_axis_gap_mm": 10.868368509244192
+    },
+    {
+      "q2_deg": 38,
+      "separating_axis_gap_mm": 10.78467295778691
+    },
+    {
+      "q2_deg": 39,
+      "separating_axis_gap_mm": 10.71109511671078
+    },
+    {
+      "q2_deg": 40,
+      "separating_axis_gap_mm": 10.64765739853896
+    },
+    {
+      "q2_deg": 41,
+      "separating_axis_gap_mm": 10.594379127014953
+    },
+    {
+      "q2_deg": 42,
+      "separating_axis_gap_mm": 10.551276531216367
+    },
+    {
+      "q2_deg": 43,
+      "separating_axis_gap_mm": 10.518362740611451
+    },
+    {
+      "q2_deg": 44,
+      "separating_axis_gap_mm": 10.495647781059631
+    },
+    {
+      "q2_deg": 45,
+      "separating_axis_gap_mm": 10.483138571757657
+    },
+    {
+      "q2_deg": 46,
+      "separating_axis_gap_mm": 10.480838923131842
+    },
+    {
+      "q2_deg": 47,
+      "separating_axis_gap_mm": 10.488749535677435
+    },
+    {
+      "q2_deg": 48,
+      "separating_axis_gap_mm": 10.506867999745253
+    },
+    {
+      "q2_deg": 49,
+      "separating_axis_gap_mm": 10.535188796275605
+    },
+    {
+      "q2_deg": 50,
+      "separating_axis_gap_mm": 10.5737032984795
+    },
+    {
+      "q2_deg": 51,
+      "separating_axis_gap_mm": 10.622399774466494
+    },
+    {
+      "q2_deg": 52,
+      "separating_axis_gap_mm": 10.681263390818266
+    },
+    {
+      "q2_deg": 53,
+      "separating_axis_gap_mm": 10.75027621710705
+    },
+    {
+      "q2_deg": 54,
+      "separating_axis_gap_mm": 10.82941723135739
+    },
+    {
+      "q2_deg": 55,
+      "separating_axis_gap_mm": 10.918662326449713
+    },
+    {
+      "q2_deg": 56,
+      "separating_axis_gap_mm": 11.017984317463515
+    },
+    {
+      "q2_deg": 57,
+      "separating_axis_gap_mm": 11.127352949958187
+    },
+    {
+      "q2_deg": 58,
+      "separating_axis_gap_mm": 11.246734909188788
+    },
+    {
+      "q2_deg": 59,
+      "separating_axis_gap_mm": 11.376093830254035
+    },
+    {
+      "q2_deg": 60,
+      "separating_axis_gap_mm": 11.515390309173469
+    },
+    {
+      "q2_deg": 61,
+      "separating_axis_gap_mm": 11.66458191489022
+    },
+    {
+      "q2_deg": 62,
+      "separating_axis_gap_mm": 11.823623202195911
+    },
+    {
+      "q2_deg": 63,
+      "separating_axis_gap_mm": 11.992465725573773
+    },
+    {
+      "q2_deg": 64,
+      "separating_axis_gap_mm": 12.171058053955583
+    },
+    {
+      "q2_deg": 65,
+      "separating_axis_gap_mm": 12.359345786388037
+    },
+    {
+      "q2_deg": 66,
+      "separating_axis_gap_mm": 12.557271568603845
+    },
+    {
+      "q2_deg": 67,
+      "separating_axis_gap_mm": 12.764775110492426
+    },
+    {
+      "q2_deg": 68,
+      "separating_axis_gap_mm": 12.981793204464758
+    },
+    {
+      "q2_deg": 69,
+      "separating_axis_gap_mm": 13.208259744707128
+    },
+    {
+      "q2_deg": 70,
+      "separating_axis_gap_mm": 13.44410574731755
+    },
+    {
+      "q2_deg": 71,
+      "separating_axis_gap_mm": 13.68925937131893
+    },
+    {
+      "q2_deg": 72,
+      "separating_axis_gap_mm": 13.943645940542538
+    },
+    {
+      "q2_deg": 73,
+      "separating_axis_gap_mm": 14.207187966375102
+    },
+    {
+      "q2_deg": 74,
+      "separating_axis_gap_mm": 14.479805171362568
+    },
+    {
+      "q2_deg": 75,
+      "separating_axis_gap_mm": 14.761414513663368
+    },
+    {
+      "q2_deg": 76,
+      "separating_axis_gap_mm": 15.051930212343855
+    },
+    {
+      "q2_deg": 77,
+      "separating_axis_gap_mm": 15.35126377350791
+    },
+    {
+      "q2_deg": 78,
+      "separating_axis_gap_mm": 15.659324017253084
+    },
+    {
+      "q2_deg": 79,
+      "separating_axis_gap_mm": 15.97601710544491
+    },
+    {
+      "q2_deg": 80,
+      "separating_axis_gap_mm": 16.301246570300837
+    },
+    {
+      "q2_deg": 81,
+      "separating_axis_gap_mm": 16.63491334377529
+    },
+    {
+      "q2_deg": 82,
+      "separating_axis_gap_mm": 16.97691578773677
+    },
+    {
+      "q2_deg": 83,
+      "separating_axis_gap_mm": 17.327149724927814
+    },
+    {
+      "q2_deg": 84,
+      "separating_axis_gap_mm": 17.685508470698345
+    },
+    {
+      "q2_deg": 85,
+      "separating_axis_gap_mm": 18.051882865502904
+    }
+  ]
+}

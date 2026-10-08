@@ -1,0 +1,32 @@
+{
+  "decision": "TOR-001",
+  "pose_source": "standing-pose.json",
+  "skeleton_source": "leg-skeleton.json",
+  "robot_mass_kg": 1.2,
+  "mass_interpretation": "design ceiling, not a measured mass",
+  "gravity_m_s2": 9.80665,
+  "contact_force_direction_body": [0, 0, 1],
+  "servo_to_joint_ratio": 1,
+  "transmission_efficiency": 1,
+  "transmission_status": "ideal direct-drive screening assumption, not selected hardware",
+  "moving_link_gravity_included": false,
+  "load_cases": [
+    {"id": "quarter_weight", "weight_share": 0.25, "meaning": "equal four-foot support, assumed centered COM and load sharing"},
+    {"id": "third_weight", "weight_share": 0.3333333333333333, "meaning": "hypothetical equal three-foot share; requires matching COM projection, not guaranteed for the nominal robot"},
+    {"id": "half_weight", "weight_share": 0.5, "meaning": "single-leg redistribution screening case; not a stable two-foot gait claim"}
+  ],
+  "servo_candidate": {
+    "name": "TowerPro MG90S",
+    "retrieved_date": "2026-10-07",
+    "continuous_holding_torque_nm": null,
+    "voltage_selected": null,
+    "sources": [
+      {"id": "manufacturer_page", "url": "https://torqpro.com/product/mg90s/", "description": "Tower Pro Hong Kong MG90S product page", "stall_ratings": [{"kgf_cm": 1.8, "voltage_v": 4.8}, {"kgf_cm": 2.2, "voltage_v": 6.6}], "operating_voltage_field_v": 4.8},
+      {"id": "manufacturer_branded_sheet", "url": "https://electronilab.co/wp-content/uploads/2015/06/MG90S_Tower-Pro.pdf", "description": "Tower Pro branded MG90S sheet hosted by Electronilab", "stall_ratings": [{"kgf_cm": 1.8, "voltage_v": 4.8}, {"kgf_cm": 2.2, "voltage_v": 6.0}], "operating_voltage_range_v": [4.8, 6.0]}
+    ],
+    "comparison_ratings": [
+      {"id": "baseline_4v8", "stall_kgf_cm": 1.8, "interpretation": "common source rating at 4.8 V"},
+      {"id": "optimistic_published", "stall_kgf_cm": 2.2, "interpretation": "optimistic stall comparison only; source voltage differs (6.0 versus 6.6 V)"}
+    ]
+  }
+}

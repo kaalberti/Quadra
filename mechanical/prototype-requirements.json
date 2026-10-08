@@ -1,0 +1,12 @@
+{
+  "updated": "2026-10-08",
+  "maximum_operating_mass_kg": 2.0,
+  "mass_scope": "Complete operating robot including battery, electronics, wiring and fasteners; no extra payload allowance",
+  "mass_authority": "User: Increase the allowable robot weight to 2kg",
+  "historical_mass_limit_kg": 1.2,
+  "preferred_total_budget_NZD": [500, 800],
+  "absolute_budget_ceiling_NZD": 1000,
+  "upper_link_target_mm": 70,
+  "lower_contact_target_mm": 85,
+  "historical_load_reports_rescaled": false
+}

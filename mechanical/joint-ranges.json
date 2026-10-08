@@ -1,0 +1,21 @@
+{
+  "decision": "KIN-004",
+  "status": "desired geometric ranges; hardware and coupled feasibility unverified",
+  "units": "degrees",
+  "pose_source": "standing-pose.json",
+  "interval_convention": "closed for geometric analysis only",
+  "hardware_limits_validated": false,
+  "coupled_feasibility_validated": false,
+  "joints": [
+    {"id": "q1", "name": "hip abduction/adduction", "lower": -25, "upper": 30},
+    {"id": "q2", "name": "hip pitch", "lower": -40, "upper": 85},
+    {"id": "q3", "name": "knee flexion", "lower": 20, "upper": 130}
+  ],
+  "coordinate_rotation_axes": ["body +x", "abducted +y", "upper-frame +y"],
+  "coordinate_rotation_signs": {
+    "FL": [1, -1, 1],
+    "FR": [-1, -1, 1],
+    "RL": [1, -1, 1],
+    "RR": [-1, -1, 1]
+  }
+}

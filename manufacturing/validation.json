@@ -1,0 +1,17 @@
+{
+  "revision": "pitch-leg-1",
+  "scope": "unpowered two-DOF mechanical prototype",
+  "cad_exports_checked": 20,
+  "geometry_comparison": "sorted STL vertices rounded to 0.00001 mm; fresh CGAL simple solid; existing independent mesh checks",
+  "assembly_unique_stls": 16,
+  "assembly_pieces": 20,
+  "fit_coupons": 4,
+  "bom": "23 M3 bolt/nut roles, 45 normal and one backing washer, two servos/two bearings; horn hardware conditional on actual fit",
+  "drawing": "STL-derived bounding dimensions; nominal 70/85mm chain verified by pitch-leg checker",
+  "pcb": "not applicable: no PCB released",
+  "connector_pinouts": "not applicable: no electrical release",
+  "wiring": "not applicable: unpowered fit scope",
+  "firmware": "not applicable: no powered operation",
+  "physical_fit_verified": false,
+  "powered_operation_approved": false
+}

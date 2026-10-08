@@ -1,0 +1,23 @@
+{
+  "decision": "KIN-002",
+  "status": "candidate; physical feasibility unverified",
+  "units": "mm",
+  "body": {"length": 180, "width": 110},
+  "parameters": {
+    "half_length": 75,
+    "half_width": 55,
+    "height": 0,
+    "forward": 0,
+    "outward": 25,
+    "vertical": 0,
+    "upper": 70,
+    "lower": 85
+  },
+  "reference_angles_rad": [0, 0, 0],
+  "legs": {
+    "FL": {"front": 1, "side": 1, "points": {"O": [75, 55, 0], "H": [75, 80, 0], "K": [75, 80, -70], "P": [75, 80, -155]}},
+    "FR": {"front": 1, "side": -1, "points": {"O": [75, -55, 0], "H": [75, -80, 0], "K": [75, -80, -70], "P": [75, -80, -155]}},
+    "RL": {"front": -1, "side": 1, "points": {"O": [-75, 55, 0], "H": [-75, 80, 0], "K": [-75, 80, -70], "P": [-75, 80, -155]}},
+    "RR": {"front": -1, "side": -1, "points": {"O": [-75, -55, 0], "H": [-75, -80, 0], "K": [-75, -80, -70], "P": [-75, -80, -155]}}
+  }
+}

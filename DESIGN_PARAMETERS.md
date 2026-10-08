@@ -1,0 +1,188 @@
+# Design Parameters
+
+Last updated: 2026-10-08
+
+This file contains the current approved or provisional design values for the active Rev A quadruped.
+
+Rules:
+- Use current values only.
+- Do not keep historical values inline.
+- Put superseded values in ARCHIVE/ or decision records.
+- Mark uncertain values as PROVISIONAL or TBD.
+- Do not add long explanations here.
+
+---
+
+## Robot
+
+BODY_LENGTH = 180 mm
+BODY_WIDTH = 110 mm
+
+MAX_OPERATING_MASS = 2.0 kg
+TARGET_OPERATING_MASS = PROVISIONAL
+
+DOF_TOTAL = 12
+LEGS = 4
+DOF_PER_LEG = 3
+
+---
+
+## Leg Geometry
+
+UPPER_LEG_LENGTH = 70 mm
+LOWER_LEG_LENGTH = 85 mm
+
+J1_ROOT_X = ±75 mm
+J1_ROOT_Y = ±55 mm
+
+J1_TO_J2_LATERAL_OFFSET = 25 mm PROVISIONAL
+J1_TO_J2_FORWARD_OFFSET = 0 mm
+J1_TO_J2_VERTICAL_OFFSET = 0 mm
+
+NOMINAL_BODY_DATUM_HEIGHT = 120 mm PROVISIONAL
+
+---
+
+## Joint Ranges
+
+J1_MIN = -25 deg
+J1_MAX = +30 deg
+
+J2_MIN = -40 deg
+J2_MAX = +85 deg
+
+J3_MIN = +20 deg
+J3_MAX = +130 deg
+
+These are geometric targets, not final hardware limits.
+
+---
+
+## Actuators
+
+SERVO_MODEL = TBD
+
+CURRENT_PACKAGING_CLASS = MG996R-sized hobby servo
+
+SERVO_QUANTITY = 12
+
+SERVO_CONTROL_INTERFACE = PWM
+
+SERVO_SUPPLY_VOLTAGE = TBD
+
+SERVO_UNIT_MASS = ~55 g PROVISIONAL
+
+SERVO_UNIT_COST_TARGET = NZ$25–35
+SERVO_UNIT_COST_SOFT_MAX = NZ$50
+
+SERVO_TORQUE_TARGET = TBD
+
+---
+
+## Bearings / Joint Support
+
+KNEE_PASSIVE_SUPPORT_BEARING = 624 PROVISIONAL
+
+BEARING_BORE = 4 mm
+BEARING_OD = 13 mm
+BEARING_WIDTH = 5 mm
+
+DEFAULT_JOINT_FASTENER = M3
+
+---
+
+## Printing
+
+PRINT_PROCESS = FDM
+
+NOZZLE_DIAMETER = 0.4 mm
+LAYER_HEIGHT = 0.2 mm
+
+PRIMARY_MATERIAL = PLA+ / PETG
+
+DEFAULT_DIMENSIONAL_ALLOWANCE = ±0.2 mm
+
+DEFAULT_STRUCTURAL_WALL = 3 mm PROVISIONAL
+
+DEFAULT_CLEARANCE_PRINTED_FIT = TBD
+
+---
+
+## Chassis
+
+CHASSIS_LENGTH = 220 mm PROVISIONAL
+CHASSIS_WIDTH = 150 mm PROVISIONAL
+CHASSIS_HEIGHT = TBD
+
+BATTERY_LOCATION = TBD
+CONTROLLER_LOCATION = TBD
+
+---
+
+## Electronics
+
+MCU = ESP32-S3
+
+SERVO_DRIVER = PCA9685 or equivalent PROVISIONAL
+
+IMU = TBD
+
+LOGIC_VOLTAGE = 3.3 V
+
+SERVO_POWER_ARCHITECTURE = dedicated external BEC/regulator
+
+CUSTOM_PCB = DEFERRED
+
+---
+
+## Battery / Power
+
+BATTERY_CHEMISTRY = TBD
+BATTERY_CELL_COUNT = TBD
+BATTERY_NOMINAL_VOLTAGE = TBD
+BATTERY_CAPACITY = TBD
+
+SERVO_SUPPLY_VOLTAGE = TBD
+
+SERVO_SUPPLY_CONTINUOUS_CURRENT = TBD
+SERVO_SUPPLY_PEAK_CURRENT = TBD
+
+LOGIC_SUPPLY = TBD
+
+---
+
+## Firmware
+
+SERVO_UPDATE_RATE = TBD
+
+IK_COORDINATE_SYSTEM:
++x = forward
++y = left
++z = up
+
+POSITIVE_J1 = outward abduction
+POSITIVE_J2 = upper leg forward
+POSITIVE_J3 = knee flexion backward
+
+---
+
+## Cost
+
+TOTAL_REV_A_BUDGET_TARGET = NZ$500–800
+TOTAL_REV_A_BUDGET_MAX = NZ$1,000
+
+ACTUATOR_TOTAL_TARGET = NZ$300–420
+
+---
+
+## Current Prototype
+
+CURRENT_MECHANICAL_STATE = supported 2-DOF pitch leg complete in CAD
+
+CURRENT_NEXT_MECHANICAL_FEATURE = J1 abduction carrier
+
+CURRENT_MANUFACTURING_PACK = MFG-001
+
+PHYSICAL_FIT_VALIDATED = false
+POWERED_LEG_VALIDATED = false
+COMPLETE_3DOF_LEG_VALIDATED = false

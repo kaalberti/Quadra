@@ -1,0 +1,14 @@
+{
+  "revision": "RevA-prototype-joint-1",
+  "units": "mm",
+  "servo": {"body_length": 40.7, "body_width": 19.7, "body_height": 42.9, "shaft_x_in_cradle": -10.35, "shaft_y_in_cradle": 0, "horn_face_z": 50, "shaft_offset_from_short_end_assumed": 10},
+  "fixed_support": {"base_top_z": 0, "base_thickness": 3, "pivot_boss_bottom_z": -10, "bolt": "M4x35 socket-head cap screw, verify actual head fits", "hole": 4.5, "head_pocket_diameter": 7.5, "head_pocket_depth": 4.5},
+  "front_arm": {"bottom_z": 50, "thickness": 5, "horn_slot_radii": [7, 11], "horn_hole_diameter": 2.5, "center_access_diameter": 10},
+  "rear_arm": {"top_z": -16.2, "thickness": 7, "bearing_seat_diameter": 13.2, "bearing_seat_depth": 5.2},
+  "bearing": {"designation": "624", "bore": 4, "outside_diameter": 13, "width": 5, "source": "https://www.skf.com/ro/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-624-2RS1?failover=true"},
+  "spacers": {"front_length": 8, "rear_length": 3, "bore": 4.3, "outside_diameter": 5.8, "inner_race_contact_requires_fit_check": true},
+  "bridge": {"radius": 58, "column_diameter": 12, "bolt_spacing": 14, "length": 66.2, "bolt_hole": 3.5, "fasteners": "two M3x90 bolts or M3 threaded rods with nuts"},
+  "retainer": {"thickness": 3, "center_opening": 10, "bolt_pitch": 22, "fasteners": "two M3x16 through bolts with nuts"},
+  "physical_fit_verified": false,
+  "assumptions": ["Actual horn face height and shaft position must be checked on one servo", "Use the supplied horn; no printed spline", "Bearing-seat coupon selects clearance", "Spacer ends touch only the bearing inner ring; hand rotation checks binding", "No full-leg mass, motion or power approval"]
+}

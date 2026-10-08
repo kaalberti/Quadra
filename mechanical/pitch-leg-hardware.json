@@ -1,0 +1,29 @@
+{
+  "scope": "One supported2DOF pitch leg including bench adapter; noJ1",
+  "servos": 2,
+  "bearings_624": 2,
+  "M3_fastener_roles": [
+    {"role": "hip case clamp", "length_mm": 40, "quantity": 2},
+    {"role": "hip cradle/support/bench adapter", "length_mm": 20, "quantity": 4},
+    {"role": "two bearing retainers", "length_mm": 16, "quantity": 4},
+    {"role": "foot carrier", "length_mm": 16, "quantity": 2},
+    {"role": "cable guide", "length_mm": 16, "quantity": 1},
+    {"role": "knee ear mount", "length_mm": 12, "quantity": 4},
+    {"role": "upper plate/saddle/rear support", "length_mm": 70, "quantity": 2},
+    {"role": "two joint bridges", "length_mm": 90, "quantity": 4}
+  ],
+  "M3_nuts": 23,
+  "M3_normal_washers": 45,
+  "M3_12mm_OD_backing_washer": 1,
+  "M4x35_socket_head_pivots": 2,
+  "M4_pivot_locknuts": 2,
+  "M4_pivot_washers": 2,
+  "M2x10_horn_bolts_max": 8,
+  "M2_horn_nuts_max": 8,
+  "M2_horn_washers_max": 16,
+  "printed_or_metal_inner_spacers_mm": [8, 10, 3, 3],
+  "rubber_or_EVA_pad": {"quantity": 1, "size_mm": [18, 8, 1]},
+  "small_cable_ties": 2,
+  "bench_only": {"M4x70_example_anchor_bolts": 2, "M4_nuts": 2, "M4_washers": 2, "40mm_standoffs": 2, "board_thickness_example_mm": 12, "note": "Choose anchor length for actual rigid vertical fixture; not robot parts"},
+  "quantities_locked_for_complete_robot": false
+}

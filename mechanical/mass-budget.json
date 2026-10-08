@@ -1,0 +1,23 @@
+{
+  "decision": "TOR-009",
+  "status": "provisional engineering allocations, not measured masses",
+  "units": "g",
+  "strict_robot_limit_g": 1200,
+  "planning_envelope_g": 1150,
+  "growth_reserve_g": 150,
+  "allocations_g": {
+    "actuator_assemblies": 360,
+    "printed_structure": 240,
+    "battery_assembly": 150,
+    "electronics_power_control": 90,
+    "wiring_connectors": 60,
+    "shared_hardware_feet": 100
+  },
+  "actuator_count": 12,
+  "candidate_sources_checked": "2026-10-08",
+  "candidate_unit_masses_g": [
+    {"model":"HS-5085MG","mass_g":21.9,"source":"https://www.hitecrcd.co.kr/products/hs-5085mg/"},
+    {"model":"XL330-M288-T","mass_g":18,"source":"https://www.robotis.com/shop/item.php?it_id=902-0163-000"},
+    {"model":"XC330-M288-T","mass_g":23,"source":"https://emanual.robotis.com/docs/en/dxl/x/xc330-m288/"}
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "physical_fit_verified": false,
+  "revision": "RevA-bench-joint-1",
+  "guide": "docs/hobby-joint-build.md",
+  "parts": [
+    {
+      "sha256": "AC5B53BF4255DC9EA0F074FA2AB76C94F5BC489BB2CBF75BBB2863D141FA083A",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-servo-cradle-left.stl"
+    },
+    {
+      "sha256": "6F4FDFDCF84A73047037AD10B611B01A5FDE09E71DCCC434BE84B0EC7AFEEA0C",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-servo-cradle-right.stl"
+    },
+    {
+      "sha256": "2A69D2433A7177B392F5C3536317F8435240A5CACCCAA1223C8C2774C709DF5D",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-joint-support.stl"
+    },
+    {
+      "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-joint-front-arm.stl"
+    },
+    {
+      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-joint-rear-arm.stl"
+    },
+    {
+      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-joint-bridge.stl"
+    },
+    {
+      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-joint-retainer.stl"
+    },
+    {
+      "sha256": "6CE50F98172CF975EF695D0279B6425BB343ADDB85ED0C3F8C7757E22C9ADDC5",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-joint-front-spacer.stl"
+    },
+    {
+      "sha256": "0940367FEAD7BA1CD2A2BEDC5331BF46721E04AEE13461C8AC1471A80901157F",
+      "quantity": 1,
+      "orientation": "As exported, z=0 on print bed",
+      "file": "mechanical/hobby-joint-rear-spacer.stl"
+    }
+  ],
+  "validation": "mechanical/hobby-joint-check.json",
+  "fit_first": [
+    "mechanical/hobby-servo-cradle-coupon.stl",
+    "mechanical/hobby-joint-bearing-coupon.stl",
+    "mechanical/hobby-joint-horn-coupon.stl"
+  ],
+  "scope": "One oversized bench joint; not a complete leg or12-joint robot baseline"
+}

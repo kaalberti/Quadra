@@ -1,0 +1,94 @@
+{
+  "task": "TOR-012",
+  "grid_points": 441,
+  "grid_spacing_mm": 1,
+  "warning": "Sampled maxima only. No continuous-domain bound, gait, friction or dynamic margin.",
+  "angle_bounds_degrees": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      32.09293314379164,
+      55.50689866585175
+    ],
+    [
+      65.81627888856289,
+      90.12036937323377
+    ]
+  ],
+  "candidates": {
+    "HS-5085MG": {
+      "max_absolute_upper_Nm": [
+        0.17332077077000002,
+        0.12965848589343024,
+        0.4361154489486561
+      ],
+      "max_locations": [
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        },
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        },
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        }
+      ]
+    },
+    "XL330-M288-T": {
+      "max_absolute_upper_Nm": [
+        0.170375833775,
+        0.13196414149485194,
+        0.43338012976915213
+      ],
+      "max_locations": [
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        },
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        },
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        }
+      ]
+    },
+    "XC330-M288-T": {
+      "max_absolute_upper_Nm": [
+        0.174151394025,
+        0.12900817277508053,
+        0.43688694923005467
+      ],
+      "max_locations": [
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        },
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        },
+        {
+          "foot_offset_mm": -10,
+          "height_mm": 110,
+          "leg": "FL"
+        }
+      ]
+    }
+  }
+}

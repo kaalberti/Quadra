@@ -1,0 +1,370 @@
+{
+  "bench_adapter_solid_mass_g": 19.75961450296044,
+  "operating_mass_limit_kg": 2.0,
+  "minimum_sampled_knee_bridge_margin_mm": 1.159445779910526,
+  "actual_fit_verified": false,
+  "meshes": [
+    {
+      "closed": true,
+      "components": 1,
+      "part": "knee-support",
+      "triangles": 1248,
+      "volume_mm3": 6295.504877520501
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "lower-leg",
+      "triangles": 2112,
+      "volume_mm3": 10000.29541160419
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "knee-spacer",
+      "triangles": 384,
+      "volume_mm3": 118.64795296200035
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "foot",
+      "triangles": 412,
+      "volume_mm3": 1076.4379451447971
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "cable-guide",
+      "triangles": 528,
+      "volume_mm3": 1075.9237621199138
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "bench-base",
+      "triangles": 1992,
+      "volume_mm3": 15558.751577134204
+    }
+  ],
+  "printed_solid_volume_mm3": 123064.43215326141,
+  "knee_static_screen": {
+    "stall_ratio": 2.1924204442753172,
+    "force_N": 6.54,
+    "nominal_Nm": 0.42046000000000006,
+    "lever_mm": 49,
+    "horizontal_full_leg_bound_Nm": 1.1137000000000001,
+    "published_stall_at_4_8V_Nm": 0.9218251000000001,
+    "moving_parts_allowance_Nm": 0.1,
+    "support_legs": 3
+  },
+  "servo_mass_g": 110,
+  "exact_front_plate_probe_angles_deg": [
+    20,
+    79,
+    90
+  ],
+  "printed_solid_mass_g": 156.291828834642,
+  "fixture_clearance_mm": {
+    "adapter_to_bridge_radial_bound": 10.67750624653019,
+    "rear_arm_to_adapter_axial_gap": 6.2,
+    "board_gap_behind_adapter": 40,
+    "sampled_10mm_OD_anchor_standoff_to_rear_arm_capsule": 3.80280362836415
+  },
+  "illustrative_65_percent_material_mass_g": 101.5896887425173,
+  "limits": "Two-DOF pitch leg only; noJ1. Three sampled plate intersections and1deg bridge samples are not full motion qualification. Initial2kg loaded use restricted to bent standing; stall is not continuous rating. Actual cable/horn/fastener/pad fit and electrical capacity unverified.",
+  "exact_front_plate_intersections_empty": true,
+  "closure_mm": {
+    "lower_contact": 85,
+    "height": 120.0,
+    "pad_thickness_assumed": 1,
+    "upper": 70,
+    "forward": -2.1316282072803006E-14
+  },
+  "knee_bridge_samples": [
+    {
+      "q3_deg": 20,
+      "margin_mm": 26.702172005582685
+    },
+    {
+      "q3_deg": 21,
+      "margin_mm": 26.347664736837704
+    },
+    {
+      "q3_deg": 22,
+      "margin_mm": 25.97666356487367
+    },
+    {
+      "q3_deg": 23,
+      "margin_mm": 25.589281500241544
+    },
+    {
+      "q3_deg": 24,
+      "margin_mm": 25.18563654327085
+    },
+    {
+      "q3_deg": 25,
+      "margin_mm": 24.765851648125693
+    },
+    {
+      "q3_deg": 26,
+      "margin_mm": 24.330054685351687
+    },
+    {
+      "q3_deg": 27,
+      "margin_mm": 23.87837840292534
+    },
+    {
+      "q3_deg": 28,
+      "margin_mm": 23.410960385817763
+    },
+    {
+      "q3_deg": 29,
+      "margin_mm": 22.92794301408495
+    },
+    {
+      "q3_deg": 30,
+      "margin_mm": 22.429473419497445
+    },
+    {
+      "q3_deg": 31,
+      "margin_mm": 21.915703440722513
+    },
+    {
+      "q3_deg": 32,
+      "margin_mm": 21.386789577072708
+    },
+    {
+      "q3_deg": 33,
+      "margin_mm": 20.84289294083459
+    },
+    {
+      "q3_deg": 34,
+      "margin_mm": 20.284179208192423
+    },
+    {
+      "q3_deg": 35,
+      "margin_mm": 19.71081856876152
+    },
+    {
+      "q3_deg": 36,
+      "margin_mm": 19.12298567374695
+    },
+    {
+      "q3_deg": 37,
+      "margin_mm": 18.520859582742982
+    },
+    {
+      "q3_deg": 38,
+      "margin_mm": 17.904623709189874
+    },
+    {
+      "q3_deg": 39,
+      "margin_mm": 17.27446576450431
+    },
+    {
+      "q3_deg": 40,
+      "margin_mm": 16.630577700900727
+    },
+    {
+      "q3_deg": 41,
+      "margin_mm": 15.973155652920777
+    },
+    {
+      "q3_deg": 42,
+      "margin_mm": 15.302399877688867
+    },
+    {
+      "q3_deg": 43,
+      "margin_mm": 14.618514693911894
+    },
+    {
+      "q3_deg": 44,
+      "margin_mm": 13.92170841964177
+    },
+    {
+      "q3_deg": 45,
+      "margin_mm": 13.213997334995035
+    },
+    {
+      "q3_deg": 46,
+      "margin_mm": 12.510031186141699
+    },
+    {
+      "q3_deg": 47,
+      "margin_mm": 11.813620735344596
+    },
+    {
+      "q3_deg": 48,
+      "margin_mm": 11.125620257665418
+    },
+    {
+      "q3_deg": 49,
+      "margin_mm": 10.446964073295135
+    },
+    {
+      "q3_deg": 50,
+      "margin_mm": 9.778674623815075
+    },
+    {
+      "q3_deg": 51,
+      "margin_mm": 9.121871034110914
+    },
+    {
+      "q3_deg": 52,
+      "margin_mm": 8.477778034244693
+    },
+    {
+      "q3_deg": 53,
+      "margin_mm": 7.847735040086637
+    },
+    {
+      "q3_deg": 54,
+      "margin_mm": 7.23320509180714
+    },
+    {
+      "q3_deg": 55,
+      "margin_mm": 6.635783221318264
+    },
+    {
+      "q3_deg": 56,
+      "margin_mm": 6.057203660552113
+    },
+    {
+      "q3_deg": 57,
+      "margin_mm": 5.499345111989165
+    },
+    {
+      "q3_deg": 58,
+      "margin_mm": 4.964233086155073
+    },
+    {
+      "q3_deg": 59,
+      "margin_mm": 4.454038081237241
+    },
+    {
+      "q3_deg": 60,
+      "margin_mm": 3.971068162969506
+    },
+    {
+      "q3_deg": 61,
+      "margin_mm": 3.5177543397934032
+    },
+    {
+      "q3_deg": 62,
+      "margin_mm": 3.09662707850734
+    },
+    {
+      "q3_deg": 63,
+      "margin_mm": 2.7102824453385255
+    },
+    {
+      "q3_deg": 64,
+      "margin_mm": 2.3613367710381903
+    },
+    {
+      "q3_deg": 65,
+      "margin_mm": 2.0523695003514275
+    },
+    {
+      "q3_deg": 66,
+      "margin_mm": 1.7858550302077745
+    },
+    {
+      "q3_deg": 67,
+      "margin_mm": 1.5640858242121982
+    },
+    {
+      "q3_deg": 68,
+      "margin_mm": 1.3890907598790168
+    },
+    {
+      "q3_deg": 69,
+      "margin_mm": 1.2625542442124853
+    },
+    {
+      "q3_deg": 70,
+      "margin_mm": 1.1857427571903514
+    },
+    {
+      "q3_deg": 71,
+      "margin_mm": 1.159445779910526
+    },
+    {
+      "q3_deg": 72,
+      "margin_mm": 1.183937279714107
+    },
+    {
+      "q3_deg": 73,
+      "margin_mm": 1.2589620385201943
+    },
+    {
+      "q3_deg": 74,
+      "margin_mm": 1.3837483938980728
+    },
+    {
+      "q3_deg": 75,
+      "margin_mm": 1.5570459293953085
+    },
+    {
+      "q3_deg": 76,
+      "margin_mm": 1.777183912758592
+    },
+    {
+      "q3_deg": 77,
+      "margin_mm": 2.0134637575436445
+    },
+    {
+      "q3_deg": 78,
+      "margin_mm": 2.23256084256072
+    },
+    {
+      "q3_deg": 79,
+      "margin_mm": 2.4343766399645093
+    },
+    {
+      "q3_deg": 80,
+      "margin_mm": 2.6188496747080636
+    },
+    {
+      "q3_deg": 81,
+      "margin_mm": 2.7859237545179854
+    },
+    {
+      "q3_deg": 82,
+      "margin_mm": 2.9355479870110743
+    },
+    {
+      "q3_deg": 83,
+      "margin_mm": 3.0676767951966726
+    },
+    {
+      "q3_deg": 84,
+      "margin_mm": 3.182269931359845
+    },
+    {
+      "q3_deg": 85,
+      "margin_mm": 3.2792924893212403
+    },
+    {
+      "q3_deg": 86,
+      "margin_mm": 3.3587149150698012
+    },
+    {
+      "q3_deg": 87,
+      "margin_mm": 3.4205130157652777
+    },
+    {
+      "q3_deg": 88,
+      "margin_mm": 3.464667967107549
+    },
+    {
+      "q3_deg": 89,
+      "margin_mm": 3.4911663190706905
+    },
+    {
+      "q3_deg": 90,
+      "margin_mm": 3.4999999999999973
+    }
+  ]
+}

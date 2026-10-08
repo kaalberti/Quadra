@@ -1,0 +1,82 @@
+{
+  "mass_status": "Oversized bench-joint proof only; full robot mass target not established. Slicer and measured mass replace material-fraction assumption.",
+  "meshes": [
+    {
+      "closed": true,
+      "components": 1,
+      "part": "support",
+      "triangles": 1620,
+      "volume_mm3": 7509.427320358099
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "front-arm",
+      "triangles": 1712,
+      "volume_mm3": 9357.896934884184
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "rear-arm",
+      "triangles": 1480,
+      "volume_mm3": 13132.209616685863
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "bridge",
+      "triangles": 764,
+      "volume_mm3": 14086.979056469223
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "retainer",
+      "triangles": 792,
+      "volume_mm3": 863.7063740463602
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "front-spacer",
+      "triangles": 384,
+      "volume_mm3": 94.91836236959969
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "rear-spacer",
+      "triangles": 384,
+      "volume_mm3": 35.594385888600044
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "bearing-coupon",
+      "triangles": 2328,
+      "volume_mm3": 9685.708359355122
+    },
+    {
+      "closed": true,
+      "components": 1,
+      "part": "horn-coupon",
+      "triangles": 1200,
+      "volume_mm3": 3320.2926599062034
+    }
+  ],
+  "illustrative_12_joint_mass_with_servos_g": 1310.930305481745,
+  "solid_print_mass_g": 83.4526032668904,
+  "assumed_PETG_density_g_cm3": 1.27,
+  "printed_solid_volume_mm3": 65710.71123377197,
+  "coverage": "All local rotations by radial bound and axial separation; excludes actual ears/horn/cables/fasteners and downstream links",
+  "actual_fit_or_motion_verified": false,
+  "torque_screen_reference": "hobby-servo-cradle-check.json; no new operating approval",
+  "nominal_clearance_mm": {
+    "front_case_gap_after_allowance": 3.3000000000000016,
+    "bridge_radial_margin_after_allowance": 2.6729714488925227,
+    "rear_fixed_gap_after_allowance": 5.3999999999999995,
+    "allowance": 0.8
+  },
+  "illustrative_print_mass_at_65_percent_material_g": 54.24419212347877
+}

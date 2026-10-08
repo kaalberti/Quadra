@@ -1,0 +1,229 @@
+{
+  "decision": "TOR-008",
+  "scope": "nominal gravity only; fixed contact reactions",
+  "joint_order": [
+    "q1",
+    "q2",
+    "q3"
+  ],
+  "reference_leg": "FL",
+  "references": [
+    {
+      "id": "carrier_at_H",
+      "attachment": "hip_carrier",
+      "com_local_mm_FL": [
+        0,
+        25,
+        0
+      ],
+      "gravity_hold_nm_per_kg": [
+        0.24516625,
+        0.0,
+        0.0
+      ],
+      "gradient_nm_per_kg_mm_columns_xyz": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.00980665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "upper_at_H",
+      "attachment": "upper",
+      "com_local_mm_FL": [
+        0,
+        0,
+        0
+      ],
+      "gravity_hold_nm_per_kg": [
+        0.24516625,
+        -0.0,
+        0.0
+      ],
+      "gradient_nm_per_kg_mm_columns_xyz": [
+        [
+          0.0,
+          0.007048529687499999,
+          0.0
+        ],
+        [
+          0.00980665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.006818255896263471,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "upper_midpoint",
+      "attachment": "upper",
+      "com_local_mm_FL": [
+        0,
+        0,
+        -35.0
+      ],
+      "gravity_hold_nm_per_kg": [
+        0.24516625,
+        0.23863895636922022,
+        0.0
+      ],
+      "gradient_nm_per_kg_mm_columns_xyz": [
+        [
+          0.0,
+          0.007048529687500027,
+          0.0
+        ],
+        [
+          0.00980665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.006818255896263337,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "upper_at_K",
+      "attachment": "upper",
+      "com_local_mm_FL": [
+        0,
+        0,
+        -70
+      ],
+      "gravity_hold_nm_per_kg": [
+        0.24516625,
+        0.4772779127384406,
+        0.0
+      ],
+      "gradient_nm_per_kg_mm_columns_xyz": [
+        [
+          0.0,
+          0.007048529687500027,
+          0.0
+        ],
+        [
+          0.00980665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.006818255896263448,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "lower_at_K",
+      "attachment": "lower",
+      "com_local_mm_FL": [
+        0,
+        0,
+        0
+      ],
+      "gravity_hold_nm_per_kg": [
+        0.24516625,
+        0.4772779127384406,
+        -0.0
+      ],
+      "gradient_nm_per_kg_mm_columns_xyz": [
+        [
+          0.0,
+          0.008040010845588197,
+          -0.00804001084558817
+        ],
+        [
+          0.00980665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.005615034267511032,
+          -0.005615034267511053
+        ]
+      ]
+    },
+    {
+      "id": "lower_midpoint",
+      "attachment": "lower",
+      "com_local_mm_FL": [
+        0,
+        0,
+        -42.5
+      ],
+      "gravity_hold_nm_per_kg": [
+        0.24516625,
+        0.23863895636922022,
+        0.23863895636922036
+      ],
+      "gradient_nm_per_kg_mm_columns_xyz": [
+        [
+          0.0,
+          0.008040010845588197,
+          -0.008040010845588141
+        ],
+        [
+          0.00980665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00561503426751106,
+          -0.005615034267511004
+        ]
+      ]
+    },
+    {
+      "id": "lower_at_P",
+      "attachment": "lower",
+      "com_local_mm_FL": [
+        0,
+        0,
+        -85
+      ],
+      "gravity_hold_nm_per_kg": [
+        0.24516625,
+        -2.7872175678567146e-16,
+        0.4772779127384409
+      ],
+      "gradient_nm_per_kg_mm_columns_xyz": [
+        [
+          0.0,
+          0.00804001084558831,
+          -0.008040010845588252
+        ],
+        [
+          0.00980665,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0056150342675111925,
+          -0.005615034267511143
+        ]
+      ]
+    }
+  ]
+}

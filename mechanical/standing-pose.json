@@ -1,0 +1,21 @@
+{
+  "decision": "KIN-003",
+  "status": "nominal geometric candidate; physical standing unverified",
+  "skeleton_source": "leg-skeleton.json",
+  "position_units": "mm",
+  "angle_units": "degrees",
+  "body_datum_height": 120,
+  "ground_z_body": -120,
+  "body_origin_ground": [0, 0, 120],
+  "body_rpy_degrees": [0, 0, 0],
+  "joint_angles_degrees_all_legs": [0, 44.04862567408432, 78.97855036448314],
+  "stance_length": 150,
+  "stance_width": 160,
+  "coordinate_rounding_tolerance_mm": 0.000001,
+  "legs": {
+    "FL": {"O": [75, 55, 0], "H": [75, 80, 0], "K": [123.668802572, 80, -50.3125], "P": [75, 80, -120]},
+    "FR": {"O": [75, -55, 0], "H": [75, -80, 0], "K": [123.668802572, -80, -50.3125], "P": [75, -80, -120]},
+    "RL": {"O": [-75, 55, 0], "H": [-75, 80, 0], "K": [-26.331197428, 80, -50.3125], "P": [-75, 80, -120]},
+    "RR": {"O": [-75, -55, 0], "H": [-75, -80, 0], "K": [-26.331197428, -80, -50.3125], "P": [-75, -80, -120]}
+  }
+}

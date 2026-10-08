@@ -1,0 +1,106 @@
+{
+  "guide": "docs/prototype-pitch-leg-build.md",
+  "revision": "pitch-leg-1",
+  "physical_fit_verified": false,
+  "scope": "TwoDOF mechanical pitch leg, noJ1",
+  "parts": [
+    {
+      "quantity": 1,
+      "sha256": "AC5B53BF4255DC9EA0F074FA2AB76C94F5BC489BB2CBF75BBB2863D141FA083A",
+      "file": "mechanical/hobby-servo-cradle-left.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "6F4FDFDCF84A73047037AD10B611B01A5FDE09E71DCCC434BE84B0EC7AFEEA0C",
+      "file": "mechanical/hobby-servo-cradle-right.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "2A69D2433A7177B392F5C3536317F8435240A5CACCCAA1223C8C2774C709DF5D",
+      "file": "mechanical/hobby-joint-support.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1",
+      "file": "mechanical/prototype-upper-leg-plate.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "9A72E19587F4ADD72F9139F8529E467D3E92E2DF40C08C612247824B281213A9",
+      "file": "mechanical/prototype-upper-leg-saddle.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 2,
+      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719",
+      "file": "mechanical/hobby-joint-rear-arm.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 2,
+      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4",
+      "file": "mechanical/hobby-joint-bridge.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 2,
+      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38",
+      "file": "mechanical/hobby-joint-retainer.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "6CE50F98172CF975EF695D0279B6425BB343ADDB85ED0C3F8C7757E22C9ADDC5",
+      "file": "mechanical/hobby-joint-front-spacer.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 2,
+      "sha256": "0940367FEAD7BA1CD2A2BEDC5331BF46721E04AEE13461C8AC1471A80901157F",
+      "file": "mechanical/hobby-joint-rear-spacer.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8",
+      "file": "mechanical/prototype-knee-support.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "4C7D2D05924903B7805D9EA35454A635F240F4628077F93501BA04C3FDF6494F",
+      "file": "mechanical/prototype-lower-leg.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "5FED377AD820F57F70389B16CA023230530773128BC9DD15C59F496B9DFDDC12",
+      "file": "mechanical/prototype-knee-spacer.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC",
+      "file": "mechanical/prototype-foot.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "6FFF92555115FCC8B9FDCB8504F409BACF56D00548BDA2E30AE177E25019AACB",
+      "file": "mechanical/prototype-cable-guide.stl",
+      "fixture_only": false
+    },
+    {
+      "quantity": 1,
+      "sha256": "B4196B48CAC305C24B5427CBE05F003406B59852FBAA1ABE63829468F416DC48",
+      "file": "mechanical/prototype-bench-base.stl",
+      "fixture_only": true
+    }
+  ],
+  "operating_mass_limit_kg": 2,
+  "bom": "docs/purchasing-bom.md"
+}

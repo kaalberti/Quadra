@@ -1,0 +1,97 @@
+{
+  "servo_mass_g": 660,
+  "meshes": [
+    {
+      "closed_edges": true,
+      "part": "left",
+      "triangles": 878,
+      "bounds_mm": [
+        {
+          "min": -33.75,
+          "max": 33.75
+        },
+        {
+          "min": -20.25,
+          "max": -0.5
+        },
+        {
+          "min": 0.0,
+          "max": 21.0
+        }
+      ]
+    },
+    {
+      "closed_edges": true,
+      "part": "right",
+      "triangles": 878,
+      "bounds_mm": [
+        {
+          "min": -33.75,
+          "max": 33.75
+        },
+        {
+          "min": 0.5,
+          "max": 20.25
+        },
+        {
+          "min": 0.0,
+          "max": 21.0
+        }
+      ]
+    },
+    {
+      "closed_edges": true,
+      "part": "coupon",
+      "triangles": 1524,
+      "bounds_mm": [
+        {
+          "min": -33.75,
+          "max": 33.75
+        },
+        {
+          "min": -20.25,
+          "max": 66.75
+        },
+        {
+          "min": 0.0,
+          "max": 10.0
+        }
+      ]
+    }
+  ],
+  "screen": {
+    "standing_knee_Nm": 0.272276,
+    "standing_stall_ratio": 3.385627451556509,
+    "stall_at_4_8V_Nm": 0.9218251000000001,
+    "extended_horizontal_bound_Nm": 0.6882199999999999,
+    "allowance_Nm": 0.08,
+    "restriction": "Bent-pose prototype only; no full-range or continuous-torque qualification",
+    "support_force_N": 3.924
+  },
+  "budget_NZD": {
+    "unit_servo_cap": [
+      25,
+      35
+    ],
+    "servo_total": [
+      300,
+      420
+    ],
+    "reserve": 80,
+    "other_allowance": 300,
+    "total": [
+      680,
+      800
+    ],
+    "quantity": 12,
+    "actual_prices_verified": false
+  },
+  "physical_fit_verified": false,
+  "pocket_mm": {
+    "split_gap": 1,
+    "depth": 18,
+    "width": 20.5,
+    "floor": 3,
+    "length": 41.5
+  }
+}
