@@ -1,26 +1,26 @@
+# MEC-144–153: Supported three-DOF bench leg
 
-# MFG-001: Package the current two-DOF mechanical prototype
+Complete ten practical steps as one prototype checkpoint:
+1. Define J1-to-pitch-module packaging and frame transforms.
+2. Screen J1 torque at the 2kg requirement; define conservative trial envelope.
+3. Design a print-flat carrier joining the existing supported J1 fork to J2.
+4. Reuse the supported horn/rear-bearing J1 joint and expose the pitch module.
+5. Assemble all three joints in editable CAD.
+6. Retain a rigid J1 bench fixture and check attachment access.
+7. Check relevant carrier and fixed-case intersections at representative poses.
+8. Export carrier STL and independently check mesh, bed placement and dimensions.
+9. Update one-leg print quantities and purchased hardware BOM.
+10. Package the unpowered 3DOF prototype checkpoint and update current status.
 
-Scope: package existing pitch-leg-1 geometry for printing and unpowered fit only.
-Outputs: manufacturing STL kit, coupons, self-contained assembly/BOM, dimensions,
-CAD snapshot, release manifest and validation report. Working exports stay in docs.
-Validation: fresh CAD exports geometrically match each original STL; quantities
-match current print manifest and hardware roles; active checks pass; release hashes,
-CAD dependencies, drawing dimensions and package file inventory verified.
-No new dependencies, geometry changes, J1 design, electronics or powered release.
-TASK_TEMPLATE.md is empty and is used as the prefix. Stop after updating STATUS.
-
+Scope: a bench prototype; no chassis, electronics, firmware or physical tests.
+Packaging offsets are prototype values, not silently applied to the old skeleton.
+Validation: CGAL export, closed connected STL, sampled empty intersections,
+existing pitch checks, print/hardware counts, source dependencies and release hashes.
+Stop after this checkpoint. Next milestone is physical coupon/assembly testing.
 ## Completion — 2026-10-08
-
-Created manufacturing/ with 46 current release files: 16 assembly STL files
-for 20 pieces, four fit coupons, CAD snapshot, assembly instructions/image,
-dimension/print table, BOM and role JSON, manifest and validation report.
-Twenty fresh CAD exports match original mesh geometry; four existing checks
-pass. Independent docs/check-manufacturing-pack.ps1 verifies package inventory,
-hashes, current CAD dependencies, links, quantities and hardware roles.
-Sources/tooling/logs outside the release: docs/build-manufacturing-pack.ps1,
-docs/check-manufacturing-pack.ps1 and docs/manufacturing-verification/.
-Updated PROJECT.md, STATUS.md and decisions/design-decisions.md.
-Physical fit and powered capacity remain unverified. No electronics, STEP or
-firmware release claimed; no next engineering stage started.
-Next task: MEC-144 J1 abduction carrier; not executed.
+All ten steps completed as a supported three-DOF bench prototype checkpoint.
+See docs/tasks/MEC-144-153.md for results and validation commands.
+MFG-002 contains54 verified files,18 assembly STLs/29 pieces plus four coupons.
+Six sampled no-solid-intersection checks, carrier mesh and retained pitch checks pass.
+Actual hardware fit, loaded operation and final robot packaging remain unverified.
+Next physical milestone: coupons and unpowered leg assembly; no next stage started.

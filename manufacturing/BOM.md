@@ -1,4 +1,4 @@
-# Purchasing BOM — Rev A, updated MEC-142 (2026-10-08)
+# Purchasing BOM — Rev A, updated MEC-144–153 (2026-10-08)
 
 Maintain this file when purchased parts or quantities change. This is a staged
 shopping list, not a purchase order. Prices are planning caps, not verified
@@ -18,32 +18,32 @@ Bearing boundary source: [SKF624](https://www.skf.com/ro/products/rolling-bearin
 These were checked in previous public-manufacturer tasks. Actual delivered price,
 model, ear shape and horn fit are not locked. Test one before a quantity order.
 
-## Current supported two-DOF pitch leg
+## Current supported three-DOF bench leg
 
-Counts include BOTH pitch joints, foot, guide and bench adapter. They replace
-previous upper-leg/bench-joint lists; do not add those lists again. J1 and chassis
+Counts include J1 and BOTH pitch joints, foot, guide and one bench adapter. They replace
+previous upper-leg/bench-joint lists; do not add those lists again. Chassis parts
 are excluded. Machine-readable roles: bom-hardware.json.
 
 | Purchased item | Total needed | Purpose |
 | --- | ---: | --- |
-| Positional servos, supplied horns/centre screws | 2 | Includes first fit-check servo |
-| 624 bearings | 2 | Includes fit-check bearing; one per pitch joint |
-| M3 x40 through bolts | 2 | Hip case clamp |
-| M3 x20 through bolts | 4 | Hip cradle/support/7mm bench adapter; replaces old x16 base bolts |
-| M3 x16 through bolts | 7 | Two retainers4, foot2, cable guide1 |
+| Positional servos, supplied horns/centre screws | 3 | Includes first fit-check servo |
+| 624 bearings | 3 | Includes fit-check bearing; one per joint |
+| M3 x40 through bolts | 4 | J1 and J2 case clamps |
+| M3 x20 through bolts | 12 | J1 cradle/support/bench4, J2 cradle/support/carrier4, carrier end tabs4 |
+| M3 x16 through bolts | 9 | Three retainers6, foot2, cable guide1 |
 | M3 x12 through bolts | 4 | Knee mounting ears; check actual ear thickness |
 | M3 x70 through bolts | 2 | Upper plate/saddle/knee rear support; replaces old x40 saddle bolts |
 | M3 x90 through bolts | 4 | Two bridges; or four90mm M3 threaded rods with four extra head-side nuts |
-| M3 nuts | 23 | Locking nuts where suitable;27 if using bridge rods |
-| M3 ordinary flat washers | 45 | Small6mm OD at close base/saddle positions |
+| M3 nuts | 35 | Locking nuts where suitable;39 if using bridge rods |
+| M3 ordinary flat washers | 69 | Small6mm OD at close base/saddle positions |
 | M3 backing washer,12mm OD | 1 | Under upper-plate window for cable guide; replaces one ordinary washer |
-| M4 x35 socket-head pivot screws | 2 | Verify heads fit7.5mm diameter x4.5mm depth recesses |
-| M4 pivot locking nuts and washers | 2 each | Bearing inner-ring retention |
-| M2 x10 horn through bolts and nuts | Up to8 each | Actual supplied horn pattern/thickness sets count and length |
-| M2 washers | Up to16 | Check tips/nuts clear servo case |
-| Inner-ring spacer stacks | 8mm,10mm,3mm,3mm | Printed parts supplied; commodity metal substitutes optional; check only inner-ring contact |
+| M4 x35 socket-head pivot screws | 3 | Verify heads fit7.5mm diameter x4.5mm depth recesses |
+| M4 pivot locking nuts and washers | 3 each | Bearing inner-ring retention |
+| M2 x10 horn through bolts and nuts | Up to12 each | Actual supplied horn pattern/thickness sets count and length |
+| M2 washers | Up to24 | Check tips/nuts clear servo case |
+| Inner-ring spacer stacks | 8mm,8mm,10mm,3mm,3mm,3mm | Printed parts supplied; commodity metal substitutes optional; check only inner-ring contact |
 | Adhesive rubber/EVA pad | 1 | Cut18 x8 x1mm;1mm thickness gives85mm nominal contact radius |
-| Small cable ties | 2 | Cable guide; leave slack through joint motion |
+| Small cable ties | 4 | Cable guide; leave slack through joint motion |
 
 Allow NZ$25 for initial small-hardware packs, then verify delivered prices.
 This is an allowance, not an itemized quote. Buy a few spare fasteners. Supplied
@@ -67,7 +67,7 @@ before any loading; this is not a powered-test stability approval.
 | Item | One3-DOF leg | Four-leg robot | Status |
 | --- | ---: | ---: | --- |
 | Positional servos with horns | 3 | 12 | Architecture count; model/performance provisional |
-| Passive support bearings | 3 planned | 12 planned |624 currently used; J1 packaging unfinished |
+| Passive support bearings | 3 | 12 planned |624 currently used; J1 bench package exists; chassis fit unfinished |
 | Remaining fasteners, inserts, feet | TBD | TBD | Update as J1/chassis are designed; do not multiply bench kit by12 |
 | Battery, power distribution, BEC/regulator, controller/PWM, cables | TBD | TBD | Electrical stage deferred; check voltage/current/polarity before powered tests |
 

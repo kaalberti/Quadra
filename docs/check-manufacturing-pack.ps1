@@ -3,7 +3,9 @@ Set-StrictMode -Version Latest
 $repo=Split-Path $PSScriptRoot -Parent
 $pack=Join-Path $repo 'manufacturing'
 $manifest=Get-Content (Join-Path $pack 'release-manifest.json') -Raw|ConvertFrom-Json
-$baseline=Get-Content (Join-Path $repo 'mechanical/pitch-leg-print-manifest.json') -Raw|ConvertFrom-Json
+$threeDof=$manifest.pack_revision -eq 'MFG-002'
+$baselineName=if($threeDof){'three-dof-print-manifest.json'}else{'pitch-leg-print-manifest.json'}
+$baseline=Get-Content (Join-Path $repo "mechanical/$baselineName") -Raw|ConvertFrom-Json
 $expected=@('release-manifest.json')+@($manifest.files.file)
 $actual=@(Get-ChildItem $pack -Recurse -File|ForEach-Object {$_.FullName.Substring($pack.Length+1).Replace('\','/')})
 if(Compare-Object ($expected|Sort-Object) ($actual|Sort-Object)) {throw 'Unexpected or missing release files'}
@@ -17,7 +19,9 @@ foreach($part in $baseline.parts) {
 }
 foreach($file in Get-ChildItem (Join-Path $pack 'cad') -File) {
  $active=Join-Path $repo "mechanical/$($file.Name)"
- if((Get-FileHash $file.FullName).Hash -ne (Get-FileHash $active).Hash) {throw "Source snapshot differs: $($file.Name)"}
+ $releasedText=[IO.File]::ReadAllText($file.FullName).Replace("`r`n","`n")
+ $activeText=[IO.File]::ReadAllText($active).Replace("`r`n","`n")
+ if($releasedText -ne $activeText) {throw "Source snapshot differs: $($file.Name)"}
  foreach($m in [regex]::Matches([IO.File]::ReadAllText($file.FullName),'(?:use|include)\s*<([^>]+)>')) {
   if(-not(Test-Path (Join-Path $file.DirectoryName $m.Groups[1].Value))) {throw "Missing released CAD dependency: $($m.Groups[1].Value)"}
  }
@@ -29,10 +33,12 @@ foreach($file in Get-ChildItem $pack -Recurse -File -Filter '*.md') {
  }
 }
 $hardware=Get-Content (Join-Path $pack 'bom-hardware.json') -Raw|ConvertFrom-Json
-$activeHardware=Get-Content (Join-Path $repo 'mechanical/pitch-leg-hardware.json') -Raw|ConvertFrom-Json
-if((Get-FileHash (Join-Path $pack 'bom-hardware.json')).Hash -ne (Get-FileHash (Join-Path $repo 'mechanical/pitch-leg-hardware.json')).Hash) {throw 'Hardware BOM snapshot differs'}
-if(($hardware.M3_fastener_roles|Measure-Object quantity -Sum).Sum -ne 23) {throw 'Hardware count mismatch'}
+$hardwareName=if($threeDof){'three-dof-hardware.json'}else{'pitch-leg-hardware.json'}
+if((Get-FileHash (Join-Path $pack 'bom-hardware.json')).Hash -ne (Get-FileHash (Join-Path $repo "mechanical/$hardwareName")).Hash) {throw 'Hardware BOM snapshot differs'}
+$boltCount=if($threeDof){35}else{23}
+if(($hardware.M3_fastener_roles|Measure-Object quantity -Sum).Sum -ne $boltCount) {throw 'Hardware count mismatch'}
 $assemblyParts=@($manifest.parts|Where-Object {-not $_.fit_coupon})
 $coupons=@($manifest.parts|Where-Object {$_.fit_coupon})
-if($assemblyParts.Count -ne 16 -or ($assemblyParts|Measure-Object quantity -Sum).Sum -ne 20 -or $coupons.Count -ne 4) {throw 'Release counts mismatch'}
-Write-Output "PASS: $($actual.Count) release files, hashes/current CAD/dependencies/links/BOM; 16 assembly STLs/20 pieces and four coupons."
+$unique=if($threeDof){18}else{16};$pieces=if($threeDof){29}else{20}
+if($assemblyParts.Count -ne $unique -or ($assemblyParts|Measure-Object quantity -Sum).Sum -ne $pieces -or $coupons.Count -ne 4) {throw 'Release counts mismatch'}
+Write-Output "PASS: $($actual.Count) release files, hashes/current CAD/dependencies/links/BOM; $unique assembly STLs/$pieces pieces and four coupons."

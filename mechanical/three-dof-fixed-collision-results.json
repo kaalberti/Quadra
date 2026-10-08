@@ -1,0 +1,26 @@
+[
+  {
+    "intersection_volume_mm3": 0.0,
+    "angle_deg": -25.0,
+    "note": "Zero-volume mating faces permitted; full swept-volume and actual hardware/cables remain unverified",
+    "acceptable": true,
+    "intersection_empty": true,
+    "mode": "fixed-collision"
+  },
+  {
+    "intersection_volume_mm3": 0.0,
+    "angle_deg": 0.0,
+    "note": "Zero-volume mating faces permitted; full swept-volume and actual hardware/cables remain unverified",
+    "acceptable": true,
+    "intersection_empty": true,
+    "mode": "fixed-collision"
+  },
+  {
+    "intersection_volume_mm3": 0.0,
+    "angle_deg": 30.0,
+    "note": "Zero-volume mating faces permitted; full swept-volume and actual hardware/cables remain unverified",
+    "acceptable": true,
+    "intersection_empty": true,
+    "mode": "fixed-collision"
+  }
+]

@@ -28,13 +28,13 @@ module knee_output(a=q3) {
 module knee_case_reservation() {
     translate([-9.85,-10,3]) cube([19.7,40.7,42.9]);
 }
-module knee_hardware() {
+module knee_hardware(a=q3) {
     translate([0,0,-18]) bearing_spacer(10);
     translate([0,0,-26]) bearing_spacer(3);
     bearing_envelope();
     translate([0,0,-39.5]) cylinder(d=4,h=35);
     translate([0,0,-4.5]) cylinder(d=7,h=4);
-    rotate([0,0,-q3]) translate([0,0,48]) cylinder(d=24,h=2);
+    rotate([0,0,-a]) translate([0,0,48]) cylinder(d=24,h=2);
 }
 if(mode=="knee-collision") intersection() {
     knee_output();
@@ -44,19 +44,20 @@ if(mode=="knee-collision") intersection() {
         translate([70,0,upper_leg_saddle_z()]) knee_ear_saddle();
     }
 }
-else if(mode=="assembly") {
-    color("gray") translate([-shaft_x,0,-10]) bench_base();
+else if(mode=="assembly") pitch_leg();
+else assert(false,"Unknown pitch-leg mode");
+module pitch_leg(hip=q2,knee=q3,include_bench=true) {
+    if(include_bench) color("gray") translate([-shaft_x,0,-10]) bench_base();
     color("orange") fixed_prints();
-    color("royalblue") upper_moving(q2);
-    color("orange") rotate([0,0,q2]) translate([-24.5,0,55]) cable_guide();
+    color("royalblue") upper_moving(hip);
+    color("orange") rotate([0,0,hip]) translate([-24.5,0,55]) cable_guide();
     color([0.25,0.25,0.25,0.6]) servo_reservation();
     color("silver") { fixed_hardware(); bearing_envelope(); }
-    rotate([0,0,q2]) translate([upper_leg_knee_x(),0,0]) {
+    rotate([0,0,hip]) translate([upper_leg_knee_x(),0,0]) {
         color("orange") knee_fixed_prints();
-        color("seagreen") knee_output(q3);
+        color("seagreen") knee_output(knee);
         color([0.25,0.25,0.25,0.6]) knee_case_reservation();
-        color("silver") knee_hardware();
-        color("black") rotate([0,0,-q3]) translate([-85,-9,47]) cube([1,18,8]);
+        color("silver") knee_hardware(knee);
+        color("black") rotate([0,0,-knee]) translate([-85,-9,47]) cube([1,18,8]);
     }
 }
-else assert(false,"Unknown pitch-leg mode");

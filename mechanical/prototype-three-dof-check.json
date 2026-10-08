@@ -1,0 +1,40 @@
+{
+  "powered_operation_approved": false,
+  "meshes": [
+    {
+      "triangles": 2998,
+      "components": 1,
+      "closed": true,
+      "part": "j1-carrier",
+      "volume_mm3": 37139.47441580524
+    }
+  ],
+  "j1_static_screens": [
+    {
+      "required_Nm": 0.32928,
+      "moving_mass_allowance_Nm": 0.12,
+      "lateral_lever_mm": 32.0,
+      "q1_deg": 0,
+      "ground_force_N": 6.54
+    },
+    {
+      "required_Nm": 0.5252701435222344,
+      "moving_mass_allowance_Nm": 0.12,
+      "lateral_lever_mm": 61.96791185355268,
+      "q1_deg": 15,
+      "ground_force_N": 6.54
+    },
+    {
+      "required_Nm": 0.6936417965040073,
+      "moving_mass_allowance_Nm": 0.12,
+      "lateral_lever_mm": 87.71281292110203,
+      "q1_deg": 30,
+      "ground_force_N": 6.54
+    }
+  ],
+  "physical_fit_verified": false,
+  "carrier_solid_mass_g": 47.167132508072655,
+  "revision": "three-dof-bench-1",
+  "limits": "Ground force uses 2kg/three support legs, 120mm nominal stance and 0.12Nm moving-part allowance. Stall is not continuous torque; no loaded range approval. Prototype offsets do not amend the historical skeleton.",
+  "published_stall_at_4_8V_Nm": 0.9218251000000001
+}

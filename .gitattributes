@@ -1,0 +1,4 @@
+# Preserve released byte hashes and STL manifest hashes across checkouts.
+/manufacturing/** -text whitespace=cr-at-eol
+/manufacturing/**/*.stl -diff
+/mechanical/*.stl -text -diff whitespace=cr-at-eol

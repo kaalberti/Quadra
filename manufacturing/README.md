@@ -1,23 +1,22 @@
-# Manufacturing pack — pitch-leg-1 / MFG-001
+# Manufacturing pack — three-dof-bench-1 / MFG-002
 
-Scope: one supported two-DOF pitch-leg mechanical prototype and bench adapter.
-Ready for printing and unpowered fit assessment. Physical fit is unverified.
-This is not a complete robot or a powered-operation release; J1 is absent.
+One supported three-DOF bench leg, for printing and unpowered fit assessment.
+No chassis, electronics, powered capacity or gait release is included.
+Physical fit remains unverified. Start with four coupons before the full kit.
 
-- [BOM](BOM.md): current assembly quantities, fit-first purchases and separate future estimates.
-- [Print quantities and dimensions](docs/print-list.md): 16 assembly STL files / 20 pieces, plus four fit coupons.
-- [Assembly instructions and view](docs/assembly.md).
-- Editable CAD snapshot: cad/prototype-pitch-leg.scad, with its dependencies.
-- release-manifest.json: selectors, quantities and file/source hashes.
-- validation.json: release verification and applicability of manufacturing checks.
+- [Assembly and view](docs/assembly.md)
+- [Print quantities](docs/print-list.md): 18 unique assembly STLs / 29 pieces
+- [Buying BOM](BOM.md): three servos/three bearings; benchmark costs only
+- Editable assembly: cad/prototype-three-dof-leg.scad
+- layout.json: prototype frame offsets and conservative trial envelope
+- release-manifest.json: quantities and hashes
+- validation.json: mesh, torque and sampled intersection evidence
 
-STLs use millimetres. STEP is not supplied: the approved OpenSCAD workflow
-produces STL and editable SCAD. No electronics, PCB, wiring, connector pinout
-or firmware has been released; those checks are not applicable to this
-unpowered mechanical scope. The 2kg robot limit is a design requirement,
-not a tested capacity of this kit. Read the fit and loading limits before use.
-
-Working verification exports and release tooling stay outside this folder.
-Any manufacturing-affecting design change requires regenerating and checking
-the affected outputs and manifest before updating this package. Superseded
-release files must be moved to ARCHIVE rather than retained in this folder.
+STL units are mm. No STEP or printer-specific G-code is supplied. PLA+/PETG,
+0.4mm nozzle, 0.2mm layers, four walls and 30% infill are starting settings.
+Horizontal holes, bearing/horn fit and actual cables need physical inspection.
+The prototype has an85mm forward pitch offset and32mm foot-plane offset;
+it is not the old25mm-offset skeleton or a finalized four-leg chassis layout.
+J1 torque is screened against stall, not certified continuous operation.
+PCB/pinout/wiring/firmware checks are not applicable to this unpowered scope.
+The previous two-DOF manufacturing pack is retained in ARCHIVE/MFG-001-two-dof-pack.

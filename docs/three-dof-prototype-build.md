@@ -1,6 +1,6 @@
 # Supported three-DOF bench leg — three-dof-bench-1
 
-![Assembly](assembly.png)
+![Assembly](../mechanical/prototype-three-dof-leg-preview.png)
 
 This prototype adds a supported J1 abduction joint to the existing J2/J3
 pitch leg. It is a printing and unpowered fit checkpoint, not a walking robot.
@@ -22,7 +22,7 @@ These process settings are assumptions; inspect the sliced part before printing.
 
 ## Assembly
 
-1. Build the two-DOF pitch leg using [the pitch-leg guide](pitch-leg-assembly.md), omitting the bench adapter.
+1. Build the two-DOF pitch leg using its guide, omitting the bench adapter.
    Use four M3x20 bolts through its cradle, support and new 7mm carrier face.
 2. Build the J1 bearing stack: 624 bearing in the rear arm, retainer with two
    M3x16 bolts, M4x35 pivot in the fixed support, 8mm front spacer, bearing,
@@ -70,4 +70,3 @@ the ESP32 board. Final robot mass and loaded range are unresolved.
 
 Next physical milestone: print the coupons, verify an actual servo and bearing,
 then assemble this leg unpowered. Electronics/chassis work has not begun.
-
