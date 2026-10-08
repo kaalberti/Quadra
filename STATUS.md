@@ -14,7 +14,7 @@ Physical assembly, fit and powered operation remain untested.
 - Three positional hobby servos with supplied horns and three624 bearings.
 - Retained70/85mm links; one existing bench adapter now mounts J1.
 - Prototype pitch datum [85,-18,0]mm; nominal foot plane32mm outward.
-- - DESIGN_PARAMETERS.md records current values. The old25mm-offset skeleton is
+- DESIGN_PARAMETERS.md records current values. The old25mm-offset skeleton is
   retained as reference and does not describe this physical prototype.
 
 ## Validation and limits
@@ -94,36 +94,8 @@ Board-only timing diagnostic is compiled/tested: explicit disarmed command,
 channel15-to-GPIO7 loopback at3.3V,50ms waits, per-sample timing screens and
 all-off/OE-high cleanup. Wiring/procedure: docs/board-pwm-timing-test.md.
 No diagnostic has been run on hardware; no timing/voltage result is inferred.
-Four-leg placement study: mechanical/prototype-four-leg-study.scad and preview.
-Nominal reference footprint320 x174mm is symmetric; case/deck and inter-leg
-case intersections are empty. Raised deck and board blocks are placeholders;
-complete nominal printed-leg/deck intersection is also empty (CGAL).
-Working chassis mount/deck CAD and STLs are available; mount print orientation
-now uses a proper rotation for the original hand. Two mounts per hand;
-16 added M3 x16 deck fixings. Carrier and saddle each have one new mirrored STL.
-Mount ribs have clearance pockets; closed connected/bed/hole checks pass.
-Corrected full nominal mount/leg intersection is empty, excluding intended contact.
-Reference assembly: mechanical/prototype-four-leg-working-assembly.scad, with
-22 unique STLs/117 pieces and12 rigid servo envelopes. Every printed-piece pose
-is a proper rotation and matches intended meshes at0.001mm coordinate resolution.
-Front-left/rear-right use mirrored carrier/saddle; other diagonal uses originals.
-Reference mass screen: approximately2.360kg at an assumed65% material fraction,
-including660g servos,484g estimated fasteners,40g reference bearings and330g
-other allowances. Actual complete mass remains NOT_MEASURED;2kg limit unchanged.
-Only486g remains for all prints under those assumptions (37.4% of solid CAD
-mass). Current bench-kit replication is not a demonstrated2kg robot design.
-MEC-161 fork prototype: four handed STLs pass closed/connected/bed checks and
-retained-interface mesh rays. Six sampled local pitch case/support checks clear.
-Fresh source/placed exports agree within0.001005mm; five sampled J1/carrier
-intersections are empty. No fork geometry/BOM correction was needed.
-Side-on fork fit coupon: mechanical/prototype-fork-fit-coupon.stl,36 x78.2 x32mm.
-Closed/connected/bed and27 interface ray checks pass; print/fit NOT_PERFORMED.
-Procedure: docs/fork-fit-coupon.md. No new hardware purchase or mass/BOM change.
-Offline calibration export/angle preview and foot-target CLI are tested; physical
-profiles stay unset. Guides: docs/measured-calibration-profiles.md and offline-leg-planner.md.
-Host console supports explicit disarmed timing/JSONL capture; nine fake-transport
-tests and full host regressions pass. Guide: docs/board-pwm-timing-test.md.
-No flash, physical capture or motion activation; voltage acknowledgements are not readings.
+Current integrated four-leg plan supersedes the117-piece bench-kit replication.
+Its21 unique STLs/93 pieces and unmeasured mass record are described below.
 Integrated hip/carrier: both handed meshes pass closed/connected/bed checks;
 30 interface rays, three sampled leg clearances and source/placement checks pass.
 Experimental bench leg has23 prints; cumulative robot estimate2.178kg remains
@@ -147,3 +119,8 @@ Perfboard buffer layout:electronics/buffer-perfboard.md;162 unique pads and
 12 complete signal paths pass. Actual body/board/soldering clearance untested.
 DigiKey perfboard BOM:electronics/digikey-perfboard-bom.md; NZ$32.82 ex GST/shipping. Prototype perfboard100 x80mm; final SMT deferred; all fit untested.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.
+
+Optional voltage input:electronics/voltage-perfboard.md;150k/10k,100nF,GPIO8.
+Overlay172-pad/tolerance/power checks, host regressions and embedded build pass.
+Explicit disarmed16-sample diagnostic keeps outputs disabled; no flash or readings.
+Sense positive must disconnect before ESP32 power; calibration/cutoff remain unset.

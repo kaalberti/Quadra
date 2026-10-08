@@ -49,3 +49,9 @@ if ($LASTEXITCODE -ne 0) { throw 'Console timing capture tests failed' }
 if ($LASTEXITCODE -ne 0) { throw 'Measured calibration profile tooling tests failed' }
 & $Python -m unittest discover -s (Join-Path $PSScriptRoot 'test') -p test_offline_leg_plan.py -v
 if ($LASTEXITCODE -ne 0) { throw 'Offline leg planner CLI tests failed' }
+
+$benchVoltageExe=Join-Path $benchOutput 'voltage-test.exe'
+& $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot 'test\voltage_test.cpp') -o $benchVoltageExe
+if ($LASTEXITCODE -ne 0) { throw 'Voltage compilation failed' }
+& $benchVoltageExe
+if ($LASTEXITCODE -ne 0) { throw 'Voltage tests failed' }

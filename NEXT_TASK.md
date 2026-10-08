@@ -1,16 +1,18 @@
-# FIT-001 — First integrated leg and perfboard dry fit
+# ELEC-008 — Perfboard voltage input and disarmed diagnostic
 
-Print the current manufacturing coupons and first-leg parts, and dry fit the
-actual servo, horn, bearing and fasteners before any powered joint operation.
-For electronics, dry fit the provisional DigiKey through-hole population on
-isolated-pad perfboard and check orientation, body clearance and continuity
-against electronics/buffer-perfboard-layout.json before inserting chips.
+Design an inexpensive, removable perfboard divider/filter for an explicitly
+limited0..25.2V positive test input, using GPIO8 provisionally after actual
+board pin verification. Check divider tolerance, ADC range and power-off wiring
+sequence against public Espressif data. Do not select a battery or treat this
+manual bench interface as an always-connected battery monitor.
 
-Completion: record measured fit/clearance and continuity results, photographs
-or notes, and only the design corrections needed to assemble this prototype.
-Physical hardware is required; results remain NOT_PERFORMED until available.
-Do not treat offline checks as physical acceptance. No full-robot powered test,
-final SMT PCB, advanced gait or following stage is included.
+Implement a bounded, explicit disarmed voltage diagnostic in existing firmware,
+reporting ADC/input estimates and sample spread without enabling servo outputs,
+changing calibration, extending armed sessions or adding a cutoff threshold.
+Add meaningful host checks for scale, limits, sample failure and state gating;
+compile using existing project tools. Record perfboard wiring, modest buying
+parts and the later multimeter comparison procedure.
 
-Build pack: manufacturing/docs/assembly.md and printing.md.
-Buying shortlist: electronics/digikey-perfboard-bom.md.
+Completion: independently checked input geometry/rating, host regressions and
+embedded build pass. All physical voltage/accuracy tests remain NOT_PERFORMED.
+No flash, powered test, final SMT PCB, battery selection or gait work.

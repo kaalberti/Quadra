@@ -121,3 +121,14 @@ restores disabled/full-off outputs. FW-009 supports this explicit command in the
 supervised console only while disarmed, with optional new-file `--timing-log`
 JSONL capture. Do not run a serial monitor and console together. Wiring and limits:
 ../docs/board-pwm-timing-test.md. No physical capture or flash was performed here.
+
+## Removable voltage diagnostic — ELEC-008
+
+Manual serial command `voltage rail-off no-servos` works only while DISARMED.
+GPIO8/ADC1_CH7 uses the provisional150k/10k perfboard divider and100nF filter.
+Sixteen readings report nominal input voltage, ADC millivolts and sample spread;
+no servo output is enabled and no battery cutoff is implemented. An armed
+request trips the command fault. The input is not calibrated against physical
+measurements and must be disconnected before ESP32 power is removed.
+Wiring, voltage limit, buying delta and later comparison procedure:
+[voltage input](../electronics/voltage-perfboard.md). No upload or powered test.

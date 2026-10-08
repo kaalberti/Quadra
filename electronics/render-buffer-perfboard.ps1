@@ -1,6 +1,12 @@
+param([switch]$VoltageAddon)
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Drawing
 $data=Get-Content (Join-Path $PSScriptRoot 'buffer-perfboard-layout.json') -Raw|ConvertFrom-Json
+if($VoltageAddon){
+ $addon=Get-Content (Join-Path $PSScriptRoot 'voltage-perfboard-addon.json') -Raw|ConvertFrom-Json
+ $data.components=@($data.components)+@($addon.components)
+ $data.headers=@($data.headers)+@($addon.headers)
+}
 $picture=[Drawing.Bitmap]::new(1080,830)
 $canvas=[Drawing.Graphics]::FromImage($picture)
 $canvas.Clear([Drawing.Color]::White)
@@ -18,7 +24,7 @@ for($row=0;$row -lt $data.grid.rows;$row++){
  for($col=0;$col -lt $data.grid.columns;$col++){$canvas.DrawEllipse($gridPen,(75+$col*27-2),(75+$row*27-2),4,4)}
 }
 foreach($part in $data.components){
- if($part.kind.StartsWith('PDIP')){
+ if($part.kind -and $part.kind.StartsWith('PDIP')){
   $left=($part.pins|Measure-Object column -Minimum).Minimum;$right=($part.pins|Measure-Object column -Maximum).Maximum
   $top=($part.pins|Measure-Object row -Minimum).Minimum;$bottom=($part.pins|Measure-Object row -Maximum).Maximum
   $canvas.FillRectangle([Drawing.Brushes]::LightSteelBlue,(75+($left-.4)*27),(75+($top-.4)*27),(($right-$left+.8)*27),(($bottom-$top+.8)*27))
@@ -37,6 +43,7 @@ foreach($header in $data.headers){
 }
 $canvas.DrawString('35 x25 isolated-pad grid,2.54mm pitch; signal-only outputs S1/S2/S3.',$titleFont,$black,45,752)
 $canvas.DrawString('Wire same-name nets from JSON; this image shows placement, not underside jumper routes.',$font,$black,45,784)
-$picture.Save((Join-Path $PSScriptRoot 'buffer-perfboard-layout.png'),[Drawing.Imaging.ImageFormat]::Png)
+$outputName=if($VoltageAddon){'voltage-perfboard-layout.png'}else{'buffer-perfboard-layout.png'}
+$picture.Save((Join-Path $PSScriptRoot $outputName),[Drawing.Imaging.ImageFormat]::Png)
 $canvas.Dispose();$picture.Dispose();$font.Dispose();$titleFont.Dispose();$gridPen.Dispose();$partPen.Dispose();$headerPen.Dispose()
 Write-Output 'Rendered perfboard placement image.'

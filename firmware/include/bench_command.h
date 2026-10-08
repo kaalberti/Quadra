@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <string.h>
 namespace bench {
-enum class Command { Invalid, Status, Disarm, Reset, Keepalive, Arm, Pulse, Timing };
+enum class Command { Invalid, Status, Disarm, Reset, Keepalive, Arm, Pulse, Timing, Voltage };
 struct ParsedCommand { Command command; uint16_t value; };
 inline bool parseNumber(const char* text,uint16_t& value) {
   if(!*text) return false;
@@ -19,6 +19,7 @@ inline ParsedCommand parseCommand(const char* text) {
   if(strcmp(text,"reset")==0)return {Command::Reset,0};
   if(strcmp(text,"keepalive")==0)return {Command::Keepalive,0};
   if(strcmp(text,"timing rail-off no-servos")==0)return {Command::Timing,0};
+  if(strcmp(text,"voltage rail-off no-servos")==0)return {Command::Voltage,0};
   uint16_t n=0;
   if(strncmp(text,"arm ",4)==0 && parseNumber(text+4,n) && n<3)return {Command::Arm,n};
   if(strncmp(text,"pulse ",6)==0 && parseNumber(text+6,n))return {Command::Pulse,n};

@@ -93,3 +93,12 @@ Public sources: [MG996R](https://towerpro.com.tw/product/mg996r/) and
 [MG90S](https://towerpro.com.tw/product/mg90s-3/). The MG90S page's voltage
 wording is inconsistent; confirm the chosen version before using it on a
 shared rail. No supplier contact or hardware test is implied by these sources.
+
+## Optional voltage-input comparison
+
+ELEC-008:electronics/voltage-perfboard.md gives the removable perfboard divider,
+GPIO8 diagnostic and multimeter comparison sequence. Check the divider output
+before connecting GPIO8; keep servo rail OFF. Compare source and ADC estimates
+at known positive test voltages within0..25.2V and record actual error/spread.
+Disconnect sense positive before ESP32 USB power. No always-connected battery
+monitor, protection threshold or physical accuracy is established yet.

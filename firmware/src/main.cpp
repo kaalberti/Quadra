@@ -10,6 +10,7 @@
 #include "bench_command.h"
 #include "pca9685.h"
 #include "pwm_timing.h"
+#include "voltage_monitor.h"
 
 struct WireBus {
   bool write(uint8_t reg,const uint8_t* data,size_t n) {
@@ -42,6 +43,13 @@ struct TimingHardware {
   bool testPulse(){return pwm.loopbackPulse();}
   uint32_t measure(bool high,uint32_t timeout){return pulseIn(bench::TimingInput,high?HIGH:LOW,timeout);}
 } timingHardware;
+struct VoltageHardware {
+  bool begin(){analogReadResolution(12);analogSetPinAttenuation(bench::VoltageInput,ADC_11db);return true;}
+  bool read(uint32_t& raw,uint32_t& mv){
+    raw=analogRead(bench::VoltageInput);mv=analogReadMilliVolts(bench::VoltageInput);return true;
+  }
+  void waitMs(unsigned ms){delay(ms);}
+} voltageHardware;
 char line[48]; size_t used=0; bool overflow=false;
 
 void status() {
@@ -70,6 +78,14 @@ void command(const char* text) {
          result.status==bench::TimingStatus::CleanupFailed)controller.externalBusFailure();
       Serial.printf("TIMING result=%s high_us=%lu period_us=%lu samples=%u\n",
         names[int(result.status)],(unsigned long)result.highUs,(unsigned long)result.periodUs,result.samples);
+      status();return;
+    }
+    case bench::Command::Voltage: {
+      const auto result=bench::measureVoltage(controller,voltageHardware);
+      const char* names[]={"READING","LOW_OR_DISCONNECTED","ADC_OUT_OF_RANGE","READ_FAILED","NOT_DISARMED","PREFLIGHT_FAILED"};
+      Serial.printf("VOLTAGE result=%s adc_mv=%lu input_mv=%lu spread_mv=%lu raw=%lu samples=%u calibrated=false\n",
+        names[int(result.status)],(unsigned long)result.adcMv,(unsigned long)result.inputMv,
+        (unsigned long)result.spreadMv,(unsigned long)result.rawAverage,result.samples);
       status();return;
     }
     default:controller.badCommand();break;

@@ -14,3 +14,4 @@ Current complete robot limit2kg supersedes older1.2kg backlog wording. Keep prot
 ## Final electronics implementation
 - Consider SMT for the final design after perfboard prototypes work; verify
   new package pinouts/footprints independently. Prefer DigiKey procurement.
+- Always-connected battery sensing needs power-off isolation and measured scaling before selecting cutoff thresholds; the removable ELEC-008 bench divider provides neither.

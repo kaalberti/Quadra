@@ -218,3 +218,10 @@ buffer supply connectors andone2-pin CTRL header. Reuse existing buffers/
 passives; component bodies and actual board grid need dry-fit checks.
 DigiKey population shortlist:electronics/digikey-perfboard-bom.md; NZ$32.82 reference parts subtotal excluding GST/shipping. Parts remain provisional; reuse bench parts and avoid duplicate purchases.
 Initial prototypes use perfboard; SMT is a later final-design consideration.
+
+Optional voltage diagnostic — ELEC-008: one150k5%1/8W axial resistor,
+one10k and one100nF50V radial capacitor. Reuse the spare10k in the25-pack,
+unused perfboard pads and four spare header positions; no extra board is needed.
+This is additional to the buffer-only subtotal. Allow roughly NZ$2–3 passive
+parts before shipping, subject to checkout; exact delta price is not verified.
+Guide:electronics/voltage-perfboard.md. No battery or cutoff component selected.
