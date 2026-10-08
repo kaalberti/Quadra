@@ -75,6 +75,6 @@ Await actual servo model/quantity, ESP32 board, PWM module, supply model/current
 rating and printing access. Prepare coupons/unpowered assembly and one separate
 horn-off servo test. Do not widen pulse limits, attach powered horns, calibrate
 joint angles or implement IK/gaits from unmeasured records.
-Local commits preserve the completed units; remote push awaits explicit approval
-after automatic review rejected the external transfer. No supplier contact.
+Completed units are committed and pushed to origin/main following explicit
+user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.
