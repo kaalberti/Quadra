@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {closedMesh,rayCrosses} from './mesh-check.mjs';
+const root=new URL('./',import.meta.url),mesh=closedMesh(new URL('prototype-integrated-hip.stl',root));
+assert.ok(Math.abs(mesh.bounds[2][0])<1e-5);assert.ok(mesh.size.every(n=>n<=300));
+const world=mesh.v.map(p=>[p[0],p[2]-28,-p[1]]);let checked=0;
+function expect(p,d,len,blocked){assert.equal(rayCrosses(world,p,d,len),blocked,`interface ray ${p}`);checked++;}
+const X=[1,0,0],Y=[0,1,0];
+expect([49,4.8,0],X,7,false);expect([49,5.2,0],X,7,true);
+for(const [y,z] of [[9,0],[-9,0],[0,9],[0,-9]])expect([49,y,z],X,7,false);
+for(const y of [-11,11])for(const z of [-1.5,0,1.5])expect([-24,y,z],X,9,false);
+expect([-24,0,6.5],X,5.9,false);expect([-24,0,6.8],X,5.9,true);expect([-24,0,6.5],X,6.5,true);
+expect([-24,0,3.8],X,9,false);expect([-24,0,4.2],X,9,true);
+for(const x of [85-17.25,85+17.25])for(const z of [10.35-14,10.35+14])for(const dz of [-1.5,0,1.5])expect([x,-30,z+dz],Y,12,false);
+expect([85,-30,10.8],Y,12,false);
+const old=JSON.parse(fs.readFileSync(new URL('robot-working-mass-check.json',root))),pitch=JSON.parse(fs.readFileSync(new URL('prototype-pitch-fork-check.json',root)));
+const mass=f=>old.prints.find(p=>p.file===f).solid_unit_g,fast=f=>old.fasteners.find(p=>p.item===f).unit_g_estimated;
+const oldSolid=4*(mass('prototype-j1-carrier.stl')+mass('hobby-joint-front-arm.stl')+mass('hobby-joint-rear-arm.stl')),newSolid=mesh.volume*.00127*4;
+const hardware=16*(fast('M3x20')+fast('M3 nuts'))+32*fast('M3 ordinary washers'),reduction=(oldSolid-newSolid)*.65+hardware;
+const report={closed:true,connected:true,bed_origin:true,size_mm:mesh.size,sha256:mesh.sha256,solid_PETG_g:mesh.volume*.00127,interface_ray_checks:checked,conditional_robot_comparison:{printed_pieces:93,old_hip_solid_g:oldSolid,new_hip_solid_g:newSolid,removed_hardware_estimated_g:hardware,total_estimated_reduction_g:reduction,robot_mass_screen_g:pitch.comparison.variant_estimated_robot_g-reduction,removed:{M3x20:16,M3_nuts:16,M3_ordinary_washers:32}},physical_fit_verified:false,print_performed:false};
+fs.writeFileSync(new URL('integrated-hip-mesh-check.json',root),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

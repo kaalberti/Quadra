@@ -1,0 +1,28 @@
+{
+  "closed": true,
+  "connected": true,
+  "bed_origin": true,
+  "size_mm": [
+    133.2,
+    101.35,
+    44
+  ],
+  "sha256": "6979eec9ec9af0313108c3f52adf108ff6deccac7b8ac24e5fbcaa7be75f4998",
+  "solid_PETG_g": 73.59580923315814,
+  "interface_ray_checks": 30,
+  "conditional_robot_comparison": {
+    "printed_pieces": 93,
+    "old_hip_solid_g": 302.91827131426646,
+    "new_hip_solid_g": 294.38323693263254,
+    "removed_hardware_estimated_g": 32.57329315698046,
+    "total_estimated_reduction_g": 38.12106550504251,
+    "robot_mass_screen_g": 2178.3928023709286,
+    "removed": {
+      "M3x20": 16,
+      "M3_nuts": 16,
+      "M3_ordinary_washers": 32
+    }
+  },
+  "physical_fit_verified": false,
+  "print_performed": false
+}

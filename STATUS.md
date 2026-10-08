@@ -136,15 +136,15 @@ intersections are empty. No fork geometry/BOM correction was needed.
 Side-on fork fit coupon: mechanical/prototype-fork-fit-coupon.stl,36 x78.2 x32mm.
 Closed/connected/bed and27 interface ray checks pass; print/fit NOT_PERFORMED.
 Procedure: docs/fork-fit-coupon.md. No new hardware purchase or mass/BOM change.
-Measured-profile validator/exporter and offline angle preview are available;
-five new tests and full host regressions pass. All physical profiles stay unset.
-Workflow: docs/measured-calibration-profiles.md. No flash or powered activation.
-Offline foot-target planner CLI is available; known CAD target/reversed mapping
-and rejection tests pass. No measured profiles, board flash or motion activation.
-Workflow: docs/offline-leg-planner.md. BOM/manufacturing unchanged.
-Host console now supports explicit disarmed timing capture and new-file JSONL
-logging; nine fake-transport tests/full host regressions pass. No physical capture.
-Procedure: docs/board-pwm-timing-test.md. Voltage acknowledgements are not readings.
-Next: prototype a simpler integrated J1 output/carrier while retaining bench geometry.
-Completed units are committed and pushed to origin/main following explicit
-user approval on2026-10-09. No supplier contact.
+Offline calibration export/angle preview and foot-target CLI are tested; physical
+profiles stay unset. Guides: docs/measured-calibration-profiles.md and offline-leg-planner.md.
+Host console supports explicit disarmed timing/JSONL capture; nine fake-transport
+tests and full host regressions pass. Guide: docs/board-pwm-timing-test.md.
+No flash, physical capture or motion activation; voltage acknowledgements are not readings.
+Integrated hip/carrier: both handed meshes pass closed/connected/bed checks;
+30 interface rays, three sampled leg clearances and source/placement checks pass.
+Experimental bench leg has23 prints; cumulative robot estimate2.178kg remains
+above2kg. Conditional BOM is updated; print/fit/load tests remain NOT_PERFORMED.
+Source/viewer: mechanical/prototype-integrated-hip.scad and prototype-integrated-hip-assembly.scad.
+Next: integrate the simplified parts into the physical four-leg plan and mass record.
+Completed milestones are pushed to origin/main with user approval. No supplier contact.

@@ -156,14 +156,15 @@ unmeasured. Do not treat these complete quantities as a ready-to-buy robot kit;
 the supported single-leg kit remains the first purchase/test. Mass record and
 next simplification: docs/working-robot-mass.md. No premium actuator is selected.
 
-Experimental MEC-161 fork variant only: eight integrated pitch forks replace
-24 plates/rear arms/bridges. Conditional robot totals become101 printed pieces,
-zero M3x90 bolts,140 M3 nuts and276 ordinary M3 washers; other quantities above
-remain unchanged. This saves approximately143g under the existing mass-screen
-assumptions, leaving approximately2.217kg. Whole-leg integration and physical
-print/load tests remain open. Keep the supported bench kit as the first purchase;
-do not buy the conditional complete robot quantities yet. Details: docs/tasks/MEC-161.md.
-MEC-162 integrated the pair into a25-piece experimental bench leg; physical
-placement/source correspondence and five sampled hip/carrier clearance checks
-pass. No additional hardware or quantity change resulted. Physical fit/load
-tests remain open; the supported bench purchase list is unchanged.
+Experimental integrated-leg variant: eight pitch forks and four integrated
+hips replace36 separate prints with12. Conditional robot totals are93 prints,
+zero M3x90 bolts,32 M3x20 bolts,124 M3 nuts and244 ordinary M3 washers.
+Other complete quantities above remain unchanged. Combined estimated savings
+are181g under the same mass-screen assumptions, leaving2.178kg, still above2kg.
+Actual mass is unmeasured. Both print hands and sampled one-leg clearances pass;
+complete four-leg integration and physical print/load tests remain open.
+The experimental bench leg uses23 prints,27 M3 bolts/nuts and53 ordinary
+M3 washers plus one backing washer. Compared with the supported bench kit,
+omit four M3x90 and four M3x20 bolts, eight nuts and16 ordinary washers.
+Keep the supported bench kit as the current purchase/test reference; do not
+buy conditional complete robot quantities yet. Details: docs/tasks/MEC-164.md.

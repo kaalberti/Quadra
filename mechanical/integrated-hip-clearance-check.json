@@ -1,0 +1,71 @@
+{
+  "clearance": [
+    {
+      "angles_deg": [
+        0,
+        44.0486,
+        78.9786
+      ],
+      "intersection_empty": true
+    },
+    {
+      "angles_deg": [
+        -25,
+        20,
+        60
+      ],
+      "intersection_empty": true
+    },
+    {
+      "angles_deg": [
+        30,
+        55,
+        90
+      ],
+      "intersection_empty": true
+    }
+  ],
+  "source_placement_vertex_difference_mm": 0.00009999999999799059,
+  "mirrored_mesh": {
+    "sha256": "ca984b79143d352e83055b2dfe377a304262beb5c83018c659abdeb756a70ada",
+    "closed": true,
+    "connected": true,
+    "size_mm": [
+      133.2,
+      101.35,
+      44
+    ]
+  },
+  "input_sha256": {
+    "prototype-integrated-hip.scad": "39cf6f4b44c930e792923e2dd6c37be61466a6ae7197897974115685dbc21f9c",
+    "prototype-integrated-hip-assembly.scad": "6ab85c9b5d526547cad123308293c49ce9c0f6102c96eedbb631ec24ed5b89e5",
+    "prototype-integrated-hip-probe.scad": "b0a31176a514499dfc838e544cc3987dbd97b012c6a321f7c55118f5b51d5f26",
+    "prototype-j1-carrier.scad": "86554a84d6d4c4be1acb8abe56d7eb0da83c1d722e6bab39bdf4d84255f89092",
+    "hobby-joint-front-arm.scad": "ff9e813414740fbf2c07d0be36183e5b2e28727c10ebec56eb58d27360368f9d",
+    "hobby-joint-rear-arm.scad": "c84f5ba566c40cf0a2bd06945cef88e811ea70cb2a37f3d12e84ea850f69b70f",
+    "hobby-joint-support.scad": "966b2759ae84100dfa8612b511e259faf3a7ad7950e220c47e075889e127e3f6",
+    "hobby-joint-common.scad": "0c37c71030c97eced89a45d261b30d71beb2ed9b7bd97c0b4500814e46bb6d94",
+    "prototype-j1-layout.scad": "c1b6a7ec07ff9a8da0c21c00c9fab6e69722c2302463de870d95ad0405ab65b8",
+    "fork-leg-parts.scad": "0c30236d080e6fbc998830ebf352387450ddbc7881b6dac1247ae1e53b3479b0",
+    "prototype-integrated-hip.stl": "6979eec9ec9af0313108c3f52adf108ff6deccac7b8ac24e5fbcaa7be75f4998",
+    "hobby-servo-cradle-left.stl": "ac5b53bf4255dc9ea0f074fa2ab76c94f5bc489bb2cbf75bbb2863d141fa083a",
+    "hobby-servo-cradle-right.stl": "6f4fdfdcf84a73047037ad10b611b01a5fde09e71dccc434be84b0ec7afeea0c",
+    "hobby-joint-support.stl": "2a69d2433a7177b392f5c3536317f8435240a5cacccaa1223c8c2774c709df5d",
+    "hobby-joint-front-spacer.stl": "6ce50f98172cf975ef695d0279b6425bb343addb85ed0c3f8c7757e22c9addc5",
+    "hobby-joint-rear-spacer.stl": "0940367fead7ba1cd2a2bedc5331bf46721e04aee13461c8ac1471a80901157f",
+    "hobby-joint-front-arm.stl": "e9a84fd7e23db59616a1dc602b7937f7cdc0689e66ee06360c11483b96f2cc43",
+    "hobby-joint-rear-arm.stl": "fc7c1224c9a4c7cfeea1f577fd9ac96b21542dda6af4879abf2d2815dad6d719",
+    "hobby-joint-retainer.stl": "985dda709401ca86c1a2b91189786d927a622043ddba337c01215321ef727a38",
+    "prototype-j1-carrier-mirrored.stl": "ceb249a9121fc08e84614ff011e6cd64429f8a7fe1d54cfa08afdda5b0583a57",
+    "prototype-upper-leg-saddle-mirrored.stl": "ba88899920087eed5471bc0bbfbec2d44cb89ff01a5bb641f9d9f5af6a1dc870",
+    "prototype-cable-guide.stl": "6fff92555115fcc8b9fdcb8504f409bacf56d00548bda2e30ae177e25019aacb",
+    "prototype-knee-support.stl": "380877341e867cf8c52d94b76a8f48d7760dd8de147d04cf31a17d6289d836f8",
+    "prototype-knee-spacer.stl": "5fed377ad820f57f70389b16ca023230530773128bc9dd15c59f496b9dfddc12",
+    "prototype-foot.stl": "36c7bb63f18990cc476c75b63bce6b8f9aedcc68173da12fc2cbc8ee6a306fbc",
+    "prototype-bench-base.stl": "198c6e6f0b32aada1b6b15897293e7d8708dab39dd0ceb1ca81b8fb11a8badff",
+    "prototype-pitch-fork-upper-mirrored.stl": "f9a69734feb1deaaff969b64656181833cd42f2461b447f15f13200fa6ddf57f",
+    "prototype-pitch-fork-lower-mirrored.stl": "384c9ca117100f0d1ca0fb15f42123937c2cad3c47e8ef6c654ec8266abd4966"
+  },
+  "scope": "Three sampled poses, modeled J1 fixed prints/case/bench adapter, J2 case and moving pitch parts. Intended J2 support/carrier and J1 retainer contacts excluded. Not a continuous sweep or actual horn/ear/lead check.",
+  "physical_fit_verified": false
+}
