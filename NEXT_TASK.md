@@ -1,4 +1,4 @@
-# ELEC-004 — solderable signal-buffer carrier plan
+# ELEC-006 — solderable signal-buffer carrier plan
 
 Create a compact perfboard-based assembly plan for the provisional three
 14-pin AHCT125 buffers and passive signal parts. Give explicit grid locations,

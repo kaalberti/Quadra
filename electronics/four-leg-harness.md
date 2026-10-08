@@ -1,4 +1,4 @@
-# Provisional four-leg harness — ELEC-002
+# Provisional four-leg harness — ELEC-004
 
 This offline wiring plan extends the bench architecture; it does not enable
 powered four-leg control. Actual board headers, delivered servo current and

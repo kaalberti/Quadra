@@ -1,4 +1,4 @@
-# Robot-power feasibility shortlist — ELEC-003
+# Robot-power feasibility shortlist — ELEC-005
 
 Checked public information2026-10-09. No supplier contact or purchase.
 Retain the simple common5.2V servo-rail architecture provisionally and measure

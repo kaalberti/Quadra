@@ -193,7 +193,7 @@ boards. Do not buy new packs if existing ties suit. Actual board mounts/fit are
 unverified. Guide:docs/electronics-deck.md; print one deck variant, not both.
 The current single-leg manufacturing/BOM and four-leg mass record are unchanged.
 
-## Provisional12-servo signal harness — ELEC-002
+## Provisional12-servo signal harness — ELEC-004
 
 Complete signal totals:3 SN74AHCT125N buffers,3 x100nF capacitors,13 x220ohm
 resistors,24 x10kohm pulldowns andone1kohm OE pull-up. Reuse the bench
@@ -205,7 +205,7 @@ The30A capacity screen is provisional, not a selected supply or verified demand.
 Prices remain unverified; test one servo before full-harness purchases.
 Connections and manufacturer sources:electronics/four-leg-harness.md.
 
-Robot regulator purchase is still TBD after ELEC-003 comparison. Do not order
+Robot regulator purchase is still TBD after ELEC-005 comparison. Do not order
 four30603000 BECs from theNZ$259.96 out-of-stock reference, or substitute
 30603003 (6V minimum) into the5.3V-max buffer rail. The25A candidate is below
 the30A planning screen; peak rating does not close that gap. Compare actual
