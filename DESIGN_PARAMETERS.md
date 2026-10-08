@@ -1,6 +1,6 @@
 # Design Parameters
 
-Last updated: 2026-10-08
+Last updated: 2026-10-09
 
 This file contains the current approved or provisional design values for the active Rev A quadruped.
 
@@ -60,7 +60,11 @@ These are geometric targets, not final hardware limits.
 
 ## Actuators
 
-SERVO_MODEL = TBD
+SERVO_MODEL = MG996R PROVISIONAL (all weight-bearing joints)
+OPTIONAL_LIGHT_ACCESSORY_SERVO = MG90S PROVISIONAL (no current application)
+AVAILABLE_PRINTER = Creality K2 Pro (user-reported access)
+AVAILABLE_BENCH_SUPPLY_MAX_VOLTAGE = 60 V (user-reported)
+AVAILABLE_BENCH_SUPPLY_CURRENT = 5 A (user-reported)
 
 CURRENT_PACKAGING_CLASS = MG996R-sized hobby servo
 
@@ -144,6 +148,10 @@ CONTROLLER_LOCATION = TBD
 ## Electronics
 
 MCU = ESP32-S3
+OWNED_MCU_BOARD = ESP32-S3 N16R8 dev board (header layout unverified)
+MCU_FLASH = 16 MB (N16R8 user-reported)
+MCU_PSRAM = 8 MB OPI (N16R8 assumed)
+OWNED_PWM_BOARD = Adafruit PCA9685 (revision unverified)
 
 SERVO_DRIVER = PCA9685 or equivalent PROVISIONAL
 

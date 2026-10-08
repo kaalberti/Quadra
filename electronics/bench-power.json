@@ -21,8 +21,12 @@
   "pca9685_frequency_Hz": 50,
   "signal_buffer": "SN74AHCT125N, 4.5–5.5V supply; one channel per servo",
   "actual_supply_model": null,
-  "actual_supply_current_A": null,
+  "actual_supply_current_A": 5,
+  "user_reported_supply_max_V": 60,
   "actual_servo_model": null,
+  "assumed_servo_model": "MG996R",
+  "owned_controller_board": "ESP32-S3 N16R8",
+  "owned_pwm_board": "Adafruit PCA9685",
   "actual_power_test_performed": false,
   "source": "https://towerpro.com.tw/product/mg996r/",
   "assumptions": "Short copper wires at20C;2A planning allowance per servo is not a measured current or certified maximum. Confirm actual board pinout and module OE topology."

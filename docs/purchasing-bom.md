@@ -3,13 +3,15 @@
 Maintain this file when purchased parts or quantities change. This is a staged
 shopping list, not a purchase order. Prices are planning caps, not verified
 retail quotations. No purchases or new ownership are inferred. The user already
-has a multimeter, digital power supply and basic load cells; specs are unverified.
+has a multimeter, adjustable60V/5A supply, basic load cells and access to a
+Creality K2 Pro. ESP32-S3 N16R8 and Adafruit PCA9685 boards are owned;
+no servos/mechanical hardware are ordered. Supply model remains unknown.
 
 ## Buy first for fit checks
 
 | Part | Quantity | Specification / cost cap |
 | --- | ---: | --- |
-| Positional metal-geared hobby servo, MG996R-sized candidate | 1 | Provisional40.7 x19.7 x42.9mm envelope; supplied horn and original centre screw; NZ$25–35 target. Avoid continuous-rotation variants. |
+| Positional MG996R servo | 1 | Provisional40.7 x19.7 x42.9mm envelope; supplied horn and original centre screw; NZ$25–35 target. Avoid continuous-rotation variants. |
 | Commodity624 bearing | 1 | 4mm bore x13mm OD x5mm width; NZ$3 allocation, not retail quote |
 | PLA+ or PETG | As needed | Use existing filament; print coupons first |
 
@@ -66,14 +68,17 @@ before any loading; this is not a powered-test stability approval.
 
 | Item | Quantity | Planning allowance NZ$ | Requirement |
 |---|---:|---:|---|
-| PCA9685 breakout | 1 | 10 |3.3V logic/pullups, accessible OE; external servo distribution |
+| Adafruit PCA9685 breakout | 1 owned | 0 additional |3.3V logic/pullups, accessible OE; external servo distribution |
 | SN74AHCT125N DIP buffer and passives | 1 set | 5 |0.1uF ceramic,220ohm/1kohm/10kohm resistors; see wiring |
 | Copper wire, rated terminals, DC cutoff and fuse holder/fuses | 1 set | 20 |10A main path,2A branch minimum;18/22AWG proposed |
-| ESP32-S3 development board | 1 if not owned | 20 | Board model/pins to verify; provisional controller |
+| ESP32-S3 N16R8 development board | 1 owned | 0 additional | Header mapping to verify |
 
-NZ$55 is a planning allocation, not a price quote or purchase commitment.
+NZ$25 remaining bench-control allowance excludes the two owned boards;
+this is a planning allocation, not a price quote or purchase commitment.
 These items sit inside the existing other-parts budget. The multimeter and
-bench supply are already owned; supply current capacity remains unknown.
+bench supply are already owned; supply is rated5A and is for staged testing.
+MG996R is the provisional choice for all12 leg joints; MG90S is not suitable
+for these weight-bearing joints and adds no current purchase requirement.
 Buy no battery, twelve-servo regulator or custom PCB at this stage.
 
 ## Planned robot quantities — wait before buying totals

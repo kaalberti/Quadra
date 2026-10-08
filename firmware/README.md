@@ -1,7 +1,8 @@
 # Individual-servo bench controller
 
 FW-001 supports one explicitly armed servo at a time. This has been compiled
-for a provisional ESP32-S3-DevKitC-1-N8, not flashed or tested on hardware.
+for the user-reported ESP32-S3 N16R8 (16MB flash/8MB OPI PSRAM), not flashed
+or tested on hardware. The generic DevKitC pin mapping remains provisional.
 Read ../electronics/bench-wiring.md first. Verify your actual board pins,
 servo voltage and PSU capacity. Keep the servo rail OFF during setup/reset.
 
@@ -88,3 +89,14 @@ Test without hardware:
 These12 transport tests complement the12 C++ controller tests. The console
 uses pyserial already present in the existing PlatformIO environment; it does
 not enumerate/open ports during testing. No real serial session was performed.
+
+## Offline calibration — FW-003
+
+`include/joint_calibration.h` maps degrees to pulse width from two measured
+anchors, in either direction. Usable angular limits must lie inside the anchor
+interval; no extrapolation or silent clamping. Invalid/unmeasured profiles fail
+without changing output. `joint-calibration.json` remains an unset recording
+template, not loaded by firmware. No angle command is enabled on hardware.
+Generic500..2500us validation bounds are only an absolute software screen,
+not approved servo travel. Tests use synthetic profiles; never copy them to
+hardware. Physical calibration and limits are listed in ../PHYSICAL_TESTS.md.

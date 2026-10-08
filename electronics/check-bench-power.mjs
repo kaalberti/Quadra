@@ -20,4 +20,9 @@ const result={planning_peak_A:current,supply_capacity_target_A:current*(1+p.supp
   per_branch_wire_dissipation_W:p.design_allowance_per_servo_A**2*branchR,
   excludes:'Existing servo leads, plugs, contact resistance, temperature rise, PSU transient response and exact servo variation',
   actual_power_test_performed:false};
+if(p.actual_supply_current_A!=null) {
+  result.available_supply_current_A=p.actual_supply_current_A;
+  result.meets_three_servo_capacity_target=p.actual_supply_current_A>=current*(1+p.supply_margin_fraction);
+  result.initial_test_scope='One unmounted servo first; multi-servo capability requires actual current measurements';
+}
 console.log(JSON.stringify(result,null,2));

@@ -1,0 +1,11 @@
+{
+  "revision": "three-dof-bench-1",
+  "angle_units": "degrees",
+  "pulse_units": "microseconds",
+  "joints": [
+    {"joint":"J1","channel":0,"servo_model_assumed":"MG996R","measured":false,"angleA":null,"angleB":null,"pulseA":null,"pulseB":null,"minimumAngle":null,"maximumAngle":null,"minimumPulse":null,"maximumPulse":null},
+    {"joint":"J2","channel":1,"servo_model_assumed":"MG996R","measured":false,"angleA":null,"angleB":null,"pulseA":null,"pulseB":null,"minimumAngle":null,"maximumAngle":null,"minimumPulse":null,"maximumPulse":null},
+    {"joint":"J3","channel":2,"servo_model_assumed":"MG996R","measured":false,"angleA":null,"angleB":null,"pulseA":null,"pulseB":null,"minimumAngle":null,"maximumAngle":null,"minimumPulse":null,"maximumPulse":null}
+  ],
+  "notes":"Recording template only; not loaded by the bench controller. Measure each joint, then review before hardware activation."
+}

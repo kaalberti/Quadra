@@ -1,8 +1,15 @@
 # Bench power and individual-servo bring-up — ELEC-001
 
 This is a proposed test harness, not a released robot power system.
+The user has an adjustable60V/5A supply. Use its low-voltage setting near5.2V
+for MG996R, not60V. Its5A rating is below the7.5A three-servo capacity target:
+reuse it for one-servo-first tests; verify measured demand before adding joints.
 Begin with one unmounted servo and its horn removed. No battery/BEC, PCB or
-full-robot power component is selected. Actual PSU capability and pinout are pending.
+full-robot power component is selected. ESP32-S3 N16R8 and Adafruit PCA9685
+are owned; header mapping, PCB revision and actual PSU transient behavior
+remain unverified. [Adafruit's guide](https://learn.adafruit.com/16-channel-pwm-servo-driver/hooking-it-up)
+separates logic VCC from servo V+. Keep VCC/I2C at3.3V and the external servo
+distribution arrangement below; ownership does not establish OE/power testing.
 
 ```mermaid
 flowchart LR

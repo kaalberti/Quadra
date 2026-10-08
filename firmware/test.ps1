@@ -10,6 +10,11 @@ $benchExe=Join-Path $benchOutput 'bench-test.exe'
 if ($LASTEXITCODE -ne 0) { throw 'Host compilation failed' }
 & $benchExe
 if ($LASTEXITCODE -ne 0) { throw 'Controller tests failed' }
+$benchCalibrationExe=Join-Path $benchOutput 'calibration-test.exe'
+& $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot 'test\calibration_test.cpp') -o $benchCalibrationExe
+if ($LASTEXITCODE -ne 0) { throw 'Calibration compilation failed' }
+& $benchCalibrationExe
+if ($LASTEXITCODE -ne 0) { throw 'Calibration tests failed' }
 $env:PYTHONDONTWRITEBYTECODE='1'
 & $Python -m unittest discover -s (Join-Path $PSScriptRoot 'test') -p test_console.py -v
 if ($LASTEXITCODE -ne 0) { throw 'Console tests failed' }
