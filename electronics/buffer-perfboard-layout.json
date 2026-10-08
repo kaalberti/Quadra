@@ -1,0 +1,2413 @@
+{
+  "revision": "perfboard-buffer-1",
+  "physical_tested": false,
+  "grid": {
+    "pitch_mm": 2.54,
+    "columns": 35,
+    "rows": 25,
+    "reference": "Top component view; row0 at notch edge. Isolated pads only, not stripboard."
+  },
+  "board_nominal_mm": [
+    100,
+    70
+  ],
+  "components": [
+    {
+      "id": "U1",
+      "kind": "PDIP14 socket/notch toward row0",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 3,
+          "row": 9,
+          "net": "OE"
+        },
+        {
+          "pin": 2,
+          "column": 3,
+          "row": 10,
+          "net": "IN0"
+        },
+        {
+          "pin": 3,
+          "column": 3,
+          "row": 11,
+          "net": "BUF0"
+        },
+        {
+          "pin": 4,
+          "column": 3,
+          "row": 12,
+          "net": "OE"
+        },
+        {
+          "pin": 5,
+          "column": 3,
+          "row": 13,
+          "net": "IN1"
+        },
+        {
+          "pin": 6,
+          "column": 3,
+          "row": 14,
+          "net": "BUF1"
+        },
+        {
+          "pin": 7,
+          "column": 3,
+          "row": 15,
+          "net": "GND"
+        },
+        {
+          "pin": 8,
+          "column": 6,
+          "row": 15,
+          "net": "BUF2"
+        },
+        {
+          "pin": 9,
+          "column": 6,
+          "row": 14,
+          "net": "IN2"
+        },
+        {
+          "pin": 10,
+          "column": 6,
+          "row": 13,
+          "net": "OE"
+        },
+        {
+          "pin": 11,
+          "column": 6,
+          "row": 12,
+          "net": "BUF3"
+        },
+        {
+          "pin": 12,
+          "column": 6,
+          "row": 11,
+          "net": "IN3"
+        },
+        {
+          "pin": 13,
+          "column": 6,
+          "row": 10,
+          "net": "OE"
+        },
+        {
+          "pin": 14,
+          "column": 6,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        }
+      ]
+    },
+    {
+      "id": "RI0",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 0,
+          "row": 3,
+          "net": "IN0"
+        },
+        {
+          "column": 4,
+          "row": 3,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS0",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 0,
+          "row": 17,
+          "net": "BUF0"
+        },
+        {
+          "column": 4,
+          "row": 17,
+          "net": "SIG0"
+        }
+      ]
+    },
+    {
+      "id": "RO0",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 6,
+          "row": 17,
+          "net": "SIG0"
+        },
+        {
+          "column": 10,
+          "row": 17,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI1",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 0,
+          "row": 4,
+          "net": "IN1"
+        },
+        {
+          "column": 4,
+          "row": 4,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS1",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 0,
+          "row": 18,
+          "net": "BUF1"
+        },
+        {
+          "column": 4,
+          "row": 18,
+          "net": "SIG1"
+        }
+      ]
+    },
+    {
+      "id": "RO1",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 6,
+          "row": 18,
+          "net": "SIG1"
+        },
+        {
+          "column": 10,
+          "row": 18,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI2",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 0,
+          "row": 5,
+          "net": "IN2"
+        },
+        {
+          "column": 4,
+          "row": 5,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS2",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 0,
+          "row": 19,
+          "net": "BUF2"
+        },
+        {
+          "column": 4,
+          "row": 19,
+          "net": "SIG2"
+        }
+      ]
+    },
+    {
+      "id": "RO2",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 6,
+          "row": 19,
+          "net": "SIG2"
+        },
+        {
+          "column": 10,
+          "row": 19,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI3",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 0,
+          "row": 6,
+          "net": "IN3"
+        },
+        {
+          "column": 4,
+          "row": 6,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS3",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 0,
+          "row": 20,
+          "net": "BUF3"
+        },
+        {
+          "column": 4,
+          "row": 20,
+          "net": "SIG3"
+        }
+      ]
+    },
+    {
+      "id": "RO3",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 6,
+          "row": 20,
+          "net": "SIG3"
+        },
+        {
+          "column": 10,
+          "row": 20,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "kind": "100nF ceramic",
+      "pins": [
+        {
+          "column": 8,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        },
+        {
+          "column": 8,
+          "row": 11,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "U2",
+      "kind": "PDIP14 socket/notch toward row0",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 15,
+          "row": 9,
+          "net": "OE"
+        },
+        {
+          "pin": 2,
+          "column": 15,
+          "row": 10,
+          "net": "IN4"
+        },
+        {
+          "pin": 3,
+          "column": 15,
+          "row": 11,
+          "net": "BUF4"
+        },
+        {
+          "pin": 4,
+          "column": 15,
+          "row": 12,
+          "net": "OE"
+        },
+        {
+          "pin": 5,
+          "column": 15,
+          "row": 13,
+          "net": "IN5"
+        },
+        {
+          "pin": 6,
+          "column": 15,
+          "row": 14,
+          "net": "BUF5"
+        },
+        {
+          "pin": 7,
+          "column": 15,
+          "row": 15,
+          "net": "GND"
+        },
+        {
+          "pin": 8,
+          "column": 18,
+          "row": 15,
+          "net": "BUF6"
+        },
+        {
+          "pin": 9,
+          "column": 18,
+          "row": 14,
+          "net": "IN6"
+        },
+        {
+          "pin": 10,
+          "column": 18,
+          "row": 13,
+          "net": "OE"
+        },
+        {
+          "pin": 11,
+          "column": 18,
+          "row": 12,
+          "net": "BUF7"
+        },
+        {
+          "pin": 12,
+          "column": 18,
+          "row": 11,
+          "net": "IN7"
+        },
+        {
+          "pin": 13,
+          "column": 18,
+          "row": 10,
+          "net": "OE"
+        },
+        {
+          "pin": 14,
+          "column": 18,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        }
+      ]
+    },
+    {
+      "id": "RI4",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 12,
+          "row": 3,
+          "net": "IN4"
+        },
+        {
+          "column": 16,
+          "row": 3,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS4",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 12,
+          "row": 17,
+          "net": "BUF4"
+        },
+        {
+          "column": 16,
+          "row": 17,
+          "net": "SIG4"
+        }
+      ]
+    },
+    {
+      "id": "RO4",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 18,
+          "row": 17,
+          "net": "SIG4"
+        },
+        {
+          "column": 22,
+          "row": 17,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI5",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 12,
+          "row": 4,
+          "net": "IN5"
+        },
+        {
+          "column": 16,
+          "row": 4,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS5",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 12,
+          "row": 18,
+          "net": "BUF5"
+        },
+        {
+          "column": 16,
+          "row": 18,
+          "net": "SIG5"
+        }
+      ]
+    },
+    {
+      "id": "RO5",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 18,
+          "row": 18,
+          "net": "SIG5"
+        },
+        {
+          "column": 22,
+          "row": 18,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI6",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 12,
+          "row": 5,
+          "net": "IN6"
+        },
+        {
+          "column": 16,
+          "row": 5,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS6",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 12,
+          "row": 19,
+          "net": "BUF6"
+        },
+        {
+          "column": 16,
+          "row": 19,
+          "net": "SIG6"
+        }
+      ]
+    },
+    {
+      "id": "RO6",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 18,
+          "row": 19,
+          "net": "SIG6"
+        },
+        {
+          "column": 22,
+          "row": 19,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI7",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 12,
+          "row": 6,
+          "net": "IN7"
+        },
+        {
+          "column": 16,
+          "row": 6,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS7",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 12,
+          "row": 20,
+          "net": "BUF7"
+        },
+        {
+          "column": 16,
+          "row": 20,
+          "net": "SIG7"
+        }
+      ]
+    },
+    {
+      "id": "RO7",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 18,
+          "row": 20,
+          "net": "SIG7"
+        },
+        {
+          "column": 22,
+          "row": 20,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "kind": "100nF ceramic",
+      "pins": [
+        {
+          "column": 20,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        },
+        {
+          "column": 20,
+          "row": 11,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "U3",
+      "kind": "PDIP14 socket/notch toward row0",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 27,
+          "row": 9,
+          "net": "OE"
+        },
+        {
+          "pin": 2,
+          "column": 27,
+          "row": 10,
+          "net": "IN8"
+        },
+        {
+          "pin": 3,
+          "column": 27,
+          "row": 11,
+          "net": "BUF8"
+        },
+        {
+          "pin": 4,
+          "column": 27,
+          "row": 12,
+          "net": "OE"
+        },
+        {
+          "pin": 5,
+          "column": 27,
+          "row": 13,
+          "net": "IN9"
+        },
+        {
+          "pin": 6,
+          "column": 27,
+          "row": 14,
+          "net": "BUF9"
+        },
+        {
+          "pin": 7,
+          "column": 27,
+          "row": 15,
+          "net": "GND"
+        },
+        {
+          "pin": 8,
+          "column": 30,
+          "row": 15,
+          "net": "BUF10"
+        },
+        {
+          "pin": 9,
+          "column": 30,
+          "row": 14,
+          "net": "IN10"
+        },
+        {
+          "pin": 10,
+          "column": 30,
+          "row": 13,
+          "net": "OE"
+        },
+        {
+          "pin": 11,
+          "column": 30,
+          "row": 12,
+          "net": "BUF11"
+        },
+        {
+          "pin": 12,
+          "column": 30,
+          "row": 11,
+          "net": "IN11"
+        },
+        {
+          "pin": 13,
+          "column": 30,
+          "row": 10,
+          "net": "OE"
+        },
+        {
+          "pin": 14,
+          "column": 30,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        }
+      ]
+    },
+    {
+      "id": "RI8",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 24,
+          "row": 3,
+          "net": "IN8"
+        },
+        {
+          "column": 28,
+          "row": 3,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS8",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 24,
+          "row": 17,
+          "net": "BUF8"
+        },
+        {
+          "column": 28,
+          "row": 17,
+          "net": "SIG8"
+        }
+      ]
+    },
+    {
+      "id": "RO8",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 30,
+          "row": 17,
+          "net": "SIG8"
+        },
+        {
+          "column": 34,
+          "row": 17,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI9",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 24,
+          "row": 4,
+          "net": "IN9"
+        },
+        {
+          "column": 28,
+          "row": 4,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS9",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 24,
+          "row": 18,
+          "net": "BUF9"
+        },
+        {
+          "column": 28,
+          "row": 18,
+          "net": "SIG9"
+        }
+      ]
+    },
+    {
+      "id": "RO9",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 30,
+          "row": 18,
+          "net": "SIG9"
+        },
+        {
+          "column": 34,
+          "row": 18,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI10",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 24,
+          "row": 5,
+          "net": "IN10"
+        },
+        {
+          "column": 28,
+          "row": 5,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS10",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 24,
+          "row": 19,
+          "net": "BUF10"
+        },
+        {
+          "column": 28,
+          "row": 19,
+          "net": "SIG10"
+        }
+      ]
+    },
+    {
+      "id": "RO10",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 30,
+          "row": 19,
+          "net": "SIG10"
+        },
+        {
+          "column": 34,
+          "row": 19,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RI11",
+      "kind": "10k input pulldown",
+      "pins": [
+        {
+          "column": 24,
+          "row": 6,
+          "net": "IN11"
+        },
+        {
+          "column": 28,
+          "row": 6,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "RS11",
+      "kind": "220ohm signal series",
+      "pins": [
+        {
+          "column": 24,
+          "row": 20,
+          "net": "BUF11"
+        },
+        {
+          "column": 28,
+          "row": 20,
+          "net": "SIG11"
+        }
+      ]
+    },
+    {
+      "id": "RO11",
+      "kind": "10k connector pulldown",
+      "pins": [
+        {
+          "column": 30,
+          "row": 20,
+          "net": "SIG11"
+        },
+        {
+          "column": 34,
+          "row": 20,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "kind": "100nF ceramic",
+      "pins": [
+        {
+          "column": 32,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        },
+        {
+          "column": 32,
+          "row": 11,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "R_OE",
+      "kind": "220ohm OE series",
+      "pins": [
+        {
+          "column": 0,
+          "row": 8,
+          "net": "GPIO6"
+        },
+        {
+          "column": 4,
+          "row": 8,
+          "net": "OE"
+        }
+      ]
+    },
+    {
+      "id": "R_UP",
+      "kind": "1k OE pull-up",
+      "pins": [
+        {
+          "column": 0,
+          "row": 7,
+          "net": "LOGIC_3V3"
+        },
+        {
+          "column": 4,
+          "row": 7,
+          "net": "OE"
+        }
+      ]
+    }
+  ],
+  "headers": [
+    {
+      "id": "P1",
+      "purpose": "PCA signals/common OE/logic3V3",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 1,
+          "row": 1,
+          "net": "IN0"
+        },
+        {
+          "pin": 2,
+          "column": 2,
+          "row": 1,
+          "net": "IN1"
+        },
+        {
+          "pin": 3,
+          "column": 3,
+          "row": 1,
+          "net": "IN2"
+        },
+        {
+          "pin": 4,
+          "column": 4,
+          "row": 1,
+          "net": "IN3"
+        },
+        {
+          "pin": 5,
+          "column": 5,
+          "row": 1,
+          "net": "OE"
+        },
+        {
+          "pin": 6,
+          "column": 6,
+          "row": 1,
+          "net": "LOGIC_3V3"
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "purpose": "Signal outputs ONLY; not servo power",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 1,
+          "row": 23,
+          "net": "SIG0"
+        },
+        {
+          "pin": 2,
+          "column": 2,
+          "row": 23,
+          "net": "SIG1"
+        },
+        {
+          "pin": 3,
+          "column": 3,
+          "row": 23,
+          "net": "SIG2"
+        },
+        {
+          "pin": 4,
+          "column": 4,
+          "row": 23,
+          "net": "SIG3"
+        }
+      ]
+    },
+    {
+      "id": "V1",
+      "purpose": "Low-current buffer supply/reference only",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 10,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        },
+        {
+          "pin": 2,
+          "column": 10,
+          "row": 11,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "purpose": "PCA signals/common OE/logic3V3",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 13,
+          "row": 1,
+          "net": "IN4"
+        },
+        {
+          "pin": 2,
+          "column": 14,
+          "row": 1,
+          "net": "IN5"
+        },
+        {
+          "pin": 3,
+          "column": 15,
+          "row": 1,
+          "net": "IN6"
+        },
+        {
+          "pin": 4,
+          "column": 16,
+          "row": 1,
+          "net": "IN7"
+        },
+        {
+          "pin": 5,
+          "column": 17,
+          "row": 1,
+          "net": "OE"
+        },
+        {
+          "pin": 6,
+          "column": 18,
+          "row": 1,
+          "net": "LOGIC_3V3"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "purpose": "Signal outputs ONLY; not servo power",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 13,
+          "row": 23,
+          "net": "SIG4"
+        },
+        {
+          "pin": 2,
+          "column": 14,
+          "row": 23,
+          "net": "SIG5"
+        },
+        {
+          "pin": 3,
+          "column": 15,
+          "row": 23,
+          "net": "SIG6"
+        },
+        {
+          "pin": 4,
+          "column": 16,
+          "row": 23,
+          "net": "SIG7"
+        }
+      ]
+    },
+    {
+      "id": "V2",
+      "purpose": "Low-current buffer supply/reference only",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 22,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        },
+        {
+          "pin": 2,
+          "column": 22,
+          "row": 11,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "purpose": "PCA signals/common OE/logic3V3",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 25,
+          "row": 1,
+          "net": "IN8"
+        },
+        {
+          "pin": 2,
+          "column": 26,
+          "row": 1,
+          "net": "IN9"
+        },
+        {
+          "pin": 3,
+          "column": 27,
+          "row": 1,
+          "net": "IN10"
+        },
+        {
+          "pin": 4,
+          "column": 28,
+          "row": 1,
+          "net": "IN11"
+        },
+        {
+          "pin": 5,
+          "column": 29,
+          "row": 1,
+          "net": "OE"
+        },
+        {
+          "pin": 6,
+          "column": 30,
+          "row": 1,
+          "net": "LOGIC_3V3"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "purpose": "Signal outputs ONLY; not servo power",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 25,
+          "row": 23,
+          "net": "SIG8"
+        },
+        {
+          "pin": 2,
+          "column": 26,
+          "row": 23,
+          "net": "SIG9"
+        },
+        {
+          "pin": 3,
+          "column": 27,
+          "row": 23,
+          "net": "SIG10"
+        },
+        {
+          "pin": 4,
+          "column": 28,
+          "row": 23,
+          "net": "SIG11"
+        }
+      ]
+    },
+    {
+      "id": "V3",
+      "purpose": "Low-current buffer supply/reference only",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 34,
+          "row": 9,
+          "net": "SERVO_SW_5V2"
+        },
+        {
+          "pin": 2,
+          "column": 34,
+          "row": 11,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "id": "CTRL",
+      "purpose": "ESP32 GPIO6 and logic reference",
+      "pins": [
+        {
+          "pin": 1,
+          "column": 10,
+          "row": 4,
+          "net": "GPIO6"
+        },
+        {
+          "pin": 2,
+          "column": 10,
+          "row": 5,
+          "net": "GND"
+        }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "name": "OE",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 1,
+          "column": 3,
+          "row": 9
+        },
+        {
+          "component": "U1",
+          "pin": 4,
+          "column": 3,
+          "row": 12
+        },
+        {
+          "component": "U1",
+          "pin": 10,
+          "column": 6,
+          "row": 13
+        },
+        {
+          "component": "U1",
+          "pin": 13,
+          "column": 6,
+          "row": 10
+        },
+        {
+          "component": "U2",
+          "pin": 1,
+          "column": 15,
+          "row": 9
+        },
+        {
+          "component": "U2",
+          "pin": 4,
+          "column": 15,
+          "row": 12
+        },
+        {
+          "component": "U2",
+          "pin": 10,
+          "column": 18,
+          "row": 13
+        },
+        {
+          "component": "U2",
+          "pin": 13,
+          "column": 18,
+          "row": 10
+        },
+        {
+          "component": "U3",
+          "pin": 1,
+          "column": 27,
+          "row": 9
+        },
+        {
+          "component": "U3",
+          "pin": 4,
+          "column": 27,
+          "row": 12
+        },
+        {
+          "component": "U3",
+          "pin": 10,
+          "column": 30,
+          "row": 13
+        },
+        {
+          "component": "U3",
+          "pin": 13,
+          "column": 30,
+          "row": 10
+        },
+        {
+          "component": "R_OE",
+          "pin": 2,
+          "column": 4,
+          "row": 8
+        },
+        {
+          "component": "R_UP",
+          "pin": 2,
+          "column": 4,
+          "row": 7
+        },
+        {
+          "component": "P1",
+          "pin": 5,
+          "column": 5,
+          "row": 1
+        },
+        {
+          "component": "P2",
+          "pin": 5,
+          "column": 17,
+          "row": 1
+        },
+        {
+          "component": "P3",
+          "pin": 5,
+          "column": 29,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "IN0",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 2,
+          "column": 3,
+          "row": 10
+        },
+        {
+          "component": "RI0",
+          "pin": 1,
+          "column": 0,
+          "row": 3
+        },
+        {
+          "component": "P1",
+          "pin": 1,
+          "column": 1,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF0",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 3,
+          "column": 3,
+          "row": 11
+        },
+        {
+          "component": "RS0",
+          "pin": 1,
+          "column": 0,
+          "row": 17
+        }
+      ]
+    },
+    {
+      "name": "IN1",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 5,
+          "column": 3,
+          "row": 13
+        },
+        {
+          "component": "RI1",
+          "pin": 1,
+          "column": 0,
+          "row": 4
+        },
+        {
+          "component": "P1",
+          "pin": 2,
+          "column": 2,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF1",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 6,
+          "column": 3,
+          "row": 14
+        },
+        {
+          "component": "RS1",
+          "pin": 1,
+          "column": 0,
+          "row": 18
+        }
+      ]
+    },
+    {
+      "name": "GND",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 7,
+          "column": 3,
+          "row": 15
+        },
+        {
+          "component": "RI0",
+          "pin": 2,
+          "column": 4,
+          "row": 3
+        },
+        {
+          "component": "RO0",
+          "pin": 2,
+          "column": 10,
+          "row": 17
+        },
+        {
+          "component": "RI1",
+          "pin": 2,
+          "column": 4,
+          "row": 4
+        },
+        {
+          "component": "RO1",
+          "pin": 2,
+          "column": 10,
+          "row": 18
+        },
+        {
+          "component": "RI2",
+          "pin": 2,
+          "column": 4,
+          "row": 5
+        },
+        {
+          "component": "RO2",
+          "pin": 2,
+          "column": 10,
+          "row": 19
+        },
+        {
+          "component": "RI3",
+          "pin": 2,
+          "column": 4,
+          "row": 6
+        },
+        {
+          "component": "RO3",
+          "pin": 2,
+          "column": 10,
+          "row": 20
+        },
+        {
+          "component": "C1",
+          "pin": 2,
+          "column": 8,
+          "row": 11
+        },
+        {
+          "component": "U2",
+          "pin": 7,
+          "column": 15,
+          "row": 15
+        },
+        {
+          "component": "RI4",
+          "pin": 2,
+          "column": 16,
+          "row": 3
+        },
+        {
+          "component": "RO4",
+          "pin": 2,
+          "column": 22,
+          "row": 17
+        },
+        {
+          "component": "RI5",
+          "pin": 2,
+          "column": 16,
+          "row": 4
+        },
+        {
+          "component": "RO5",
+          "pin": 2,
+          "column": 22,
+          "row": 18
+        },
+        {
+          "component": "RI6",
+          "pin": 2,
+          "column": 16,
+          "row": 5
+        },
+        {
+          "component": "RO6",
+          "pin": 2,
+          "column": 22,
+          "row": 19
+        },
+        {
+          "component": "RI7",
+          "pin": 2,
+          "column": 16,
+          "row": 6
+        },
+        {
+          "component": "RO7",
+          "pin": 2,
+          "column": 22,
+          "row": 20
+        },
+        {
+          "component": "C2",
+          "pin": 2,
+          "column": 20,
+          "row": 11
+        },
+        {
+          "component": "U3",
+          "pin": 7,
+          "column": 27,
+          "row": 15
+        },
+        {
+          "component": "RI8",
+          "pin": 2,
+          "column": 28,
+          "row": 3
+        },
+        {
+          "component": "RO8",
+          "pin": 2,
+          "column": 34,
+          "row": 17
+        },
+        {
+          "component": "RI9",
+          "pin": 2,
+          "column": 28,
+          "row": 4
+        },
+        {
+          "component": "RO9",
+          "pin": 2,
+          "column": 34,
+          "row": 18
+        },
+        {
+          "component": "RI10",
+          "pin": 2,
+          "column": 28,
+          "row": 5
+        },
+        {
+          "component": "RO10",
+          "pin": 2,
+          "column": 34,
+          "row": 19
+        },
+        {
+          "component": "RI11",
+          "pin": 2,
+          "column": 28,
+          "row": 6
+        },
+        {
+          "component": "RO11",
+          "pin": 2,
+          "column": 34,
+          "row": 20
+        },
+        {
+          "component": "C3",
+          "pin": 2,
+          "column": 32,
+          "row": 11
+        },
+        {
+          "component": "V1",
+          "pin": 2,
+          "column": 10,
+          "row": 11
+        },
+        {
+          "component": "V2",
+          "pin": 2,
+          "column": 22,
+          "row": 11
+        },
+        {
+          "component": "V3",
+          "pin": 2,
+          "column": 34,
+          "row": 11
+        },
+        {
+          "component": "CTRL",
+          "pin": 2,
+          "column": 10,
+          "row": 5
+        }
+      ]
+    },
+    {
+      "name": "BUF2",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 8,
+          "column": 6,
+          "row": 15
+        },
+        {
+          "component": "RS2",
+          "pin": 1,
+          "column": 0,
+          "row": 19
+        }
+      ]
+    },
+    {
+      "name": "IN2",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 9,
+          "column": 6,
+          "row": 14
+        },
+        {
+          "component": "RI2",
+          "pin": 1,
+          "column": 0,
+          "row": 5
+        },
+        {
+          "component": "P1",
+          "pin": 3,
+          "column": 3,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF3",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 11,
+          "column": 6,
+          "row": 12
+        },
+        {
+          "component": "RS3",
+          "pin": 1,
+          "column": 0,
+          "row": 20
+        }
+      ]
+    },
+    {
+      "name": "IN3",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 12,
+          "column": 6,
+          "row": 11
+        },
+        {
+          "component": "RI3",
+          "pin": 1,
+          "column": 0,
+          "row": 6
+        },
+        {
+          "component": "P1",
+          "pin": 4,
+          "column": 4,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "SERVO_SW_5V2",
+      "endpoints": [
+        {
+          "component": "U1",
+          "pin": 14,
+          "column": 6,
+          "row": 9
+        },
+        {
+          "component": "C1",
+          "pin": 1,
+          "column": 8,
+          "row": 9
+        },
+        {
+          "component": "U2",
+          "pin": 14,
+          "column": 18,
+          "row": 9
+        },
+        {
+          "component": "C2",
+          "pin": 1,
+          "column": 20,
+          "row": 9
+        },
+        {
+          "component": "U3",
+          "pin": 14,
+          "column": 30,
+          "row": 9
+        },
+        {
+          "component": "C3",
+          "pin": 1,
+          "column": 32,
+          "row": 9
+        },
+        {
+          "component": "V1",
+          "pin": 1,
+          "column": 10,
+          "row": 9
+        },
+        {
+          "component": "V2",
+          "pin": 1,
+          "column": 22,
+          "row": 9
+        },
+        {
+          "component": "V3",
+          "pin": 1,
+          "column": 34,
+          "row": 9
+        }
+      ]
+    },
+    {
+      "name": "SIG0",
+      "endpoints": [
+        {
+          "component": "RS0",
+          "pin": 2,
+          "column": 4,
+          "row": 17
+        },
+        {
+          "component": "RO0",
+          "pin": 1,
+          "column": 6,
+          "row": 17
+        },
+        {
+          "component": "S1",
+          "pin": 1,
+          "column": 1,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG1",
+      "endpoints": [
+        {
+          "component": "RS1",
+          "pin": 2,
+          "column": 4,
+          "row": 18
+        },
+        {
+          "component": "RO1",
+          "pin": 1,
+          "column": 6,
+          "row": 18
+        },
+        {
+          "component": "S1",
+          "pin": 2,
+          "column": 2,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG2",
+      "endpoints": [
+        {
+          "component": "RS2",
+          "pin": 2,
+          "column": 4,
+          "row": 19
+        },
+        {
+          "component": "RO2",
+          "pin": 1,
+          "column": 6,
+          "row": 19
+        },
+        {
+          "component": "S1",
+          "pin": 3,
+          "column": 3,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG3",
+      "endpoints": [
+        {
+          "component": "RS3",
+          "pin": 2,
+          "column": 4,
+          "row": 20
+        },
+        {
+          "component": "RO3",
+          "pin": 1,
+          "column": 6,
+          "row": 20
+        },
+        {
+          "component": "S1",
+          "pin": 4,
+          "column": 4,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "IN4",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 2,
+          "column": 15,
+          "row": 10
+        },
+        {
+          "component": "RI4",
+          "pin": 1,
+          "column": 12,
+          "row": 3
+        },
+        {
+          "component": "P2",
+          "pin": 1,
+          "column": 13,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF4",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 3,
+          "column": 15,
+          "row": 11
+        },
+        {
+          "component": "RS4",
+          "pin": 1,
+          "column": 12,
+          "row": 17
+        }
+      ]
+    },
+    {
+      "name": "IN5",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 5,
+          "column": 15,
+          "row": 13
+        },
+        {
+          "component": "RI5",
+          "pin": 1,
+          "column": 12,
+          "row": 4
+        },
+        {
+          "component": "P2",
+          "pin": 2,
+          "column": 14,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF5",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 6,
+          "column": 15,
+          "row": 14
+        },
+        {
+          "component": "RS5",
+          "pin": 1,
+          "column": 12,
+          "row": 18
+        }
+      ]
+    },
+    {
+      "name": "BUF6",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 8,
+          "column": 18,
+          "row": 15
+        },
+        {
+          "component": "RS6",
+          "pin": 1,
+          "column": 12,
+          "row": 19
+        }
+      ]
+    },
+    {
+      "name": "IN6",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 9,
+          "column": 18,
+          "row": 14
+        },
+        {
+          "component": "RI6",
+          "pin": 1,
+          "column": 12,
+          "row": 5
+        },
+        {
+          "component": "P2",
+          "pin": 3,
+          "column": 15,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF7",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 11,
+          "column": 18,
+          "row": 12
+        },
+        {
+          "component": "RS7",
+          "pin": 1,
+          "column": 12,
+          "row": 20
+        }
+      ]
+    },
+    {
+      "name": "IN7",
+      "endpoints": [
+        {
+          "component": "U2",
+          "pin": 12,
+          "column": 18,
+          "row": 11
+        },
+        {
+          "component": "RI7",
+          "pin": 1,
+          "column": 12,
+          "row": 6
+        },
+        {
+          "component": "P2",
+          "pin": 4,
+          "column": 16,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "SIG4",
+      "endpoints": [
+        {
+          "component": "RS4",
+          "pin": 2,
+          "column": 16,
+          "row": 17
+        },
+        {
+          "component": "RO4",
+          "pin": 1,
+          "column": 18,
+          "row": 17
+        },
+        {
+          "component": "S2",
+          "pin": 1,
+          "column": 13,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG5",
+      "endpoints": [
+        {
+          "component": "RS5",
+          "pin": 2,
+          "column": 16,
+          "row": 18
+        },
+        {
+          "component": "RO5",
+          "pin": 1,
+          "column": 18,
+          "row": 18
+        },
+        {
+          "component": "S2",
+          "pin": 2,
+          "column": 14,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG6",
+      "endpoints": [
+        {
+          "component": "RS6",
+          "pin": 2,
+          "column": 16,
+          "row": 19
+        },
+        {
+          "component": "RO6",
+          "pin": 1,
+          "column": 18,
+          "row": 19
+        },
+        {
+          "component": "S2",
+          "pin": 3,
+          "column": 15,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG7",
+      "endpoints": [
+        {
+          "component": "RS7",
+          "pin": 2,
+          "column": 16,
+          "row": 20
+        },
+        {
+          "component": "RO7",
+          "pin": 1,
+          "column": 18,
+          "row": 20
+        },
+        {
+          "component": "S2",
+          "pin": 4,
+          "column": 16,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "IN8",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 2,
+          "column": 27,
+          "row": 10
+        },
+        {
+          "component": "RI8",
+          "pin": 1,
+          "column": 24,
+          "row": 3
+        },
+        {
+          "component": "P3",
+          "pin": 1,
+          "column": 25,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF8",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 3,
+          "column": 27,
+          "row": 11
+        },
+        {
+          "component": "RS8",
+          "pin": 1,
+          "column": 24,
+          "row": 17
+        }
+      ]
+    },
+    {
+      "name": "IN9",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 5,
+          "column": 27,
+          "row": 13
+        },
+        {
+          "component": "RI9",
+          "pin": 1,
+          "column": 24,
+          "row": 4
+        },
+        {
+          "component": "P3",
+          "pin": 2,
+          "column": 26,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF9",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 6,
+          "column": 27,
+          "row": 14
+        },
+        {
+          "component": "RS9",
+          "pin": 1,
+          "column": 24,
+          "row": 18
+        }
+      ]
+    },
+    {
+      "name": "BUF10",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 8,
+          "column": 30,
+          "row": 15
+        },
+        {
+          "component": "RS10",
+          "pin": 1,
+          "column": 24,
+          "row": 19
+        }
+      ]
+    },
+    {
+      "name": "IN10",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 9,
+          "column": 30,
+          "row": 14
+        },
+        {
+          "component": "RI10",
+          "pin": 1,
+          "column": 24,
+          "row": 5
+        },
+        {
+          "component": "P3",
+          "pin": 3,
+          "column": 27,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "BUF11",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 11,
+          "column": 30,
+          "row": 12
+        },
+        {
+          "component": "RS11",
+          "pin": 1,
+          "column": 24,
+          "row": 20
+        }
+      ]
+    },
+    {
+      "name": "IN11",
+      "endpoints": [
+        {
+          "component": "U3",
+          "pin": 12,
+          "column": 30,
+          "row": 11
+        },
+        {
+          "component": "RI11",
+          "pin": 1,
+          "column": 24,
+          "row": 6
+        },
+        {
+          "component": "P3",
+          "pin": 4,
+          "column": 28,
+          "row": 1
+        }
+      ]
+    },
+    {
+      "name": "SIG8",
+      "endpoints": [
+        {
+          "component": "RS8",
+          "pin": 2,
+          "column": 28,
+          "row": 17
+        },
+        {
+          "component": "RO8",
+          "pin": 1,
+          "column": 30,
+          "row": 17
+        },
+        {
+          "component": "S3",
+          "pin": 1,
+          "column": 25,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG9",
+      "endpoints": [
+        {
+          "component": "RS9",
+          "pin": 2,
+          "column": 28,
+          "row": 18
+        },
+        {
+          "component": "RO9",
+          "pin": 1,
+          "column": 30,
+          "row": 18
+        },
+        {
+          "component": "S3",
+          "pin": 2,
+          "column": 26,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG10",
+      "endpoints": [
+        {
+          "component": "RS10",
+          "pin": 2,
+          "column": 28,
+          "row": 19
+        },
+        {
+          "component": "RO10",
+          "pin": 1,
+          "column": 30,
+          "row": 19
+        },
+        {
+          "component": "S3",
+          "pin": 3,
+          "column": 27,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "SIG11",
+      "endpoints": [
+        {
+          "component": "RS11",
+          "pin": 2,
+          "column": 28,
+          "row": 20
+        },
+        {
+          "component": "RO11",
+          "pin": 1,
+          "column": 30,
+          "row": 20
+        },
+        {
+          "component": "S3",
+          "pin": 4,
+          "column": 28,
+          "row": 23
+        }
+      ]
+    },
+    {
+      "name": "GPIO6",
+      "endpoints": [
+        {
+          "component": "R_OE",
+          "pin": 1,
+          "column": 0,
+          "row": 8
+        },
+        {
+          "component": "CTRL",
+          "pin": 1,
+          "column": 10,
+          "row": 4
+        }
+      ]
+    },
+    {
+      "name": "LOGIC_3V3",
+      "endpoints": [
+        {
+          "component": "R_UP",
+          "pin": 1,
+          "column": 0,
+          "row": 7
+        },
+        {
+          "component": "P1",
+          "pin": 6,
+          "column": 6,
+          "row": 1
+        },
+        {
+          "component": "P2",
+          "pin": 6,
+          "column": 18,
+          "row": 1
+        },
+        {
+          "component": "P3",
+          "pin": 6,
+          "column": 30,
+          "row": 1
+        }
+      ]
+    }
+  ],
+  "motor_power_on_board": false,
+  "source_channel_revision": "four-leg-harness-1"
+}

@@ -10,3 +10,7 @@ Current complete robot limit2kg supersedes older1.2kg backlog wording. Keep prot
 - Measure one servo, supplied horn and bearing against coupons before bulk purchasing.
 - Weigh printed leg and hardware; reserve battery/electronics mass within2kg.
 - Measure J1 load/current/duty before powered standing; refine cable loop and usable limits on hardware.
+
+## Final electronics implementation
+- Consider SMT for the final design after perfboard prototypes work; verify
+  new package pinouts/footprints independently. Prefer DigiKey procurement.

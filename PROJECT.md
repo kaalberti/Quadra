@@ -360,7 +360,10 @@ Expected architecture:
 - optional Bluetooth
 - USB programming/debugging
 
-A custom PCB should be considered only after the basic mechanical, actuator, and power architecture has been demonstrated.
+Initial prototypes should use perfboard. Consider SMT components for the final
+design after the basic mechanical, actuator, and power architecture has been demonstrated.
+DigiKey is the preferred supplier for electronic components.
+A custom PCB remains deferred until the architecture is demonstrated.
 
 Electronics may initially be assembled using:
 

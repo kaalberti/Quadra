@@ -14,8 +14,7 @@ Physical assembly, fit and powered operation remain untested.
 - Three positional hobby servos with supplied horns and three624 bearings.
 - Retained70/85mm links; one existing bench adapter now mounts J1.
 - Prototype pitch datum [85,-18,0]mm; nominal foot plane32mm outward.
-- The generous85mm forward offset is a bench prototype, not a final chassis layout.
-- DESIGN_PARAMETERS.md records current values. The old25mm-offset skeleton is
+- - DESIGN_PARAMETERS.md records current values. The old25mm-offset skeleton is
   retained as reference and does not describe this physical prototype.
 
 ## Validation and limits
@@ -108,8 +107,6 @@ Reference assembly: mechanical/prototype-four-leg-working-assembly.scad, with
 22 unique STLs/117 pieces and12 rigid servo envelopes. Every printed-piece pose
 is a proper rotation and matches intended meshes at0.001mm coordinate resolution.
 Front-left/rear-right use mirrored carrier/saddle; other diagonal uses originals.
-Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
-Guide/counts: docs/four-leg-working-assembly.md and mechanical/four-leg-working-print-manifest.json.
 Reference mass screen: approximately2.360kg at an assumed65% material fraction,
 including660g servos,484g estimated fasteners,40g reference bearings and330g
 other allowances. Actual complete mass remains NOT_MEASURED;2kg limit unchanged.
@@ -146,4 +143,7 @@ robot battery/regulator/protection stay TBD. Bench firmware remains one-channel.
 Power shortlist:electronics/robot-power-shortlist.md; no regulator selected.
 25A candidate misses30A screen; split10A option costsNZ$260/out of stock.
 Keep common5.2V rail provisionally; measure actual demand before supply purchase.
+Perfboard buffer layout:electronics/buffer-perfboard.md;162 unique pads and
+12 complete signal paths pass. Actual body/board/soldering clearance untested.
+Initial prototypes use perfboard; consider final SMT. Preferred supplier:DigiKey.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.

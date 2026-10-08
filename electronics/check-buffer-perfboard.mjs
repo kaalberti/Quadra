@@ -1,0 +1,14 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const read=n=>JSON.parse(fs.readFileSync(new URL(n,import.meta.url)));
+const p=read('buffer-perfboard-layout.json'),h=read('four-leg-harness.json'),occupied=new Set(),components=new Map(p.components.map(c=>[c.id,c]));
+assert.equal(p.motor_power_on_board,false);assert.equal(p.physical_tested,false);assert.equal(p.grid.pitch_mm,2.54);
+for(const c of [...p.components,...p.headers])for(const t of c.pins){assert(Number.isInteger(t.column)&&Number.isInteger(t.row)&&t.column>=0&&t.column<p.grid.columns&&t.row>=0&&t.row<p.grid.rows);const key=t.column+','+t.row;assert(!occupied.has(key),'shared pad '+key);occupied.add(key);assert(!/MOTOR|SERVO_POWER|SERVO_RETURN/.test(t.net));}
+const nets=new Map(p.nets.map(n=>[n.name,n.endpoints]));
+for(const c of [...p.components,...p.headers])c.pins.forEach((t,i)=>assert(nets.get(t.net).some(e=>e.component===c.id&&e.pin===(t.pin??i+1)&&e.column===t.column&&e.row===t.row),'missing terminal in net'));
+assert.equal([...nets.values()].reduce((n,e)=>n+e.length,0),occupied.size);
+const pair=(id,a,b)=>assert.deepEqual(components.get(id).pins.map(p=>p.net),[a,b]);
+for(const c of h.channels){const chip=components.get(c.buffer);assert.equal(chip.pins.find(p=>p.pin===c.input_pin).net,'IN'+c.channel);assert.equal(chip.pins.find(p=>p.pin===c.output_pin).net,'BUF'+c.channel);assert.equal(chip.pins.find(p=>p.pin===c.oe_pin).net,'OE');pair('RI'+c.channel,'IN'+c.channel,'GND');pair('RS'+c.channel,'BUF'+c.channel,'SIG'+c.channel);pair('RO'+c.channel,'SIG'+c.channel,'GND');assert.equal(nets.get('IN'+c.channel).length,3);assert.equal(nets.get('BUF'+c.channel).length,2);assert.equal(nets.get('SIG'+c.channel).length,3);}
+for(let i=1;i<=3;i++){const chip=components.get('U'+i);assert.equal(chip.pins.length,14);assert.equal(chip.pins.find(p=>p.pin===14).net,'SERVO_SW_5V2');assert.equal(chip.pins.find(p=>p.pin===7).net,'GND');assert.equal(chip.pins.find(p=>p.pin===1).row,chip.pins.find(p=>p.pin===14).row);assert.equal(chip.pins.find(p=>p.pin===7).row,chip.pins.find(p=>p.pin===8).row);assert.equal(chip.pins.find(p=>p.pin===14).column-chip.pins.find(p=>p.pin===1).column,3);pair('C'+i,'SERVO_SW_5V2','GND');assert(p.headers.find(p=>p.id==='S'+i).pins.every(p=>/^SIG\d+$/.test(p.net)));}
+pair('R_OE','GPIO6','OE');pair('R_UP','LOGIC_3V3','OE');assert.equal(p.components.length,44);assert.equal(p.headers.length,10);assert.equal(nets.get('OE').filter(e=>e.component.startsWith('U')).length,12);
+const endpoints=nets.get('SERVO_SW_5V2');assert(endpoints.every(e=>/^[UCV][123]$/.test(e.component)),'unexpected high-current path');
+console.log('PASS:'+occupied.size+' unique in-bounds pads;44 components/10 headers;12 channel net chains,PDIP orientation,common OE and isolated motor-power boundary. Physical soldering/body clearance remains untested.');

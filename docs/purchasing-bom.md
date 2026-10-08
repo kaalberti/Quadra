@@ -210,3 +210,11 @@ four30603000 BECs from theNZ$259.96 out-of-stock reference, or substitute
 30603003 (6V minimum) into the5.3V-max buffer rail. The25A candidate is below
 the30A planning screen; peak rating does not close that gap. Compare actual
 leg demand and landed cost first. Reference:electronics/robot-power-shortlist.md.
+
+Perfboard carrier — ELEC-006: one isolated-pad board with at least35 x25
+usable2.54mm holes (100 x70mm nominal),three14-pin DIP sockets,three6-pin
+input headers,three4-pin signal-only headers,three2-terminal low-current
+buffer supply connectors andone2-pin CTRL header. Reuse existing buffers/
+passives; component bodies and actual board grid need dry-fit checks.
+DigiKey is preferred; exact parts/prices remain provisional until checked.
+Initial prototypes use perfboard; SMT is a later final-design consideration.

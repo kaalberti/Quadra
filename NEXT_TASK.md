@@ -1,13 +1,13 @@
-# ELEC-006 — solderable signal-buffer carrier plan
+# ELEC-007 — DigiKey perfboard population shortlist
 
-Create a compact perfboard-based assembly plan for the provisional three
-14-pin AHCT125 buffers and passive signal parts. Give explicit grid locations,
-IC orientation, connections and connector labels for12 signal outputs/common
-OE. Keep all motor power on external distribution, and provide insulated board
-mounting/decoupling access. Reuse the channel plan and ordinary perfboard;
-no custom PCB, component purchase or powered test.
+Find public DigiKey listings and primary manufacturer data for affordable
+parts matching the prototype buffer carrier:14-pin PDIP AHCT125, sockets,
+axial resistors,100nF capacitors,isolated-pad perfboard and low-current headers.
+Check body/pitch compatibility with the existing layout and quantity-adjusted
+cost. Reuse existing parts where possible; do not place an order or contact suppliers.
 
-Completion: consistent layout/connection artifact with independently checked
-pin/net/channel coverage and no motor-current route through perfboard. Exact
-purchased perfboard and physical soldering stay provisional. MFG-003/firmware
-unchanged; no following stage. FIT-001 remains pending alongside offline work.
+Completion:one coherent provisional part-number BOM with public links, checked
+package/pitch/ratings and total cost/availability caveats. Revise layout only for
+an actual incompatible part, without assuming physical fit. Initial prototypes
+stay perfboard; final SMT remains deferred. No powered test, custom PCB,
+manufacturing regeneration or following stage. FIT-001 remains pending.
