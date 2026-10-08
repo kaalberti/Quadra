@@ -1,0 +1,31 @@
+{
+  "revision": "three-dof-bench-1",
+  "units": "mm",
+  "measured_by": null,
+  "measured_on": null,
+  "servo_model": null,
+  "bearing_model": null,
+  "print_material": null,
+  "measurements": {
+    "case_length": null,
+    "case_width": null,
+    "mounted_shaft_x": null,
+    "mounted_horn_face_z": null,
+    "selected_bearing_coupon_seat": null,
+    "assembled_leg_mass_g": null
+  },
+  "checks": {
+    "cradle_clamps_without_case_damage": null,
+    "lead_exit_clear": null,
+    "supplied_horn_and_original_centre_screw_used": null,
+    "horn_through_bolts_and_tips_clear": null,
+    "bearing_retained_without_force_or_play": null,
+    "spacers_touch_inner_ring_only": null,
+    "both_fork_arms_align_without_force": null,
+    "carrier_relief_and_mounts_fit": null,
+    "bench_fixture_rigid_and_clear": null,
+    "all_joints_move_gently_without_binding": null,
+    "cable_loop_clear_through_trial_motion": null
+  },
+  "notes": "Unmeasured template. Fill only from actual coupons and unpowered assembly; no powered approval."
+}

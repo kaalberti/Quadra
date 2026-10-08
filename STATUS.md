@@ -46,6 +46,9 @@ including one12mm backing washer. Bench-only anchors/standoffs are separate.
 Servo model and delivered prices remain provisional; test one before buying12.
 Next: print four coupons, verify one actual servo/horn/bearing, then assemble
 one leg unpowered. Do not infer fit or hardware ownership from CAD.
+The fit record/evaluator in mechanical/prototype-fit-record.json and
+docs/prototype-fit-check.md is ready; six evaluator tests pass and the real
+record remains NOT_MEASURED. Bench-control preparation can proceed independently.
 
 ## Open issues
 - Actual servo/horn/bearing/cable fit and measured printed mass.
