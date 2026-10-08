@@ -63,4 +63,7 @@ Individual-servo firmware is compiled for provisional ESP32-S3-DevKitC-1-N8.
 Twelve host C++ scenarios pass for disabled startup, single-channel arming,
 1450..1550us commands, timeout, bus/configuration faults and explicit recovery.
 Source/commands: firmware/README.md. No flashing, calibration or gait code.
+The supervised bench console has12 fake-transport tests: explicit arm,
+automatic keepalive, disarm on protocol failure and no automatic recovery.
+Use firmware/console.ps1 with a verified port only after hardware setup.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

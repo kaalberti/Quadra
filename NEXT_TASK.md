@@ -1,10 +1,11 @@
-# FW-002 — supervised single-servo bench console
+# ELEC-002 — single-servo commissioning evidence
 
-Provide a host console for the FW-001 protocol: explicit operator arming and
-pulse commands, periodic keepalive only during an acknowledged armed session,
-and immediate shutdown on protocol failure, device reboot, fault or exit.
-Test with a fake serial transport, including dropped replies and unexpected
-state/channel changes. Do not auto-arm, auto-reset, flash or move hardware.
+Prepare one concise measurement record and checker for the actual bench
+harness: hardware identity, PSU limits, polarity/common ground, OE levels,
+PWM measurements, cutoff behavior and one unmounted-servo current/voltage
+observations. Leave all physical results unset until measured.
 
-Keep actual hardware commissioning pending. No wider servo limits, calibration,
-assembled-leg control, IK or locomotion in this task.
+Validate the checker with synthetic passing, missing and failed records.
+Separate readiness for an unloaded trial from any assembled-leg approval.
+No motion, fabrication, wider limits, robot battery selection, IK or gaits.
+After preparation, actual hardware identification and measurements gate progress.

@@ -8,6 +8,11 @@ servo voltage and PSU capacity. Keep the servo rail OFF during setup/reset.
 ## Build and tests
 
 From the repository, run `firmware/build.ps1` and `firmware/test.ps1`.
+For a new checkout on this Windows workstation, run
+`firmware/setup-local-tools.ps1` first. It copies the existing PlatformIO
+platform/packages locally and downloads the pinned, checksum-verified host
+compiler if absent. It does not install PlatformIO globally. A different
+workstation needs an existing compatible PlatformIO installation first.
 The embedded build uses PlatformIO Core6.2.0 and project-local copies of
 Espressif platform7.0.1, Arduino-ESP32 package3.20017.241212 and Xtensa
 8.4.0. No third-party servo library is required. Wire is bundled with Arduino.
@@ -53,3 +58,33 @@ OE wiring, output pulse voltage, MCU lockup, or servo power/current.
 
 Removing signals can leave a digital servo holding. Use the physical power
 cutoff for isolation. No physical safety, fit or loaded-duty result is claimed.
+
+## Supervised host console
+
+Use the existing PlatformIO Python environment, for example:
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE='1'
+& C:\Users\Kyle\.platformio\penv\Scripts\python.exe firmware/bench_console.py --port COM5
+```
+
+Substitute your verified port. Keep servo power OFF when opening the port:
+some boards reset on serial connection despite DTR/RTS settings. The console
+accepts a disarmed/faulted device and never arms automatically. A FAULT requires
+diagnosis and the explicit operator command `reset rail-off`; this text is an
+operator acknowledgement, not a voltage measurement.
+
+Once `arm 0` is explicitly entered, the console sends keepalive every0.4s
+while replies match the expected channel/pulse/state. `pulse 1450..1550`,
+`status`, `disarm`, and `quit` are supported. Stay at the bench; console
+keepalives continue while waiting for keyboard input. Use quit/disarm or the
+physical cutoff before leaving. Loss of a reply within0.35s, unexpected state,
+device reboot, invalid armed command or exit stops this session and attempts
+disarm. It never reconnects or automatically recovers. If disarm cannot be
+delivered, the MCU's1.5s command timeout remains the fallback.
+
+Test without hardware:
+`python -m unittest discover -s firmware/test -p test_console.py -v`.
+These12 transport tests complement the12 C++ controller tests. The console
+uses pyserial already present in the existing PlatformIO environment; it does
+not enumerate/open ports during testing. No real serial session was performed.

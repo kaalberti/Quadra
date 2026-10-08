@@ -1,4 +1,4 @@
-param([string]$PlatformIO="C:\Users\Kyle\.platformio\penv\Scripts\platformio.exe")
+param([string]$PlatformIO=(Join-Path $env:USERPROFILE '.platformio\penv\Scripts\platformio.exe'))
 $ErrorActionPreference='Stop'
 $env:PLATFORMIO_CORE_DIR=Join-Path $PSScriptRoot '.pio-core'
 $env:PLATFORMIO_SETTING_ENABLE_TELEMETRY='No'
