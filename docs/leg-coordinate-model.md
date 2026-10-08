@@ -55,3 +55,24 @@ These are geometric solutions only. Bounds do not establish collision-free,
 loaded or servo-calibrated motion. There are no hardware IK commands. Host
 tests cover36 envelope round trips, four wide-bound branches, straight/folded
 deduplication, altered geometry, out-of-reach targets and invalid data.
+
+## Offline request-to-pulse preparation — FW-006
+
+`leg_plan.h` combines calibration and inverse solving without I/O. It first
+requires three valid measured profiles, then solves the nominal reference target.
+A unique non-singular branch can be used directly. Multiple branches or finite
+singular poses require an explicit index into that request's returned IK branches.
+Indeterminate abduction has no selectable branch. An explicitly selected finite
+singular pose retains its singular flag; it is not a qualified motion request.
+
+Each selected angle must lie inside its own calibrated usable range and every
+mapped pulse must stay within the initial1450..1550us bench window. Wider
+calibration anchors do not widen this output window. All three pulses are
+prepared locally; output is assigned only after every check succeeds. Diagnostics
+identify IK/mapping status, branch count and failing joint. On failure, the prior
+output remains unchanged and must not be mistaken for a newly authorized command.
+
+The library neither loads the unmeasured JSON record nor sends commands to the
+PWM controller. Synthetic host profiles demonstrate the integration only.
+Physical profile collection, measured supply capability and hardware enablement
+remain separate tasks. No trajectory, gait or three-servo power approval is implied.

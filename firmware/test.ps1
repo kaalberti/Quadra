@@ -20,6 +20,11 @@ $benchInverseExe=Join-Path $benchOutput 'inverse-test.exe'
 if ($LASTEXITCODE -ne 0) { throw 'Inverse compilation failed' }
 & $benchInverseExe
 if ($LASTEXITCODE -ne 0) { throw 'Inverse tests failed' }
+$benchPlanExe=Join-Path $benchOutput 'plan-test.exe'
+& $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot 'test\plan_test.cpp') -o $benchPlanExe
+if ($LASTEXITCODE -ne 0) { throw 'Planner compilation failed' }
+& $benchPlanExe
+if ($LASTEXITCODE -ne 0) { throw 'Planner tests failed' }
 foreach ($benchSource in @('geometry_test','geometry_cli')) {
  $benchGeometryExe=Join-Path $benchOutput ($benchSource+'.exe')
  & $Compiler c++ -std=c++17 -Wall -Wextra -Werror -I (Join-Path $PSScriptRoot 'include') (Join-Path $PSScriptRoot ('test\'+$benchSource+'.cpp')) -o $benchGeometryExe

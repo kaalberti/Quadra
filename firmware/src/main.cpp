@@ -6,6 +6,7 @@
 #include <initializer_list>
 #include "leg_geometry.h" // offline FK only; no hardware position command
 #include "leg_inverse.h" // offline IK only; no hardware position command
+#include "leg_plan.h" // side-effect-free preparation only; never sent to servos
 #include "bench_command.h"
 #include "pca9685.h"
 

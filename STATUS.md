@@ -89,8 +89,12 @@ Special-pose/invariant tests and N16R8 build pass; manufacturing remains unchang
 Offline inverse solving now returns explicit branches/errors and singular flags.
 Thirty-six trial-envelope round trips plus reach-boundary/branch tests pass.
 Candidates are checked against FK; targets are not projected into the workspace.
-Next: offline one-leg request-to-pulse preparation using measured-profile gates.
+Offline one-leg planning now prepares all three pulses atomically only after
+calibration, IK branch, angle and1450..1550us output checks. Failure leaves
+output unchanged; complete/partial-profile and explicit-branch tests pass.
 No powered IK or gait commands are enabled; physical profiles remain unset.
+Next: prepare a board-only PWM timing diagnostic for the owned ESP32/PCA9685,
+with servo power off and a3.3V loopback. No physical timing results are inferred.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.
