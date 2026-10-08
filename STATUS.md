@@ -142,8 +142,9 @@ Workflow: docs/measured-calibration-profiles.md. No flash or powered activation.
 Offline foot-target planner CLI is available; known CAD target/reversed mapping
 and rejection tests pass. No measured profiles, board flash or motion activation.
 Workflow: docs/offline-leg-planner.md. BOM/manufacturing unchanged.
-Next: support the existing board-only timing diagnostic in the host console.
-Details: docs/tasks/MEC-162.md and MEC-163.md. Manufacturing kit unchanged.
+Host console now supports explicit disarmed timing capture and new-file JSONL
+logging; nine fake-transport tests/full host regressions pass. No physical capture.
+Procedure: docs/board-pwm-timing-test.md. Voltage acknowledgements are not readings.
+Next: prototype a simpler integrated J1 output/carrier while retaining bench geometry.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
-Detailed ten-step results are in docs/tasks/MEC-144-153.md.

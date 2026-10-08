@@ -30,7 +30,8 @@ cover this connection; no new controller, PWM module or scope purchase.
 
 Use the UART/programming USB connection appropriate to the actual dev board.
 Open a115200baud serial monitor; do not run the automatic bench console at
-the same time. Confirm DISARMED and no connected servo or servo power, then type:
+the same time. Alternatively use the supervised console below. Confirm DISARMED
+and no connected servo or servo power, then type:
 
 ```text
 timing rail-off no-servos
@@ -56,3 +57,30 @@ PWM fields, together with date/operator and setup observations. This verifies
 logic timing only: it does not measure amplitude,5V buffer behavior, motor
 current, servo response, physical fit or loaded duty. If timing fails, check
 logic voltage, channel/pin wiring, OE and configured oscillator before motion.
+
+## Supervised console capture — FW-009
+
+After the same wiring checks, use your verified explicit COM port:
+
+```powershell
+& C:\Users\Kyle\.platformio\penv\Scripts\python.exe firmware/bench_console.py --port COM5 --timing-log electronics/board-timing-first.jsonl
+```
+
+The log path must be new; an existing file is never overwritten. The console
+still never arms automatically. While DISARMED, type `timing rail-off no-servos`.
+It rechecks state, accepts exactly one diagnostic line plus its cleanup status,
+and uses a1second diagnostic deadline. The usual0.35second state/motion reply
+deadline stays unchanged. The extra time allows acquisition, I2C cleanup and
+serial delivery; it does not extend an armed keepalive.
+
+Each complete validated reply is printed as JSON and optionally logged with a
+UTC capture timestamp. PASS requires three samples and the existing timing
+screens. NO_SIGNAL and OUT_OF_RANGE retain the reported failure values without
+automatic retry. Bus/configuration/cleanup faults retain a complete fault capture
+and stop the session. Malformed, incomplete or timed-out replies stop without
+publishing a timing capture. No automatic reconnect/reset occurs.
+
+Rail-off and disconnected-servos fields are operator acknowledgements. The
+voltage-measured field remains null; a timing log does not update commissioning
+voltage records or authorize servo motion. All current physical results remain
+NOT_PERFORMED. Fake-transport test logs exist only under ignored test-output.

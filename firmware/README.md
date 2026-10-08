@@ -117,6 +117,7 @@ or powered commands are added. Workflow: ../docs/offline-leg-planner.md.
 
 `timing rail-off no-servos` is a manual serial-monitor command while DISARMED.
 It temporarily drives only channel15 for3.3V timing capture on GPIO7, then
-restores disabled/full-off outputs. It is not supported by the automatic host
-console; close that console for this check. Wiring, acknowledgements and limits:
+restores disabled/full-off outputs. FW-009 supports this explicit command in the
+supervised console only while disarmed, with optional new-file `--timing-log`
+JSONL capture. Do not run a serial monitor and console together. Wiring and limits:
 ../docs/board-pwm-timing-test.md. No physical capture or flash was performed here.

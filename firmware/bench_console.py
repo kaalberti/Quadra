@@ -4,8 +4,11 @@ import queue
 import re
 import threading
 import time
+import json
+from datetime import datetime, timezone
 
 STATUS = re.compile(r"state=(DISARMED|ARMED|FAULT) fault=(NONE|I2C|TIMEOUT|COMMAND) channel=([0-2]) pulse_us=(\d+)")
+TIMING = re.compile(r"TIMING result=(PASS|CONFIG_FAILED|WRITE_FAILED|NO_SIGNAL|OUT_OF_RANGE|CLEANUP_FAILED) high_us=(\d+) period_us=(\d+) samples=([0-3])")
 
 
 class ProtocolError(RuntimeError):
@@ -23,6 +26,61 @@ class Session:
         self.stopped = False
         self.last_poll = 0.0
         self.last_keepalive = 0.0
+        self.last_timing = None
+
+    def timing(self):
+        self.exchange("status", "DISARMED", self.channel, self.pulse)
+        try:
+            self.transport.write(b"timing rail-off no-servos\n")
+            deadline = self.clock() + 1.0  # Disarmed diagnostic only; normal deadline unchanged.
+            capture = None
+            while self.clock() < deadline:
+                raw = self.transport.readline()
+                if not raw:
+                    continue
+                line = raw.decode("ascii", errors="strict").strip()
+                if capture is None:
+                    match = TIMING.fullmatch(line)
+                    if not match:
+                        raise ProtocolError("Malformed timing response: " + line)
+                    result, high, period, samples = match.groups()
+                    high, period, samples = int(high), int(period), int(samples)
+                    if high > 50000 or period > 100000 or period < high:
+                        raise ProtocolError("Invalid timing measurements")
+                    if samples == 0 and (high != 0 or period != 0):
+                        raise ProtocolError("Measurements reported without samples")
+                    if samples > 0 and not 0 < high < period:
+                        raise ProtocolError("Invalid completed timing sample")
+                    if result == "PASS" and not (samples == 3 and 1400 <= high <= 1600 and 19000 <= period <= 21000):
+                        raise ProtocolError("Inconsistent timing PASS")
+                    if result in ("CONFIG_FAILED", "WRITE_FAILED") and samples != 0:
+                        raise ProtocolError("Samples reported before pulse setup")
+                    if result == "NO_SIGNAL" and samples == 3:
+                        raise ProtocolError("Inconsistent missing-signal sample count")
+                    capture = dict(result=result, high_us=high, period_us=period, samples=samples)
+                    continue
+                match = STATUS.fullmatch(line)
+                if not match:
+                    raise ProtocolError("Missing timing cleanup status: " + line)
+                state, fault, channel, pulse = match.groups()
+                expected_fault = capture['result'] in ('CONFIG_FAILED', 'WRITE_FAILED', 'CLEANUP_FAILED')
+                if (state, fault) != (('FAULT', 'I2C') if expected_fault else ('DISARMED', 'NONE')):
+                    raise ProtocolError("Inconsistent timing cleanup state")
+                if int(channel) != self.channel or int(pulse) != self.pulse:
+                    raise ProtocolError("Timing changed actuator channel/pulse")
+                capture.update(state=state, fault=fault, captured_at_utc=datetime.now(timezone.utc).isoformat(),
+                               diagnostic_channel=15, loopback_gpio=7,
+                               servo_rail_off_acknowledged=True, servos_disconnected_acknowledged=True,
+                               servo_rail_voltage_measured=None)
+                self.last_timing = capture
+                self.state, self.fault, self.last_poll = state, fault, self.clock()
+                if expected_fault:
+                    raise ProtocolError("Timing bus/cleanup fault; diagnose before reconnecting")
+                return json.dumps(capture)
+            raise ProtocolError("Timing reply deadline exceeded")
+        except (OSError, UnicodeError, ProtocolError) as error:
+            self.stop()
+            raise ProtocolError(str(error)) from error
 
     def stop(self):
         self.stopped = True
@@ -89,6 +147,8 @@ class Session:
             return self.exchange("disarm", "FAULT" if self.state == "FAULT" else "DISARMED")
         if text == "reset rail-off":
             return self.exchange("reset", "DISARMED")
+        if text == "timing rail-off no-servos" and self.state == "DISARMED":
+            return self.timing()
         match = re.fullmatch(r"arm ([0-2])", text)
         if match and self.state == "DISARMED":
             channel = int(match.group(1))
@@ -100,7 +160,7 @@ class Session:
         if self.state == "ARMED":
             self.stop()
             raise ProtocolError("Invalid command while armed; signals disabled, reconnect after diagnosis")
-        raise ValueError("Use status, arm 0..2, pulse 1450..1550, disarm, reset rail-off or quit")
+        raise ValueError("Use status, arm 0..2, pulse 1450..1550, disarm, reset rail-off, timing rail-off no-servos or quit")
 
     def poll(self):
         reference = self.last_keepalive if self.state == "ARMED" else self.last_poll
@@ -115,6 +175,7 @@ class Session:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", required=True, help="Explicit Windows COM port; servo rail OFF before connecting")
+    parser.add_argument("--timing-log", help="New JSONL file for complete diagnostic replies; never overwritten")
     args = parser.parse_args()
     import serial  # Already bundled with the existing PlatformIO Python environment.
     transport = serial.Serial(port=None, baudrate=115200, timeout=0.1, write_timeout=0.1)
@@ -123,6 +184,8 @@ def main():
     transport.port = args.port
     session = Session(transport)
     commands = queue.Queue()
+    timing_log = None
+    last_saved = None
 
     def operator_input():
         try:
@@ -135,6 +198,8 @@ def main():
             commands.put("quit")
 
     try:
+        if args.timing_log:
+            timing_log = open(args.timing_log, 'x', encoding='utf-8')
         transport.open()
         # USB/serial opening can reset a board. Startup is allowed only before
         # this session, with the operator instructed to keep servo power off.
@@ -142,7 +207,7 @@ def main():
         transport.reset_input_buffer()
         print(session.connect())
         print("Rail OFF for wiring/reset. One unmounted servo, horn removed. Explicit arm moves to unknown centre.")
-        print("status | arm 0..2 | pulse 1450..1550 | disarm | reset rail-off | quit")
+        print("status | arm 0..2 | pulse 1450..1550 | disarm | reset rail-off | timing rail-off no-servos | quit")
         threading.Thread(target=operator_input, daemon=True).start()
         while True:
             session.poll()
@@ -156,12 +221,19 @@ def main():
                 print(session.command(text))
             except ValueError as error:
                 print(error)
+            finally:
+                if timing_log and session.last_timing is not None and session.last_timing is not last_saved:
+                    timing_log.write(json.dumps(session.last_timing) + '\n')
+                    timing_log.flush()
+                    last_saved = session.last_timing
     except (ProtocolError, OSError, KeyboardInterrupt) as error:
         print("STOP:", error, "Use the physical servo-power cutoff.")
     finally:
         session.stop()
         if transport.is_open:
             transport.close()
+        if timing_log:
+            timing_log.close()
 
 
 if __name__ == "__main__":
