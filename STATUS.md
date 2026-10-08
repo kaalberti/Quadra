@@ -26,8 +26,7 @@ Six sampled checks have no solid intersections: J1 fixed-case probes -25/0/+30de
 and carrier/J2 probes20/44.0486/55deg, with remaining joints at nominal angles.
 Carrier mating-face contact is permitted; full swept ranges and actual cables,
 fasteners, horns, board anchoring and servo limits remain unverified.
-Existing pitch-leg checks pass. Suggested unpowered geometric trial envelope:
-J1 -25..30deg, J2 20..55deg, J3 60..90deg; reduce travel if anything binds.
+Unpowered geometric trials: J1 -25..30deg, J2 20..55deg, J3 60..90deg; stop if binding.
 At2kg/three support legs, J1 neutral screen0.329Nm vs0.922Nm published stall;
 +15deg0.525Nm and+30deg0.694Nm. Stall is not sustained torque or powered approval.
 
@@ -39,11 +38,6 @@ The kit now selects mirrored carrier/saddle prints and proper printed-part poses
 Self-contained assembly: manufacturing/cad/prototype-rigid-bench-pack-assembly.scad.
 18 unique assembly STLs/29 pieces, four coupons, CAD snapshot, BOM, assembly
 instructions/image, print list, layout, validation and hashes:53 verified files.
-The prior two-DOF pack is archived intact at ARCHIVE/MFG-001-two-dof-pack/.
-The prior bench-1 checkpoint is intact at ARCHIVE/MFG-002-three-dof-bench-1/.
-The prior bench-2 checkpoint is intact at ARCHIVE/MFG-002-three-dof-bench-2/.
-Source and validation tooling remain under mechanical/ and docs/.
-Manufacturing is updated for this build checkpoint, not during every design edit.
 
 ## Purchases and immediate next objective
 Maintained buying BOM: docs/purchasing-bom.md; role data: mechanical/three-dof-hardware.json.
@@ -108,7 +102,7 @@ now uses a proper rotation for the original hand. Two mounts per hand;
 16 added M3 x16 deck fixings. Carrier and saddle each have one new mirrored STL.
 Mount ribs have clearance pockets; closed connected/bed/hole checks pass.
 Corrected full nominal mount/leg intersection is empty, excluding intended contact.
-Working assembly: mechanical/prototype-four-leg-working-assembly.scad, with
+Reference assembly: mechanical/prototype-four-leg-working-assembly.scad, with
 22 unique STLs/117 pieces and12 rigid servo envelopes. Every printed-piece pose
 is a proper rotation and matches intended meshes at0.001mm coordinate resolution.
 Front-left/rear-right use mirrored carrier/saddle; other diagonal uses originals.
@@ -118,7 +112,7 @@ Rear local pitch directions differ from global forward; no powered mapping added
 Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
 Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
 Guide/counts: docs/four-leg-working-assembly.md and mechanical/four-leg-working-print-manifest.json.
-Working mass screen: approximately2.360kg at an assumed65% material fraction,
+Reference mass screen: approximately2.360kg at an assumed65% material fraction,
 including660g servos,484g estimated fasteners,40g reference bearings and330g
 other allowances. Actual complete mass remains NOT_MEASURED;2kg limit unchanged.
 Only486g remains for all prints under those assumptions (37.4% of solid CAD
@@ -146,5 +140,9 @@ Integrated hip/carrier: both handed meshes pass closed/connected/bed checks;
 Experimental bench leg has23 prints; cumulative robot estimate2.178kg remains
 above2kg. Conditional BOM is updated; print/fit/load tests remain NOT_PERFORMED.
 Source/viewer: mechanical/prototype-integrated-hip.scad and prototype-integrated-hip-assembly.scad.
-Next: integrate the simplified parts into the physical four-leg plan and mass record.
+Integrated four-leg plan:21 unique STLs/93 pieces;12 new placements agree with
+source within0.000709mm and all60 nominal chassis pairs pass. Variant mass
+record remains NOT_MEASURED; screen2.178kg exceeds the unchanged2kg limit.
+Viewer: mechanical/prototype-integrated-four-leg-assembly.scad.
+Next: MFG-003 integrated single-leg build checkpoint; preserve bench-3 fallback.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.

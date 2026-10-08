@@ -4,9 +4,12 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 const here=path.dirname(fileURLToPath(import.meta.url));
-const inputPath=path.join(here,'robot-mass-inputs.json');
+const integrated=process.argv.includes('--integrated');
+const inputPath=path.join(here,integrated?'integrated-robot-mass-inputs.json':'robot-mass-inputs.json');
 const input=JSON.parse(fs.readFileSync(inputPath,'utf8'));
-const plan=JSON.parse(fs.readFileSync(path.join(here,'four-leg-working-print-manifest.json'),'utf8'));
+const planPath=path.join(here,integrated?'integrated-four-leg-print-manifest.json':'four-leg-working-print-manifest.json');
+const plan=JSON.parse(fs.readFileSync(planPath,'utf8'));
+const expectedPieces=integrated?93:117;
 const hardware=JSON.parse(fs.readFileSync(path.join(here,'three-dof-hardware.json'),'utf8').replace(/^\uFEFF/,''));
 const optional=x=>{assert.ok(x===null || (Number.isFinite(x)&&x>0),'invalid measured/slicer input');return x;};
 const positive=x=>{assert.ok(Number.isFinite(x)&&x>0);return x;};
@@ -30,7 +33,7 @@ for(const p of plan.parts) {
  const record=input.print_unit_inputs[name],measured=optional(record.measured_unit_g),sliced=optional(record.slicer_unit_g);
  prints.push({file:name,quantity:p.quantity,solid_unit_g:solid,assumed_unit_g:solid*fraction,chosen_unit_g:measured??sliced??solid*fraction,chosen_basis:measured!==null?'measured':sliced!==null?'slicer':'assumed material fraction',sha256:p.sha256});
 }
-assert.equal(prints.reduce((s,p)=>s+p.quantity,0),117);
+assert.equal(prints.reduce((s,p)=>s+p.quantity,0),expectedPieces);
 const rho=positive(input.steel_density_g_per_cm3_assumed)/1000;
 const thread=positive(input.threaded_shank_volume_fraction_assumed);assert.ok(thread<=1);
 const cylinder=(d,h)=>Math.PI*d*d*h/4;
@@ -40,12 +43,14 @@ const nut=(d,af,h)=>(hex(af,h)-cylinder(d,h))*rho;
 const washer=(bore,od,h)=>(cylinder(od,h)-cylinder(bore,h))*rho;
 const byLength=new Map();for(const role of hardware.M3_fastener_roles)byLength.set(role.length_mm,(byLength.get(role.length_mm)||0)+role.quantity*4);
 byLength.set(16,byLength.get(16)+16); // Deck fixings, once.
-assert.equal([...byLength.values()].reduce((a,b)=>a+b,0),156);
+if(integrated) {assert.equal(byLength.get(90),16);byLength.delete(90);byLength.set(20,byLength.get(20)-16);}
+const removedFixings=integrated?32:0;
+assert.equal([...byLength.values()].reduce((a,b)=>a+b,0),156-removedFixings);
 const fasteners=[];
 for(const [length,quantity]of byLength)fasteners.push({item:`M3x${length}`,quantity,unit_g_estimated:bolt(3,length,5.5,3,2.5,1.3)});
 for(const [item,quantity,unit]of [
- ['M3 nuts',hardware.M3_nuts*4+16,nut(3,5.5,2.4)],
- ['M3 ordinary washers',hardware.M3_normal_washers*4+32,washer(3.2,7,0.5)],
+ ['M3 nuts',hardware.M3_nuts*4+16-removedFixings,nut(3,5.5,2.4)],
+ ['M3 ordinary washers',hardware.M3_normal_washers*4+32-2*removedFixings,washer(3.2,7,0.5)],
  ['M3 backing washers',4,washer(3.2,12,1)],
  ['M4x35 pivots',12,bolt(4,35,7,4,3,2)],
  ['M4 locknuts',12,nut(4,7,5)],
@@ -63,7 +68,7 @@ const extras=[['battery','battery'],['electronics_and_power','electronics_and_po
 const extraTotal=extras.reduce((s,p)=>s+p.g,0),fixed=hardwareChosen+servos+bearings+extraTotal;
 const solidTotal=prints.reduce((s,p)=>s+p.quantity*p.solid_unit_g,0),chosenPrints=prints.reduce((s,p)=>s+p.quantity*p.chosen_unit_g,0);
 const allMeasured=prints.every(p=>p.chosen_basis==='measured')&&['measured_servo_unit_g','measured_bearing_unit_g','measured_complete_fasteners_g','measured_battery_g','measured_electronics_and_power_g','measured_distribution_wiring_g','measured_horns_feet_ties_g'].every(k=>input[k]!==null);
-const report={revision:'working-robot-mass-1',complete_limit_g:input.maximum_complete_mass_g,printed_pieces:117,prints,fasteners,fastener_estimate_g:hardwareEstimate,servos_g:servos,bearings_g:bearings,extras,solid_CAD_prints_g:solidTotal,chosen_prints_g:chosenPrints,estimated_complete_g:fixed+chosenPrints,estimated_margin_g:input.maximum_complete_mass_g-fixed-chosenPrints,available_print_mass_g:input.maximum_complete_mass_g-fixed,required_max_material_fraction:(input.maximum_complete_mass_g-fixed)/solidTotal,all_component_masses_measured:allMeasured,measured_complete_robot_g:input.measured_complete_robot_g,status:input.measured_complete_robot_g!==null?(input.measured_complete_robot_g<=input.maximum_complete_mass_g?'MEASURED_WITHIN_LIMIT':'MEASURED_OVER_LIMIT'):'NOT_MEASURED',sources:input.sources,limits:'Solid CAD mass is not printed mass; 65% material fraction is an example, not an infill setting. Fastener dimensions/thread factor are rough reference-based estimates, not product weights. Unselected power/battery hardware and actual materials can change this screen.'};
+const report={revision:integrated?'integrated-robot-mass-1':'working-robot-mass-1',complete_limit_g:input.maximum_complete_mass_g,printed_pieces:expectedPieces,prints,fasteners,fastener_estimate_g:hardwareEstimate,servos_g:servos,bearings_g:bearings,extras,solid_CAD_prints_g:solidTotal,chosen_prints_g:chosenPrints,estimated_complete_g:fixed+chosenPrints,estimated_margin_g:input.maximum_complete_mass_g-fixed-chosenPrints,available_print_mass_g:input.maximum_complete_mass_g-fixed,required_max_material_fraction:(input.maximum_complete_mass_g-fixed)/solidTotal,all_component_masses_measured:allMeasured,measured_complete_robot_g:input.measured_complete_robot_g,status:input.measured_complete_robot_g!==null?(input.measured_complete_robot_g<=input.maximum_complete_mass_g?'MEASURED_WITHIN_LIMIT':'MEASURED_OVER_LIMIT'):'NOT_MEASURED',sources:input.sources,limits:'Solid CAD mass is not printed mass; 65% material fraction is an example, not an infill setting. Fastener dimensions/thread factor are rough reference-based estimates, not product weights. Unselected power/battery hardware and actual materials can change this screen.'};
 report.fastener_geometry_assumptions={M3_cap_mm:{diameter:5.5,height:3,socket_AF:2.5,socket_depth:1.3},M3_nut_mm:{AF:5.5,height:2.4,bore:3},M3_washer_mm:{bore:3.2,OD:7,thickness:0.5},M3_backing_washer_mm:{bore:3.2,OD:12,thickness:1},M4_cap_mm:{diameter:7,height:4,socket_AF:3,socket_depth:2},M4_locknut_mm:{AF:7,height:5,bore:4},M4_washer_mm:{bore:4.3,OD:9,thickness:0.8},M2_cap_mm:{diameter:3.8,height:2,socket_AF:1.5,socket_depth:1},M2_nut_mm:{AF:4,height:1.6,bore:2},M2_washer_mm:{bore:2.2,OD:5,thickness:0.3},note:'Rough reference envelopes; mixed/partial threads, locking inserts and actual washer sizes need weighing. Some close positions require6mm OD washers;7mm here conservatively screens mass.'};
 report.M3x40_reference_check={estimated_unit_g:m3x40,published_unit_g:2.36};
 report.independent_volume_spot_checks=[];
@@ -73,10 +78,15 @@ for(const [file,validation,part]of [
  ['prototype-chassis-deck.stl','prototype-chassis-check.json','deck']]) {
  const reference=JSON.parse(fs.readFileSync(path.join(here,validation),'utf8').replace(/^\uFEFF/,''));
  const expected=reference.meshes.find(p=>p.part===part).volume_mm3;
- const actual=prints.find(p=>p.file===file).solid_unit_g*1000/input.PETG_density_g_per_cm3_assumed;
+ const printed=prints.find(p=>p.file===file);if(!printed && integrated)continue;
+ const actual=printed.solid_unit_g*1000/input.PETG_density_g_per_cm3_assumed;
  assert.ok(Math.abs(actual-expected)<0.01,'independent CAD-volume report differs');
  report.independent_volume_spot_checks.push({file,reference:validation,volume_difference_mm3:Math.abs(actual-expected)});
 }
 fs.writeFileSync(inputPath,JSON.stringify(input,null,2)+'\n');
-fs.writeFileSync(path.join(here,'robot-working-mass-check.json'),JSON.stringify(report,null,2)+'\n');
+if(integrated) {
+ const hash=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+ report.source_binding={manifest_sha256:hash(planPath),input_sha256:hash(inputPath),calculator_sha256:hash(fileURLToPath(import.meta.url)),hardware_roles_sha256:hash(path.join(here,'three-dof-hardware.json'))};
+}
+fs.writeFileSync(path.join(here,integrated?'integrated-robot-mass-check.json':'robot-working-mass-check.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({solid_prints_g:solidTotal,assumed_prints_g:chosenPrints,fasteners_g:hardwareEstimate,servos_g:servos,bearings_g:bearings,other_allowances_g:extraTotal,estimated_complete_g:report.estimated_complete_g,margin_g:report.estimated_margin_g,available_prints_g:report.available_print_mass_g,max_solid_material_fraction:report.required_max_material_fraction,status:report.status},null,2));

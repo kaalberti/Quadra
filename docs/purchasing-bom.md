@@ -162,9 +162,15 @@ zero M3x90 bolts,32 M3x20 bolts,124 M3 nuts and244 ordinary M3 washers.
 Other complete quantities above remain unchanged. Combined estimated savings
 are181g under the same mass-screen assumptions, leaving2.178kg, still above2kg.
 Actual mass is unmeasured. Both print hands and sampled one-leg clearances pass;
-complete four-leg integration and physical print/load tests remain open.
+all12 new four-leg placements and60 nominal chassis pairs now pass.
+Physical print/load tests remain open.
 The experimental bench leg uses23 prints,27 M3 bolts/nuts and53 ordinary
 M3 washers plus one backing washer. Compared with the supported bench kit,
 omit four M3x90 and four M3x20 bolts, eight nuts and16 ordinary washers.
 Keep the supported bench kit as the current purchase/test reference; do not
 buy conditional complete robot quantities yet. Details: docs/tasks/MEC-164.md.
+
+MEC-165 confirms21 unique STLs/93 pieces in
+mechanical/integrated-four-leg-print-manifest.json. The source-bound variant
+mass record is mechanical/integrated-robot-mass-inputs.json; its report remains
+NOT_MEASURED. Assembly/measurement guide: docs/integrated-four-leg-working-assembly.md.

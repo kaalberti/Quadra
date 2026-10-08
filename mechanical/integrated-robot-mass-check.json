@@ -1,0 +1,381 @@
+{
+  "revision": "integrated-robot-mass-1",
+  "complete_limit_g": 2000,
+  "printed_pieces": 93,
+  "prints": [
+    {
+      "file": "hobby-servo-cradle-left.stl",
+      "quantity": 8,
+      "solid_unit_g": 13.100036781249477,
+      "assumed_unit_g": 8.51502390781216,
+      "chosen_unit_g": 8.51502390781216,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "AC5B53BF4255DC9EA0F074FA2AB76C94F5BC489BB2CBF75BBB2863D141FA083A"
+    },
+    {
+      "file": "hobby-servo-cradle-right.stl",
+      "quantity": 8,
+      "solid_unit_g": 13.10003678124948,
+      "assumed_unit_g": 8.515023907812163,
+      "chosen_unit_g": 8.515023907812163,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "6F4FDFDCF84A73047037AD10B611B01A5FDE09E71DCCC434BE84B0EC7AFEEA0C"
+    },
+    {
+      "file": "hobby-joint-support.stl",
+      "quantity": 8,
+      "solid_unit_g": 9.536972696854786,
+      "assumed_unit_g": 6.199032252955611,
+      "chosen_unit_g": 6.199032252955611,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "2A69D2433A7177B392F5C3536317F8435240A5CACCCAA1223C8C2774C709DF5D"
+    },
+    {
+      "file": "hobby-joint-front-spacer.stl",
+      "quantity": 8,
+      "solid_unit_g": 0.12054632020939161,
+      "assumed_unit_g": 0.07835510813610455,
+      "chosen_unit_g": 0.07835510813610455,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "6CE50F98172CF975EF695D0279B6425BB343ADDB85ED0C3F8C7757E22C9ADDC5"
+    },
+    {
+      "file": "hobby-joint-rear-spacer.stl",
+      "quantity": 12,
+      "solid_unit_g": 0.04520487007852206,
+      "assumed_unit_g": 0.02938316555103934,
+      "chosen_unit_g": 0.02938316555103934,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "0940367FEAD7BA1CD2A2BEDC5331BF46721E04AEE13461C8AC1471A80901157F"
+    },
+    {
+      "file": "hobby-joint-retainer.stl",
+      "quantity": 12,
+      "solid_unit_g": 1.0969070950388775,
+      "assumed_unit_g": 0.7129896117752704,
+      "chosen_unit_g": 0.7129896117752704,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38"
+    },
+    {
+      "file": "prototype-upper-leg-saddle-mirrored.stl",
+      "quantity": 2,
+      "solid_unit_g": 7.779801305552947,
+      "assumed_unit_g": 5.056870848609416,
+      "chosen_unit_g": 5.056870848609416,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
+    },
+    {
+      "file": "prototype-cable-guide.stl",
+      "quantity": 4,
+      "solid_unit_g": 1.3664231778922906,
+      "assumed_unit_g": 0.8881750656299889,
+      "chosen_unit_g": 0.8881750656299889,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "6FFF92555115FCC8B9FDCB8504F409BACF56D00548BDA2E30AE177E25019AACB"
+    },
+    {
+      "file": "prototype-knee-support.stl",
+      "quantity": 4,
+      "solid_unit_g": 7.995291194451037,
+      "assumed_unit_g": 5.1969392763931745,
+      "chosen_unit_g": 5.1969392763931745,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8"
+    },
+    {
+      "file": "prototype-knee-spacer.stl",
+      "quantity": 4,
+      "solid_unit_g": 0.15068290026174044,
+      "assumed_unit_g": 0.09794388517013129,
+      "chosen_unit_g": 0.09794388517013129,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "5FED377AD820F57F70389B16CA023230530773128BC9DD15C59F496B9DFDDC12"
+    },
+    {
+      "file": "prototype-foot.stl",
+      "quantity": 4,
+      "solid_unit_g": 1.3670761903338924,
+      "assumed_unit_g": 0.8885995237170301,
+      "chosen_unit_g": 0.8885995237170301,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
+    },
+    {
+      "file": "prototype-chassis-mount-left.stl",
+      "quantity": 2,
+      "solid_unit_g": 31.520802906304755,
+      "assumed_unit_g": 20.48852188909809,
+      "chosen_unit_g": 20.48852188909809,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "F9112C24B72B818507C4D00ECACEA200E37B7065D4583A4DDAF06A9CE306CB5B"
+    },
+    {
+      "file": "prototype-upper-leg-saddle.stl",
+      "quantity": 2,
+      "solid_unit_g": 7.77980130555294,
+      "assumed_unit_g": 5.056870848609411,
+      "chosen_unit_g": 5.056870848609411,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "9A72E19587F4ADD72F9139F8529E467D3E92E2DF40C08C612247824B281213A9"
+    },
+    {
+      "file": "prototype-chassis-mount-right.stl",
+      "quantity": 2,
+      "solid_unit_g": 31.520802908430515,
+      "assumed_unit_g": 20.488521890479834,
+      "chosen_unit_g": 20.488521890479834,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "C1A7A95B389CD557CF01CFB415F720FAA06B226B6069AB40A835A6E75509F5EA"
+    },
+    {
+      "file": "prototype-chassis-deck.stl",
+      "quantity": 1,
+      "solid_unit_g": 99.80700855098878,
+      "assumed_unit_g": 64.87455555814272,
+      "chosen_unit_g": 64.87455555814272,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "5010DFA4EBA8014AD5DCFEFA76C5EC89E32F43358ED8F9D8DAC028527C1D83C8"
+    },
+    {
+      "file": "prototype-integrated-hip.stl",
+      "quantity": 2,
+      "solid_unit_g": 73.59580923315812,
+      "assumed_unit_g": 47.83727600155278,
+      "chosen_unit_g": 47.83727600155278,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "6979EEC9EC9AF0313108C3F52ADF108FF6DECCAC7B8AC24E5FBCAA7BE75F4998"
+    },
+    {
+      "file": "prototype-pitch-fork-upper-mirrored.stl",
+      "quantity": 2,
+      "solid_unit_g": 40.88205796591561,
+      "assumed_unit_g": 26.573337677845146,
+      "chosen_unit_g": 26.573337677845146,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "F9A69734FEB1DEAAFF969B64656181833CD42F2461B447F15F13200FA6DDF57F"
+    },
+    {
+      "file": "prototype-pitch-fork-lower-mirrored.stl",
+      "quantity": 2,
+      "solid_unit_g": 36.10738235853073,
+      "assumed_unit_g": 23.469798533044973,
+      "chosen_unit_g": 23.469798533044973,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "384C9CA117100F0D1CA0FB15F42123937C2CAD3C47E8EF6C654EC8266ABD4966"
+    },
+    {
+      "file": "prototype-integrated-hip-mirrored.stl",
+      "quantity": 2,
+      "solid_unit_g": 73.59580923315765,
+      "assumed_unit_g": 47.837276001552475,
+      "chosen_unit_g": 47.837276001552475,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "CA984B79143D352E83055B2DFE377A304262BEB5C83018C659ABDEB756A70ADA"
+    },
+    {
+      "file": "prototype-pitch-fork-upper.stl",
+      "quantity": 2,
+      "solid_unit_g": 40.88205796591561,
+      "assumed_unit_g": 26.573337677845146,
+      "chosen_unit_g": 26.573337677845146,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "B0E63CBBF4BC33504CBC26D346EC8C4B1E8A271F9EA4EF00A687BC0F61217F9B"
+    },
+    {
+      "file": "prototype-pitch-fork-lower.stl",
+      "quantity": 2,
+      "solid_unit_g": 36.10738235853058,
+      "assumed_unit_g": 23.469798533044877,
+      "chosen_unit_g": 23.469798533044877,
+      "chosen_basis": "assumed material fraction",
+      "sha256": "F8508F81692908807FD4AFC0DB2BDB945B437D868FE404D5BE306A8420F5A776"
+    }
+  ],
+  "fasteners": [
+    {
+      "item": "M3x40",
+      "quantity": 16,
+      "unit_g_estimated": 2.3686812275415723
+    },
+    {
+      "item": "M3x20",
+      "quantity": 32,
+      "unit_g_estimated": 1.4364764394418728
+    },
+    {
+      "item": "M3x16",
+      "quantity": 52,
+      "unit_g_estimated": 1.2500354818219328
+    },
+    {
+      "item": "M3x12",
+      "quantity": 16,
+      "unit_g_estimated": 1.0635945242019929
+    },
+    {
+      "item": "M3x70",
+      "quantity": 8,
+      "unit_g_estimated": 3.766988409691121
+    },
+    {
+      "item": "M3 nuts",
+      "quantity": 124,
+      "unit_g_estimated": 0.3603844252851181
+    },
+    {
+      "item": "M3 ordinary washers",
+      "quantity": 244,
+      "unit_g_estimated": 0.11948497879214398
+    },
+    {
+      "item": "M3 backing washers",
+      "quantity": 4,
+      "unit_g_estimated": 0.824680637937935
+    },
+    {
+      "item": "M4x35 pivots",
+      "quantity": 12,
+      "unit_g_estimated": 3.9862368987365255
+    },
+    {
+      "item": "M4 locknuts",
+      "quantity": 12,
+      "unit_g_estimated": 1.1723533112148237
+    },
+    {
+      "item": "M4 washers",
+      "quantity": 12,
+      "unit_g_estimated": 0.3083181021381598
+    },
+    {
+      "item": "M2x10 horn bolts (maximum)",
+      "quantity": 48,
+      "unit_g_estimated": 0.36991649271087695
+    },
+    {
+      "item": "M2 horn nuts (maximum)",
+      "quantity": 48,
+      "unit_g_estimated": 0.134578061415433
+    },
+    {
+      "item": "M2 horn washers (maximum)",
+      "quantity": 96,
+      "unit_g_estimated": 0.03728819152398797
+    }
+  ],
+  "fastener_estimate_g": 366.56044126413576,
+  "servos_g": 660,
+  "bearings_g": 39.599999999999994,
+  "extras": [
+    {
+      "item": "battery",
+      "g": 150,
+      "basis": "provisional allowance"
+    },
+    {
+      "item": "electronics_and_power",
+      "g": 100,
+      "basis": "provisional allowance"
+    },
+    {
+      "item": "distribution_wiring",
+      "g": 60,
+      "basis": "provisional allowance"
+    },
+    {
+      "item": "horns_feet_ties",
+      "g": 20,
+      "basis": "provisional allowance"
+    }
+  ],
+  "solid_CAD_prints_g": 1203.4344017027574,
+  "chosen_prints_g": 782.2323611067923,
+  "estimated_complete_g": 2178.3928023709277,
+  "estimated_margin_g": -178.39280237092794,
+  "available_print_mass_g": 603.8395587358643,
+  "required_max_material_fraction": 0.5017635841899506,
+  "all_component_masses_measured": false,
+  "measured_complete_robot_g": null,
+  "status": "NOT_MEASURED",
+  "sources": {
+    "servo": "https://towerpro.com.tw/product/mg996r/",
+    "bearing_reference": "https://www.skf.com/ro/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-624-2RS1?failover=true",
+    "M3_cap_reference": "https://www.accu.co.uk/api/product-datasheet?id=659829"
+  },
+  "limits": "Solid CAD mass is not printed mass; 65% material fraction is an example, not an infill setting. Fastener dimensions/thread factor are rough reference-based estimates, not product weights. Unselected power/battery hardware and actual materials can change this screen.",
+  "fastener_geometry_assumptions": {
+    "M3_cap_mm": {
+      "diameter": 5.5,
+      "height": 3,
+      "socket_AF": 2.5,
+      "socket_depth": 1.3
+    },
+    "M3_nut_mm": {
+      "AF": 5.5,
+      "height": 2.4,
+      "bore": 3
+    },
+    "M3_washer_mm": {
+      "bore": 3.2,
+      "OD": 7,
+      "thickness": 0.5
+    },
+    "M3_backing_washer_mm": {
+      "bore": 3.2,
+      "OD": 12,
+      "thickness": 1
+    },
+    "M4_cap_mm": {
+      "diameter": 7,
+      "height": 4,
+      "socket_AF": 3,
+      "socket_depth": 2
+    },
+    "M4_locknut_mm": {
+      "AF": 7,
+      "height": 5,
+      "bore": 4
+    },
+    "M4_washer_mm": {
+      "bore": 4.3,
+      "OD": 9,
+      "thickness": 0.8
+    },
+    "M2_cap_mm": {
+      "diameter": 3.8,
+      "height": 2,
+      "socket_AF": 1.5,
+      "socket_depth": 1
+    },
+    "M2_nut_mm": {
+      "AF": 4,
+      "height": 1.6,
+      "bore": 2
+    },
+    "M2_washer_mm": {
+      "bore": 2.2,
+      "OD": 5,
+      "thickness": 0.3
+    },
+    "note": "Rough reference envelopes; mixed/partial threads, locking inserts and actual washer sizes need weighing. Some close positions require6mm OD washers;7mm here conservatively screens mass."
+  },
+  "M3x40_reference_check": {
+    "estimated_unit_g": 2.3686812275415723,
+    "published_unit_g": 2.36
+  },
+  "independent_volume_spot_checks": [
+    {
+      "file": "prototype-chassis-deck.stl",
+      "reference": "prototype-chassis-check.json",
+      "volume_difference_mm3": 0
+    }
+  ],
+  "source_binding": {
+    "manifest_sha256": "cefafb42bdc5be341495a08b90cab51b6e5fe2489328309dabe108d0c2a23607",
+    "input_sha256": "42d351cbc6584f8829ea5933c44607ebaa0c93df3801fa16d6441e3662a38af7",
+    "calculator_sha256": "8b1de3a24f5c9df28f723a541d75170d68d6067728265f787aee86321d313032",
+    "hardware_roles_sha256": "3fdfd8dee3481d731fdac6af1394f9e2739ebe38cdfe19b1fc5f9f1e64cb3005"
+  }
+}

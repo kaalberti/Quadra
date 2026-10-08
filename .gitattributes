@@ -6,3 +6,10 @@
 /ARCHIVE/MFG-002-three-dof-bench-1/**/*.stl -diff
 /ARCHIVE/MFG-002-three-dof-bench-2/** -text whitespace=cr-at-eol,-blank-at-eof
 /ARCHIVE/MFG-002-three-dof-bench-2/**/*.stl -diff
+# Preserve raw bytes for the integrated plan's source-bound reports.
+/mechanical/check-robot-working-mass.mjs -text
+/mechanical/integrated-four-leg-print-manifest.json -text whitespace=cr-at-eol
+/mechanical/integrated-four-leg-parts.scad -text whitespace=cr-at-eol
+/mechanical/integrated-four-leg-probe-data.scad -text whitespace=cr-at-eol
+/mechanical/prototype-integrated-four-leg-probe.scad -text whitespace=cr-at-eol
+/mechanical/integrated-robot-mass-inputs.json -text whitespace=cr-at-eol

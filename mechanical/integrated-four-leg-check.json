@@ -1,0 +1,473 @@
+{
+  "correspondence": [
+    {
+      "role": "front-left integrated hip",
+      "file": "prototype-integrated-hip.stl",
+      "max_bidirectional_vertex_difference_mm": 0.00010000000000331966
+    },
+    {
+      "role": "front-left Upper fork",
+      "file": "prototype-pitch-fork-upper-mirrored.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0005053327954464294
+    },
+    {
+      "role": "front-left Lower fork",
+      "file": "prototype-pitch-fork-lower-mirrored.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0007085971446984409
+    },
+    {
+      "role": "front-right integrated hip",
+      "file": "prototype-integrated-hip-mirrored.stl",
+      "max_bidirectional_vertex_difference_mm": 0.00010000000000331966
+    },
+    {
+      "role": "front-right Upper fork",
+      "file": "prototype-pitch-fork-upper.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0005053327954464294
+    },
+    {
+      "role": "front-right Lower fork",
+      "file": "prototype-pitch-fork-lower.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0007085971446984409
+    },
+    {
+      "role": "rear-left integrated hip",
+      "file": "prototype-integrated-hip-mirrored.stl",
+      "max_bidirectional_vertex_difference_mm": 0.00010000000000331966
+    },
+    {
+      "role": "rear-left Upper fork",
+      "file": "prototype-pitch-fork-upper.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0005053327954464294
+    },
+    {
+      "role": "rear-left Lower fork",
+      "file": "prototype-pitch-fork-lower.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0007085971446984409
+    },
+    {
+      "role": "rear-right integrated hip",
+      "file": "prototype-integrated-hip.stl",
+      "max_bidirectional_vertex_difference_mm": 0.00010000000000331966
+    },
+    {
+      "role": "rear-right Upper fork",
+      "file": "prototype-pitch-fork-upper-mirrored.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0005053327954464294
+    },
+    {
+      "role": "rear-right Lower fork",
+      "file": "prototype-pitch-fork-lower-mirrored.stl",
+      "max_bidirectional_vertex_difference_mm": 0.0007085971446984409
+    }
+  ],
+  "vertex_tolerance_mm": 0.002,
+  "clearance": [
+    {
+      "part": "front-left integrated hip",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left integrated hip",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left integrated hip",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Upper fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Upper fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Upper fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Upper fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Upper fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Lower fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Lower fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Lower fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Lower fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left Lower fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right integrated hip",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right integrated hip",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right integrated hip",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Upper fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Upper fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Upper fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Upper fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Upper fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Lower fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Lower fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Lower fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Lower fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right Lower fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left integrated hip",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left integrated hip",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left integrated hip",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Upper fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Upper fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Upper fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Upper fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Upper fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Lower fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Lower fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Lower fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Lower fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left Lower fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right integrated hip",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right integrated hip",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right integrated hip",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Upper fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Upper fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Upper fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Upper fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Upper fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Lower fork",
+      "chassis": "rear-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Lower fork",
+      "chassis": "rear-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Lower fork",
+      "chassis": "front-right chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Lower fork",
+      "chassis": "front-left chassis mount",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right Lower fork",
+      "chassis": "Deck",
+      "method": "disjoint actual-mesh bounds",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left integrated hip",
+      "chassis": "front-left chassis mount",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-left integrated hip",
+      "chassis": "Deck",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right integrated hip",
+      "chassis": "front-right chassis mount",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    },
+    {
+      "part": "front-right integrated hip",
+      "chassis": "Deck",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left integrated hip",
+      "chassis": "rear-left chassis mount",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-left integrated hip",
+      "chassis": "Deck",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right integrated hip",
+      "chassis": "rear-right chassis mount",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    },
+    {
+      "part": "rear-right integrated hip",
+      "chassis": "Deck",
+      "method": "pairwise CGAL intersection",
+      "intersection_empty": true
+    }
+  ],
+  "new_parts_nominal_chassis_intersection_empty": true,
+  "scope": "All60 nominal new-part/chassis pairs, using disjoint actual-mesh bounds or pairwise CGAL. Combined union export failed CGAL and is not counted. Unchanged geometry/placements reuse previous validation. Not a continuous sweep or actual fit/load claim.",
+  "input_sha256": {
+    "integrated-four-leg-print-manifest.json": "cefafb42bdc5be341495a08b90cab51b6e5fe2489328309dabe108d0c2a23607",
+    "integrated-four-leg-parts.scad": "4997b6380e7bf9ca2cfcb1b70aa40b5710268bc874ffb9185d7a9a665cbf9601",
+    "prototype-integrated-four-leg-probe.scad": "b71c9b0f428e0546ac04fea57d68bd4e814eb0c95c015e2ff459da1dff0fd7a2",
+    "prototype-integrated-hip.scad": "39cf6f4b44c930e792923e2dd6c37be61466a6ae7197897974115685dbc21f9c",
+    "prototype-j1-carrier.scad": "86554a84d6d4c4be1acb8abe56d7eb0da83c1d722e6bab39bdf4d84255f89092",
+    "prototype-j1-layout.scad": "c1b6a7ec07ff9a8da0c21c00c9fab6e69722c2302463de870d95ad0405ab65b8",
+    "hobby-joint-common.scad": "0c37c71030c97eced89a45d261b30d71beb2ed9b7bd97c0b4500814e46bb6d94",
+    "hobby-joint-support.scad": "966b2759ae84100dfa8612b511e259faf3a7ad7950e220c47e075889e127e3f6",
+    "hobby-joint-front-arm.scad": "ff9e813414740fbf2c07d0be36183e5b2e28727c10ebec56eb58d27360368f9d",
+    "hobby-joint-rear-arm.scad": "c84f5ba566c40cf0a2bd06945cef88e811ea70cb2a37f3d12e84ea850f69b70f",
+    "prototype-fork-placement-probe.scad": "a5a00d972056051e1445bd6aaeded2fb8762dd146729b5625f2cde548da1df81",
+    "prototype-pitch-fork.scad": "6a6724740ac8f6d61c3aed04909fa016c5f2adc136fddda3384f547778806a70",
+    "prototype-upper-leg.scad": "1a20e2e9bb8c5bf02cb28f97db8f7a758852184c697e5828805be2cc8ec7d174",
+    "prototype-lower-leg.scad": "845f8b5879cce11f77aba9a4db3b3cc6d770f38375f7599b2356d1e8e94ca746",
+    "hobby-servo-cradle-left.stl": "ac5b53bf4255dc9ea0f074fa2ab76c94f5bc489bb2cbf75bbb2863d141fa083a",
+    "hobby-servo-cradle-right.stl": "6f4fdfdcf84a73047037ad10b611b01a5fde09e71dccc434be84b0ec7afeea0c",
+    "hobby-joint-support.stl": "2a69d2433a7177b392f5c3536317f8435240a5cacccaa1223c8c2774c709df5d",
+    "hobby-joint-front-spacer.stl": "6ce50f98172cf975ef695d0279b6425bb343addb85ed0c3f8c7757e22c9addc5",
+    "hobby-joint-rear-spacer.stl": "0940367fead7ba1cd2a2bedc5331bf46721e04aee13461c8ac1471a80901157f",
+    "hobby-joint-retainer.stl": "985dda709401ca86c1a2b91189786d927a622043ddba337c01215321ef727a38",
+    "prototype-upper-leg-saddle-mirrored.stl": "ba88899920087eed5471bc0bbfbec2d44cb89ff01a5bb641f9d9f5af6a1dc870",
+    "prototype-cable-guide.stl": "6fff92555115fcc8b9fdcb8504f409bacf56d00548bda2e30ae177e25019aacb",
+    "prototype-knee-support.stl": "380877341e867cf8c52d94b76a8f48d7760dd8de147d04cf31a17d6289d836f8",
+    "prototype-knee-spacer.stl": "5fed377ad820f57f70389b16ca023230530773128bc9dd15c59f496b9dfddc12",
+    "prototype-foot.stl": "36c7bb63f18990cc476c75b63bce6b8f9aedcc68173da12fc2cbc8ee6a306fbc",
+    "prototype-chassis-mount-left.stl": "f9112c24b72b818507c4d00ecacea200e37b7065d4583a4ddaf06a9ce306cb5b",
+    "prototype-upper-leg-saddle.stl": "9a72e19587f4add72f9139f8529e467d3e92e2df40c08c612247824b281213a9",
+    "prototype-chassis-mount-right.stl": "c1a7a95b389cd557cf01cfb415f720faa06b226b6069ab40a835a6e75509f5ea",
+    "prototype-chassis-deck.stl": "5010dfa4eba8014ad5dcfefa76c5ec89e32f43358ed8f9d8dac028527c1d83c8",
+    "prototype-integrated-hip.stl": "6979eec9ec9af0313108c3f52adf108ff6deccac7b8ac24e5fbcaa7be75f4998",
+    "prototype-pitch-fork-upper-mirrored.stl": "f9a69734feb1deaaff969b64656181833cd42f2461b447f15f13200fa6ddf57f",
+    "prototype-pitch-fork-lower-mirrored.stl": "384c9ca117100f0d1ca0fb15f42123937c2cad3c47e8ef6c654ec8266abd4966",
+    "prototype-integrated-hip-mirrored.stl": "ca984b79143d352e83055b2dfe377a304262beb5c83018c659abdeb756a70ada",
+    "prototype-pitch-fork-upper.stl": "b0e63cbbf4bc33504cbc26d346ec8c4b1e8a271f9ea4ef00a687bc0f61217f9b",
+    "prototype-pitch-fork-lower.stl": "f8508f81692908807fd4afc0db2bdb945b437d868fe404d5be306a8420f5a776",
+    "integrated-four-leg-probe-data.scad": "399ee4f1439a8917d12af1cd20101faac3f345a63bd128485a8518459ba582c1"
+  },
+  "source_export_sha256": {
+    "integrated-four-leg-hip-source.stl": "30fcf1ef2d682a71c3e0a78b11ee60e1600c902ca919e7f1dfc08fbeeafbfff8",
+    "integrated-four-leg-upper-source.stl": "92ce14b4ec434a7e0bcf1d08de236a82697c22f331732acefeda8212a0dfefd4",
+    "integrated-four-leg-lower-source.stl": "d9a8a023437aa602040aa435905b33560a506352890733db576839f20d710bd0"
+  },
+  "physical_fit_verified": false
+}
