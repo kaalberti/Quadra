@@ -1,11 +1,17 @@
-# ELEC-002 — single-servo commissioning evidence
+# PROTO-001 — actual hardware identification and first physical checks
 
-Prepare one concise measurement record and checker for the actual bench
-harness: hardware identity, PSU limits, polarity/common ground, OE levels,
-PWM measurements, cutoff behavior and one unmounted-servo current/voltage
-observations. Leave all physical results unset until measured.
+Record the actual servo model/quantity, controller board, PWM module,
+bench supply model/current rating and 3D-printing access. Print the four
+MFG-002 fit coupons, measure one actual servo/horn/bearing and complete
+mechanical/prototype-fit-record.json. Evaluate it before revising CAD or
+assembling an unpowered leg.
 
-Validate the checker with synthetic passing, missing and failed records.
-Separate readiness for an unloaded trial from any assembled-leg approval.
-No motion, fabrication, wider limits, robot battery selection, IK or gaits.
-After preparation, actual hardware identification and measurements gate progress.
+Independently, build the verified bench harness for one unmounted servo,
+horn removed; record setup and trial observations in
+electronics/bench-commissioning.json. Use docs/bench-commissioning.md and
+the explicit-arm console only after hardware identification/setup checks.
+
+Acceptance: actual measurements, evaluator outputs and observed servo response.
+No result may be marked passing from synthetic tests or CAD alone.
+Stop before powered assembled-leg motion, wider limits, calibration or IK.
+This task requires user hardware and observations; preparation is complete.

@@ -1,0 +1,39 @@
+{
+  "revision": "bench-power-1",
+  "measured_by": null,
+  "measured_on": null,
+  "servo_model": null,
+  "servo_voltage_source": null,
+  "controller_board": null,
+  "psu_model": null,
+  "measurements": {
+    "servo_allowed_min_V": null,
+    "servo_allowed_max_V": null,
+    "psu_rated_current_A": null,
+    "initial_current_limit_A": null,
+    "servo_rail_unloaded_V": null,
+    "logic_V": null,
+    "OE_disabled_V": null,
+    "OE_enabled_V": null,
+    "cutoff_servo_rail_V": null,
+    "PWM_period_us_optional": null,
+    "PWM_centre_us_optional": null
+  },
+  "checks": {
+    "polarity_and_common_ground_verified": null,
+    "actual_board_pins_and_pullups_verified": null,
+    "external_power_distribution_and_fuse_verified": null,
+    "OE_high_at_startup_and_MCU_reset": null,
+    "disabled_signals_low": null,
+    "only_one_secured_servo_horn_removed": null,
+    "physical_cutoff_removes_servo_and_buffer_power": null
+  },
+  "trial": {
+    "performed": null,
+    "observed_min_servo_rail_V": null,
+    "observed_current_A": null,
+    "PSU_did_not_limit_or_reset": null,
+    "small_pulse_commands_responded": null,
+    "no_continuous_buzz_or_rapid_heating": null
+  }
+}

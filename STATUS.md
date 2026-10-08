@@ -66,4 +66,15 @@ Source/commands: firmware/README.md. No flashing, calibration or gait code.
 The supervised bench console has12 fake-transport tests: explicit arm,
 automatic keepalive, disarm on protocol failure and no automatic recovery.
 Use firmware/console.ps1 with a verified port only after hardware setup.
+The electrical commissioning record/checker is ready under electronics/;
+seven tests pass and the real record remains NOT_MEASURED. Procedure:
+docs/bench-commissioning.md. Only physical results can advance the next stage.
+
+## Immediate hardware gate
+Await actual servo model/quantity, ESP32 board, PWM module, supply model/current
+rating and printing access. Prepare coupons/unpowered assembly and one separate
+horn-off servo test. Do not widen pulse limits, attach powered horns, calibrate
+joint angles or implement IK/gaits from unmeasured records.
+Local commits preserve the completed units; remote push awaits explicit approval
+after automatic review rejected the external transfer. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.
