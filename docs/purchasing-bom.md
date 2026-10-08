@@ -174,3 +174,14 @@ MEC-165 confirms21 unique STLs/93 pieces in
 mechanical/integrated-four-leg-print-manifest.json. The source-bound variant
 mass record is mechanical/integrated-robot-mass-inputs.json; its report remains
 NOT_MEASURED. Assembly/measurement guide: docs/integrated-four-leg-working-assembly.md.
+
+## Current first-leg build checkpoint — MFG-003
+
+Use manufacturing/BOM.md and bom-hardware.json for the integrated first leg:
+3 MG996R candidates with supplied horns/centre screws,3 bearings,27 M3 bolts/nuts,
+53 ordinary washers and one backing washer. This replaces the old bench-3
+first-leg buying quantities above; do not add the two lists. M3 lengths are
+40:4,20:8,16:9,12:4,70:2; no90mm bridge bolts. Other joint/fixture hardware
+is unchanged. Buy/test one servo before ordering12; owned boards need no purchase.
+The original bench-3 fallback is archived intact. Physical fit/load remains
+NOT_PERFORMED; full robot quantities remain conditional and mass unmeasured.

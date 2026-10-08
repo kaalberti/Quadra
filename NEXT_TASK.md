@@ -1,15 +1,13 @@
-# MFG-003 — integrated single-leg prototype build checkpoint
+# FIT-001 — first integrated-leg physical print and fit
 
-Prepare a self-contained experimental first-leg build checkpoint for the23-piece
-integrated bench leg: correct STLs/hands, editable CAD sources, preview,
-support/fit instructions and reconciled buying BOM. Include the small side-on
-fit coupon for a cheap first print.
+Print the small side-on fork coupon from the verified MFG-003 checkpoint using
+the K2 Pro and record material/settings, support removal and measured mass.
+When one MG996R/horn and624 bearing are available, check bearing/retainer,
+horn seating, fixing access and the remaining coupons. Assemble one integrated
+leg unpowered only after these fit checks pass, using manufacturing/docs/assembly.md.
 
-Preserve the current bench-3 pack intact as a recoverable fallback before
-replacing active manufacturing outputs. Verify raw archive hashes and staged
-release hashes. Independently check source dependencies, STL quantities and
-assembly correspondence. Completion requires a self-contained, verified pack
-with print and assembly instructions and an updated STATUS.md.
-
-Physical fit/load stays NOT_PERFORMED; complete robot2kg compliance is not
-established. No redesign, supplier contact, powered motion or following stage.
+Completion requires actual recorded observations, not CAD inference: clean
+support removal, seated bearing/retainer, compatible horn/servo fit and free
+unpowered joint motion. Record failures for the minimum necessary revision;
+keep all unavailable results NOT_PERFORMED. No powered motion, bulk purchases,
+further geometry optimization or following stage.

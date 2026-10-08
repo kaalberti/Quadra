@@ -1,0 +1,102 @@
+{
+  "scope": "One supported3DOF bench leg; prototype offsets85/32mm",
+  "servos": 3,
+  "bearings_624": 3,
+  "M3_fastener_roles": [
+    {
+      "role": "hip case clamp",
+      "length_mm": 40,
+      "quantity": 2
+    },
+    {
+      "role": "J2 cradle/support/J1 carrier",
+      "length_mm": 20,
+      "quantity": 4
+    },
+    {
+      "role": "two bearing retainers",
+      "length_mm": 16,
+      "quantity": 4
+    },
+    {
+      "role": "foot carrier",
+      "length_mm": 16,
+      "quantity": 2
+    },
+    {
+      "role": "cable guide",
+      "length_mm": 16,
+      "quantity": 1
+    },
+    {
+      "role": "knee ear mount",
+      "length_mm": 12,
+      "quantity": 4
+    },
+    {
+      "role": "upper plate/saddle/rear support",
+      "length_mm": 70,
+      "quantity": 2
+    },
+    {
+      "role": "two joint bridges",
+      "length_mm": 90,
+      "quantity": 4
+    },
+    {
+      "quantity": 2,
+      "length_mm": 40,
+      "role": "J1 case clamp"
+    },
+    {
+      "quantity": 4,
+      "length_mm": 20,
+      "role": "J1 cradle/support/bench adapter"
+    },
+    {
+      "quantity": 2,
+      "length_mm": 16,
+      "role": "J1 bearing retainer"
+    },
+    {
+      "quantity": 4,
+      "length_mm": 20,
+      "role": "J1 carrier end tabs"
+    }
+  ],
+  "M3_nuts": 35,
+  "M3_normal_washers": 69,
+  "M3_12mm_OD_backing_washer": 1,
+  "M4x35_socket_head_pivots": 3,
+  "M4_pivot_locknuts": 3,
+  "M4_pivot_washers": 3,
+  "M2x10_horn_bolts_max": 12,
+  "M2_horn_nuts_max": 12,
+  "M2_horn_washers_max": 24,
+  "printed_or_metal_inner_spacers_mm": [
+    8,
+    10,
+    3,
+    3,
+    8,
+    3
+  ],
+  "rubber_or_EVA_pad": {
+    "quantity": 1,
+    "size_mm": [
+      18,
+      8,
+      1
+    ]
+  },
+  "small_cable_ties": 4,
+  "bench_only": {
+    "M4x70_example_anchor_bolts": 2,
+    "M4_nuts": 2,
+    "M4_washers": 2,
+    "40mm_standoffs": 2,
+    "board_thickness_example_mm": 12,
+    "note": "Choose anchor length for actual rigid vertical fixture; not robot parts"
+  },
+  "quantities_locked_for_complete_robot": false
+}

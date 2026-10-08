@@ -13,3 +13,6 @@
 /mechanical/integrated-four-leg-probe-data.scad -text whitespace=cr-at-eol
 /mechanical/prototype-integrated-four-leg-probe.scad -text whitespace=cr-at-eol
 /mechanical/integrated-robot-mass-inputs.json -text whitespace=cr-at-eol
+
+/ARCHIVE/MFG-002-three-dof-bench-3/** -text whitespace=cr-at-eol,-blank-at-eof
+/ARCHIVE/MFG-002-three-dof-bench-3/**/*.stl -diff

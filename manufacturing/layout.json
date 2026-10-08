@@ -1,13 +1,37 @@
 {
-  "revision": "three-dof-bench-1",
-  "pitch_forward_mm": 85,
-  "pitch_floor_y_mm": -18,
-  "pitch_vertical_mm": 0,
-  "foot_outward_mm": 32,
-  "carrier_back_y_mm": -28,
-  "carrier_thickness_mm": 7,
-  "fork_bolt_world_z_mm": -58,
-  "initial_geometric_envelope": {"q1_deg": [-25,30],"q2_deg": [20,55],"q3_deg": [60,90]},
-  "loaded_ranges_approved": false,
-  "historical_skeleton_changed": false
+  "revision": "integrated-bench-1",
+  "nominal_angles_deg": [
+    0,
+    44.0486,
+    78.9786
+  ],
+  "pitch_datum_mm": [
+    85,
+    -18,
+    0
+  ],
+  "links_mm": [
+    70,
+    85
+  ],
+  "foot_reference_mm": [
+    85,
+    32,
+    -120
+  ],
+  "trial_envelope_deg": {
+    "J1": [
+      -25,
+      30
+    ],
+    "J2": [
+      20,
+      55
+    ],
+    "J3": [
+      60,
+      90
+    ]
+  },
+  "loaded_ranges_approved": false
 }

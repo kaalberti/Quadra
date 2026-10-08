@@ -1,5 +1,7 @@
 {
-  "pack_revision": "MFG-002",
+  "pack_revision": "MFG-003",
+  "revision": "integrated-bench-1",
+  "date": "2026-10-09",
   "parts": [
     {
       "file": "stl/hobby-servo-cradle-left.stl",
@@ -29,51 +31,6 @@
       "sha256": "2A69D2433A7177B392F5C3536317F8435240A5CACCCAA1223C8C2774C709DF5D"
     },
     {
-      "file": "stl/prototype-upper-leg-plate.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/prototype-upper-leg.scad",
-      "selector": "plate",
-      "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
-    },
-    {
-      "file": "stl/prototype-upper-leg-saddle-mirrored.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/prototype-handed-parts.scad",
-      "selector": "saddle",
-      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
-    },
-    {
-      "file": "stl/hobby-joint-rear-arm.stl",
-      "quantity": 3,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/hobby-joint-rear-arm.scad",
-      "selector": null,
-      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719"
-    },
-    {
-      "file": "stl/hobby-joint-bridge.stl",
-      "quantity": 2,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/hobby-joint-bridge.scad",
-      "selector": null,
-      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4"
-    },
-    {
-      "file": "stl/hobby-joint-retainer.stl",
-      "quantity": 3,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/hobby-joint-bearing-parts.scad",
-      "selector": "retainer",
-      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38"
-    },
-    {
       "file": "stl/hobby-joint-front-spacer.stl",
       "quantity": 2,
       "fixture_only": false,
@@ -92,6 +49,33 @@
       "sha256": "0940367FEAD7BA1CD2A2BEDC5331BF46721E04AEE13461C8AC1471A80901157F"
     },
     {
+      "file": "stl/hobby-joint-retainer.stl",
+      "quantity": 3,
+      "fixture_only": false,
+      "fit_coupon": false,
+      "cad": "cad/hobby-joint-bearing-parts.scad",
+      "selector": "retainer",
+      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38"
+    },
+    {
+      "file": "stl/prototype-upper-leg-saddle-mirrored.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "fit_coupon": false,
+      "cad": "cad/prototype-handed-parts.scad",
+      "selector": "saddle",
+      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
+    },
+    {
+      "file": "stl/prototype-cable-guide.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "fit_coupon": false,
+      "cad": "cad/prototype-cable-guide.scad",
+      "selector": null,
+      "sha256": "6FFF92555115FCC8B9FDCB8504F409BACF56D00548BDA2E30AE177E25019AACB"
+    },
+    {
       "file": "stl/prototype-knee-support.stl",
       "quantity": 1,
       "fixture_only": false,
@@ -99,15 +83,6 @@
       "cad": "cad/prototype-knee-support.scad",
       "selector": null,
       "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8"
-    },
-    {
-      "file": "stl/prototype-lower-leg.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/prototype-lower-leg.scad",
-      "selector": null,
-      "sha256": "4C7D2D05924903B7805D9EA35454A635F240F4628077F93501BA04C3FDF6494F"
     },
     {
       "file": "stl/prototype-knee-spacer.stl",
@@ -128,15 +103,6 @@
       "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
     },
     {
-      "file": "stl/prototype-cable-guide.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/prototype-cable-guide.scad",
-      "selector": null,
-      "sha256": "6FFF92555115FCC8B9FDCB8504F409BACF56D00548BDA2E30AE177E25019AACB"
-    },
-    {
       "file": "stl/prototype-bench-base.stl",
       "quantity": 1,
       "fixture_only": true,
@@ -144,6 +110,47 @@
       "cad": "cad/prototype-bench-base.scad",
       "selector": null,
       "sha256": "198C6E6F0B32AADA1B6B15897293E7D8708DAB39DD0CEB1CA81B8FB11A8BADFF"
+    },
+    {
+      "file": "stl/prototype-pitch-fork-upper-mirrored.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "fit_coupon": false,
+      "cad": "cad/prototype-pitch-fork.scad",
+      "selector": null,
+      "defines": {
+        "part": "upper",
+        "hand": -1,
+        "view": "print"
+      },
+      "sha256": "F9A69734FEB1DEAAFF969B64656181833CD42F2461B447F15F13200FA6DDF57F"
+    },
+    {
+      "file": "stl/prototype-pitch-fork-lower-mirrored.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "fit_coupon": false,
+      "cad": "cad/prototype-pitch-fork.scad",
+      "selector": null,
+      "defines": {
+        "part": "lower",
+        "hand": -1,
+        "view": "print"
+      },
+      "sha256": "384C9CA117100F0D1CA0FB15F42123937C2CAD3C47E8EF6C654EC8266ABD4966"
+    },
+    {
+      "file": "stl/prototype-integrated-hip.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "fit_coupon": false,
+      "cad": "cad/prototype-integrated-hip.scad",
+      "selector": null,
+      "defines": {
+        "hand": 1,
+        "view": "print"
+      },
+      "sha256": "6979EEC9EC9AF0313108C3F52ADF108FF6DECCAC7B8AC24E5FBCAA7BE75F4998"
     },
     {
       "file": "coupons/hobby-servo-cradle-coupon.stl",
@@ -182,54 +189,27 @@
       "sha256": "B5D429CC9CB279B2739B76BFC00CE6A009C497178C7DA65C4BA21140998DF166"
     },
     {
-      "file": "stl/hobby-joint-front-arm.stl",
+      "file": "coupons/prototype-fork-fit-coupon.stl",
       "quantity": 1,
       "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/hobby-joint-front-arm.scad",
+      "fit_coupon": true,
+      "cad": "cad/prototype-fork-fit-coupon.scad",
       "selector": null,
-      "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43"
-    },
-    {
-      "file": "stl/prototype-j1-carrier-mirrored.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "fit_coupon": false,
-      "cad": "cad/prototype-handed-parts.scad",
-      "selector": "carrier",
-      "sha256": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57"
+      "sha256": "295CF71A475821B42066C8783F7D42F906B9E5B275A335AFE0CDB758238179B2"
     }
   ],
-  "date": "2026-10-09",
-  "revision": "three-dof-bench-3",
   "files": [
     {
       "file": "bom-hardware.json",
-      "sha256": "3FDFD8DEE3481D731FDAC6AF1394F9E2739EBE38CDFE19B1FC5F9F1E64CB3005"
+      "sha256": "DEA6D9DAEC0559750E445552A5016921312D1AFCFC5E1DB1D51091AF4D76832E"
     },
     {
       "file": "BOM.md",
-      "sha256": "DBEC8A3BA58AD3C18AF394BAF83D80A09C7FA8DAC808BF62E92F86BC7A6D7B34"
-    },
-    {
-      "file": "layout.json",
-      "sha256": "5142F6C6E8F15A6E2D8FEACEFAB4D6F0C5191DDAA2D0C80E87F20DA792C21BF4"
-    },
-    {
-      "file": "README.md",
-      "sha256": "C74C37FDD88EED7F8FE3980F8CA5722BA9761756D7D05F1773ADD7AE15187487"
-    },
-    {
-      "file": "validation.json",
-      "sha256": "74E381A2DEAD3345722A7BF2AE8FBC66C12BBF6259FD450AD5A6E1FFEECE777E"
+      "sha256": "BCB0FD7A5FD75DB2154F2A2A28CDAC4FE92432198F5604154672BF3D87EAC347"
     },
     {
       "file": "cad/hobby-joint-bearing-parts.scad",
       "sha256": "DC8C19080E41B9057D93F48DCFF9BF4E3EBD2C7CF156B47394E569A53DBB1FE7"
-    },
-    {
-      "file": "cad/hobby-joint-bridge.scad",
-      "sha256": "216462CF03937903C8BD19ED0F2F99A02B606EA7016DB7BB0CEC91D8CB7F1370"
     },
     {
       "file": "cad/hobby-joint-common.scad",
@@ -256,6 +236,10 @@
       "sha256": "6387FB93F609B479FFB63CAF32183F552F6B9549BE51DC16F236D0865D176294"
     },
     {
+      "file": "cad/integrated-bench-parts.scad",
+      "sha256": "70576343916D8B104651532FD48634A20C1533E2658686EDC78A08924576237D"
+    },
+    {
       "file": "cad/prototype-bench-base.scad",
       "sha256": "B212099E4D7FDAEB47FEB04A616C88145C62BB04B8870417159D6F9ABC51F0D3"
     },
@@ -268,8 +252,20 @@
       "sha256": "289CE400E1321A8F25542C6BA230BFD83B167573214DF267F4EF07B723BF3D30"
     },
     {
+      "file": "cad/prototype-fork-fit-coupon.scad",
+      "sha256": "683FBC9D5E733C3E77A57856720019B07D6579B4D750ADBA4025F19A2E7EA5AB"
+    },
+    {
       "file": "cad/prototype-handed-parts.scad",
       "sha256": "FA2A7D9D204A3D4C110678C0EA245E1535C5A0C60A9304DD2FE933C60D78A161"
+    },
+    {
+      "file": "cad/prototype-integrated-bench-pack-assembly.scad",
+      "sha256": "8C1368F2ABFC7E09126C7516D3E365E1054AD468D3BD5C3FAD260B73618629ED"
+    },
+    {
+      "file": "cad/prototype-integrated-hip.scad",
+      "sha256": "39CF6F4B44C930E792923E2DD6C37BE61466A6AE7197897974115685DBC21F9C"
     },
     {
       "file": "cad/prototype-j1-carrier.scad",
@@ -292,16 +288,12 @@
       "sha256": "845F8B5879CCE11F77ABA9A4DB3B3CC6D770F38375F7599B2356D1E8E94CA746"
     },
     {
-      "file": "cad/prototype-rigid-bench-pack-assembly.scad",
-      "sha256": "BE7471251B335DB0579DCD30B36142A21375B6A51FD2C7EE50785CE9FFF59F18"
+      "file": "cad/prototype-pitch-fork.scad",
+      "sha256": "6A6724740AC8F6D61C3AED04909FA016C5F2ADC136FDDDA3384F547778806A70"
     },
     {
       "file": "cad/prototype-upper-leg.scad",
       "sha256": "1A20E2E9BB8C5BF02CB28F97DB8F7A758852184C697E5828805BE2CC8EC7D174"
-    },
-    {
-      "file": "cad/rigid-bench-parts.scad",
-      "sha256": "CDD904BD0A307CF179421F2D5F8ACB1FC16E263857249376C025B2C77172EF24"
     },
     {
       "file": "coupons/hobby-joint-bearing-coupon.stl",
@@ -316,44 +308,44 @@
       "sha256": "E9A1923F4D52B7520F96D5FA9F52210FA1BB091D24588C7CAD123E50BEC33113"
     },
     {
+      "file": "coupons/prototype-fork-fit-coupon.stl",
+      "sha256": "295CF71A475821B42066C8783F7D42F906B9E5B275A335AFE0CDB758238179B2"
+    },
+    {
       "file": "coupons/prototype-upper-leg-ear-coupon.stl",
       "sha256": "B5D429CC9CB279B2739B76BFC00CE6A009C497178C7DA65C4BA21140998DF166"
     },
     {
       "file": "docs/assembly.md",
-      "sha256": "FDDA5086756865A0D0CEAA70A17B026442C8161B7ECF7EF961643F6E1BDCB4E6"
+      "sha256": "5C0D0311E0453D99183586DC7878593326B3F10072BFC0E202953EFF92290A00"
     },
     {
       "file": "docs/assembly.png",
-      "sha256": "195DD3A5BFCED07532F7F7912ABD517825D597B0D8714378ED814FDF0DDCBFA5"
+      "sha256": "E302A40B70C337698A28926107D55AB2256C874464939F32C8BA10ADF4655936"
     },
     {
-      "file": "docs/pitch-leg-assembly.md",
-      "sha256": "059232F0B9AF281039D720AA2CBB5E7B18825EADE655CABA78C81C8A2880F83B"
-    },
-    {
-      "file": "docs/pitch-leg.png",
-      "sha256": "C609EEC7C4E0AEA4AF357C8C15345A8558C35E8C809BA119F2D357E91777A0C9"
+      "file": "docs/fork-fit-coupon.md",
+      "sha256": "89802F34F33366D035006B2BC2C057FFBE932D03A2409498A389B91511C584BB"
     },
     {
       "file": "docs/print-list.md",
-      "sha256": "A90B514AF8631D64CF33493BCF10316E463E92BE0FE0CA0647493DDB06D8904F"
+      "sha256": "E4B4688C89F9850C69003D323B6307B6C5ACC60F226B8F0C6FFA0D7A98E859C7"
     },
     {
-      "file": "stl/hobby-joint-bridge.stl",
-      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4"
+      "file": "docs/printing.md",
+      "sha256": "BA1B0BF8FE60F81054A5E1606C0CF86B1BD49E0C15FA8D44F3948BDD353D28C9"
     },
     {
-      "file": "stl/hobby-joint-front-arm.stl",
-      "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43"
+      "file": "layout.json",
+      "sha256": "6805CAB3385271A7EEFA2B4D811FECB29B49517D0B10C1D1A4A604C53ED7B7F9"
+    },
+    {
+      "file": "README.md",
+      "sha256": "7139402E3A82C61AD10B7AEBEF5652C80F6ED3B4CC27478DCE504BC3CA6EB903"
     },
     {
       "file": "stl/hobby-joint-front-spacer.stl",
       "sha256": "6CE50F98172CF975EF695D0279B6425BB343ADDB85ED0C3F8C7757E22C9ADDC5"
-    },
-    {
-      "file": "stl/hobby-joint-rear-arm.stl",
-      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719"
     },
     {
       "file": "stl/hobby-joint-rear-spacer.stl",
@@ -388,8 +380,8 @@
       "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
     },
     {
-      "file": "stl/prototype-j1-carrier-mirrored.stl",
-      "sha256": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57"
+      "file": "stl/prototype-integrated-hip.stl",
+      "sha256": "6979EEC9EC9AF0313108C3F52ADF108FF6DECCAC7B8AC24E5FBCAA7BE75F4998"
     },
     {
       "file": "stl/prototype-knee-spacer.stl",
@@ -400,17 +392,21 @@
       "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8"
     },
     {
-      "file": "stl/prototype-lower-leg.stl",
-      "sha256": "4C7D2D05924903B7805D9EA35454A635F240F4628077F93501BA04C3FDF6494F"
+      "file": "stl/prototype-pitch-fork-lower-mirrored.stl",
+      "sha256": "384C9CA117100F0D1CA0FB15F42123937C2CAD3C47E8EF6C654EC8266ABD4966"
     },
     {
-      "file": "stl/prototype-upper-leg-plate.stl",
-      "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
+      "file": "stl/prototype-pitch-fork-upper-mirrored.stl",
+      "sha256": "F9A69734FEB1DEAAFF969B64656181833CD42F2461B447F15F13200FA6DDF57F"
     },
     {
       "file": "stl/prototype-upper-leg-saddle-mirrored.stl",
       "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
+    },
+    {
+      "file": "validation.json",
+      "sha256": "A5A86FB9C039E68F3A372439DA5D643362DBA52BB7ED93837A0514299B030BDE"
     }
   ],
-  "scope": "Unpowered3DOF bench prototype"
+  "physical_fit_verified": false
 }

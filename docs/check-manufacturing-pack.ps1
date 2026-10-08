@@ -3,6 +3,11 @@ Set-StrictMode -Version Latest
 $repo=Split-Path $PSScriptRoot -Parent
 $pack=Join-Path $repo 'manufacturing'
 $manifest=Get-Content (Join-Path $pack 'release-manifest.json') -Raw|ConvertFrom-Json
+if($manifest.pack_revision -eq 'MFG-003') {
+ & node (Join-Path $PSScriptRoot 'check-integrated-manufacturing-pack.mjs') $pack
+ if($LASTEXITCODE -ne 0){throw 'Integrated pack verification failed'}
+ return
+}
 $threeDof=$manifest.pack_revision -eq 'MFG-002'
 $baselineName=if($threeDof){'three-dof-print-manifest.json'}else{'pitch-leg-print-manifest.json'}
 $baseline=Get-Content (Join-Path $repo "mechanical/$baselineName") -Raw|ConvertFrom-Json

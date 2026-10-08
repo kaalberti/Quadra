@@ -4,13 +4,13 @@ Last updated: 2026-10-09
 
 ## Current milestone
 Stage4 — single-leg mechanical prototype.
-Supported three-DOF bench-leg CAD now includes J1 abduction plus J2/J3 pitch.
+Integrated three-DOF build checkpoint includes J1 abduction plus J2/J3 pitch.
 Physical assembly, fit and powered operation remain untested.
 
 ## Current design
-- Physical print assembly: mechanical/prototype-rigid-bench-assembly.scad.
-- Build guide: docs/three-dof-prototype-build.md.
-- Bench carrier/saddle use their mirrored STLs; source: prototype-handed-parts.scad.
+- Build assembly: manufacturing/cad/prototype-integrated-bench-pack-assembly.scad.
+- Build/print guides: manufacturing/docs/assembly.md and printing.md.
+- Original integrated hip, mirrored pitch forks and mirrored knee saddle.
 - Three positional hobby servos with supplied horns and three624 bearings.
 - Retained70/85mm links; one existing bench adapter now mounts J1.
 - Prototype pitch datum [85,-18,0]mm; nominal foot plane32mm outward.
@@ -31,21 +31,24 @@ At2kg/three support legs, J1 neutral screen0.329Nm vs0.922Nm published stall;
 +15deg0.525Nm and+30deg0.694Nm. Stall is not sustained torque or powered approval.
 
 ## Prototype manufacturing checkpoint
-Corrected MFG-002 / three-dof-bench-3 is under manufacturing/.
-Adapter rib clearance, fixing/pivot access and closed connected print checks pass;
-the old bench-1 adapter had a CAD clash and is archived. Physical fit is untested.
-The kit now selects mirrored carrier/saddle prints and proper printed-part poses.
-Self-contained assembly: manufacturing/cad/prototype-rigid-bench-pack-assembly.scad.
-18 unique assembly STLs/29 pieces, four coupons, CAD snapshot, BOM, assembly
-instructions/image, print list, layout, validation and hashes:53 verified files.
+MFG-003 / integrated-bench-1 is under manufacturing/.
+15 unique assembly STLs/23 pieces, five coupons, editable CAD, buying BOM,
+print/support/assembly instructions and preview:53 verified self-contained files.
+All23 printed poses/three case poses are proper; source-bound sampled evidence,
+closed connected assembly meshes, hashes, imports/dependencies and quantities pass.
+Assembly rendered from the pack and visually inspected. Physical fit is untested.
+Bench-3 is archived intact at ARCHIVE/MFG-002-three-dof-bench-3/; all53 file
+bytes including its manifest are verified unchanged. Earlier packs stay archived.
+Run docs/check-manufacturing-pack.ps1 for the active checkpoint.
 
 ## Purchases and immediate next objective
 Maintained buying BOM: docs/purchasing-bom.md; role data: mechanical/three-dof-hardware.json.
-One full prototype needs3 servos/3 bearings,35 M3 bolts/nuts and70 washers
+Integrated prototype needs3 servos/3 bearings,27 M3 bolts/nuts and54 washers
 including one12mm backing washer. Bench-only anchors/standoffs are separate.
 MG996R is assumed for all weight-bearing joints; variant/prices remain provisional.
 No servos ordered; test one before12. MG90S is too weak for current leg loads.
-Next: print four coupons, verify one actual servo/horn/bearing, then assemble
+Next: print the side-on coupon, check remaining fit coupons and one actual
+servo/horn/bearing, then assemble
 one leg unpowered. Do not infer fit or hardware ownership from CAD.
 The fit record/evaluator in mechanical/prototype-fit-record.json and
 docs/prototype-fit-check.md is ready; six evaluator tests pass and the real
@@ -108,8 +111,6 @@ is a proper rotation and matches intended meshes at0.001mm coordinate resolution
 Front-left/rear-right use mirrored carrier/saddle; other diagonal uses originals.
 Closed connected/bed checks pass for the new mirrors; actual servo ears/leads unknown.
 Independent fresh source/placed exports agree within0.001005mm (STL rounding).
-Rear local pitch directions differ from global forward; no powered mapping added.
-Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
 Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
 Guide/counts: docs/four-leg-working-assembly.md and mechanical/four-leg-working-print-manifest.json.
 Reference mass screen: approximately2.360kg at an assumed65% material fraction,
@@ -117,7 +118,6 @@ including660g servos,484g estimated fasteners,40g reference bearings and330g
 other allowances. Actual complete mass remains NOT_MEASURED;2kg limit unchanged.
 Only486g remains for all prints under those assumptions (37.4% of solid CAD
 mass). Current bench-kit replication is not a demonstrated2kg robot design.
-Record/report: mechanical/robot-mass-inputs.json and docs/working-robot-mass.md.
 MEC-161 fork prototype: four handed STLs pass closed/connected/bed checks and
 retained-interface mesh rays. Six sampled local pitch case/support checks clear.
 Local assembly viewer uses proper print rotations; preview visually inspected.
@@ -144,5 +144,5 @@ Integrated four-leg plan:21 unique STLs/93 pieces;12 new placements agree with
 source within0.000709mm and all60 nominal chassis pairs pass. Variant mass
 record remains NOT_MEASURED; screen2.178kg exceeds the unchanged2kg limit.
 Viewer: mechanical/prototype-integrated-four-leg-assembly.scad.
-Next: MFG-003 integrated single-leg build checkpoint; preserve bench-3 fallback.
+Next: physical side-on coupon print/fit, followed by unpowered integrated-leg assembly.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.
