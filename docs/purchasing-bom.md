@@ -1,6 +1,7 @@
 # Purchasing BOM — Rev A working plan (2026-10-09)
 
-The bench adapter is corrected in three-dof-bench-2; purchased quantities are unchanged.
+Bench-3 includes the rib-relieved adapter and mirrored carrier/saddle selection;
+purchased quantities are unchanged.
 
 Maintain this file when purchased parts or quantities change. This is a staged
 shopping list, not a purchase order. Prices are planning caps, not verified

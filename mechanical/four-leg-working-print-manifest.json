@@ -3978,12 +3978,12 @@
   ],
   "mirrored_variants": [
     {
-      "source": "prototype-upper-leg-saddle.stl",
-      "variant": "prototype-upper-leg-saddle-mirrored.stl"
-    },
-    {
       "source": "prototype-j1-carrier.stl",
       "variant": "prototype-j1-carrier-mirrored.stl"
+    },
+    {
+      "source": "prototype-upper-leg-saddle.stl",
+      "variant": "prototype-upper-leg-saddle-mirrored.stl"
     }
   ],
   "checks": {
@@ -3994,18 +3994,6 @@
   },
   "new_mesh_checks": [
     {
-      "file": "prototype-upper-leg-saddle-mirrored.stl",
-      "triangles": 1256,
-      "closed": true,
-      "connected": true,
-      "on_bed": true,
-      "size_mm": [
-        40,
-        60.7,
-        22
-      ]
-    },
-    {
       "file": "prototype-j1-carrier-mirrored.stl",
       "triangles": 2998,
       "closed": true,
@@ -4015,6 +4003,18 @@
         129.2,
         101.35,
         41
+      ]
+    },
+    {
+      "file": "prototype-upper-leg-saddle-mirrored.stl",
+      "triangles": 1256,
+      "closed": true,
+      "connected": true,
+      "on_bed": true,
+      "size_mm": [
+        40,
+        60.7,
+        22
       ]
     }
   ]

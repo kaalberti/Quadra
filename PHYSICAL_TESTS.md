@@ -8,12 +8,11 @@ The supply's model/transient behavior and board header/revision remain unknown.
 
 ## Before buying a full set
 
-Use the corrected MFG-002 / three-dof-bench-2 adapter with support-rib pockets;
+Use the corrected MFG-002 / three-dof-bench-3 adapter with support-rib pockets;
 the older bench-1 adapter had a CAD clash and is archived. Confirm free seating
 on the actual printed support before tightening. Working chassis mounts also have rib pockets.
-MEC-158 identified a separate handed-part issue: bench-2 still needs mirrored
-carrier/saddle selection corrected. Hold off printing those two bench parts
-until that checkpoint update; unaffected coupons/other parts remain useful.
+Bench-3 also corrects carrier/saddle handed selection. Use its mirrored carrier
+and mirrored saddle, not the original files in archived bench-1/bench-2 kits.
 Working handed assignments: docs/four-leg-working-assembly.md. Verify actual
 servo ear/horn/lead orientation for each hand; a symmetric case box is insufficient.
 When trying a chassis mount, verify the four existing fixing slots, pivot access,

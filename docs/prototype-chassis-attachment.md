@@ -66,5 +66,5 @@ and PCA9685. Their attachment holes are not guessed. No battery mount, gait,
 powered standing or manufacturing release is included.
 
 The same rib check exposed127.65mm3 of interference with the older bench
-adapter, corrected in the bench-2 checkpoint by MEC-157. Its separate carrier/
-saddle handed-print selection still needs correction. Fit coupons remain useful.
+adapter, corrected by MEC-157. Bench-3 also corrects carrier/saddle handed-print
+selection; use the current kit. Fit coupons remain useful.

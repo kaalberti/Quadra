@@ -1,10 +1,10 @@
-# MEC-159 — physically placeable bench carrier/saddle checkpoint
+# MEC-160 — complete working robot mass screen
 
-Correct the bench kit's carrier/saddle handed print selection, identified by
-MEC-158. Use the working rigid-placement plan to supply the intended physical
-parts and a bench assembly whose printed-piece poses are proper rotations.
-Preserve nominal geometry, link/root parameters and purchased hardware. Check
-source CAD correspondence, print geometry, quantities and self-contained assembly.
-Archive the prior bench-2 checkpoint intact and revise affected manufacturing
-files/hashes/instructions. Keep the four-leg working plan separate; do not
-release the full robot or add powered locomotion. Physical fit remains deferred.
+Screen the current four-leg print and hardware BOM against the2kg complete mass
+limit. Use actual STL volumes, explicit rough standard-fastener assumptions and
+provisional battery/electronics/wiring allowances. Keep solid CAD mass, assumed
+printed mass and measured mass separate; create a small record for later slicer/
+scale inputs. Identify whether the current design leaves a plausible margin and
+which physical measurements can change that decision. Do not optimize structures,
+select expensive hardware or claim measured whole-robot mass. Preserve the bench
+manufacturing checkpoint; physical fit and loaded operation remain deferred.

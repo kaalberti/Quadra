@@ -1,4 +1,4 @@
-# Supported three-DOF bench leg — three-dof-bench-2
+# Supported three-DOF bench leg — three-dof-bench-3
 
 ![Assembly](assembly.png)
 
@@ -9,11 +9,25 @@ The servo model and horn/bearing fit remain provisional.
 ## Print and buy
 
 Use the three-DOF print manifest and hardware BOM, not the sum of earlier kits.
-Reuse all current pitch-leg prints. Add one left/right cradle pair, fixed
+Reuse current pitch-leg prints except the saddle hand specified below. Add one left/right cradle pair, fixed
 support, front arm, rear arm, retainer, 8mm front spacer, 3mm rear spacer,
 and the new J1 carrier. The existing bench adapter moves from J2 to J1;
 there is only one bench adapter. Do not print an extra J1 bridge: the carrier
 ties the front and rear fork arms together.
+
+Use the current rib-relieved adapter STL from the corrected bench-3 checkpoint.
+Its pockets face the passive support and provide0.2mm clearance around the ribs.
+Check that the support seats freely before tightening; the older adapter had a
+CAD clash. Bolt slots, anchors and hardware quantities are unchanged.
+
+Use `prototype-j1-carrier-mirrored.stl` and `prototype-upper-leg-saddle-mirrored.stl`
+for this bench orientation. They replace the two original print files; do not
+print both hands for one bench leg. The original saddle remains valid for the
+standalone two-DOF frame, but the three-DOF bench uses this mirrored selection.
+Actual part placement is in `prototype-rigid-bench-assembly.scad`; the older
+three-DOF source is a reflected geometric reference, not a physical print plan.
+The new view shows prints and case envelopes; bearings, horns and fasteners
+follow the assembly instructions below and are not fully drawn in that view.
 
 Print fit coupons first. Print the carrier flat as exported, with its tabs
 upright. Start with PLA+/PETG, 0.4mm nozzle, 0.2mm layers, four walls and 30%
@@ -22,7 +36,7 @@ These process settings are assumptions; inspect the sliced part before printing.
 
 ## Assembly
 
-1. Build the two-DOF pitch leg using [the pitch-leg guide](pitch-leg-assembly.md), omitting the bench adapter.
+1. Build the two-DOF pitch leg using [the pitch-leg reference guide](pitch-leg-assembly.md), omitting the bench adapter.
    Use four M3x20 bolts through its cradle, support and new 7mm carrier face.
 2. Build the J1 bearing stack: 624 bearing in the rear arm, retainer with two
    M3x16 bolts, M4x35 pivot in the fixed support, 8mm front spacer, bearing,
@@ -70,7 +84,3 @@ the ESP32 board. Final robot mass and loaded range are unresolved.
 
 Next physical milestone: print the coupons, verify an actual servo and bearing,
 then assemble this leg unpowered. Electronics/chassis work has not begun.
-
-
-Bench adapter revision: use the current rib-relieved STL. Pockets face the passive
-support; verify free seating before tightening. Overall assembly image is unchanged.

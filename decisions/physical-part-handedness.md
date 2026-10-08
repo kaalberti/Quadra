@@ -16,3 +16,7 @@ The working chassis mount print transform was also made a proper rotation;
 its updated left/right exports retain dimensions and hole patterns. The bench
 checkpoint is preserved for a separate handed-print correction. Actual servo
 horn/ear/cable asymmetry remains a physical test, not a CAD assumption of fit.
+
+MEC-159 packages the intended bench orientation as three-dof-bench-3 with the
+two mirrored prints and a physically placeable self-contained assembly. Hardware
+and nominal geometry remain unchanged; bench-2 is retained intact in ARCHIVE.

@@ -38,10 +38,9 @@ make a convincing CAD view without establishing how an actual print is fitted.
 The asymmetric saddle and carrier require mirrored prints for that intended
 bench orientation; this cannot be repaired by servo direction settings.
 
-The current bench-2 checkpoint fixes adapter ribs but still needs its handed
-carrier/saddle print selection corrected in a separate build checkpoint. Hold
-off printing those two bench parts from that release. Unaffected coupons and
-other parts remain useful; existing physical-fit flags remain false.
+The current bench-3 checkpoint includes rib clearance and the corrected mirrored
+carrier/saddle print selection. Bench-2 is archived as history. Use the current
+kit for the supported leg; physical-fit flags remain false.
 
 ## Servo cases and verification
 

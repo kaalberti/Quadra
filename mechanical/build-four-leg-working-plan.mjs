@@ -38,7 +38,7 @@ for(const perm of [[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]]) for(const x
 }
 assert.equal(rotations.length,24);
 const baseline=JSON.parse(fs.readFileSync(path.join(here,'three-dof-print-manifest.json'),'utf8').replace(/^\uFEFF/,''));
-const names=baseline.parts.filter(p=>!p.fixture_only).map(p=>path.basename(p.file,'.stl'));
+const names=baseline.parts.filter(p=>!p.fixture_only).map(p=>path.basename(p.file,'.stl').replace(/-mirrored$/,''));
 names.push('prototype-chassis-mount-left','prototype-chassis-mount-right','prototype-chassis-deck');
 const library=new Map(names.map(n=>[n,mesh(n)]));
 const mirrors=new Map();

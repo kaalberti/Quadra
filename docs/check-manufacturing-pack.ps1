@@ -43,9 +43,20 @@ $assemblyParts=@($manifest.parts|Where-Object {-not $_.fit_coupon})
 $coupons=@($manifest.parts|Where-Object {$_.fit_coupon})
 $unique=if($threeDof){18}else{16};$pieces=if($threeDof){29}else{20}
 if($assemblyParts.Count -ne $unique -or ($assemblyParts|Measure-Object quantity -Sum).Sum -ne $pieces -or $coupons.Count -ne 4) {throw 'Release counts mismatch'}
-if($threeDof -and $manifest.revision -eq 'three-dof-bench-2') {
+if($threeDof -and $manifest.revision -in @('three-dof-bench-2','three-dof-bench-3')) {
  $fit=(Get-Content (Join-Path $pack 'validation.json') -Raw|ConvertFrom-Json).bench_adapter
  if(-not $fit.closed -or -not $fit.connected -or -not $fit.fixing_and_pivot_paths_clear -or -not $fit.support_intersection_empty -or $fit.physical_fit_verified){throw 'Adapter validation incomplete'}
  if($fit.stl_sha256 -ne (Get-FileHash (Join-Path $pack 'stl/prototype-bench-base.stl')).Hash -or $fit.cad_sha256 -ne (Get-FileHash (Join-Path $pack 'cad/prototype-bench-base.scad')).Hash){throw 'Adapter validation differs from released CAD/STL'}
+}
+if($threeDof -and $manifest.revision -eq 'three-dof-bench-3') {
+ $rigid=(Get-Content (Join-Path $pack 'validation.json') -Raw|ConvertFrom-Json).rigid_bench
+ if($rigid.proper_printed_poses -ne 29 -or $rigid.proper_servo_poses -ne 3 -or $rigid.physical_fit_verified){throw 'Rigid bench validation incomplete'}
+ if(@($rigid.new_mesh_checks).Count -ne 2 -or @($rigid.new_mesh_checks|Where-Object {-not $_.closed -or -not $_.connected -or -not $_.on_bed}).Count){throw 'Mirrored print validation incomplete'}
+ if(@($rigid.source_correspondence).Count -ne 2 -or @($rigid.source_correspondence|Where-Object {$_.max_bidirectional_vertex_difference_mm -gt 0.002 -or $_.relative_volume_difference -ge 0.0001}).Count){throw 'Handed source correspondence incomplete'}
+ if($rigid.assembly_sha256 -ne (Get-FileHash (Join-Path $pack 'cad/rigid-bench-parts.scad')).Hash){throw 'Rigid assembly differs from validation'}
+ foreach($p in $rigid.parts){if((Get-FileHash (Join-Path $pack "stl/$(Split-Path $p.file -Leaf)")).Hash -ne $p.sha256){throw 'Rigid assembly mesh differs'}}
+ foreach($m in [regex]::Matches([IO.File]::ReadAllText((Join-Path $pack 'cad/rigid-bench-parts.scad')),'import\(str\(mesh_dir,"/([^"\r\n]+)"\)\)')){
+  if(-not(Test-Path (Join-Path $pack "stl/$($m.Groups[1].Value)"))){throw 'Missing imported bench mesh'}
+ }
 }
 Write-Output "PASS: $($actual.Count) release files, hashes/current CAD/dependencies/links/BOM; $unique assembly STLs/$pieces pieces and four coupons."

@@ -8,9 +8,9 @@ Supported three-DOF bench-leg CAD now includes J1 abduction plus J2/J3 pitch.
 Physical assembly, fit and powered operation remain untested.
 
 ## Current design
-- Editable assembly: mechanical/prototype-three-dof-leg.scad.
+- Physical print assembly: mechanical/prototype-rigid-bench-assembly.scad.
 - Build guide: docs/three-dof-prototype-build.md.
-- New carrier: mechanical/prototype-j1-carrier.scad and STL.
+- Bench carrier/saddle use their mirrored STLs; source: prototype-handed-parts.scad.
 - Three positional hobby servos with supplied horns and three624 bearings.
 - Retained70/85mm links; one existing bench adapter now mounts J1.
 - Prototype pitch datum [85,-18,0]mm; nominal foot plane32mm outward.
@@ -32,15 +32,16 @@ At2kg/three support legs, J1 neutral screen0.329Nm vs0.922Nm published stall;
 +15deg0.525Nm and+30deg0.694Nm. Stall is not sustained torque or powered approval.
 
 ## Prototype manufacturing checkpoint
-Corrected MFG-002 / three-dof-bench-2 is under manufacturing/.
+Corrected MFG-002 / three-dof-bench-3 is under manufacturing/.
 Adapter rib clearance, fixing/pivot access and closed connected print checks pass;
 the old bench-1 adapter had a CAD clash and is archived. Physical fit is untested.
-MEC-158 found reflected carrier/saddle placement in the bench view: correct their
-handed print selection before printing those two parts. Bench checkpoint unchanged.
+The kit now selects mirrored carrier/saddle prints and proper printed-part poses.
+Self-contained assembly: manufacturing/cad/prototype-rigid-bench-pack-assembly.scad.
 18 unique assembly STLs/29 pieces, four coupons, CAD snapshot, BOM, assembly
-instructions/image, print list, layout, validation and hashes:54 verified files.
+instructions/image, print list, layout, validation and hashes:53 verified files.
 The prior two-DOF pack is archived intact at ARCHIVE/MFG-001-two-dof-pack/.
 The prior bench-1 checkpoint is intact at ARCHIVE/MFG-002-three-dof-bench-1/.
+The prior bench-2 checkpoint is intact at ARCHIVE/MFG-002-three-dof-bench-2/.
 Source and validation tooling remain under mechanical/ and docs/.
 Manufacturing is updated for this build checkpoint, not during every design edit.
 
@@ -121,8 +122,8 @@ Rear local pitch directions differ from global forward; no powered mapping added
 Details/checks: docs/four-leg-placement-study.md and mechanical/check-four-leg-study.mjs.
 Guide: docs/prototype-chassis-attachment.md; assembly: mechanical/prototype-chassis-assembly.scad.
 Guide/counts: docs/four-leg-working-assembly.md and mechanical/four-leg-working-print-manifest.json.
-Next: correct the bench carrier/saddle handed-print selection and its build
-checkpoint, keeping nominal geometry unchanged. No powered operation.
+Next: screen complete working-BOM mass against2kg and identify remaining measured
+print/power mass inputs. Defer structural optimization until the first leg test.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

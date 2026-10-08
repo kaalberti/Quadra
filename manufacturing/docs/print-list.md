@@ -1,14 +1,14 @@
-# Print quantities — three-dof-bench-2
+# Print quantities — three-dof-bench-3
 
-Millimetres; print in exported orientation. Four fit coupons first, then29 assembly pieces from18 unique STL files.
+18 unique assembly STLs/29 pieces; four coupons first. Use the mirrored carrier and saddle listed below.
 
 | File | Quantity | Type |
-|---|---:|---|
+| --- | ---: | --- |
 | [stl/hobby-servo-cradle-left.stl](../stl/hobby-servo-cradle-left.stl) | 2 | Leg part |
 | [stl/hobby-servo-cradle-right.stl](../stl/hobby-servo-cradle-right.stl) | 2 | Leg part |
 | [stl/hobby-joint-support.stl](../stl/hobby-joint-support.stl) | 2 | Leg part |
 | [stl/prototype-upper-leg-plate.stl](../stl/prototype-upper-leg-plate.stl) | 1 | Leg part |
-| [stl/prototype-upper-leg-saddle.stl](../stl/prototype-upper-leg-saddle.stl) | 1 | Leg part |
+| [stl/prototype-upper-leg-saddle-mirrored.stl](../stl/prototype-upper-leg-saddle-mirrored.stl) | 1 | Leg part |
 | [stl/hobby-joint-rear-arm.stl](../stl/hobby-joint-rear-arm.stl) | 3 | Leg part |
 | [stl/hobby-joint-bridge.stl](../stl/hobby-joint-bridge.stl) | 2 | Leg part |
 | [stl/hobby-joint-retainer.stl](../stl/hobby-joint-retainer.stl) | 3 | Leg part |
@@ -25,5 +25,4 @@ Millimetres; print in exported orientation. Four fit coupons first, then29 assem
 | [coupons/hobby-joint-horn-coupon.stl](../coupons/hobby-joint-horn-coupon.stl) | 1 | Fit coupon |
 | [coupons/prototype-upper-leg-ear-coupon.stl](../coupons/prototype-upper-leg-ear-coupon.stl) | 1 | Fit coupon |
 | [stl/hobby-joint-front-arm.stl](../stl/hobby-joint-front-arm.stl) | 1 | Leg part |
-| [stl/prototype-j1-carrier.stl](../stl/prototype-j1-carrier.stl) | 1 | Leg part |
-
+| [stl/prototype-j1-carrier-mirrored.stl](../stl/prototype-j1-carrier-mirrored.stl) | 1 | Leg part |

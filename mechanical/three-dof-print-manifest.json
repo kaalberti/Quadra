@@ -19,36 +19,6 @@
       "sha256": "2A69D2433A7177B392F5C3536317F8435240A5CACCCAA1223C8C2774C709DF5D"
     },
     {
-      "file": "mechanical/prototype-upper-leg-plate.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
-    },
-    {
-      "file": "mechanical/prototype-upper-leg-saddle.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "sha256": "9A72E19587F4ADD72F9139F8529E467D3E92E2DF40C08C612247824B281213A9"
-    },
-    {
-      "file": "mechanical/hobby-joint-rear-arm.stl",
-      "quantity": 3,
-      "fixture_only": false,
-      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719"
-    },
-    {
-      "file": "mechanical/hobby-joint-bridge.stl",
-      "quantity": 2,
-      "fixture_only": false,
-      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4"
-    },
-    {
-      "file": "mechanical/hobby-joint-retainer.stl",
-      "quantity": 3,
-      "fixture_only": false,
-      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38"
-    },
-    {
       "file": "mechanical/hobby-joint-front-spacer.stl",
       "quantity": 2,
       "fixture_only": false,
@@ -61,28 +31,46 @@
       "sha256": "0940367FEAD7BA1CD2A2BEDC5331BF46721E04AEE13461C8AC1471A80901157F"
     },
     {
-      "file": "mechanical/prototype-knee-support.stl",
+      "file": "mechanical/hobby-joint-front-arm.stl",
       "quantity": 1,
       "fixture_only": false,
-      "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8"
+      "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43"
     },
     {
-      "file": "mechanical/prototype-lower-leg.stl",
-      "quantity": 1,
+      "file": "mechanical/hobby-joint-rear-arm.stl",
+      "quantity": 3,
       "fixture_only": false,
-      "sha256": "4C7D2D05924903B7805D9EA35454A635F240F4628077F93501BA04C3FDF6494F"
+      "sha256": "FC7C1224C9A4C7CFEEA1F577FD9AC96B21542DDA6AF4879ABF2D2815DAD6D719"
     },
     {
-      "file": "mechanical/prototype-knee-spacer.stl",
-      "quantity": 1,
+      "file": "mechanical/hobby-joint-retainer.stl",
+      "quantity": 3,
       "fixture_only": false,
-      "sha256": "5FED377AD820F57F70389B16CA023230530773128BC9DD15C59F496B9DFDDC12"
+      "sha256": "985DDA709401CA86C1A2B91189786D927A622043DDBA337C01215321EF727A38"
     },
     {
-      "file": "mechanical/prototype-foot.stl",
+      "file": "mechanical/prototype-j1-carrier-mirrored.stl",
       "quantity": 1,
       "fixture_only": false,
-      "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
+      "sha256": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57"
+    },
+    {
+      "file": "mechanical/prototype-upper-leg-plate.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
+    },
+    {
+      "file": "mechanical/hobby-joint-bridge.stl",
+      "quantity": 2,
+      "fixture_only": false,
+      "sha256": "2E4645CE91EA1687EE6ECE8A76B96E0E449F6320B8A6B8ACBEBE64A41CFFB9A4"
+    },
+    {
+      "file": "mechanical/prototype-upper-leg-saddle-mirrored.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
     },
     {
       "file": "mechanical/prototype-cable-guide.stl",
@@ -91,26 +79,38 @@
       "sha256": "6FFF92555115FCC8B9FDCB8504F409BACF56D00548BDA2E30AE177E25019AACB"
     },
     {
+      "file": "mechanical/prototype-knee-support.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "sha256": "380877341E867CF8C52D94B76A8F48D7760DD8DE147D04CF31A17D6289D836F8"
+    },
+    {
+      "file": "mechanical/prototype-knee-spacer.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "sha256": "5FED377AD820F57F70389B16CA023230530773128BC9DD15C59F496B9DFDDC12"
+    },
+    {
+      "file": "mechanical/prototype-lower-leg.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "sha256": "4C7D2D05924903B7805D9EA35454A635F240F4628077F93501BA04C3FDF6494F"
+    },
+    {
+      "file": "mechanical/prototype-foot.stl",
+      "quantity": 1,
+      "fixture_only": false,
+      "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
+    },
+    {
       "file": "mechanical/prototype-bench-base.stl",
       "quantity": 1,
       "fixture_only": true,
       "sha256": "198C6E6F0B32AADA1B6B15897293E7D8708DAB39DD0CEB1CA81B8FB11A8BADFF"
-    },
-    {
-      "file": "mechanical/hobby-joint-front-arm.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43"
-    },
-    {
-      "file": "mechanical/prototype-j1-carrier.stl",
-      "quantity": 1,
-      "fixture_only": false,
-      "sha256": "4CCE5EACBA8D3852723F86C2AE33752C6BD7561C95A3C74002CA3D8477576452"
     }
   ],
   "guide": "docs/three-dof-prototype-build.md",
-  "revision": "three-dof-bench-2",
+  "revision": "three-dof-bench-3",
   "bom": "docs/purchasing-bom.md",
   "physical_fit_verified": false
 }

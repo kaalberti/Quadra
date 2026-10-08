@@ -218,7 +218,7 @@ CURRENT_MECHANICAL_STATE = supported 3-DOF bench leg in CAD; physical fit untest
 CURRENT_NEXT_MECHANICAL_FEATURE = print coupons and unpowered leg fit assessment
 
 CURRENT_MANUFACTURING_PACK = MFG-002 (prototype build checkpoint)
-CURRENT_MANUFACTURING_BUILD_REVISION = three-dof-bench-2
+CURRENT_MANUFACTURING_BUILD_REVISION = three-dof-bench-3
 BENCH_ADAPTER_SUPPORT_RIB_CLEARANCE = 0.2 mm PROVISIONAL
 
 PHYSICAL_FIT_VALIDATED = false

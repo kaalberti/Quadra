@@ -1,6 +1,6 @@
-# Supported three-DOF bench leg — three-dof-bench-2
+# Supported three-DOF bench leg — three-dof-bench-3
 
-![Assembly](../mechanical/prototype-three-dof-leg-preview.png)
+![Assembly](../mechanical/prototype-rigid-bench-assembly.png)
 
 This prototype adds a supported J1 abduction joint to the existing J2/J3
 pitch leg. It is a printing and unpowered fit checkpoint, not a walking robot.
@@ -9,16 +9,25 @@ The servo model and horn/bearing fit remain provisional.
 ## Print and buy
 
 Use the three-DOF print manifest and hardware BOM, not the sum of earlier kits.
-Reuse all current pitch-leg prints. Add one left/right cradle pair, fixed
+Reuse current pitch-leg prints except the saddle hand specified below. Add one left/right cradle pair, fixed
 support, front arm, rear arm, retainer, 8mm front spacer, 3mm rear spacer,
 and the new J1 carrier. The existing bench adapter moves from J2 to J1;
 there is only one bench adapter. Do not print an extra J1 bridge: the carrier
 ties the front and rear fork arms together.
 
-Use the current rib-relieved adapter STL from the corrected bench-2 checkpoint.
+Use the current rib-relieved adapter STL from the corrected bench-3 checkpoint.
 Its pockets face the passive support and provide0.2mm clearance around the ribs.
 Check that the support seats freely before tightening; the older adapter had a
 CAD clash. Bolt slots, anchors and hardware quantities are unchanged.
+
+Use `prototype-j1-carrier-mirrored.stl` and `prototype-upper-leg-saddle-mirrored.stl`
+for this bench orientation. They replace the two original print files; do not
+print both hands for one bench leg. The original saddle remains valid for the
+standalone two-DOF frame, but the three-DOF bench uses this mirrored selection.
+Actual part placement is in `prototype-rigid-bench-assembly.scad`; the older
+three-DOF source is a reflected geometric reference, not a physical print plan.
+The new view shows prints and case envelopes; bearings, horns and fasteners
+follow the assembly instructions below and are not fully drawn in that view.
 
 Print fit coupons first. Print the carrier flat as exported, with its tabs
 upright. Start with PLA+/PETG, 0.4mm nozzle, 0.2mm layers, four walls and 30%

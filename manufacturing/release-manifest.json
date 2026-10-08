@@ -38,13 +38,13 @@
       "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
     },
     {
-      "file": "stl/prototype-upper-leg-saddle.stl",
+      "file": "stl/prototype-upper-leg-saddle-mirrored.stl",
       "quantity": 1,
       "fixture_only": false,
       "fit_coupon": false,
-      "cad": "cad/prototype-upper-leg.scad",
+      "cad": "cad/prototype-handed-parts.scad",
       "selector": "saddle",
-      "sha256": "9A72E19587F4ADD72F9139F8529E467D3E92E2DF40C08C612247824B281213A9"
+      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
     },
     {
       "file": "stl/hobby-joint-rear-arm.stl",
@@ -191,17 +191,17 @@
       "sha256": "E9A84FD7E23DB59616A1DC602B7937F7CDC0689E66EE06360C11483B96F2CC43"
     },
     {
-      "file": "stl/prototype-j1-carrier.stl",
+      "file": "stl/prototype-j1-carrier-mirrored.stl",
       "quantity": 1,
       "fixture_only": false,
       "fit_coupon": false,
-      "cad": "cad/prototype-j1-carrier.scad",
-      "selector": null,
-      "sha256": "4CCE5EACBA8D3852723F86C2AE33752C6BD7561C95A3C74002CA3D8477576452"
+      "cad": "cad/prototype-handed-parts.scad",
+      "selector": "carrier",
+      "sha256": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57"
     }
   ],
   "date": "2026-10-09",
-  "revision": "three-dof-bench-2",
+  "revision": "three-dof-bench-3",
   "files": [
     {
       "file": "bom-hardware.json",
@@ -217,15 +217,11 @@
     },
     {
       "file": "README.md",
-      "sha256": "C710D25DEA912A64FA8AA1D446E35AE8F321F01AFAA77F209A40FF429370CA44"
+      "sha256": "C74C37FDD88EED7F8FE3980F8CA5722BA9761756D7D05F1773ADD7AE15187487"
     },
     {
       "file": "validation.json",
-      "sha256": "32DE7E76F841F9034C1C28718404252E2732A4FBC5432E15FF5295E2525BC971"
-    },
-    {
-      "file": "cad/hobby-joint-assembly.scad",
-      "sha256": "9E88B79F586E1FAA48E1E81EB6F07C56D1140650AF1F5D2EA01041AB5C3E31A8"
+      "sha256": "74E381A2DEAD3345722A7BF2AE8FBC66C12BBF6259FD450AD5A6E1FFEECE777E"
     },
     {
       "file": "cad/hobby-joint-bearing-parts.scad",
@@ -272,6 +268,10 @@
       "sha256": "289CE400E1321A8F25542C6BA230BFD83B167573214DF267F4EF07B723BF3D30"
     },
     {
+      "file": "cad/prototype-handed-parts.scad",
+      "sha256": "FA2A7D9D204A3D4C110678C0EA245E1535C5A0C60A9304DD2FE933C60D78A161"
+    },
+    {
       "file": "cad/prototype-j1-carrier.scad",
       "sha256": "86554A84D6D4C4BE1ACB8ABE56D7EB0DA83C1D722E6BAB39BDF4D84255F89092"
     },
@@ -292,20 +292,16 @@
       "sha256": "845F8B5879CCE11F77ABA9A4DB3B3CC6D770F38375F7599B2356D1E8E94CA746"
     },
     {
-      "file": "cad/prototype-pitch-leg.scad",
-      "sha256": "5FE228E7B20CF538E00E1F5516620AB84B5355805E44ABFDEA8140C07CC1247D"
-    },
-    {
-      "file": "cad/prototype-three-dof-leg.scad",
-      "sha256": "6BD7C2FD9ED82887C519D484ED9F0E664529C3E1DCEF0370F6EFED51D1AC51C8"
-    },
-    {
-      "file": "cad/prototype-upper-leg-assembly.scad",
-      "sha256": "3FA65CA4949C2B74DC53B3F75D70CBEEA93DDECE3D66F931B971C2E493E7EBC6"
+      "file": "cad/prototype-rigid-bench-pack-assembly.scad",
+      "sha256": "BE7471251B335DB0579DCD30B36142A21375B6A51FD2C7EE50785CE9FFF59F18"
     },
     {
       "file": "cad/prototype-upper-leg.scad",
       "sha256": "1A20E2E9BB8C5BF02CB28F97DB8F7A758852184C697E5828805BE2CC8EC7D174"
+    },
+    {
+      "file": "cad/rigid-bench-parts.scad",
+      "sha256": "CDD904BD0A307CF179421F2D5F8ACB1FC16E263857249376C025B2C77172EF24"
     },
     {
       "file": "coupons/hobby-joint-bearing-coupon.stl",
@@ -325,11 +321,11 @@
     },
     {
       "file": "docs/assembly.md",
-      "sha256": "900601A702915CF624B31326DDB0C302F8892C3C02CD925CFA41218AB932F4CF"
+      "sha256": "FDDA5086756865A0D0CEAA70A17B026442C8161B7ECF7EF961643F6E1BDCB4E6"
     },
     {
       "file": "docs/assembly.png",
-      "sha256": "D0E4B906167D18034B54643D1E93E1141CB5E7016F2C8109B626BBEB88CB1FA3"
+      "sha256": "195DD3A5BFCED07532F7F7912ABD517825D597B0D8714378ED814FDF0DDCBFA5"
     },
     {
       "file": "docs/pitch-leg-assembly.md",
@@ -341,7 +337,7 @@
     },
     {
       "file": "docs/print-list.md",
-      "sha256": "74B7C4875C52D590A4A6A4032C4108584B4BEE3D3391DF4892914DB7B090BA0D"
+      "sha256": "A90B514AF8631D64CF33493BCF10316E463E92BE0FE0CA0647493DDB06D8904F"
     },
     {
       "file": "stl/hobby-joint-bridge.stl",
@@ -392,8 +388,8 @@
       "sha256": "36C7BB63F18990CC476C75B63BCE6B8F9AEDCC68173DA12FC2CBC8EE6A306FBC"
     },
     {
-      "file": "stl/prototype-j1-carrier.stl",
-      "sha256": "4CCE5EACBA8D3852723F86C2AE33752C6BD7561C95A3C74002CA3D8477576452"
+      "file": "stl/prototype-j1-carrier-mirrored.stl",
+      "sha256": "CEB249A9121FC08E84614FF011E6CD64429F8A7FE1D54CFA08AFDDA5B0583A57"
     },
     {
       "file": "stl/prototype-knee-spacer.stl",
@@ -412,8 +408,8 @@
       "sha256": "757310C623965A3B2B6CE26DC9CB9979C6AAE50D7C8271A8BF9D31C8B59920C1"
     },
     {
-      "file": "stl/prototype-upper-leg-saddle.stl",
-      "sha256": "9A72E19587F4ADD72F9139F8529E467D3E92E2DF40C08C612247824B281213A9"
+      "file": "stl/prototype-upper-leg-saddle-mirrored.stl",
+      "sha256": "BA88899920087EED5471BC0BBFBEC2D44CB89FF01A5BB641F9D9F5AF6A1DC870"
     }
   ],
   "scope": "Unpowered3DOF bench prototype"
