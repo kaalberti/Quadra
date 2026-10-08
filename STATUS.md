@@ -128,8 +128,13 @@ other allowances. Actual complete mass remains NOT_MEASURED;2kg limit unchanged.
 Only486g remains for all prints under those assumptions (37.4% of solid CAD
 mass). Current bench-kit replication is not a demonstrated2kg robot design.
 Record/report: mechanical/robot-mass-inputs.json and docs/working-robot-mass.md.
-Next: prototype an integrated pitch output fork to reduce long bolts, part count
-and mass together. Keep the supported bench kit for the first physical leg test.
+MEC-161 fork prototype: four handed STLs pass closed/connected/bed checks and
+retained-interface mesh rays. Six sampled local pitch case/support checks clear.
+Local assembly viewer uses proper print rotations; preview visually inspected.
+Conditional BOM removes16 long bolts and16 printed pieces, saving an estimated
+143g; robot screen still2.217kg. Physical fit/strength remain untested.
+Next: integrate forks into the handed3-DOF assembly and check J1/carrier clearance.
+Details: docs/tasks/MEC-161.md. Supported bench manufacturing kit unchanged.
 Completed units are committed and pushed to origin/main following explicit
 user approval on2026-10-09. No supplier contact.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.

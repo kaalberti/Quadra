@@ -155,3 +155,11 @@ print/power assumptions, exceeding the2kg limit by about360g. Actual mass is
 unmeasured. Do not treat these complete quantities as a ready-to-buy robot kit;
 the supported single-leg kit remains the first purchase/test. Mass record and
 next simplification: docs/working-robot-mass.md. No premium actuator is selected.
+
+Experimental MEC-161 fork variant only: eight integrated pitch forks replace
+24 plates/rear arms/bridges. Conditional robot totals become101 printed pieces,
+zero M3x90 bolts,140 M3 nuts and276 ordinary M3 washers; other quantities above
+remain unchanged. This saves approximately143g under the existing mass-screen
+assumptions, leaving approximately2.217kg. Whole-leg integration and physical
+print/load tests remain open. Keep the supported bench kit as the first purchase;
+do not buy the conditional complete robot quantities yet. Details: docs/tasks/MEC-161.md.

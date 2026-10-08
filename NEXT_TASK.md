@@ -1,11 +1,10 @@
-# MEC-161 — integrated pitch output fork prototype
+# MEC-162 — integrate experimental forks into the physical leg
 
-Prototype a simpler upper/lower pitch output-fork family that combines the
-front plate, rear bearing arm and bridge, removing the long coupling bolts.
-Retain current horn/bearing/link interfaces and70/85mm geometry; use conservative
-walls and a practical print orientation. Check proper physical placement,
-connected/closed bed-sized meshes and representative case clearances. Compare
-print/hardware mass and part counts with the old output assembly; record only
-the variant's verified changes to the working BOM. Keep the current supported
-bench manufacturing kit intact. Do not claim complete2kg compliance, perform
-detailed structural analysis, add powered control or begin another stage.
+Build a working three-DOF leg viewer using the experimental MEC-161 fork STLs
+with proper physical rotations and explicit print hands. Verify fork placement
+against intended source geometry and check new webs against J1/carrier parts
+at nominal and representative trial poses. Correct any actual interference
+with conservative geometry while retaining existing interfaces and70/85mm links.
+Update the conditional BOM/mass record only if geometry changes. Keep the
+supported manufacturing kit intact; no powered control, physical-test claims,
+complete2kg claim, detailed structural analysis or following stage.

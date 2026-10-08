@@ -60,6 +60,13 @@ flange fasteners and actual servo cable route; test stiffness with support first
 
 ## Provisional servo choices
 
+Experimental MEC-161 forks: print one upper/lower pair side-on, inspect support
+removal, bearing-seat fit, horn/retainer and saddle/foot assembly access. Gradually
+load the assembled pair and inspect the web/plate junctions for flex or cracking.
+These tests are NOT_PERFORMED; the flat-print coupons do not qualify this new
+orientation. Use docs/tasks/MEC-161.md; wait for whole-leg clearance integration
+before replacing the supported bench parts.
+
 - **MG996R:** all12 weight-bearing joints; three for the first leg. Current CAD
   already uses its size class. Manufacturer stall torque9.4kgf·cm at4.8V is
   approximately0.922Nm. Existing J1 neutral/knee estimates0.329/0.42Nm support

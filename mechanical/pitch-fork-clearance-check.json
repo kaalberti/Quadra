@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "kind": "upper",
+      "angle_deg": 20,
+      "intersection_empty": true
+    },
+    {
+      "kind": "upper",
+      "angle_deg": 44.0486,
+      "intersection_empty": true
+    },
+    {
+      "kind": "upper",
+      "angle_deg": 55,
+      "intersection_empty": true
+    },
+    {
+      "kind": "lower",
+      "angle_deg": 60,
+      "intersection_empty": true
+    },
+    {
+      "kind": "lower",
+      "angle_deg": 78.9786,
+      "intersection_empty": true
+    },
+    {
+      "kind": "lower",
+      "angle_deg": 90,
+      "intersection_empty": true
+    }
+  ],
+  "scope": "Six sampled local pitch poses; not a continuous sweep, J1/carrier or actual servo ear/horn/lead check.",
+  "physical_tested": false
+}

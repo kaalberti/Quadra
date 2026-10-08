@@ -1,0 +1,144 @@
+{
+  "stage": "experimental fork CAD; not released",
+  "meshes": [
+    {
+      "file": "prototype-pitch-fork-upper.stl",
+      "sha256": "b0e63cbbf4bc33504cbc26d346ec8c4b1e8a271f9ea4ef00a687bc0f61217f9b",
+      "closed": true,
+      "connected": true,
+      "bounds_mm": [
+        [
+          -54.5739,
+          64
+        ],
+        [
+          -55,
+          23.2
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "solid_PETG_g": 40.88205796591561
+    },
+    {
+      "file": "prototype-pitch-fork-upper-mirrored.stl",
+      "sha256": "f9a69734feb1deaaff969b64656181833cd42f2461b447f15f13200fa6ddf57f",
+      "closed": true,
+      "connected": true,
+      "bounds_mm": [
+        [
+          -54.5739,
+          64
+        ],
+        [
+          -23.2,
+          55
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "solid_PETG_g": 40.88205796591561
+    },
+    {
+      "file": "prototype-pitch-fork-lower.stl",
+      "sha256": "f8508f81692908807fd4afc0db2bdb945b437d868fe404d5be306a8420f5a776",
+      "closed": true,
+      "connected": true,
+      "bounds_mm": [
+        [
+          -80,
+          16
+        ],
+        [
+          -55,
+          23.2
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "solid_PETG_g": 36.10738235853058
+    },
+    {
+      "file": "prototype-pitch-fork-lower-mirrored.stl",
+      "sha256": "384c9ca117100f0d1ca0fb15f42123937c2cad3c47e8ef6c654ec8266abd4966",
+      "closed": true,
+      "connected": true,
+      "bounds_mm": [
+        [
+          -80,
+          16
+        ],
+        [
+          -23.2,
+          55
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "solid_PETG_g": 36.10738235853073
+    }
+  ],
+  "opposite_print_correspondence_mm": 0.001,
+  "retained_interface_mesh_rays": true,
+  "placement": "Local viewer uses T(0,-16,0)*Rx(-90), a proper rotation. Reflected pitch frame requires opposite physical prints; assembly integration remains deferred.",
+  "clearance": {
+    "checks": [
+      {
+        "kind": "upper",
+        "angle_deg": 20,
+        "intersection_empty": true
+      },
+      {
+        "kind": "upper",
+        "angle_deg": 44.0486,
+        "intersection_empty": true
+      },
+      {
+        "kind": "upper",
+        "angle_deg": 55,
+        "intersection_empty": true
+      },
+      {
+        "kind": "lower",
+        "angle_deg": 60,
+        "intersection_empty": true
+      },
+      {
+        "kind": "lower",
+        "angle_deg": 78.9786,
+        "intersection_empty": true
+      },
+      {
+        "kind": "lower",
+        "angle_deg": 90,
+        "intersection_empty": true
+      }
+    ],
+    "scope": "Six sampled local pitch poses; not a continuous sweep, J1/carrier or actual servo ear/horn/lead check.",
+    "physical_tested": false
+  },
+  "comparison": {
+    "old_fork_solid_g": 397.9629502254087,
+    "new_fork_solid_g": 307.9577612977847,
+    "removed_hardware_estimated_g": 84.7767612905636,
+    "material_fraction_assumed": 0.65,
+    "total_estimated_reduction_g": 143.2801340935192,
+    "variant_estimated_robot_g": 2216.5138678759713,
+    "printed_pieces": 101,
+    "removed": {
+      "M3x90": 16,
+      "M3_nuts": 16,
+      "M3_ordinary_washers": 32
+    }
+  },
+  "physical_fit_verified": false,
+  "print_verified": false
+}
