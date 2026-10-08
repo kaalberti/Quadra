@@ -63,6 +63,21 @@ These are fixture parts, not multiplied into the robot BOM. The board face is
 before any loading; this is not a powered-test stability approval.
 
 ## Planned quantities — wait before buying totals
+## Proposed bench control purchases — verify existing hardware first
+
+| Item | Quantity | Planning allowance NZ$ | Requirement |
+|---|---:|---:|---|
+| PCA9685 breakout | 1 | 10 |3.3V logic/pullups, accessible OE; external servo distribution |
+| SN74AHCT125N DIP buffer and passives | 1 set | 5 |0.1uF ceramic,220ohm/1kohm/10kohm resistors; see wiring |
+| Copper wire, rated terminals, DC cutoff and fuse holder/fuses | 1 set | 20 |10A main path,2A branch minimum;18/22AWG proposed |
+| ESP32-S3 development board | 1 if not owned | 20 | Board model/pins to verify; provisional controller |
+
+NZ$55 is a planning allocation, not a price quote or purchase commitment.
+These items sit inside the existing other-parts budget. The multimeter and
+bench supply are already owned; supply current capacity remains unknown.
+Buy no battery, twelve-servo regulator or custom PCB at this stage.
+
+## Planned robot quantities — wait before buying totals
 
 | Item | One3-DOF leg | Four-leg robot | Status |
 | --- | ---: | ---: | --- |

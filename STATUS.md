@@ -54,5 +54,9 @@ record remains NOT_MEASURED. Bench-control preparation can proceed independently
 - Actual servo/horn/bearing/cable fit and measured printed mass.
 - Loaded joint ranges, servo current/duty and power supply capacity.
 - Final four-leg chassis attachment/symmetry and2kg complete mass budget.
-No chassis, electronics, firmware or locomotion stage has been started.
+Bench electronics preparation is underway; robot power, chassis and locomotion remain deferred.
+The proposed isolated servo rail is5.2V, with a7.5A supply-capacity target for
+three servos and an external rated distribution/cutoff. Wire-only drop screen
+is0.189V; actual PSU and servo measurements remain pending.
+Wiring: electronics/bench-wiring.md; no powered test is claimed.
 Detailed ten-step results are in docs/tasks/MEC-144-153.md.
