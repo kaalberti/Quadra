@@ -202,7 +202,7 @@ buying the totals twice. Controller boards are owned; no replacements.
 12 signal paths/servo power branches andfour protected leg feeds are planned;
 main distribution, connector, fuse, wire and regulator purchases stay TBD.
 The30A capacity screen is provisional, not a selected supply or verified demand.
-Prices remain unverified; test one servo before full-harness purchases.
+Reference signal-component prices are in electronics/digikey-perfboard-bom.md; test one servo before full-harness purchases.
 Connections and manufacturer sources:electronics/four-leg-harness.md.
 
 Robot regulator purchase is still TBD after ELEC-005 comparison. Do not order
@@ -212,9 +212,9 @@ the30A planning screen; peak rating does not close that gap. Compare actual
 leg demand and landed cost first. Reference:electronics/robot-power-shortlist.md.
 
 Perfboard carrier — ELEC-006: one isolated-pad board with at least35 x25
-usable2.54mm holes (100 x70mm nominal),three14-pin DIP sockets,three6-pin
-input headers,three4-pin signal-only headers,three2-terminal low-current
+usable2.54mm holes (100 x80mm PAD2 candidate),three14-pin DIP sockets,three6-pin
+input headers,three4-pin signal-only headers,three3-position headers,centre unused,for2-terminal low-current
 buffer supply connectors andone2-pin CTRL header. Reuse existing buffers/
 passives; component bodies and actual board grid need dry-fit checks.
-DigiKey is preferred; exact parts/prices remain provisional until checked.
+DigiKey population shortlist:electronics/digikey-perfboard-bom.md; NZ$32.82 reference parts subtotal excluding GST/shipping. Parts remain provisional; reuse bench parts and avoid duplicate purchases.
 Initial prototypes use perfboard; SMT is a later final-design consideration.

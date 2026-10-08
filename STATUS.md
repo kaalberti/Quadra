@@ -145,5 +145,5 @@ Power shortlist:electronics/robot-power-shortlist.md; no regulator selected.
 Keep common5.2V rail provisionally; measure actual demand before supply purchase.
 Perfboard buffer layout:electronics/buffer-perfboard.md;162 unique pads and
 12 complete signal paths pass. Actual body/board/soldering clearance untested.
-Initial prototypes use perfboard; consider final SMT. Preferred supplier:DigiKey.
+DigiKey perfboard BOM:electronics/digikey-perfboard-bom.md; NZ$32.82 ex GST/shipping. Prototype perfboard100 x80mm; final SMT deferred; all fit untested.
 Completed milestones are pushed to origin/main with user approval. No supplier contact.

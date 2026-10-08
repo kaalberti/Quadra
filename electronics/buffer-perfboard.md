@@ -2,7 +2,7 @@
 
 ![Top-side placement](buffer-perfboard-layout.png)
 
-Use a nominal100 x70mm isolated-pad perfboard with at least35 x25 usable holes
+Use a nominal100 x80mm isolated-pad perfboard with at least35 x25 usable holes
 on2.54mm pitch. This is a provisional hand-wired layout, not a custom PCB or
 a verified purchased board. Actual hole grid, socket/component bodies and
 mount clearance require a dry fit before soldering. Never use uncut stripboard
@@ -54,7 +54,7 @@ Fit sockets and headers without solder first, mark orientation/labels, then
 fit passives and insulated jumpers. Mount on insulating supports with access
 to both sides. The electronics deck slots can hold a removable insulating
 carrier; actual mounting holes and installed clearance remain TBD. This buffer
-board adds an unmeasured100 x70mm space claim and is not incorporated into
+board adds an unmeasured100 x80mm space claim and is not incorporated into
 the current chassis/mass model. Avoid stacking across USB or antenna access.
 
 Before chips/servos are connected, check every same-net continuity and no
@@ -65,7 +65,7 @@ cutoff behavior must be measured on the assembled board.
 
 Buying delta: one suitable isolated-pad perfboard, three14-pin DIP sockets,
 three six-pin signal input headers, three four-pin signal output headers,
-three two-terminal buffer supply connectors and one two-terminal CTRL header;
+three three-position headers with centre pins removed for the two-terminal buffer supplies and one two-terminal CTRL header;
 reuse existing resistor/capacitor/buffer totals. No purchased board geometry,
 connector rating or retail price is selected. Exact hardware is provisional.
 Check:node electronics/check-buffer-perfboard.mjs.
@@ -74,3 +74,5 @@ User preference:initial prototypes use perfboard; consider SMT for the final
 design after hardware behavior is demonstrated. DigiKey is the preferred
 supplier. Final package pinouts/footprints must be checked independently;
 the PDIP layout is not a ready-made SMT PCB design.
+
+Provisional compatible parts and reference buying costs: [DigiKey population list](digikey-perfboard-bom.md). PAD2 is the 100 x80mm candidate; retain the logical35 x25 grid. Supply headers use their outer pins at5.08mm spacing.
