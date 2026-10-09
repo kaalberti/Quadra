@@ -1,19 +1,17 @@
-# MEC-172 — Printable ST3215 four-leg chassis layout
+# FW-010 — ST3215 single-servo feedback bench firmware
 
-Integrate the four current legs without changing their geometry. Create a
-provisional 175 x160 mm chassis with matching hip fixture holes, central battery
-tray and removable generic electronics deck. Use proper rotations and identical
-leg prints. Record the packaging change from the original 180 x110 mm target.
+Create a separate ESP32-S3 build using existing local tools. Implement validated
+ST3215 ping/feedback requests, torque-state read and explicit supported torque-off
+with readback. UART stays disabled until operator selects confirmed pins while
+rail is off; no motion, torque-enable, broadcasts or EEPROM writes are exposed.
+Verify the protocol/register map against public manufacturer source.
 
-Export chassis/deck/printed riser STLs and full assembly preview. Check closed,
-connected bed meshes, mounting bores, transform handedness, nominal foot support
-and conservative body/leg clearance. Check only useful additional poses; no full
-swept range or gait qualification. Keep real hardware envelopes provisional.
-Update BOM, build guide, parameters, risk register and STATUS afterward.
+Acceptance: host tests cover exact packets, framing/checksums/IDs/lengths, device
+errors, timeouts, feedback decode, command rejection and torque-off verification.
+Build for ESP32-S3 N16R8 without flash/upload. Document adapter wiring and staged
+one-servo use; update status/BOM as needed. No powered test, full-leg controller,
+gait, battery-harness implementation or next major stage.
 
-Acceptance: printable parts and actual fixture-hole coordinates independently
-checked; four placed nominal legs fit with the assumed battery/deck; unsupported
-fit/current/mass claims remain open. No powered tests, purchases, new firmware or
-manufacturing release. Do not start the following stage.
-
-Completed: three printable meshes, actual leg/chassis fixture bores, proper four-leg placement, deck fastener access and nominal/5-degree clearances pass. Leg mesh/fit checks and fourteen artifact regressions pass; read-only chassis verification rejects stale evidence. Final preview inspected. No following stage started.
+Status: complete. Separate build, 96 host checks and operating guide completed;
+no flash or powered test. Result: docs/st3215-feedback-bench.md.
+Following stage not started.

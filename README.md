@@ -6,6 +6,7 @@ Active redesign: **ST3215 standard12V serial-bus servos +60 Wh conventional3S Li
 - Working leg CAD:mechanical/st3215-leg.scad; assembly preview:mechanical/st3215-leg.png.
 - First-leg print/build instructions:docs/st3215-leg-build.md.
 - Battery tray:mechanical/st3215-battery-tray.scad; provisional pack120 x50 x20 mm.
+- Active single-servo feedback firmware: [bench guide](docs/st3215-feedback-bench.md), `firmware/st3215/`.
 - Power/control architecture:electronics/st3215-power-plan.md.
 - Buying list:docs/purchasing-bom.md; physical tests:PHYSICAL_TESTS.md.
 

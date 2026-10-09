@@ -50,22 +50,25 @@ No high-current bus through adapter,barrel jack,perfboard or unverified chains.
 ## Reference artifacts and limitations
 The manufacturing/ checkpoint (MFG-003 integrated-bench-1) remains an unchanged MG996R reference
 checkpoint,not a current ST3215 release. Do not print it for these actuators.
-Existing firmware controls PWM hobby servos and cannot control ST3215; bus
-firmware,feedback commissioning and angle calibration are the next software work.
+Legacy firmware controls PWM hobby servos and cannot control ST3215. Separate
+firmware/st3215 now provides single-servo ping/feedback and explicit torque-off
+with readback. UART starts disabled; no motion/enable/EEPROM commands exposed.
+ESP32-S3 build and host checks pass; wiring, flashing and powered tests pending.
+Guide:docs/st3215-feedback-bench.md. Joint angle calibration remains future work.
 Existing MG996R CAD/fit/calibration/mass reports do not qualify this new assembly.
 Voltage divider concept remains usable for manual3S readings,but always-connected
 sense input/protection and low-battery control require revision. No cutoff works yet.
 
 ## Design review
 Review:docs/design-review.md. Main gates are actual clamp/wheel fit, protected
-power distribution and single-servo ST3215 firmware. Proposed adapter is rated
+power distribution and physical single-servo ST3215 commissioning. Proposed adapter is rated
 5A, so external parallel servo power is required. Read-only artifact verification
 now binds both CAD sources/generator/STLs; legacy PWM build/console requires
-explicit opt-in. Physical fit, power qualification and bus firmware remain open.
+explicit opt-in. Physical fit, power qualification and powered bus commissioning remain open.
 
 ## Immediate objective
 Check one servo/wheel/clamp fit and obtain real battery specifications. Continue
-with ST3215 bench interface/feedback and protected harness design as bounded work;
+with physical feedback commissioning and protected harness design as bounded work;
 no gait deployment or sensor implementation before reliable leg operation.
 Sensor plan:IMU and power monitoring,then forward ranging; remote slow crawl
 before obstacle avoidance or mapped navigation. Tests:PHYSICAL_TESTS.md.

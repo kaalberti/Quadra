@@ -3,7 +3,8 @@ Priorities and evidence: [design review](docs/design-review.md).
 
 - Verify actual ST3215 kit,rear wheel behavior,case shape and clamp fit before bulk prints.
 - Verify assumed120 x50 x20mm60Wh3S pack,mass,connector,current rating; mount provisional tray.
-- ST3215 single-servo feedback/torque commissioning firmware and UART adapter wiring.
+- Physically verify the compiled ST3215 feedback/off bench, actual UART adapter wiring
+  and startup/release behavior; then define angle calibration and bounded motion.
 - Protected parallel servo harness,logic buck,fuse/disconnect and cell monitoring.
 - Always-connected voltage sense input off-state protection; old diagnostic manual only.
 - Update kinematics/calibration for new0 mm datum and four-leg rotations/outward signs.

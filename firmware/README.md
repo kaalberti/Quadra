@@ -1,5 +1,7 @@
 > ST3215 redesign: this is preserved MG996R/PCA9685 PWM firmware. It cannot control the selected serial-bus servos. Do not deploy it for the new leg. See ../electronics/st3215-power-plan.md.
 
+Active ST3215 project: [st3215/README.md](st3215/README.md); [bench wiring/operation](../docs/st3215-feedback-bench.md).
+
 # Individual-servo bench controller
 
 FW-001 supports one explicitly armed servo at a time. This has been compiled

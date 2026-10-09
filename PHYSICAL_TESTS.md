@@ -16,7 +16,8 @@ No listed test has been performed. Current CAD is provisional.
 4. Read actual battery label:3S conventionalLiPo,capacity,C/current rating,
    dimensions,mass,connector. Inspect condition and individual cell voltages.
    Check charger,main fuse,disconnect and distribution ratings before use.
-5. One unmounted servo only:verified adapter wiring,12.0V current-limited PSU,
+5. Follow docs/st3215-feedback-bench.md using firmware/st3215 (compiled only).
+   One unmounted servo only:verified adapter wiring,12.0V current-limited PSU,
    horn removed initially. Read position/voltage; verify startup torque state,
    ID uniqueness,limits,communication-loss behavior and explicit torque-off.
 6. Configure one servo ID at a time,then map joints1..12. Confirm position readback
