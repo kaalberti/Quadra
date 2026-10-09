@@ -14,7 +14,7 @@ Separate data chaining from current distribution. Supplied three-wire cables
 can combine both; final harness must avoid backfeeding duplicate positives and
 must establish actual connector/pinout/current capability. Verify polarity with
 meter,not wire colour. Do not carry32A through adapter,DC barrel,perfboard or
-first daisy-chain lead. Adapter current rating is not documented for that duty.
+first daisy-chain lead. Manufacturer FAQ rates Bus Servo Adapter A at5A maximum; this is not a main-distribution path.
 Power-injection harness and connector selection remain a subsequent bounded task.
 
 Planning checks:2.7A per stalled servo at 12 V;8.1A per leg,32.4A all12.
@@ -56,3 +56,4 @@ References:
 https://www.waveshare.com/wiki/ST3215_Servo
 https://docs.waveshare.com/Bus_Servo_Adapter_A
 https://docs.waveshare.com/Bus_Servo_Adapter_A/Product-Wiring-Example
+https://docs.waveshare.com/Bus_Servo_Adapter_A/FAQ

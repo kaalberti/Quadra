@@ -42,6 +42,12 @@ Existing MG996R CAD/fit/calibration/mass reports do not qualify this new assembl
 Voltage divider concept remains usable for manual3S readings,but always-connected
 sense input/protection and low-battery control require revision. No cutoff works yet.
 
+## Design review
+Review:docs/design-review.md. Main gates are actual clamp/wheel fit, protected
+power distribution and single-servo ST3215 firmware. Proposed adapter is rated
+5A, so external parallel servo power is required. Review only; no design stage
+implemented. Existing CAD/report artifact hashes independently checked.
+
 ## Immediate objective
 Check one servo/wheel/clamp fit and obtain real battery specifications. Continue
 with ST3215 bench interface/feedback and protected harness design as bounded work;
