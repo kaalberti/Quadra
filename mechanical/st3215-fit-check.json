@@ -1,0 +1,16 @@
+{
+  "source_sha256": "89917713ff9aec89981b92081ae53be069f270a799d7018f3b1d9e900e69eb03",
+  "physical_fit_verified": false,
+  "coupon_grip_mm": 29,
+  "coupon_pocket_mm": [
+    25.52,
+    29.8
+  ],
+  "parameter_checks": [
+    "L1 +5 moves upper clamp +5",
+    "L2 +5 moves foot +5",
+    "hip offset +5 moves carrier +5",
+    "front/rear faces19/20 produce independent4/3 mm spacers"
+  ],
+  "limitations": "No real wheel/case/screw/cable fit or loaded qualification. Perturbed meshes are checks, not selected dimensions."
+}

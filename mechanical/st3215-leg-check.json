@@ -1,6 +1,6 @@
 {
-  "schema_version": 2,
-  "checker_sha256": "7c10378d49555820e8d3ce1058d4a1f52662e0e338ba30409d54fa0c21bc1583",
+  "schema_version": 3,
+  "checker_sha256": "f608e3cc7438fbc9ed15ec7261c79b285c1eb2a9a8345eddbad04052b51cd61c",
   "tray_source_sha256": "f8ad3f7f3afb1838c871d0ead6fc70acdc8b99209c523afc3118a3e37fa31ec0",
   "placement_rotation_determinants": [
     1,
@@ -62,14 +62,14 @@
       "empty": true
     }
   ],
-  "source_sha256": "f4a51e384ec766df1fafb07e20ac1b1f1a09a1ea9a731971e9d70cb5d381af9b",
+  "source_sha256": "89917713ff9aec89981b92081ae53be069f270a799d7018f3b1d9e900e69eb03",
   "battery_tray": {
     "size_mm": [
       134,
       66,
       11
     ],
-    "sha256": "aa931f5db517c5e794f6c469592faebcf94234bb67e19bf5eb8d5006e92e92ed",
+    "sha256": "ec009578c2bed802f3797eead4338518e3cb69cf5c9b6404ecbe7fe4421a60a0",
     "pack_envelope_mm": [
       120,
       50,
@@ -77,13 +77,13 @@
     ],
     "physical_fit_verified": false
   },
-  "task": "MEC-170",
+  "task": "MEC-171",
   "parts": [
     {
       "part": "clamp-bottom",
       "file": "mechanical/st3215-clamp-bottom.stl",
       "quantity": 3,
-      "sha256": "da3a64c273ac557eb469bf4b1622f593d8266ce4d6bfbe3179b852e5559c081e",
+      "sha256": "a532ec7b8c7240b91c397abeca9838d2ca85c549e41dff7e81e3be119e560135",
       "size_mm": [
         11,
         44,
@@ -95,7 +95,7 @@
       "part": "clamp-top",
       "file": "mechanical/st3215-clamp-top.stl",
       "quantity": 3,
-      "sha256": "0c7a09497a366bce77928f13c3360c0775cf1bbbd2d02a17863bbdafef5a1723",
+      "sha256": "7657714a48ef596af31b5877f12abb13f1fded113c463bbe91fa9ada3c4cd1db",
       "size_mm": [
         11,
         44,
@@ -107,43 +107,43 @@
       "part": "upper",
       "file": "mechanical/st3215-upper.stl",
       "quantity": 1,
-      "sha256": "d0069d0e6a5ee0f3fa264dd327c5cc5691db849c115e5498c7a73e7aca1bdbe0",
+      "sha256": "1003054b3a1cc5ebcb369d04b05fbde9d9b75b867948226014b1648075151fad",
       "size_mm": [
         68.5,
         56,
         48
       ],
-      "solid_volume_mm3": 31835.67886335591
+      "solid_volume_mm3": 31835.678863355926
     },
     {
       "part": "lower",
       "file": "mechanical/st3215-lower.stl",
       "quantity": 1,
-      "sha256": "f8e62e837c4894e41a746ecb9a5d562c8081c947be5c9c55e723671efac834ea",
+      "sha256": "0d812f89d4aece857f0de6b43f86301808adf7bbef19e423bb3e4f7a8935a20c",
       "size_mm": [
         104.7257,
         56,
         28
       ],
-      "solid_volume_mm3": 36328.572369079135
+      "solid_volume_mm3": 36328.57236907912
     },
     {
       "part": "hip",
       "file": "mechanical/st3215-hip.stl",
       "quantity": 1,
-      "sha256": "fd4798464af511c97ee38e36f44df30a324abd3cebacdf4326b65409dafd6e5a",
+      "sha256": "bc38139113afa7ead2acf0119ad8fc2bb5d226ed3a3e4a6f55ac759b7f597224",
       "size_mm": [
         137,
         49,
         41.5
       ],
-      "solid_volume_mm3": 24877.034533015973
+      "solid_volume_mm3": 24877.03453301598
     },
     {
       "part": "mount",
       "file": "mechanical/st3215-mount.stl",
       "quantity": 1,
-      "sha256": "ec1f4170504478e80c2ba60ee0b997048b760be4b2607e54c26d1dce1617a7c8",
+      "sha256": "0716d1c84ffdeb1747b679ede7fc377321db355e861290dadb746897e2065a8c",
       "size_mm": [
         30,
         60,
@@ -154,14 +154,50 @@
     {
       "part": "shims",
       "file": "mechanical/st3215-shims.stl",
-      "quantity": 6,
-      "sha256": "2e13afc19a29ae4b543f87951aac1f8ad525a6373e4a432272564c61f862ec0b",
+      "quantity": 3,
+      "sha256": "1d703ca875c284a75d89b57933fcca9b74b1efe8aff36372342f7533ccd98d9e",
       "size_mm": [
         19.2,
         19.2,
         4.375
       ],
-      "solid_volume_mm3": 847.449564594149
+      "solid_volume_mm3": 847.4495645941491
+    },
+    {
+      "part": "shim-rear",
+      "file": "mechanical/st3215-shim-rear.stl",
+      "quantity": 3,
+      "sha256": "121210dc169bbf12820d0b5062dd05cad1ee1474812c8e9a265c635c8769b267",
+      "size_mm": [
+        19.2,
+        19.2,
+        4.375
+      ],
+      "solid_volume_mm3": 847.4495645941491
+    },
+    {
+      "part": "clamp-fit29-bottom",
+      "file": "mechanical/st3215-clamp-fit29-bottom.stl",
+      "quantity": 0,
+      "sha256": "1f6fe144a18c5715a033bc5e292fe852fa3b6800102cea986bde3f93e00dcda0",
+      "size_mm": [
+        11,
+        44,
+        22
+      ],
+      "solid_volume_mm3": 6183.515000960002
+    },
+    {
+      "part": "clamp-fit29-top",
+      "file": "mechanical/st3215-clamp-fit29-top.stl",
+      "quantity": 0,
+      "sha256": "81d7c38f864a5966843c6850b524430b96fd4df70af6cfb7b3dcd6e658df5c8d",
+      "size_mm": [
+        11,
+        44,
+        22
+      ],
+      "solid_volume_mm3": 6183.5150009600075
     }
   ],
   "print_pieces": 16,
@@ -181,7 +217,11 @@
   ],
   "case_to_fork_axial_gap_mm": 5.5,
   "web_to_case_gap_mm": 5.89,
-  "nominal_wheel_spacer_mm": 4.375,
+  "wheel_spacers_mm": {
+    "front": 4.375,
+    "rear": 4.375
+  },
+  "fit_coupon_grip_mm": 29,
   "physical_fit_verified": false,
   "battery_mount_released": false
 }

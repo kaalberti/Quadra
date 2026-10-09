@@ -24,7 +24,7 @@ electronics; actuator-specific parts may need Waveshare/compatible suppliers.
 | M3 ordinary washers |12 external+4 internal per leg|64|Internal0.5 mm assumed; check actual stack |
 | J1 fixture/chassis through bolts/nuts |4|16|Length depends on fixture/chassis; TBD |
 | Rubber/EVA foot pads |1|4|20 x56 mm cheap replaceable contact; attachment to suit |
-| Printed ST3215 parts |16|Robot count not released|Use docs/st3215-leg-build.md |
+| Printed ST3215 parts |16; optional two fit coupons first|Robot count not released|Front/rear spacers separate; no extra bought hardware |
 
 Owned:ESP32-S3 N16R8,Adafruit PCA9685 (unused for current leg control),multimeter,
 load cells,60V/5A adjustable supply,and Creality K2 Pro access. Battery access is

@@ -2,7 +2,7 @@
 Last updated:2026-10-09
 
 ## Current milestone
-ST3215 /3S architecture redesign and first-leg working CAD.
+ST3215 first-leg CAD with configurable fit interfaces and printable fit coupons.
 User selected standard12V ST3215 and inexpensive60 Wh conventional3S LiPo.
 No hardware ordered,tested,flashed or physically validated.
 
@@ -11,9 +11,12 @@ No hardware ordered,tested,flashed or physically validated.
 - Build guide:docs/st3215-leg-build.md; buying BOM:docs/purchasing-bom.md.
 - Three dual-side wheel outputs,adjustable split case clamps; no old624/M4 stack.
 -70/85 mm links,85 mm J1-to-J2 forward offset,0 mm axial foot plane provisionally.
-- Seven unique STLs/sixteen prints per leg,including six wheel spacer rings.
+- Eight leg STLs/sixteen prints per leg; front/rear spacers tune independently.
+- Two alternative29 mm grip-band clamp coupons available before full printing.
+- Link lengths/hip offset now drive mounting geometry; nominal dimensions retained.
 - Fresh exports:closed connected bed meshes,proper placements,axis/contact and
   bore checks pass;three sampled case/printed-group intersections are empty.
+- Coupon bores and independent link/hip/spacer mesh perturbations pass.
 - Battery tray closed/connected,bed-oriented;dimensions and four mount bores pass.
 - Assembly/tray previews visually inspected. No swept/loaded range released.
 - Wheel faces/hardware/rear support and real cable clearance remain unverified.

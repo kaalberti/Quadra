@@ -1,16 +1,17 @@
-# RISK-001 — Guard active artifacts and incompatible legacy firmware
+# MEC-171 — Fit-tunable ST3215 leg interfaces
 
-Reduce R12 and the accidental legacy-use portion of R9 without physical hardware.
-Add a read-only current-artifact verifier; bind both CAD sources and the generator
-to fresh validation evidence; require explicit legacy opt-in at PWM build/console
-entry points. Preserve current geometry and all physical qualification caveats.
+Retain current nominal leg geometry and hardware architecture. Make upper/lower
+lengths and hip offset drive the CAD, allow separate front/rear wheel spacer
+thicknesses, and provide small 29 mm grip-band clamp coupons alongside the
+conservative 35 mm default. Avoid guessing the actual case/ports or rear support.
 
-Acceptance: fresh existing mesh/clearance checks pass; read-only verification
-passes without altering artifacts and rejects changed sources, meshes, generator
-or incomplete manifests. Legacy entry points reject default use before tools or
-serial I/O. Update review/status/backlog, commit and push the coherent checkpoint.
+Check default and coupon meshes/bore access, independently check spacer fit and
+that parameter changes move the intended interfaces. Regenerate source-bound
+validation and preview; update build guide, parameters, risk register and status.
+No new power/control stage, purchases or manufacturing release.
 
-Scope excludes mechanical redesign, new bus firmware, powered tests, purchases,
-and manufacturing release. Do not start the next engineering stage.
+Acceptance: existing three sampled collision poses pass; all current print parts
+and coupons are connected, closed and bed-oriented; adjustable parameters affect
+actual geometry. Actual servo fit remains provisional until tested.
 
-Completed: fresh seven-part/tray mesh and six sampled intersection checks pass; read-only verifier and twelve fault-injection tests pass without artifact writes; twenty-one console regressions, Python CLI refusal and both PowerShell preflight guards pass. No following stage started.
+Completed: ten default/fit-coupon meshes and tray pass; six sampled intersections are empty; grip-coupon bores and five mesh parameter perturbations pass; fourteen artifact regression tests pass. Preview visually inspected. No following stage started.

@@ -4,7 +4,9 @@ No listed test has been performed. Current CAD is provisional.
 1. Check one **12V** ST3215,its front/rear wheels and supplied screws. Measure
    case,shaft offsets,wheel faces and mounting pitch. Verify rear wheel rotates
    as an independent support,not a stationary case attachment.
-2. Print one clamp pair/spacer. Check gentle grip,case shape,connector access,
+2. Print one clamp pair/spacer: start with the29 mm fit coupons only if the
+   measured grip band suits them; otherwise export the measured grip height.
+   Measure front/rear wheel faces separately and set each spacer. Check gentle grip,case shape,connector access,
    spacers and wheel thread engagement. Do not force clamp or preload shaft.
 3. Dry assemble complete secured bench leg. Check both wheel attachments,
    bolt/tool access,cables and low-angle travel before powered testing. Existing

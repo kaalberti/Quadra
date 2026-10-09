@@ -12,7 +12,8 @@ MFG-003 pack is MG996R-specific and must not be used for this design.
 | st3215-upper.stl |1| J2 output and J3 fixed-case support |
 | st3215-lower.stl |1| J3 output;85 mm contact datum |
 | st3215-mount.stl |1| J1 fixed-case mounting plate |
-| st3215-shims.stl |6| One provisional wheel spacer per side |
+| st3215-shims.stl |3| Front wheel spacers |
+| st3215-shim-rear.stl |3| Independently adjustable rear wheel spacers |
 
 Three12V ST3215s and six supplied-compatible wheels complete the joint interfaces.
 Check the opposite wheel is a proper free support and confirm supplied hardware;
@@ -36,8 +37,12 @@ J1 fixture screws depend on fixture thickness; start with fourM3 through bolts.
 
 Wheel OD19.2 mm,PCD14 mm and total37.25 mm come from the downloaded drawing.
 The drawing title saysSCS215 although linked from the ST3215 manufacturer page.
-Both wheel faces are modeled symmetrically for now. Nominal4.375 mm spacer is
-adjustable; measure each side rather than forcing the fork against the bearings.
+Front and rear face distances are separately configurable as `wheel_face_front`
+and `wheel_face_rear` (positive magnitudes from the shaft datum). Both default
+to18.625 mm provisionally. Each spacer is derived as23 mm minus its face distance;
+nominal thickness remains4.375 mm. Measure each side independently; do not force
+the fork against the bearings. `shims` selects front, `shim-rear` selects rear.
+A face outside the fork planes fails rather than producing a negative spacer.
 Horn holes are radial6.5..7.5 mm slots,Ø3.2; use correct supplied screws and
 washers after confirming thread size and engagement. CentreØ8 access permits
 wheel retaining screw access. The printed clamp avoids unknown case screw threads.
@@ -61,3 +66,30 @@ real wheel faces,connectors,cables,screw heads and rear support require dry fit.
 
 Manufacturer sources and immutable downloaded PDF/DXF/STEP are under
 mechanical/reference/st3215; URLs recorded in decisions/st3215-3s-architecture.md.
+
+## Small fit pack before the full leg
+
+Print one `st3215-clamp-fit29-bottom.stl` and one
+`st3215-clamp-fit29-top.stl` to try the drawing's29 mm main body band. These
+are alternative clamp halves with a25.52 x29.8 mm pocket, not extra parts added
+to the leg. They use the same bolt positions and external mounting stack as the
+default clamps. Keep the standard35 mm clamp files as the conservative envelope
+alternative until the actual grip band and ports are measured.
+
+Use the two halves gently on an unpowered servo, checking the intended tail grip
+area, connector access and shell distortion. Do not force the29 mm coupon over
+32/35 mm end features. If the measured band differs, export `clamp-bottom` and
+`clamp-top` with `-D case_grip_height=MEASURED_MM`; the CAD adds0.8 mm total
+allowance. This is a fit starting point, not a validated clamping force.
+The assembly's conservative35 mm case proxy remains unchanged; a smaller grip
+pocket is not qualified by the default case collision report.
+
+The nominal link/offset values remain70/85/85 mm. `L1` now moves the upper-link
+knee seat and clamp, `L2` moves the foot, and `pitch_forward` moves the hip carrier
+and pitch frame. Changes still require fresh collision/geometry checks; the
+current standing/contact checks deliberately qualify only the current nominal
+configuration. Fit probes using alternate dimensions are not production STLs.
+
+After fresh exports, run `node mechanical/check-st3215-fit.mjs` for coupon bore
+and independent parameter-perturbation checks. Probe outputs live in
+`mechanical/st3215-fit-probes/`; do not print them as the selected leg parts.

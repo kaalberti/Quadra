@@ -10,5 +10,4 @@ Priorities and evidence: [design review](docs/design-review.md).
 - Four-leg chassis and manufacturing release after first-leg interface checks.
 - IMU/posture corrections and forward ranging after dependable slow walking.
 - Foot sensing,mapped navigation,SMT and appearance/mass optimization later as needed.
-- During CAD/checker revision, share geometry parameters; artifact/source hash binding is implemented.
 - After first build, tune supports, cable strain relief, foot grip and fastener retention as needed.

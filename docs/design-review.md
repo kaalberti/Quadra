@@ -13,14 +13,13 @@ yet been designed or qualified.
 ## Evidence and limits
 
 - [Leg CAD](../mechanical/st3215-leg.scad), [build guide](st3215-leg-build.md)
-  and [validation report](../mechanical/st3215-leg-check.json): seven printable
-  meshes, axis/contact checks and three sampled collision poses passed.
+  and [validation report](../mechanical/st3215-leg-check.json): eight leg meshes and two alternative fit coupons, axis/contact checks and three sampled collision poses passed.
 - [Battery tray](../mechanical/st3215-battery-tray.scad) and
   [tray guide](st3215-battery-tray.md): printable geometry, not verified pack fit.
 - [Power plan](../electronics/st3215-power-plan.md), [BOM](purchasing-bom.md)
   and [physical tests](../PHYSICAL_TESTS.md): planned components and tests,
   not implemented protection, actual current measurements or completed tests.
-- Current report hashes match both CAD sources, the validation generator, seven part STLs and tray STL.
+- Current report hashes match both CAD sources, the validation generator, ten part/coupon STLs and tray STL.
   This checks artifact identity; it does not repeat or extend the CAD checks.
 - No servo, battery, print, firmware or loaded leg has been physically validated.
 
@@ -32,7 +31,7 @@ A later-stage issue does not block current documentation or a cheap fit coupon.
 | ID / resolve before | Evidence and risk | Consequence | Smallest useful check or action |
 | --- | --- | --- | --- |
 | R1 — bulk leg printing | Clamp pocket defaults to 35.8 mm while the referenced main shell band is about 29 mm; drawing-to-actual case shape remains uncertain. The 1 mm split cannot close that difference. Short tail grip also depends on friction and print creep. | Loose servo, crushed case if overtightened, or blocked connector. | Obtain one kit; measure the actual grip band and ports; print one clamp coupon. Adjust the grip parameter or use fitted liners, then check retention without case distortion. |
-| R2 — assembled powered leg | Rear wheel/support behavior, wheel face positions and supplied screws are unverified. The 4.375 mm spacers assume symmetric faces. | Binding, bearing preload, stripped threads or a fork attached to a stationary case feature. | Verify both output interfaces; measure each side separately; hand-assemble a fork with correct screw engagement and free movement before power. |
+| R2 — assembled powered leg | Rear wheel/support behavior, wheel face positions and supplied screws are unverified. Front/rear spacers now adjust independently; their default 4.375 mm values still assume symmetric faces. | Binding, bearing preload, stripped threads or a fork attached to a stationary case feature. | Verify both output interfaces; measure each side separately; hand-assemble a fork with correct screw engagement and free movement before power. |
 | R3 — motion beyond sampled poses | Collision checks cover three poses and simplified bodies; they omit real cable bends, protruding fasteners and spacer-ring interactions. | Cable damage or a hard mechanical stop while the motor drives. | Route actual cables; move the supported unpowered leg through a conservative intended range; establish limits from observed clearance. Check additional CAD poses only where useful. |
 | R4 — loaded leg | Long hip bridge, fork plates and tail clamps have no printed/load evidence. Layer direction, support removal, bolt tightening and warm plastic can affect stiffness. | Deflection, slipping joints or print failure despite a valid STL. | Slice with suitable orientation/supports; inspect the first prints, then apply representative supported foot load and check movement/loosening. Revise locally if needed; no FEA required now. |
 | R5 — battery-powered multi-servo test | 60 Wh and the assumed pack size do not establish discharge rating, cell balance, mass or condition. | Excessive sag, hot wiring or damaged cells. | Read the actual label/specification, inspect and balance-check the pack; verify connector ratings and measure staged load/sag. Use a compatible balance charger. |
@@ -42,7 +41,7 @@ A later-stage issue does not block current documentation or a cheap fit coupon.
 | R9 — first commanded motion | Existing firmware drives PWM servos; ST3215 firmware, direction, offsets, limits and fault handling are absent. Default IDs may conflict; lost communication behavior is unqualified. | Unexpected movement, continued holding/heating, or collapse on torque removal. | Commission one unmounted servo and one unique ID at a time. Verify feedback, startup, timeouts, recovery and torque release; support the leg/robot during calibration and shutdown. |
 | R10 — choosing final mass or walking duty | Stall torque is not a continuous torque rating. Current total robot mass and sustained demand at discharged-pack voltage are unknown. | A robot that stands briefly but overheats, sags or cannot walk reliably. | Weigh the actual assembly; perform one useful stance torque estimate and supported loaded-leg duty test. Adjust stance/geometry or mass if measurements require it; do not treat 2 kg as a qualified limit. |
 | R11 — standing on four legs | No complete ST3215 chassis, handed leg layout, battery/board packaging or centre-of-mass/support check exists. Flat foot contact is aligned to the nominal stance only. | Inter-leg interference, tipping, insufficient ground clearance or edge contact/slip. | Lay out four legs and actual masses, revise kinematics for the new datum, and check a simple supported stance/weight shift before crawl. Test inexpensive foot pads if slipping appears. |
-| R12 — relying on automated qualification | Checker repeats some geometry as hardcoded arithmetic; CAD dimensions also repeat literals. Tray source and generator are now hash-bound; shared CAD/checker literals remain a limitation. Existing legacy firmware/release outputs remain in the repo. | A future edit or old workflow can appear valid while describing different hardware. | Read-only artifact verification and explicit legacy build/console guards are implemented. Make shared dimensions drive geometry/checks when revising CAD. Direct PlatformIO invocation or custom serial tools can bypass these entry-point guards. |
+| R12 — relying on automated qualification | Link/hip dimensions now drive geometry and parameter perturbations are checked. Nominal pose qualification and some fixed interface dimensions remain deliberately specific to this revision. Tray source and generator are now hash-bound; full swept and physical qualification remain outside these checks. Existing legacy firmware/release outputs remain in the repo. | A future edit or old workflow can appear valid while describing different hardware. | Read-only artifact verification and explicit legacy build/console guards are implemented. Keep geometry/checks coupled when revising CAD; use fit checks after exports. Direct PlatformIO invocation or custom serial tools can bypass these entry-point guards. |
 | R13 — ordering all twelve servos | Exact variant, kit contents and landed NZ cost are not confirmed. Quantity multiplies small price differences; power hardware and charger add cost. | Budget overrun or twelve incompatible kits. | Confirm standard 12 V variant and wheel kit with one sample, then price the complete quantity-adjusted BOM including freight/tax before bulk ordering. No supplier contact is needed for this review. |
 
 Manufacturer basis for R6: [Bus Servo Adapter A FAQ](https://docs.waveshare.com/Bus_Servo_Adapter_A/FAQ)
@@ -129,10 +128,20 @@ experiments remain the cheaper path to a working first prototype.
   a port. Intentional legacy work remains possible. Direct PlatformIO/custom
   serial tools are outside these guards; ST3215 firmware is still absent.
 - Geometry and power architecture are unchanged. R1–R11 physical/electrical
-  qualification and R13 landed-price checks remain open; duplicated geometry
-  values in R12 still need attention when the CAD is next revised.
+  qualification and R13 landed-price checks remain open; physical geometry/fit assumptions still need measured verification.
 
 Validation: fresh mesh/bore/contact checks and all six sampled intersections passed.
 Twelve artifact tests, twenty-one mocked console regressions, Python CLI refusal
 and both PowerShell preflight refusals passed. Verifier execution left all source,
 report and STL bytes unchanged. No serial port was opened or hardware flashed.
+
+## Mechanical refinement — MEC-171
+
+R1 has a cheap printable check: two29 mm grip-band clamp halves with the same
+mounting pattern as the default35 mm version. This reduces fit iteration cost;
+it does not establish the actual band shape, port clearance or retention force.
+R2 no longer requires equal front/rear spacer thicknesses: each is derived from
+its separately configurable wheel face. Both defaults remain provisional.
+R12 link/hip dimension drift is reduced by shared CAD parameters and independent
+mesh perturbation checks. Nominal geometry, bought hardware and sixteen installed
+prints remain unchanged; the coupons are alternatives, not additional leg parts.

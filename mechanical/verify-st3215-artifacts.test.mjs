@@ -13,7 +13,7 @@ function changedReport(edit){
  return name=>name==='mechanical/st3215-leg-check.json'?Buffer.from(JSON.stringify(report)):read(name);
 }
 test('current evidence passes without writes',()=>assert.match(verifyArtifacts(read),/^PASS/));
-for(const file of ['mechanical/st3215-leg.scad','mechanical/st3215-battery-tray.scad','mechanical/check-st3215-leg.mjs','mechanical/st3215-upper.stl','mechanical/st3215-battery-tray.stl']){
+for(const file of ['mechanical/st3215-leg.scad','mechanical/st3215-battery-tray.scad','mechanical/check-st3215-leg.mjs','mechanical/st3215-upper.stl','mechanical/st3215-shim-rear.stl','mechanical/st3215-clamp-fit29-top.stl','mechanical/st3215-battery-tray.stl']){
  test(`reject changed ${file}`,()=>assert.throws(()=>verifyArtifacts(changed(file)),/Stale validation/));
 }
 test('reject absent tray provenance',()=>assert.throws(()=>verifyArtifacts(changedReport(r=>delete r.tray_source_sha256)),/Missing\/invalid hash/));
