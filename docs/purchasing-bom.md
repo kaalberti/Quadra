@@ -232,3 +232,10 @@ PCB,four upper boards) replace the earlier generic four-tie mount allowance;
 leg ties are separate. Reuse existing stock before buying more. Print base+
 shelf working STLs only if adopting the option; manufacturing remains MFG-003.
 Guide:docs/electronics-carrier.md. Board fit and actual print mass are unmeasured.
+
+Preferred working electronics mount — MEC-168: three small single-level sleds,
+no added M3 fasteners. Up to ten narrow<=2.5mm ties (four frame/six board ties)
+replace the generic four or stacked eight electronics ties if adopted; leg
+ties remain separate. Do not buy the optional two-tier four M3 sets for this
+arrangement. Reuse suitable stock. Source/print/fit guide:docs/electronics-sleds.md.
+Actual board retention and sliced print masses stay pending; no release change.

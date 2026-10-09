@@ -42,3 +42,7 @@ MEC-167 now provides an optional two-tier printed carrier:
 [electronics carrier](electronics-carrier.md). Its specific strap plan replaces
 the generic four-tie allowance when adopted. Actual board fit/mass remain
 pending; no manufacturing or robot-manifest substitution.
+
+Preferred working attachment is now [three single-level sleds](electronics-sleds.md)
+using all four existing strap lanes. It replaces the stacked carrier when
+nominal single-level board/connector fit proves acceptable on actual hardware.

@@ -125,7 +125,7 @@ Overlay172-pad/tolerance/power checks, host regressions and embedded build pass.
 Explicit disarmed16-sample diagnostic keeps outputs disabled; no flash or readings.
 Sense positive must disconnect before ESP32 power; calibration/cutoff remain unset.
 
-Optional mechanical carrier:docs/electronics-carrier.md;two printable tiers,
-four M3x12 fasteners,all16 chassis fixings accessible.384 mesh passage checks
-and nominal board intersection pass. Solid CAD PETG79.8g;actual mass/fit TBD.
-Not adopted in the robot mass/print manifest; manufacturing remains MFG-003.
+Preferred working mount:docs/electronics-sleds.md;three single-level printed
+frames,no added M3 hardware.472 mesh checks and nominal board clearance pass.
+Solid PETG24.5g vs79.8g stacked fallback;actual board/strap/print fit pending.
+Not adopted in robot mass/manifest;complete2kg target and MFG-003 stay unchanged.

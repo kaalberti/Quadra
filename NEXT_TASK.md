@@ -1,13 +1,14 @@
-# MEC-167 — Removable two-tier electronics carrier
+# MEC-168 — Simpler single-level electronics mounts
 
-Create a simple printable working carrier for the provisional100 x80mm PAD2
-buffer board and owned ESP32/PCA9685 space claims. Use the current deck strap
-slots, insulating board supports, accessible underside wiring and modest M3
-hardware. Preserve all16 chassis fixing access paths. Do not invent actual
-board mounting-hole patterns or claim physical fit.
+Check whether rotating the ESP32/PCA9685 nominal board envelopes allows all
+three boards on the existing180 x110mm deck at one level. If it fits, make
+three small insulating strap-mounted frames using existing deck slots,
+without additional M3 fasteners. Preserve clearance above chassis screw heads;
+accept that unpowered removable boards must be lifted for screwdriver access.
 
-Completion: separate bed-oriented connected STLs, source CAD, assembly preview,
-independent mesh/passage/envelope checks, nominal board separation and source
-mass. Update the conditional buying list and parameters. Manufacturing and the
-93-piece integrated robot manifest remain unchanged until a build checkpoint.
-No detailed stress analysis, joint optimization, powered test or final PCB.
+Completion: source CAD,bed-oriented closed connected meshes,assembly preview,
+independent nominal fit/strap/support/fixing clearance checks and source mass.
+Compare against the two-tier working option and prefer this arrangement if
+simpler/lighter. Do not assume actual board holes,connector layout or strap
+clearance. Keep released manufacturing and robot mass/manifest unchanged.
+No repeated joint load analysis,full structural optimization or powered test.

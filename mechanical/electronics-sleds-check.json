@@ -1,0 +1,81 @@
+{
+  "closed_connected_bed_meshes": true,
+  "parts": [
+    {
+      "name": "perfboard",
+      "size_mm": [
+        102,
+        82,
+        8
+      ],
+      "placement_x_mm": 0,
+      "solid_PETG_g": 12.429388341072002,
+      "stl_sha256": "47bff7ca84abc57081b295fbc484174f6e4153c89e9816bedf9ca8ce773f88b6"
+    },
+    {
+      "name": "esp32",
+      "size_mm": [
+        36,
+        50,
+        8
+      ],
+      "placement_x_mm": -70,
+      "solid_PETG_g": 6.126606187189848,
+      "stl_sha256": "3386e3c01b348040c55b913dabf176f08300727fbe1c7e8221614f8ccac831f4"
+    },
+    {
+      "name": "pca9685",
+      "size_mm": [
+        33,
+        50,
+        8
+      ],
+      "placement_x_mm": 70,
+      "solid_PETG_g": 5.989446187189851,
+      "stl_sha256": "353d533f8a5d739f284df2e39706d9a92a780abfffb1f783f51090cdbe9f1c8a"
+    }
+  ],
+  "mesh_passage_checks": 472,
+  "deck_fixing_head_clearance_paths": 16,
+  "head_envelope_assumption_mm": {
+    "diameter": 7,
+    "height": 4
+  },
+  "pcb_underside_height_mm": 8,
+  "underside_clearance_above_frame_mm": 5,
+  "added_M3_mount_fasteners": 0,
+  "assembled_prints_bounds_mm": [
+    [
+      -88,
+      86
+    ],
+    [
+      -41,
+      41
+    ],
+    [
+      0,
+      8
+    ]
+  ],
+  "nominal_board_gap_mm": [
+    2.5,
+    5
+  ],
+  "total_solid_PETG_g": 24.5454407154517,
+  "two_tier_solid_PETG_g": 79.7988064242778,
+  "solid_PETG_reduction_g": 55.253365708826095,
+  "nominal_populated_height_above_deck_mm": 29.6,
+  "nominal_board_intersection": "empty CGAL, support faces relieved0.001mm",
+  "source_sha256": {
+    "prototype-electronics-sleds.scad": "a126b977221b70eb8a6f390ecc3d3883c8102d9ce0235578632e4178aea41b30",
+    "prototype-electronics-deck.scad": "dfb04924bbbf03f91c72fa74247743f3b59cccfbe09ab37431fd8aa080b158c9",
+    "prototype-electronics-sled-perfboard.stl": "47bff7ca84abc57081b295fbc484174f6e4153c89e9816bedf9ca8ce773f88b6",
+    "prototype-electronics-sled-esp32.stl": "3386e3c01b348040c55b913dabf176f08300727fbe1c7e8221614f8ccac831f4",
+    "prototype-electronics-sled-pca9685.stl": "353d533f8a5d739f284df2e39706d9a92a780abfffb1f783f51090cdbe9f1c8a"
+  },
+  "screwdriver_access_requires_board_removal": true,
+  "robot_manifest_adopted": false,
+  "physical_fit_verified": false,
+  "actual_board_dimensions_measured": false
+}

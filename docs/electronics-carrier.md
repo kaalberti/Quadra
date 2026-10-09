@@ -68,3 +68,8 @@ screen already exceeds2kg at2.178kg. This option is not added to the93-piece
 robot manifest or mass record. If adopted,use the electronics deck instead of
 the original deck,add these two prints and measured hardware/masses,and recheck
 complete2kg budget. Manufacturing remains the MFG-003 first-leg checkpoint.
+
+The simpler [single-level sleds](electronics-sleds.md) are now preferred for
+the working prototype because they fit the same nominal boards with less
+material,height and M3 hardware. This stack remains a fallback if actual
+connector/wire fit needs it; do not print/buy both options automatically.
