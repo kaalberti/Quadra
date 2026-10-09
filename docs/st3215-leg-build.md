@@ -54,7 +54,7 @@ MG996R[85,32,-120] datum. The lower tip has a flat20 x56 mm nominal contact surf
 contact pad; a temporary secured pad is adequate. Its attachment is untested; pad thickness shifts the contact datum. Local support is also needed beneath the lower foot crosspiece.
 No loaded limits or full swept collision range is released.
 
-Run node mechanical/check-st3215-leg.mjs for closed connected printable meshes,
+Run `node mechanical/verify-st3215-artifacts.mjs` to check existing artifact/source hashes without changing files. For fresh exports (overwrites working STLs/report), run node mechanical/check-st3215-leg.mjs for closed connected printable meshes,
 print-bed bounds,proper placement rotations,clamp bore access and independently calculated70/85 mm geometry.
 Recorded case clearance uses conservative rectangular envelopes at three sampled poses;
 real wheel faces,connectors,cables,screw heads and rear support require dry fit. Sample checks do not release a swept or loaded range.

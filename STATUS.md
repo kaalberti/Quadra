@@ -45,8 +45,9 @@ sense input/protection and low-battery control require revision. No cutoff works
 ## Design review
 Review:docs/design-review.md. Main gates are actual clamp/wheel fit, protected
 power distribution and single-servo ST3215 firmware. Proposed adapter is rated
-5A, so external parallel servo power is required. Review only; no design stage
-implemented. Existing CAD/report artifact hashes independently checked.
+5A, so external parallel servo power is required. Read-only artifact verification
+now binds both CAD sources/generator/STLs; legacy PWM build/console requires
+explicit opt-in. Physical fit, power qualification and bus firmware remain open.
 
 ## Immediate objective
 Check one servo/wheel/clamp fit and obtain real battery specifications. Continue

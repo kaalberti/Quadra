@@ -12,3 +12,8 @@ Active redesign: **ST3215 standard12V serial-bus servos +60 Wh conventional3S Li
 These are untested working prototypes. Manufacturing/MFG-003 and existing
 PWM firmware describe the previousMG996R design and are incompatible with
 ST3215. Do not use them as the new build/programming instructions.
+
+Read-only CAD artifact check: `node mechanical/verify-st3215-artifacts.mjs`.
+Risk register and mitigation status: [design review](docs/design-review.md).
+
+Verifier regression tests: `node --test mechanical/verify-st3215-artifacts.test.mjs` (in-memory changes; no CAD export).

@@ -176,7 +176,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", required=True, help="Explicit Windows COM port; servo rail OFF before connecting")
     parser.add_argument("--timing-log", help="New JSONL file for complete diagnostic replies; never overwritten")
+    parser.add_argument("--allow-legacy-pwm", action="store_true", help="Explicitly acknowledge MG996R/PCA9685 legacy operation; incompatible with ST3215")
     args = parser.parse_args()
+    if not args.allow_legacy_pwm:
+        parser.error("Legacy PWM console cannot control ST3215. Use --allow-legacy-pwm only for intentional legacy work.")
     import serial  # Already bundled with the existing PlatformIO Python environment.
     transport = serial.Serial(port=None, baudrate=115200, timeout=0.1, write_timeout=0.1)
     transport.dtr = False

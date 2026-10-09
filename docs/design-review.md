@@ -20,7 +20,7 @@ yet been designed or qualified.
 - [Power plan](../electronics/st3215-power-plan.md), [BOM](purchasing-bom.md)
   and [physical tests](../PHYSICAL_TESTS.md): planned components and tests,
   not implemented protection, actual current measurements or completed tests.
-- Current report hashes match the leg source, seven part STLs and tray STL.
+- Current report hashes match both CAD sources, the validation generator, seven part STLs and tray STL.
   This checks artifact identity; it does not repeat or extend the CAD checks.
 - No servo, battery, print, firmware or loaded leg has been physically validated.
 
@@ -42,7 +42,7 @@ A later-stage issue does not block current documentation or a cheap fit coupon.
 | R9 — first commanded motion | Existing firmware drives PWM servos; ST3215 firmware, direction, offsets, limits and fault handling are absent. Default IDs may conflict; lost communication behavior is unqualified. | Unexpected movement, continued holding/heating, or collapse on torque removal. | Commission one unmounted servo and one unique ID at a time. Verify feedback, startup, timeouts, recovery and torque release; support the leg/robot during calibration and shutdown. |
 | R10 — choosing final mass or walking duty | Stall torque is not a continuous torque rating. Current total robot mass and sustained demand at discharged-pack voltage are unknown. | A robot that stands briefly but overheats, sags or cannot walk reliably. | Weigh the actual assembly; perform one useful stance torque estimate and supported loaded-leg duty test. Adjust stance/geometry or mass if measurements require it; do not treat 2 kg as a qualified limit. |
 | R11 — standing on four legs | No complete ST3215 chassis, handed leg layout, battery/board packaging or centre-of-mass/support check exists. Flat foot contact is aligned to the nominal stance only. | Inter-leg interference, tipping, insufficient ground clearance or edge contact/slip. | Lay out four legs and actual masses, revise kinematics for the new datum, and check a simple supported stance/weight shift before crawl. Test inexpensive foot pads if slipping appears. |
-| R12 — relying on automated qualification | Checker repeats some geometry as hardcoded arithmetic; CAD dimensions also repeat literals. Tray source is not hash-bound in the report. Existing legacy firmware/release outputs remain in the repo. | A future edit or old workflow can appear valid while describing different hardware. | Make shared dimensions drive geometry/checks when revising CAD; bind tray source too. Clearly gate active versus legacy workflows and use read-only artifact checks for reviews. |
+| R12 — relying on automated qualification | Checker repeats some geometry as hardcoded arithmetic; CAD dimensions also repeat literals. Tray source and generator are now hash-bound; shared CAD/checker literals remain a limitation. Existing legacy firmware/release outputs remain in the repo. | A future edit or old workflow can appear valid while describing different hardware. | Read-only artifact verification and explicit legacy build/console guards are implemented. Make shared dimensions drive geometry/checks when revising CAD. Direct PlatformIO invocation or custom serial tools can bypass these entry-point guards. |
 | R13 — ordering all twelve servos | Exact variant, kit contents and landed NZ cost are not confirmed. Quantity multiplies small price differences; power hardware and charger add cost. | Budget overrun or twelve incompatible kits. | Confirm standard 12 V variant and wheel kit with one sample, then price the complete quantity-adjusted BOM including freight/tax before bulk ordering. No supplier contact is needed for this review. |
 
 Manufacturer basis for R6: [Bus Servo Adapter A FAQ](https://docs.waveshare.com/Bus_Servo_Adapter_A/FAQ)
@@ -114,3 +114,25 @@ verification to avoid accidental changes during a review.
 hardware, active ankles, foot-force sensors and mapped navigation. They should
 follow a demonstrated need. Perfboard auxiliaries, commodity modules and one-kit
 experiments remain the cheaper path to a working first prototype.
+
+## Mitigations implemented without hardware — RISK-001
+
+- **R12 partially mitigated:** `node mechanical/verify-st3215-artifacts.mjs`
+  checks both CAD sources, the generator and every expected STL against the
+  fresh report, including exact part names, paths and quantities. It is read-only;
+  stale or incomplete evidence fails. The generator checks both sources again
+  after the final export before recording their hashes. These hashes establish
+  recorded artifact identity, not physical safety or correctness of every checker.
+- **R9/R12 accidental legacy entry-point use reduced:** PowerShell build/console
+  wrappers now refuse unless `-AllowLegacyPwm` is explicit. The Python console
+  independently requires `--allow-legacy-pwm` before importing serial or opening
+  a port. Intentional legacy work remains possible. Direct PlatformIO/custom
+  serial tools are outside these guards; ST3215 firmware is still absent.
+- Geometry and power architecture are unchanged. R1–R11 physical/electrical
+  qualification and R13 landed-price checks remain open; duplicated geometry
+  values in R12 still need attention when the CAD is next revised.
+
+Validation: fresh mesh/bore/contact checks and all six sampled intersections passed.
+Twelve artifact tests, twenty-one mocked console regressions, Python CLI refusal
+and both PowerShell preflight refusals passed. Verifier execution left all source,
+report and STL bytes unchanged. No serial port was opened or hardware flashed.

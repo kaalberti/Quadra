@@ -1,4 +1,7 @@
 {
+  "schema_version": 2,
+  "checker_sha256": "7c10378d49555820e8d3ce1058d4a1f52662e0e338ba30409d54fa0c21bc1583",
+  "tray_source_sha256": "f8ad3f7f3afb1838c871d0ead6fc70acdc8b99209c523afc3118a3e37fa31ec0",
   "placement_rotation_determinants": [
     1,
     1
@@ -66,7 +69,7 @@
       66,
       11
     ],
-    "sha256": "ce7524bae3f5131bb9e0d0d37d3ced35998671091f8c542bfa606aafd1eabcd2",
+    "sha256": "aa931f5db517c5e794f6c469592faebcf94234bb67e19bf5eb8d5006e92e92ed",
     "pack_envelope_mm": [
       120,
       50,
@@ -80,7 +83,7 @@
       "part": "clamp-bottom",
       "file": "mechanical/st3215-clamp-bottom.stl",
       "quantity": 3,
-      "sha256": "d1cca32cd5324c8fd409c73e09c195fcf03bcc428d80ee8e87e68a5fcde901dc",
+      "sha256": "da3a64c273ac557eb469bf4b1622f593d8266ce4d6bfbe3179b852e5559c081e",
       "size_mm": [
         11,
         44,
@@ -92,31 +95,31 @@
       "part": "clamp-top",
       "file": "mechanical/st3215-clamp-top.stl",
       "quantity": 3,
-      "sha256": "3b91ee87384e8d7a3f0c7f6828c3a21bcfc0a984baa14ea42b70f0dbf0b978d1",
+      "sha256": "0c7a09497a366bce77928f13c3360c0775cf1bbbd2d02a17863bbdafef5a1723",
       "size_mm": [
         11,
         44,
         22
       ],
-      "solid_volume_mm3": 5341.355000960003
+      "solid_volume_mm3": 5341.355000960007
     },
     {
       "part": "upper",
       "file": "mechanical/st3215-upper.stl",
       "quantity": 1,
-      "sha256": "1e3fc7c39f0e8407435bbb49d4249e88809f0beb137459fc253b36ad821261ba",
+      "sha256": "d0069d0e6a5ee0f3fa264dd327c5cc5691db849c115e5498c7a73e7aca1bdbe0",
       "size_mm": [
         68.5,
         56,
         48
       ],
-      "solid_volume_mm3": 31835.678863355926
+      "solid_volume_mm3": 31835.67886335591
     },
     {
       "part": "lower",
       "file": "mechanical/st3215-lower.stl",
       "quantity": 1,
-      "sha256": "06ef8481d57b8e9f1bd5c81ac18e2d1767bee45abd048eb1738c7dcf88889d37",
+      "sha256": "f8e62e837c4894e41a746ecb9a5d562c8081c947be5c9c55e723671efac834ea",
       "size_mm": [
         104.7257,
         56,
@@ -128,19 +131,19 @@
       "part": "hip",
       "file": "mechanical/st3215-hip.stl",
       "quantity": 1,
-      "sha256": "2b58bd7ff89e74084d52f293bd961bb3d9e051225774f5f7272e41e8c054505b",
+      "sha256": "fd4798464af511c97ee38e36f44df30a324abd3cebacdf4326b65409dafd6e5a",
       "size_mm": [
         137,
         49,
         41.5
       ],
-      "solid_volume_mm3": 24877.034533015987
+      "solid_volume_mm3": 24877.034533015973
     },
     {
       "part": "mount",
       "file": "mechanical/st3215-mount.stl",
       "quantity": 1,
-      "sha256": "40f9071eb741ebcdd3d3976ada4407fc9a6e382fbbc44244bbd4a01cd27e722e",
+      "sha256": "ec1f4170504478e80c2ba60ee0b997048b760be4b2607e54c26d1dce1617a7c8",
       "size_mm": [
         30,
         60,
@@ -152,7 +155,7 @@
       "part": "shims",
       "file": "mechanical/st3215-shims.stl",
       "quantity": 6,
-      "sha256": "d8eeec949668e0372b617d031160c7219d67ac13a3ead4dd41f4006b6b685a09",
+      "sha256": "2e13afc19a29ae4b543f87951aac1f8ad525a6373e4a432272564c61f862ec0b",
       "size_mm": [
         19.2,
         19.2,

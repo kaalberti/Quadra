@@ -73,7 +73,7 @@ class TimingConsole(unittest.TestCase):
         folder = Path(tempfile.mkdtemp(prefix='timing-fault-test-', dir=output)); log = folder / 'capture.jsonl'
         self.transport.timing_lines = [b'TIMING result=CLEANUP_FAILED high_us=1498 period_us=19988 samples=3\n', FAULT]
         serial = types.SimpleNamespace(Serial=lambda **kwargs: self.transport)
-        argv = ['bench_console.py', '--port', 'FAKE-NO-HARDWARE', '--timing-log', str(log)]
+        argv = ['bench_console.py', '--allow-legacy-pwm', '--port', 'FAKE-NO-HARDWARE', '--timing-log', str(log)]
         with patch.dict(sys.modules, {'serial': serial}), patch.object(sys, 'argv', argv), patch('builtins.input', side_effect=['timing rail-off no-servos', 'quit']), patch('builtins.print'), patch.object(bench_console.time, 'sleep'):
             bench_console.main()
         result = json.loads(log.read_text())
@@ -111,7 +111,7 @@ class TimingConsole(unittest.TestCase):
         output = ROOT / 'test-output'; output.mkdir(exist_ok=True)
         folder = Path(tempfile.mkdtemp(prefix='timing-log-test-', dir=output)); log = folder / 'capture.jsonl'
         serial = types.SimpleNamespace(Serial=lambda **kwargs: self.transport)
-        argv = ['bench_console.py', '--port', 'FAKE-NO-HARDWARE', '--timing-log', str(log)]
+        argv = ['bench_console.py', '--allow-legacy-pwm', '--port', 'FAKE-NO-HARDWARE', '--timing-log', str(log)]
         with patch.dict(sys.modules, {'serial': serial}), patch.object(sys, 'argv', argv), patch('builtins.input', side_effect=['timing rail-off no-servos', 'quit']), patch('builtins.print'), patch.object(bench_console.time, 'sleep'):
             bench_console.main()
         lines = log.read_text().splitlines(); self.assertEqual(len(lines), 1)

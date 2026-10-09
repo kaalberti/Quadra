@@ -10,7 +10,7 @@ servo voltage and PSU capacity. Keep the servo rail OFF during setup/reset.
 
 ## Build and tests
 
-From the repository, run `firmware/build.ps1` and `firmware/test.ps1`.
+The build wrapper refuses by default. For intentional MG996R/PCA9685 reference work only, use `firmware/build.ps1 -AllowLegacyPwm`; host tests remain `firmware/test.ps1`. The PowerShell console requires `-AllowLegacyPwm`, and direct Python console use requires `--allow-legacy-pwm`. These do not make this firmware compatible with ST3215. Direct PlatformIO/custom tools can bypass these entry-point guards.
 For a new checkout on this Windows workstation, run
 `firmware/setup-local-tools.ps1` first. It copies the existing PlatformIO
 platform/packages locally and downloads the pinned, checksum-verified host
@@ -68,7 +68,7 @@ Use the existing PlatformIO Python environment, for example:
 
 ```powershell
 $env:PYTHONDONTWRITEBYTECODE='1'
-& C:\Users\Kyle\.platformio\penv\Scripts\python.exe firmware/bench_console.py --port COM5
+& C:\Users\Kyle\.platformio\penv\Scripts\python.exe firmware/bench_console.py --port COM5 --allow-legacy-pwm
 ```
 
 Substitute your verified port. Keep servo power OFF when opening the port:

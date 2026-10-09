@@ -1,17 +1,16 @@
-# REV-001 — Review the current ST3215 prototype design
+# RISK-001 — Guard active artifacts and incompatible legacy firmware
 
-Create docs/design-review.md covering risks, assumptions, future work and
-practical improvements against the current CAD, power plan, BOM and test evidence.
-Prioritize by the milestone affected, with cheap independent checks suitable for
-a hobby prototype. Verify relevant public manufacturer limits. Link the review
-from STATUS.md and keep BACKLOG.md concise.
+Reduce R12 and the accidental legacy-use portion of R9 without physical hardware.
+Add a read-only current-artifact verifier; bind both CAD sources and the generator
+to fresh validation evidence; require explicit legacy opt-in at PWM build/console
+entry points. Preserve current geometry and all physical qualification caveats.
 
-Acceptance: each important risk has evidence, consequence and a next check;
-assumptions are distinguished from verified facts; future work follows the
-one-servo / one-leg / four-leg progression. Check existing CAD/report hashes
-without regenerating outputs, and check documentation links and Git diff.
+Acceptance: fresh existing mesh/clearance checks pass; read-only verification
+passes without altering artifacts and rejects changed sources, meshes, generator
+or incomplete manifests. Legacy entry points reject default use before tools or
+serial I/O. Update review/status/backlog, commit and push the coherent checkpoint.
 
-Scope: review and documentation only. No CAD, firmware, purchasing, physical
-qualification or manufacturing release. Do not start the following stage.
+Scope excludes mechanical redesign, new bus firmware, powered tests, purchases,
+and manufacturing release. Do not start the next engineering stage.
 
-Completed: prioritized register written; manufacturer adapter limit verified; existing source/STL hashes and local links checked. No following engineering stage started.
+Completed: fresh seven-part/tray mesh and six sampled intersection checks pass; read-only verifier and twelve fault-injection tests pass without artifact writes; twenty-one console regressions, Python CLI refusal and both PowerShell preflight guards pass. No following stage started.
