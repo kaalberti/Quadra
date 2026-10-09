@@ -1,0 +1,240 @@
+{
+  "task": "MEC-172",
+  "inputs_sha256": {
+    "mechanical/st3215-chassis.scad": "ef9b90039bee4ca8bc9a42b276bdc9330b56bb0836ea5f10ff9430156805cf33",
+    "mechanical/st3215-leg.scad": "77b04ddebfadd92d4d6dde83192d3b0db0aaf3cf631d49e66836be11e5b3c0bf",
+    "mechanical/st3215-battery-tray.stl": "3e05c79d34851d5449bad2c86c2022b23108993e9b153bfc1b619908c6bd1b78",
+    "mechanical/st3215-hip.stl": "1785dd6571e21efb9045300e4153a4af787e2428749dd1e2665157627f9cc442",
+    "mechanical/st3215-mount.stl": "ec1f2a7efb02baba422b67f04774f4135cf1cb578d3ecf7372299c78f30d6b53",
+    "mechanical/st3215-leg-check.json": "b3d917333a92e490c66cebd145f197ba98715601e95f70364297863b2903780f",
+    "mechanical/check-st3215-chassis.mjs": "d62bd0e82f53ed8e84589fe06eef62b6694dd3920c58be9c00692561da8bb8f2"
+  },
+  "parts": [
+    {
+      "part": "body",
+      "file": "mechanical/st3215-chassis-body.stl",
+      "quantity": 1,
+      "sha256": "cbe6ace917c08679d976117f6030c0ffe901645bbc29fac4b6b6e9be38132e92",
+      "size_mm": [
+        175,
+        160,
+        42
+      ],
+      "solid_volume_mm3": 178011.47546358
+    },
+    {
+      "part": "deck",
+      "file": "mechanical/st3215-chassis-deck.stl",
+      "quantity": 1,
+      "sha256": "5535910ed927ae2548a5f47e49a703e59749a94d18a6a30b9ce9757856d36ec5",
+      "size_mm": [
+        140,
+        140,
+        4
+      ],
+      "solid_volume_mm3": 74815.04892736001
+    },
+    {
+      "part": "riser",
+      "file": "mechanical/st3215-chassis-riser.stl",
+      "quantity": 4,
+      "sha256": "24fc721ed560f14ca651c885561f23966561c6d781c473612db9b60d3e23ea0f",
+      "size_mm": [
+        10,
+        10,
+        51
+      ],
+      "solid_volume_mm3": 3492.314236631877
+    }
+  ],
+  "fixture_holes_world_mm": [
+    [
+      87.5,
+      -76,
+      -16
+    ],
+    [
+      87.5,
+      -24,
+      -16
+    ],
+    [
+      87.5,
+      -76,
+      -38
+    ],
+    [
+      87.5,
+      -24,
+      -38
+    ],
+    [
+      87.5,
+      24,
+      -16
+    ],
+    [
+      87.5,
+      76,
+      -16
+    ],
+    [
+      87.5,
+      24,
+      -38
+    ],
+    [
+      87.5,
+      76,
+      -38
+    ],
+    [
+      -87.5,
+      -24,
+      -16
+    ],
+    [
+      -87.5,
+      -76,
+      -16
+    ],
+    [
+      -87.5,
+      -24,
+      -38
+    ],
+    [
+      -87.5,
+      -76,
+      -38
+    ],
+    [
+      -87.5,
+      76,
+      -16
+    ],
+    [
+      -87.5,
+      24,
+      -16
+    ],
+    [
+      -87.5,
+      76,
+      -38
+    ],
+    [
+      -87.5,
+      24,
+      -38
+    ]
+  ],
+  "poses": [
+    {
+      "outward_abduction_deg": 0,
+      "leg_aabbs_disjoint": true,
+      "hip_body_intersection_empty": true,
+      "foot_reference_mm": [
+        [
+          199.99988585785678,
+          -50,
+          -119.9999578379956
+        ],
+        [
+          199.99988585785678,
+          50,
+          -119.9999578379956
+        ],
+        [
+          -199.99988585785678,
+          -49.99999999999999,
+          -119.9999578379956
+        ],
+        [
+          -199.99988585785678,
+          50.00000000000001,
+          -119.9999578379956
+        ]
+      ]
+    },
+    {
+      "outward_abduction_deg": 5,
+      "leg_aabbs_disjoint": true,
+      "hip_body_intersection_empty": true,
+      "foot_reference_mm": [
+        [
+          199.99988585785678,
+          -60.45868545505817,
+          -119.54332176944422
+        ],
+        [
+          199.99988585785678,
+          60.45868545505817,
+          -119.54332176944422
+        ],
+        [
+          -199.99988585785678,
+          -60.45868545505816,
+          -119.54332176944422
+        ],
+        [
+          -199.99988585785678,
+          60.45868545505818,
+          -119.54332176944422
+        ]
+      ]
+    }
+  ],
+  "electronics_reserved_spaces": [
+    {
+      "origin": [
+        -60,
+        -50,
+        12
+      ],
+      "size": [
+        65,
+        35,
+        20
+      ]
+    },
+    {
+      "origin": [
+        10,
+        -50,
+        12
+      ],
+      "size": [
+        50,
+        35,
+        20
+      ]
+    },
+    {
+      "origin": [
+        -60,
+        0,
+        12
+      ],
+      "size": [
+        120,
+        45,
+        25
+      ]
+    }
+  ],
+  "battery_envelope_mm": [
+    120,
+    50,
+    20
+  ],
+  "battery_to_deck_gap_mm": 27,
+  "nominal_floor_ground_clearance_mm": 72,
+  "geometric_center_support_margin_mm": 50,
+  "actual_center_of_mass_known": false,
+  "body_solid_petg_g": 330.8267688584597,
+  "complete_robot_mass_g": null,
+  "physical_fit_verified": false,
+  "loaded_range_released": false,
+  "limitations": "Two clearance poses only. Hub relief checked by actual mesh intersection; other body/leg and inter-leg separations use conservative AABBs. Hardware protrusions, cable bends and actual boards omitted. COM/loaded strength and gait remain unqualified."
+}

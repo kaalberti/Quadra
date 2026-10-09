@@ -10,7 +10,9 @@ No listed test has been performed. Current CAD is provisional.
    spacers and wheel thread engagement. Do not force clamp or preload shaft.
 3. Dry assemble complete secured bench leg. Check both wheel attachments,
    bolt/tool access,cables and low-angle travel before powered testing. Existing
-   MG996R manufacturing pack/fit records do not apply.
+   MG996R manufacturing pack/fit records do not apply. For the new chassis,
+   verify hip reliefs, sixteen fixture bolts, tray fasteners/straps and removable
+   deck access; confirm real boards/USB/leads fit before repeating four legs.
 4. Read actual battery label:3S conventionalLiPo,capacity,C/current rating,
    dimensions,mass,connector. Inspect condition and individual cell voltages.
    Check charger,main fuse,disconnect and distribution ratings before use.

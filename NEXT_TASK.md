@@ -1,17 +1,19 @@
-# MEC-171 — Fit-tunable ST3215 leg interfaces
+# MEC-172 — Printable ST3215 four-leg chassis layout
 
-Retain current nominal leg geometry and hardware architecture. Make upper/lower
-lengths and hip offset drive the CAD, allow separate front/rear wheel spacer
-thicknesses, and provide small 29 mm grip-band clamp coupons alongside the
-conservative 35 mm default. Avoid guessing the actual case/ports or rear support.
+Integrate the four current legs without changing their geometry. Create a
+provisional 175 x160 mm chassis with matching hip fixture holes, central battery
+tray and removable generic electronics deck. Use proper rotations and identical
+leg prints. Record the packaging change from the original 180 x110 mm target.
 
-Check default and coupon meshes/bore access, independently check spacer fit and
-that parameter changes move the intended interfaces. Regenerate source-bound
-validation and preview; update build guide, parameters, risk register and status.
-No new power/control stage, purchases or manufacturing release.
+Export chassis/deck/printed riser STLs and full assembly preview. Check closed,
+connected bed meshes, mounting bores, transform handedness, nominal foot support
+and conservative body/leg clearance. Check only useful additional poses; no full
+swept range or gait qualification. Keep real hardware envelopes provisional.
+Update BOM, build guide, parameters, risk register and STATUS afterward.
 
-Acceptance: existing three sampled collision poses pass; all current print parts
-and coupons are connected, closed and bed-oriented; adjustable parameters affect
-actual geometry. Actual servo fit remains provisional until tested.
+Acceptance: printable parts and actual fixture-hole coordinates independently
+checked; four placed nominal legs fit with the assumed battery/deck; unsupported
+fit/current/mass claims remain open. No powered tests, purchases, new firmware or
+manufacturing release. Do not start the following stage.
 
-Completed: ten default/fit-coupon meshes and tray pass; six sampled intersections are empty; grip-coupon bores and five mesh parameter perturbations pass; fourteen artifact regression tests pass. Preview visually inspected. No following stage started.
+Completed: three printable meshes, actual leg/chassis fixture bores, proper four-leg placement, deck fastener access and nominal/5-degree clearances pass. Leg mesh/fit checks and fourteen artifact regressions pass; read-only chassis verification rejects stale evidence. Final preview inspected. No following stage started.

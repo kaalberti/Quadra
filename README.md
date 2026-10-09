@@ -17,3 +17,6 @@ Read-only CAD artifact check: `node mechanical/verify-st3215-artifacts.mjs`.
 Risk register and mitigation status: [design review](docs/design-review.md).
 
 Verifier regression tests: `node --test mechanical/verify-st3215-artifacts.test.mjs` (in-memory changes; no CAD export).
+
+- Complete working chassis assembly: [st3215-chassis.scad](mechanical/st3215-chassis.scad).
+- Chassis build/layout: [build guide](docs/st3215-chassis-build.md).

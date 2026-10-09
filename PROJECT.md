@@ -9,7 +9,7 @@ structural optimization.
 - Four legs, three DOF each: hip abduction, hip pitch, knee pitch.
 - Passive replaceable feet; indoor flat-floor testing first.
 - Retain70 mm upper and85 mm lower links where practical.
-- Nominal body180 x110 mm; packaging may grow if simpler.
+- Provisional ST3215 chassis175 x160 mm; packaging may change after real fit tests.
 - Preferred complete operating mass2 kg. Heavier is acceptable within measured
   servo/power load and duty capability; qualified maximum remains TBD.
 - Body frame+x forward,+y left,+z up. Existing joint signs retained.

@@ -40,7 +40,7 @@ A later-stage issue does not block current documentation or a cheap fit coupon.
 | R8 — unattended or prolonged battery operation | No low-battery protection works yet. Pack voltage can hide a weak cell. Existing manual ADC sense requires sense-positive disconnection before MCU power-off. | Overdischarge or back-powering an unpowered ESP32 input. | Use individual-cell monitoring and manual observation initially; implement supported low-battery stop and safe off-state sensing before leaving the pack connected. Qualify thresholds against the actual pack. |
 | R9 — first commanded motion | Existing firmware drives PWM servos; ST3215 firmware, direction, offsets, limits and fault handling are absent. Default IDs may conflict; lost communication behavior is unqualified. | Unexpected movement, continued holding/heating, or collapse on torque removal. | Commission one unmounted servo and one unique ID at a time. Verify feedback, startup, timeouts, recovery and torque release; support the leg/robot during calibration and shutdown. |
 | R10 — choosing final mass or walking duty | Stall torque is not a continuous torque rating. Current total robot mass and sustained demand at discharged-pack voltage are unknown. | A robot that stands briefly but overheats, sags or cannot walk reliably. | Weigh the actual assembly; perform one useful stance torque estimate and supported loaded-leg duty test. Adjust stance/geometry or mass if measurements require it; do not treat 2 kg as a qualified limit. |
-| R11 — standing on four legs | No complete ST3215 chassis, handed leg layout, battery/board packaging or centre-of-mass/support check exists. Flat foot contact is aligned to the nominal stance only. | Inter-leg interference, tipping, insufficient ground clearance or edge contact/slip. | Lay out four legs and actual masses, revise kinematics for the new datum, and check a simple supported stance/weight shift before crawl. Test inexpensive foot pads if slipping appears. |
+| R11 — standing on four legs | A working ST3215 chassis/rotated leg layout now exists with provisional battery/board spaces and geometric four-foot support. Actual mass/COM, hardware fit and loaded motion remain untested. Flat foot contact is aligned to the nominal stance only. | Inter-leg interference, tipping, insufficient ground clearance or edge contact/slip. | Lay out four legs and actual masses, revise kinematics for the new datum, and check a simple supported stance/weight shift before crawl. Test inexpensive foot pads if slipping appears. |
 | R12 — relying on automated qualification | Link/hip dimensions now drive geometry and parameter perturbations are checked. Nominal pose qualification and some fixed interface dimensions remain deliberately specific to this revision. Tray source and generator are now hash-bound; full swept and physical qualification remain outside these checks. Existing legacy firmware/release outputs remain in the repo. | A future edit or old workflow can appear valid while describing different hardware. | Read-only artifact verification and explicit legacy build/console guards are implemented. Keep geometry/checks coupled when revising CAD; use fit checks after exports. Direct PlatformIO invocation or custom serial tools can bypass these entry-point guards. |
 | R13 — ordering all twelve servos | Exact variant, kit contents and landed NZ cost are not confirmed. Quantity multiplies small price differences; power hardware and charger add cost. | Budget overrun or twelve incompatible kits. | Confirm standard 12 V variant and wheel kit with one sample, then price the complete quantity-adjusted BOM including freight/tax before bulk ordering. No supplier contact is needed for this review. |
 
@@ -145,3 +145,14 @@ its separately configurable wheel face. Both defaults remain provisional.
 R12 link/hip dimension drift is reduced by shared CAD parameters and independent
 mesh perturbation checks. Nominal geometry, bought hardware and sixteen installed
 prints remain unchanged; the coupons are alternatives, not additional leg parts.
+
+## Chassis layout — MEC-172
+
+R11 packaging uncertainty is reduced by a printable four-leg layout with matching
+hip fixture holes, rotating-hub reliefs, low central battery and removable generic
+electronics deck. Two clearance poses and a geometric four-foot support check
+are available. This does not establish loaded strength, actual COM, three-foot
+support or walking range. Real electronics, battery leads and bolt protrusions
+remain physical checks. See [chassis build guide](st3215-chassis-build.md).
+The widened175 x160 mm body and long carrier footprint trade compactness for
+reuse and simple assembly; mass/servo duty still need qualification.

@@ -106,6 +106,8 @@ module assembly(){
   }
  }
 }
+// Set leg_library=true before including this file to reuse modules without output.
+if (is_undef(leg_library) || !leg_library) {
 if(part=="assembly") assembly();
 else if(part=="clamp-bottom") clamp_print();
 else if(part=="clamp-top") clamp_print(true);
@@ -120,6 +122,7 @@ else if(part=="clamp-fit29-top") clamp_print(true,29);
 else if(part=="collision") intersection(){printed_world();cases_world();}
 else if(part=="pair-collision") pair_collision();
 else assert(false,"Unknown part");
+}
 
 
 module cases_world(){

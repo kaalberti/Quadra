@@ -2,7 +2,7 @@
 Last updated:2026-10-09
 
 ## Current milestone
-ST3215 first-leg CAD with configurable fit interfaces and printable fit coupons.
+ST3215 four-leg working chassis layout; first-leg interfaces remain untested.
 User selected standard12V ST3215 and inexpensive60 Wh conventional3S LiPo.
 No hardware ordered,tested,flashed or physically validated.
 
@@ -22,6 +22,17 @@ No hardware ordered,tested,flashed or physically validated.
 - Wheel faces/hardware/rear support and real cable clearance remain unverified.
 - Old MG996R mass estimate2.178 kg is not a current ST3215 estimate; battery and
   servo mass await actual data.2 kg is preferred,qualified maximum TBD.
+
+## Four-leg chassis layout
+- Assembly:mechanical/st3215-chassis.scad; guide:docs/st3215-chassis-build.md.
+- Provisional175 x160 mm floor/end-wall body,rotated rear legs; identical leg prints.
+- Low central battery tray; removable140 mm deck on four51 mm printed risers.
+- Matching J1 fixture holes and34 mm rotating-hub reliefs; commodity M3 bolts.
+- Closed/connected bed meshes and bores checked; nominal and5 deg outward
+  abduction clearances checked using conservative boxes and actual hip meshes.
+- Electronics blocks reserve space only; real modules,leads,fasteners and COM TBD.
+- Chassis/deck/risers solid-PETG estimate331 g; complete measured mass unknown.
+- Current layout71 installed prints including battery tray; no manufacturing release.
 
 ## Power/control direction
 Protected switched3S battery bus directly supplies ST3215; separate5V logic buck.
