@@ -1,3 +1,5 @@
+> Superseded MG996R/PWM design reference. Active design is ST3215 12V with3S power; see README.md,docs/st3215-leg-build.md and electronics/st3215-power-plan.md. These quantities,interfaces and mass estimates are not the current ST3215 design.
+
 # Servo-qualified operating mass — MEC-169
 
 The user permits additional weight if the servos can handle it. Complete2kg

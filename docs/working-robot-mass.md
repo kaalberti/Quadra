@@ -1,3 +1,5 @@
+> Superseded MG996R/PWM design reference. Active design is ST3215 12V with3S power; see README.md,docs/st3215-leg-build.md and electronics/st3215-power-plan.md. These quantities,interfaces and mass estimates are not the current ST3215 design.
+
 # Current integrated robot mass screen
 
 The active93-piece integrated plan estimates2.178kg. This exceeds the preferred

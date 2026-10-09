@@ -1,245 +1,43 @@
-# Purchasing BOM — Rev A working plan (2026-10-09)
+# Buying BOM — active ST3215 /3S design
+Last updated:2026-10-09
 
-Current first-leg kit: MFG-003 integrated-bench-1; see manufacturing/BOM.md.
-Earlier bench-3 quantities below are an archived reference, not additional purchases.
+Buy/test one actuator first; the working leg needs three. User-selected12V
+ST3215 replaces MG996R. Old MG996R manufacturing hardware and AHCT/PCA buffer
+parts are no longer the active leg purchase list. DigiKey preferred for standard
+electronics; actuator-specific parts may need Waveshare/compatible suppliers.
 
-Maintain this file when purchased parts or quantities change. This is a staged
-shopping list, not a purchase order. Prices are planning caps, not verified
-retail quotations. No purchases or new ownership are inferred. The user already
-has a multimeter, adjustable60V/5A supply, basic load cells and access to a
-Creality K2 Pro. ESP32-S3 N16R8 and Adafruit PCA9685 boards are owned;
-no servos/mechanical hardware are ordered. Supply model remains unknown.
-
-## Buy first for fit checks
-
-| Part | Quantity | Specification / cost cap |
-| --- | ---: | --- |
-| Positional MG996R servo | 1 | Provisional40.7 x19.7 x42.9mm envelope; supplied horn and original centre screw; NZ$25–35 target. Avoid continuous-rotation variants. |
-| Commodity624 bearing | 1 | 4mm bore x13mm OD x5mm width; NZ$3 allocation, not retail quote |
-| PLA+ or PETG | As needed | Use existing filament; print coupons first |
-
-Servo source: [TowerPro MG996R](https://towerpro.com.tw/product/mg996r/).
-Bearing boundary source: [SKF624](https://www.skf.com/ro/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-624-2RS1?failover=true).
-These were checked in previous public-manufacturer tasks. Actual delivered price,
-model, ear shape and horn fit are not locked. Test one before a quantity order.
-
-## Archived bench-3 hardware reference
-
-Counts include J1 and BOTH pitch joints, foot, guide and one bench adapter. They replace
-previous upper-leg/bench-joint lists; do not add those lists again. Chassis parts
-are excluded. Machine-readable roles: mechanical/three-dof-hardware.json.
-
-| Purchased item | Total needed | Purpose |
-| --- | ---: | --- |
-| Positional servos, supplied horns/centre screws | 3 | Includes first fit-check servo |
-| 624 bearings | 3 | Includes fit-check bearing; one per joint |
-| M3 x40 through bolts | 4 | J1 and J2 case clamps |
-| M3 x20 through bolts | 12 | J1 cradle/support/bench4, J2 cradle/support/carrier4, carrier end tabs4 |
-| M3 x16 through bolts | 9 | Three retainers6, foot2, cable guide1 |
-| M3 x12 through bolts | 4 | Knee mounting ears; check actual ear thickness |
-| M3 x70 through bolts | 2 | Upper plate/saddle/knee rear support; replaces old x40 saddle bolts |
-| M3 x90 through bolts | 4 | Two bridges; or four90mm M3 threaded rods with four extra head-side nuts |
-| M3 nuts | 35 | Locking nuts where suitable;39 if using bridge rods |
-| M3 ordinary flat washers | 69 | Small6mm OD at close base/saddle positions |
-| M3 backing washer,12mm OD | 1 | Under upper-plate window for cable guide; replaces one ordinary washer |
-| M4 x35 socket-head pivot screws | 3 | Verify heads fit7.5mm diameter x4.5mm depth recesses |
-| M4 pivot locking nuts and washers | 3 each | Bearing inner-ring retention |
-| M2 x10 horn through bolts and nuts | Up to12 each | Actual supplied horn pattern/thickness sets count and length |
-| M2 washers | Up to24 | Check tips/nuts clear servo case |
-| Inner-ring spacer stacks | 8mm,8mm,10mm,3mm,3mm,3mm | Printed parts supplied; commodity metal substitutes optional; check only inner-ring contact |
-| Adhesive rubber/EVA pad | 1 | Cut18 x8 x1mm;1mm thickness gives85mm nominal contact radius |
-| Small cable ties | 4 | Cable guide; leave slack through joint motion |
-
-Allow NZ$25 for initial small-hardware packs, then verify delivered prices.
-This is an allowance, not an itemized quote. Buy a few spare fasteners. Supplied
-servo centre screws are NOT substituted with the horn through-bolt hardware.
-
-## Bench-only purchases / reusable workshop items
-
-| Item | Quantity | Specification |
-| --- | ---: | --- |
-| Rigid vertical board/bracket | 1 | Scrap material acceptable; fixture itself not supplied by CAD |
-| M4 standoffs/spacers | 2 |40mm length, maximum10mm OD; keeps board behind rear-arm space |
-| M4 anchor bolts | 2 | Example x70 for a12mm board; select length for actual board and nut engagement |
-| M4 nuts and nut-side washers | 2 each | Anchor heads seat directly in recessed adapter pockets |
-
-These are fixture parts, not multiplied into the robot BOM. The board face is
-40mm behind the adapter's back face. Confirm bench anchoring and fork clearance
-before any loading; this is not a powered-test stability approval.
-
-## Proposed bench control purchases — verify existing hardware first
-
-| Item | Quantity | Planning allowance NZ$ | Requirement |
-|---|---:|---:|---|
-| Adafruit PCA9685 breakout | 1 owned | 0 additional |3.3V logic/pullups, accessible OE; external servo distribution |
-| SN74AHCT125N DIP buffer and passives | 1 set | 5 |0.1uF ceramic,220ohm/1kohm/10kohm resistors; see wiring |
-| Copper wire, rated terminals, DC cutoff and fuse holder/fuses | 1 set | 20 |10A main path,2A branch minimum;18/22AWG proposed |
-| ESP32-S3 N16R8 development board | 1 owned | 0 additional | Header mapping to verify |
-
-NZ$25 remaining bench-control allowance excludes the two owned boards;
-this is a planning allocation, not a price quote or purchase commitment.
-These items sit inside the existing other-parts budget. The multimeter and
-bench supply are already owned; supply is rated5A and is for staged testing.
-MG996R is the provisional choice for all12 leg joints; MG90S is not suitable
-for these weight-bearing joints and adds no current purchase requirement.
-Buy no battery, twelve-servo regulator or custom PCB at this stage.
-
-## Planned robot quantities — wait before buying totals
-
-| Item | One3-DOF leg | Four-leg robot | Status |
+| Item | First trial /leg | Full robot | Selection /cost |
 | --- | ---: | ---: | --- |
-| Positional servos with horns | 3 | 12 | Architecture count; model/performance provisional |
-| Passive support bearings | 3 | 12 planned |624 currently used; J1 bench package exists; chassis fit unfinished |
-| Remaining fasteners, inserts, feet | TBD | TBD | Update as J1/chassis are designed; do not multiply bench kit by12 |
-| ESP32-S3 N16R8 and Adafruit PCA9685 | Owned | Owned | No additional controller/PWM purchase planned |
-| Battery, power distribution, BEC/regulator, cables | TBD | TBD | Robot electrical stage deferred; bench harness defined separately |
+| ST3215 standard12V/30 kg.cm bus servo |1 then3|12|Selected model; landed NZD quote TBD |
+| Compatible front/rear wheels |2/6|24|Verify supplied kit and rear-support behavior |
+| Wheel retaining/mounting screws |Kit,up to24 per leg plus centres|Up to96 plus centres|Thread/length TBD; use supplied correct hardware |
+| TTL half-duplex bus adapter |1|1 initially|Waveshare Bus Servo Adapter A candidate; no all-servo power through it |
+| Servo bus cables and power-injection harness |For1 then3|12 joints|Actual pinout/current rating and lengths TBD |
+| Conventional3S60 Wh LiPo |Not needed for PSU trial|1|User access; 120 x50 x20 mm assumed;mass,connector,discharge rating TBD |
+|3S-compatible balance charger |1|1|Needed if not already available; model/cost TBD |
+| Main fuse/holder and servo disconnect |Bench protection then robot kit|1 each|Rated and coordinated with real pack/wires; value TBD |
+| Parallel power distribution and branch protection |For one leg|4 legs|40A main capacity screen; actual ratings TBD |
+|3S-to5V logic buck |USB initially|1|Module/current capability TBD; DigiKey preferred |
+| Cell-voltage monitor/alarm |Before battery use|1|3S balance connector compatible; part TBD |
+| M3x60 through bolts/plain nuts |4 each per leg|16 each|Provisional J1/J2 mounting stacks |
+| M3x65 through bolts/plain nuts |2 each per leg|8 each|Provisional J3 fork/clamp stack |
+| M3 ordinary washers |12 external+4 internal per leg|64|Internal0.5 mm assumed; check actual stack |
+| J1 fixture/chassis through bolts/nuts |4|16|Length depends on fixture/chassis; TBD |
+| Rubber/EVA foot pads |1|4|20 x56 mm cheap replaceable contact; attachment to suit |
+| Printed ST3215 parts |16|Robot count not released|Use docs/st3215-leg-build.md |
 
-Servo cap:3 x NZ$25–35 = NZ$75–105 per leg;12 x NZ$25–35 = NZ$300–420.
-The existing allocation remains NZ$300 for other parts plus NZ$80 reserve,
-NZ$680–800 overall. Bearing/fixture allowances sit inside other parts, not
-added twice. Verify shipping/tax and actual prices before purchasing. Preferred
-budget NZ$500–800 and ceiling NZ$1,000 are unchanged.
+Owned:ESP32-S3 N16R8,Adafruit PCA9685 (unused for current leg control),multimeter,
+load cells,60V/5A adjustable supply,and Creality K2 Pro access. Battery access is
+reported; no specific pack checked. No actuator,horn or bearing ownership assumed.
 
-Complete2kg mass is now a preferred target;heavier operation is acceptable within demonstrated servo/power capability. Include
-battery/electronics. Twelve55g servos leave1340g to meet that target. Historic
-1.2kg calculations remain historical; new knee screen uses2kg. Actual whole
-robot mass remains unknown. Never power servos through the ESP32 board.
+Waveshare lists ST3215 familyUS$16.99–21.99 depending variant: twelveUS$203.88–
+263.88 before shipping,GST/conversion. This is a family price screen,not a12V
+variant checkout quote. Budget targetNZ$500–800 total,ceilingNZ$1000 remains.
+Servo targetNZ$25–35 each; flag actual landed pricing aboveNZ$50 or significant
+budget changes before purchase. No order or supplier contact authorized here.
+https://www.waveshare.com/product/st3215-servo.htm
 
-Four-leg placement study: `mechanical/prototype-four-leg-study.scad`.
-The raised deck and board blocks are placeholders; chassis brackets and mirrored
-print variants are not released. No new purchases or chassis fastener counts
-are established by MEC-155. Bench fixtures are not four-leg chassis components.
+Deferred sensor buys:one 6-axis IMU,voltage/current sensing,and forwardToF sensor.
+Choose modules when those bounded stages begin; no full navigation kit purchase.
 
-## Working chassis attachment — MEC-156, not yet a released robot kit
-
-Print two left/two right chassis mounts and one deck from the working CAD.
-Existing joint hardware stays with each leg; the bracket replaces the bench
-adapter and reuses its four M3 x20 mounting bolts. Do not buy bench anchors
-or standoffs for the robot. Actual mirrored leg parts remain under review.
-
-| Added purchased item | One mount | Complete four-mount chassis |
-| --- | ---: | ---: |
-| M3 x16 through bolts | 4 | 16 |
-| M3 nuts | 4 | 16 |
-| M3 flat washers | 8 | 32 |
-
-These quantities are additional deck fixings, not replacements for the bench
-leg BOM. Use existing packs where possible; retail price remains unverified,
-with no change to the approved overall budget. Guide: docs/prototype-chassis-attachment.md.
-
-## Four-leg working hardware totals — MEC-158, wait for physical fit
-
-These are complete totals, including the16 deck fixings above; do not add them
-again. Bench adapters, board anchors and standoffs are excluded. Printed
-quantities/handed assignments: docs/four-leg-working-assembly.md and
-mechanical/four-leg-working-print-manifest.json. No new actuator or board selection.
-
-| Purchased item | Complete working robot quantity |
-| --- | ---: |
-| MG996R positional servos with horns/original centre screws | 12 provisional |
-| 624 bearings | 12 |
-| M3 x40 / x20 / x16 / x12 / x70 / x90 bolts | 16 /48 /52 /16 /8 /16 |
-| M3 nuts | 156;172 if bridge rods replace bolts |
-| M3 ordinary washers /12mm backing washers | 308 /4 |
-| M4 x35 pivots / locknuts / washers | 12 each |
-| M2 x10 horn bolts / nuts / washers | Up to48 /48 /96; actual horn sets count |
-| Rubber/EVA foot pads | 4,18 x8 x1mm assumed |
-| Small cable ties | 16 |
-
-Verify one servo and printed leg first. Battery, full-robot regulator/current
-capacity, board attachments and measured mass are still unresolved. Existing
-controller boards need no replacements. Cost targets remain unchanged.
-
-MEC-160 mass screen: the current full working BOM estimates2.360kg with explicit
-print/power assumptions, exceeding the preferred2kg target by about360g. Actual mass is
-unmeasured. Do not treat these complete quantities as a ready-to-buy robot kit;
-the supported single-leg kit remains the first purchase/test. Mass record and
-next simplification: docs/working-robot-mass.md. No premium actuator is selected.
-
-Experimental integrated-leg variant: eight pitch forks and four integrated
-hips replace36 separate prints with12. Conditional robot totals are93 prints,
-zero M3x90 bolts,32 M3x20 bolts,124 M3 nuts and244 ordinary M3 washers.
-Other complete quantities above remain unchanged. Combined estimated savings
-are181g under the same mass-screen assumptions, leaving2.178kg, above the preferred2kg target,with servo-qualified maximum TBD.
-Actual mass is unmeasured. Both print hands and sampled one-leg clearances pass;
-all12 new four-leg placements and60 nominal chassis pairs now pass.
-Physical print/load tests remain open.
-The experimental bench leg uses23 prints,27 M3 bolts/nuts and53 ordinary
-M3 washers plus one backing washer. Compared with the supported bench kit,
-omit four M3x90 and four M3x20 bolts, eight nuts and16 ordinary washers.
-Keep the supported bench kit as the current purchase/test reference; do not
-buy conditional complete robot quantities yet. Details: docs/tasks/MEC-164.md.
-
-MEC-165 confirms21 unique STLs/93 pieces in
-mechanical/integrated-four-leg-print-manifest.json. The source-bound variant
-mass record is mechanical/integrated-robot-mass-inputs.json; its report remains
-NOT_MEASURED. Assembly/measurement guide: docs/integrated-four-leg-working-assembly.md.
-
-## Current first-leg build checkpoint — MFG-003
-
-Use manufacturing/BOM.md and bom-hardware.json for the integrated first leg:
-3 MG996R candidates with supplied horns/centre screws,3 bearings,27 M3 bolts/nuts,
-53 ordinary washers and one backing washer. This replaces the old bench-3
-first-leg buying quantities above; do not add the two lists. M3 lengths are
-40:4,20:8,16:9,12:4,70:2; no90mm bridge bolts. Other joint/fixture hardware
-is unchanged. Buy/test one servo before ordering12; owned boards need no purchase.
-The original bench-3 fallback is archived intact. Physical fit/load remains
-NOT_PERFORMED; full robot quantities remain conditional and mass unmeasured.
-
-Optional chassis electronics deck — MEC-166: reuse four narrow cable ties
-(nominal width2.5mm or less) for removable insulating mounts. These are additional
-to the16 leg cable ties if adopting this option; no extra screws or controller
-boards. Do not buy new packs if existing ties suit. Actual board mounts/fit are
-unverified. Guide:docs/electronics-deck.md; print one deck variant, not both.
-The current single-leg manufacturing/BOM and four-leg mass record are unchanged.
-
-## Provisional12-servo signal harness — ELEC-004
-
-Complete signal totals:3 SN74AHCT125N buffers,3 x100nF capacitors,13 x220ohm
-resistors,24 x10kohm pulldowns andone1kohm OE pull-up. Reuse the bench
-components: add2 buffers,2 capacitors,9 x220ohm and18 x10kohm, rather than
-buying the totals twice. Controller boards are owned; no replacements.
-12 signal paths/servo power branches andfour protected leg feeds are planned;
-main distribution, connector, fuse, wire and regulator purchases stay TBD.
-The30A capacity screen is provisional, not a selected supply or verified demand.
-Reference signal-component prices are in electronics/digikey-perfboard-bom.md; test one servo before full-harness purchases.
-Connections and manufacturer sources:electronics/four-leg-harness.md.
-
-Robot regulator purchase is still TBD after ELEC-005 comparison. Do not order
-four30603000 BECs from theNZ$259.96 out-of-stock reference, or substitute
-30603003 (6V minimum) into the5.3V-max buffer rail. The25A candidate is below
-the30A planning screen; peak rating does not close that gap. Compare actual
-leg demand and landed cost first. Reference:electronics/robot-power-shortlist.md.
-
-Perfboard carrier — ELEC-006: one isolated-pad board with at least35 x25
-usable2.54mm holes (100 x80mm PAD2 candidate),three14-pin DIP sockets,three6-pin
-input headers,three4-pin signal-only headers,three3-position headers,centre unused,for2-terminal low-current
-buffer supply connectors andone2-pin CTRL header. Reuse existing buffers/
-passives; component bodies and actual board grid need dry-fit checks.
-DigiKey population shortlist:electronics/digikey-perfboard-bom.md; NZ$32.82 reference parts subtotal excluding GST/shipping. Parts remain provisional; reuse bench parts and avoid duplicate purchases.
-Initial prototypes use perfboard; SMT is a later final-design consideration.
-
-Optional voltage diagnostic — ELEC-008: one150k5%1/8W axial resistor,
-one10k and one100nF50V radial capacitor. Reuse the spare10k in the25-pack,
-unused perfboard pads and four spare header positions; no extra board is needed.
-This is additional to the buffer-only subtotal. Allow roughly NZ$2–3 passive
-parts before shipping, subject to checkout; exact delta price is not verified.
-Guide:electronics/voltage-perfboard.md. No battery or cutoff component selected.
-
-Optional two-tier carrier — MEC-167: add four M3 x12 bolts,four M3 nuts and
-four ordinary washers. Maximum eight narrow<=2.5mm ties (two carrier,two lower
-PCB,four upper boards) replace the earlier generic four-tie mount allowance;
-leg ties are separate. Reuse existing stock before buying more. Print base+
-shelf working STLs only if adopting the option; manufacturing remains MFG-003.
-Guide:docs/electronics-carrier.md. Board fit and actual print mass are unmeasured.
-
-Preferred working electronics mount — MEC-168: three small single-level sleds,
-no added M3 fasteners. Up to ten narrow<=2.5mm ties (four frame/six board ties)
-replace the generic four or stacked eight electronics ties if adopted; leg
-ties remain separate. Do not buy the optional two-tier four M3 sets for this
-arrangement. Reuse suitable stock. Source/print/fit guide:docs/electronics-sleds.md.
-Actual board retention and sliced print masses stay pending; no release change.
-
-Mass policy follows demonstrated servo capacity,not a hard2kg ceiling.
-No new servo,battery or power component is selected. Test one actual servo/leg
-before ordering12;budget limits and narrow bench operation remain unchanged.
+Battery mount:one st3215-battery-tray.stl,two15 mm reusable straps (>=250 mm),1 mm soft padding,and fourM3 fixture bolts of length to suit eventual chassis. Tray layout provisional; pack actual fit untested.
