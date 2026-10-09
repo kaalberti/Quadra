@@ -1,6 +1,5 @@
 {
   "revision": "working-robot-mass-1",
-  "complete_limit_g": 2000,
   "printed_pieces": 117,
   "prints": [
     {
@@ -307,11 +306,17 @@
   "solid_CAD_prints_g": 1301.9746250120168,
   "chosen_prints_g": 846.2835062578109,
   "estimated_complete_g": 2359.7940019694906,
-  "estimated_margin_g": -359.79400196949075,
-  "available_print_mass_g": 486.4895042883202,
-  "required_max_material_fraction": 0.37365513500989317,
+  "available_print_mass_for_preferred_target_g": 486.4895042883202,
+  "required_material_fraction_for_preferred_target": 0.37365513500989317,
   "all_component_masses_measured": false,
   "measured_complete_robot_g": null,
+  "preferred_target_g": 2000,
+  "qualified_limit_g": null,
+  "estimated_margin_to_preferred_target_g": -359.79400196949064,
+  "measured_margin_to_preferred_target_g": null,
+  "estimated_margin_to_qualified_limit_g": null,
+  "measured_margin_to_qualified_limit_g": null,
+  "capacity_limit_status": "NOT_QUALIFIED",
   "status": "NOT_MEASURED",
   "sources": {
     "servo": "https://towerpro.com.tw/product/mg996r/",

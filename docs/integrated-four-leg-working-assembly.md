@@ -49,8 +49,10 @@ The variant currently screens2.178kg:782g assumed prints,367g estimated
 fasteners,660g servos,40g bearings and330g other allowances. Solid PETG CAD
 prints total1203g; the65% material fraction is an example, not an infill setting.
 Only604g remains for prints under those other assumptions, corresponding to
-50.2% of solid CAD. Actual status remains NOT_MEASURED and the2kg limit remains.
+50.2% of solid CAD. Actual status remains NOT_MEASURED;2kg is preferred,qualified maximum TBD.
 
 Buying quantities are in docs/purchasing-bom.md. Verify one printed/assembled
 leg and actual servo duty before bulk purchases. The supported bench pack,
 physical-test list and current offline firmware gates remain in place.
+
+Current [mass policy](servo-qualified-mass.md):2kg is preferred;heavier is allowed within demonstrated servo/power duty. No physical qualification is recorded.

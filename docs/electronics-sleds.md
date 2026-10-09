@@ -67,3 +67,5 @@ frames are not adopted in its93-piece manifest or mass record. The first-leg
 manufacturing pack remains MFG-003. If adopting later,use one electronics
 mount option,replace the deck once,and account for all actual print/hardware
 masses rather than adding both alternatives.
+
+Current [mass policy](servo-qualified-mass.md):2kg is preferred;heavier is allowed within demonstrated servo/power duty. No physical qualification is recorded.

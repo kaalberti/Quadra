@@ -55,7 +55,7 @@ record remains NOT_MEASURED. Bench-control preparation can proceed independently
 ## Open issues
 - Actual servo/horn/bearing/cable fit and measured printed mass.
 - Loaded joint ranges, servo current/duty and power supply capacity.
-- Final four-leg chassis attachment/symmetry and2kg complete mass budget.
+- Final four-leg chassis attachment/symmetry and servo-qualified complete operating mass.
 Bench electronics preparation is underway; robot power, chassis and locomotion remain deferred.
 The proposed isolated servo rail is5.2V, with a7.5A supply-capacity target for
 three servos and an external rated distribution/cutoff. Wire-only drop screen
@@ -99,11 +99,11 @@ Its21 unique STLs/93 pieces and unmeasured mass record are described below.
 Integrated hip/carrier: both handed meshes pass closed/connected/bed checks;
 30 interface rays, three sampled leg clearances and source/placement checks pass.
 Experimental bench leg has23 prints; cumulative robot estimate2.178kg remains
-above2kg. Conditional BOM is updated; print/fit/load tests remain NOT_PERFORMED.
+above the preferred2kg target. Conditional BOM is updated; print/fit/load tests remain NOT_PERFORMED.
 Source/viewer: mechanical/prototype-integrated-hip.scad and prototype-integrated-hip-assembly.scad.
 Integrated four-leg plan:21 unique STLs/93 pieces;12 new placements agree with
 source within0.000709mm and all60 nominal chassis pairs pass. Variant mass
-record remains NOT_MEASURED; screen2.178kg exceeds the unchanged2kg limit.
+record remains NOT_MEASURED; screen2.178kg exceeds the preferred2kg target;qualified maximum remains TBD.
 Viewer: mechanical/prototype-integrated-four-leg-assembly.scad.
 Physical next: side-on coupon/fit and unpowered integrated-leg assembly remain pending.
 Offline deck option: prototype-electronics-deck.scad adds eight strap slots while
@@ -128,4 +128,8 @@ Sense positive must disconnect before ESP32 power; calibration/cutoff remain uns
 Preferred working mount:docs/electronics-sleds.md;three single-level printed
 frames,no added M3 hardware.472 mesh checks and nominal board clearance pass.
 Solid PETG24.5g vs79.8g stacked fallback;actual board/strap/print fit pending.
-Not adopted in robot mass/manifest;complete2kg target and MFG-003 stay unchanged.
+Not adopted in robot mass/manifest;preferred2kg target and MFG-003 remain;heavier mass requires servo qualification.
+
+Mass policy:2kg preferred,heavier permitted within demonstrated servo/power duty.
+No qualified maximum or measured loads. Eight policy tests pass;CAD mass totals unchanged.
+Guide:docs/servo-qualified-mass.md;no stall-derived mass approval or servo upgrade.

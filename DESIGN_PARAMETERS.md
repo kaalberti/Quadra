@@ -18,8 +18,8 @@ Rules:
 BODY_LENGTH = 180 mm
 BODY_WIDTH = 110 mm
 
-MAX_OPERATING_MASS = 2.0 kg
-TARGET_OPERATING_MASS = PROVISIONAL
+MAX_OPERATING_MASS = TBD; demonstrated servo load/current/duty capability
+TARGET_OPERATING_MASS = 2.0 kg preferred
 
 DOF_TOTAL = 12
 LEGS = 4

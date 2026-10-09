@@ -1,6 +1,5 @@
 {
   "scope": "Experimental integrated four-leg BOM; excludes bench fixture",
-  "maximum_complete_mass_g": 2000,
   "PETG_density_g_per_cm3_assumed": 1.27,
   "assumed_printed_material_fraction": 0.65,
   "steel_density_g_per_cm3_assumed": 7.85,
@@ -110,5 +109,7 @@
     "bearing_reference": "https://www.skf.com/ro/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-624-2RS1?failover=true",
     "M3_cap_reference": "https://www.accu.co.uk/api/product-datasheet?id=659829"
   },
-  "notes": "Printed material fraction is not infill percentage. Allowances are provisional, not selected battery/regulator masses. Distribution wiring excludes servo leads already in the servo reference mass assumption. Horn allowance is conservative because exact supplied contents/weight are unknown. SKF is a reference mass, not a bearing purchase selection."
+  "notes": "Printed material fraction is not infill percentage. Allowances are provisional, not selected battery/regulator masses. Distribution wiring excludes servo leads already in the servo reference mass assumption. Horn allowance is conservative because exact supplied contents/weight are unknown. SKF is a reference mass, not a bearing purchase selection.",
+  "preferred_complete_mass_g": 2000,
+  "qualified_maximum_complete_mass_g": null
 }

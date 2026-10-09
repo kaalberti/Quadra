@@ -100,8 +100,8 @@ NZ$680–800 overall. Bearing/fixture allowances sit inside other parts, not
 added twice. Verify shipping/tax and actual prices before purchasing. Preferred
 budget NZ$500–800 and ceiling NZ$1,000 are unchanged.
 
-User increased maximum COMPLETE operating mass to2kg on2026-10-08, including
-battery/electronics. Twelve55g servos leave1340g for everything else. Historic
+Complete2kg mass is now a preferred target;heavier operation is acceptable within demonstrated servo/power capability. Include
+battery/electronics. Twelve55g servos leave1340g to meet that target. Historic
 1.2kg calculations remain historical; new knee screen uses2kg. Actual whole
 robot mass remains unknown. Never power servos through the ESP32 board.
 
@@ -151,7 +151,7 @@ capacity, board attachments and measured mass are still unresolved. Existing
 controller boards need no replacements. Cost targets remain unchanged.
 
 MEC-160 mass screen: the current full working BOM estimates2.360kg with explicit
-print/power assumptions, exceeding the2kg limit by about360g. Actual mass is
+print/power assumptions, exceeding the preferred2kg target by about360g. Actual mass is
 unmeasured. Do not treat these complete quantities as a ready-to-buy robot kit;
 the supported single-leg kit remains the first purchase/test. Mass record and
 next simplification: docs/working-robot-mass.md. No premium actuator is selected.
@@ -160,7 +160,7 @@ Experimental integrated-leg variant: eight pitch forks and four integrated
 hips replace36 separate prints with12. Conditional robot totals are93 prints,
 zero M3x90 bolts,32 M3x20 bolts,124 M3 nuts and244 ordinary M3 washers.
 Other complete quantities above remain unchanged. Combined estimated savings
-are181g under the same mass-screen assumptions, leaving2.178kg, still above2kg.
+are181g under the same mass-screen assumptions, leaving2.178kg, above the preferred2kg target,with servo-qualified maximum TBD.
 Actual mass is unmeasured. Both print hands and sampled one-leg clearances pass;
 all12 new four-leg placements and60 nominal chassis pairs now pass.
 Physical print/load tests remain open.
@@ -239,3 +239,7 @@ replace the generic four or stacked eight electronics ties if adopted; leg
 ties remain separate. Do not buy the optional two-tier four M3 sets for this
 arrangement. Reuse suitable stock. Source/print/fit guide:docs/electronics-sleds.md.
 Actual board retention and sliced print masses stay pending; no release change.
+
+Mass policy follows demonstrated servo capacity,not a hard2kg ceiling.
+No new servo,battery or power component is selected. Test one actual servo/leg
+before ordering12;budget limits and narrow bench operation remain unchanged.

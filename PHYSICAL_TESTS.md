@@ -45,10 +45,10 @@ before adopting it. See docs/electronics-carrier.md.
 6. **Supported one-leg load trial:** after fit/control checks, support the fixture
    and increase load gradually. Check small commanded motion, voltage droop,
    current, horn slip, printed-part flex and heating. Representative three-leg
-   support at2kg is about6.5N per foot; avoid deliberate prolonged stalls.
+   support at2kg is about6.5N per foot; use intended mass x9.81 /3 for other study weights,starting well below full load. Avoid deliberate prolonged stalls.
    Determine whether usable torque/duty requires a lighter robot or different
    actuator before ordering12. Published stall torque is not continuous torque.
-7. **Later integration:** check complete mass against2kg, chassis clearances,
+7. **Later integration:** weigh the complete robot and qualify its servo load/current/duty at intended mass,check chassis clearances,
    all-leg current and power distribution before supported standing. The5A
    bench supply is not assumed sufficient for three loaded joints or12 servos.
    Slow walking and IMU work follow stable hardware and calibrated joint control.

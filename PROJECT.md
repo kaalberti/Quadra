@@ -66,7 +66,7 @@ Nominal body planform target:
 
 These dimensions are targets rather than hard packaging limits.
 
-Maximum complete operating mass:
+Preferred complete operating mass target:
 
 **2.0 kg**
 
@@ -81,7 +81,7 @@ This includes:
 - wiring
 - onboard accessories required for normal operation
 
-The 2.0 kg value is a hard upper limit for Rev A unless explicitly changed.
+Heavier operation is acceptable when the actual servos and power system demonstrate adequate load, current, temperature and duty capability in prototype testing. The qualified maximum mass remains TBD; published stall torque alone does not establish it.
 
 Lower mass is preferred when it can be achieved without significantly increasing cost, complexity, or development time.
 
@@ -641,7 +641,7 @@ Current approved/high-confidence direction:
 - 4 legs
 - 3 DOF per leg
 - 12 actuators
-- 2.0 kg maximum operating mass
+- 2.0 kg preferred operating mass target; heavier allowed within demonstrated servo capability
 - approximately 180 × 110 mm body target
 - approximately 70 mm upper-leg length
 - approximately 85 mm lower-leg length

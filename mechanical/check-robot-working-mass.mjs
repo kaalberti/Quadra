@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
+import {evaluateMassPolicy} from './mass-policy.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const integrated=process.argv.includes('--integrated');
 const inputPath=path.join(here,integrated?'integrated-robot-mass-inputs.json':'robot-mass-inputs.json');
@@ -16,8 +17,15 @@ const positive=x=>{assert.ok(Number.isFinite(x)&&x>0);return x;};
 for(const [key,value]of Object.entries(input))if(key.startsWith('measured_'))optional(value);
 const fraction=positive(input.assumed_printed_material_fraction);assert.ok(fraction<=1);
 const parameters=fs.readFileSync(path.join(here,'../DESIGN_PARAMETERS.md'),'utf8');
-const approvedLimit=Number(parameters.match(/MAX_OPERATING_MASS\s*=\s*([0-9.]+)\s*kg/)[1])*1000;
-assert.equal(input.maximum_complete_mass_g,approvedLimit,'mass input differs from approved limit');
+const limitValue=parameters.match(/^MAX_OPERATING_MASS\s*=\s*(.+)$/m)?.[1].trim();
+assert(limitValue,'missing operating mass parameter');
+const numericLimit=limitValue.match(/^([0-9.]+)\s*kg(?:\s|$)/);
+assert(numericLimit || limitValue.startsWith('TBD'),'invalid qualified mass parameter');
+const approvedLimit=numericLimit?Number(numericLimit[1])*1000:null;
+const targetValue=parameters.match(/^TARGET_OPERATING_MASS\s*=\s*([0-9.]+)\s*kg/m);
+assert(targetValue,'missing preferred mass target');const preferredTarget=Number(targetValue[1])*1000;
+assert.equal(input.qualified_maximum_complete_mass_g,approvedLimit,'mass input differs from qualified limit');
+assert.equal(input.preferred_complete_mass_g,preferredTarget,'mass input differs from preferred target');
 const knownNames=new Set(plan.parts.map(p=>path.basename(p.file)));
 for(const name of Object.keys(input.print_unit_inputs))assert.ok(knownNames.has(name),'unknown/stale print record');
 const prints=[];
@@ -68,7 +76,7 @@ const extras=[['battery','battery'],['electronics_and_power','electronics_and_po
 const extraTotal=extras.reduce((s,p)=>s+p.g,0),fixed=hardwareChosen+servos+bearings+extraTotal;
 const solidTotal=prints.reduce((s,p)=>s+p.quantity*p.solid_unit_g,0),chosenPrints=prints.reduce((s,p)=>s+p.quantity*p.chosen_unit_g,0);
 const allMeasured=prints.every(p=>p.chosen_basis==='measured')&&['measured_servo_unit_g','measured_bearing_unit_g','measured_complete_fasteners_g','measured_battery_g','measured_electronics_and_power_g','measured_distribution_wiring_g','measured_horns_feet_ties_g'].every(k=>input[k]!==null);
-const report={revision:integrated?'integrated-robot-mass-1':'working-robot-mass-1',complete_limit_g:input.maximum_complete_mass_g,printed_pieces:expectedPieces,prints,fasteners,fastener_estimate_g:hardwareEstimate,servos_g:servos,bearings_g:bearings,extras,solid_CAD_prints_g:solidTotal,chosen_prints_g:chosenPrints,estimated_complete_g:fixed+chosenPrints,estimated_margin_g:input.maximum_complete_mass_g-fixed-chosenPrints,available_print_mass_g:input.maximum_complete_mass_g-fixed,required_max_material_fraction:(input.maximum_complete_mass_g-fixed)/solidTotal,all_component_masses_measured:allMeasured,measured_complete_robot_g:input.measured_complete_robot_g,status:input.measured_complete_robot_g!==null?(input.measured_complete_robot_g<=input.maximum_complete_mass_g?'MEASURED_WITHIN_LIMIT':'MEASURED_OVER_LIMIT'):'NOT_MEASURED',sources:input.sources,limits:'Solid CAD mass is not printed mass; 65% material fraction is an example, not an infill setting. Fastener dimensions/thread factor are rough reference-based estimates, not product weights. Unselected power/battery hardware and actual materials can change this screen.'};
+const report={revision:integrated?'integrated-robot-mass-1':'working-robot-mass-1',printed_pieces:expectedPieces,prints,fasteners,fastener_estimate_g:hardwareEstimate,servos_g:servos,bearings_g:bearings,extras,solid_CAD_prints_g:solidTotal,chosen_prints_g:chosenPrints,estimated_complete_g:fixed+chosenPrints,available_print_mass_for_preferred_target_g:preferredTarget-fixed,required_material_fraction_for_preferred_target:(preferredTarget-fixed)/solidTotal,all_component_masses_measured:allMeasured,measured_complete_robot_g:input.measured_complete_robot_g,...evaluateMassPolicy({targetG:preferredTarget,qualifiedLimitG:approvedLimit,estimatedG:fixed+chosenPrints,measuredG:input.measured_complete_robot_g}),sources:input.sources,limits:'Solid CAD mass is not printed mass; 65% material fraction is an example, not an infill setting. Fastener dimensions/thread factor are rough reference-based estimates, not product weights. Unselected power/battery hardware and actual materials can change this screen.'};
 report.fastener_geometry_assumptions={M3_cap_mm:{diameter:5.5,height:3,socket_AF:2.5,socket_depth:1.3},M3_nut_mm:{AF:5.5,height:2.4,bore:3},M3_washer_mm:{bore:3.2,OD:7,thickness:0.5},M3_backing_washer_mm:{bore:3.2,OD:12,thickness:1},M4_cap_mm:{diameter:7,height:4,socket_AF:3,socket_depth:2},M4_locknut_mm:{AF:7,height:5,bore:4},M4_washer_mm:{bore:4.3,OD:9,thickness:0.8},M2_cap_mm:{diameter:3.8,height:2,socket_AF:1.5,socket_depth:1},M2_nut_mm:{AF:4,height:1.6,bore:2},M2_washer_mm:{bore:2.2,OD:5,thickness:0.3},note:'Rough reference envelopes; mixed/partial threads, locking inserts and actual washer sizes need weighing. Some close positions require6mm OD washers;7mm here conservatively screens mass.'};
 report.M3x40_reference_check={estimated_unit_g:m3x40,published_unit_g:2.36};
 report.independent_volume_spot_checks=[];
@@ -86,7 +94,7 @@ for(const [file,validation,part]of [
 fs.writeFileSync(inputPath,JSON.stringify(input,null,2)+'\n');
 if(integrated) {
  const hash=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex');
- report.source_binding={manifest_sha256:hash(planPath),input_sha256:hash(inputPath),calculator_sha256:hash(fileURLToPath(import.meta.url)),hardware_roles_sha256:hash(path.join(here,'three-dof-hardware.json'))};
+ report.source_binding={manifest_sha256:hash(planPath),input_sha256:hash(inputPath),calculator_sha256:hash(fileURLToPath(import.meta.url)),mass_policy_sha256:hash(path.join(here,'mass-policy.mjs')),hardware_roles_sha256:hash(path.join(here,'three-dof-hardware.json'))};
 }
 fs.writeFileSync(path.join(here,integrated?'integrated-robot-mass-check.json':'robot-working-mass-check.json'),JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify({solid_prints_g:solidTotal,assumed_prints_g:chosenPrints,fasteners_g:hardwareEstimate,servos_g:servos,bearings_g:bearings,other_allowances_g:extraTotal,estimated_complete_g:report.estimated_complete_g,margin_g:report.estimated_margin_g,available_prints_g:report.available_print_mass_g,max_solid_material_fraction:report.required_max_material_fraction,status:report.status},null,2));
+console.log(JSON.stringify({solid_prints_g:solidTotal,assumed_prints_g:chosenPrints,fasteners_g:hardwareEstimate,servos_g:servos,bearings_g:bearings,other_allowances_g:extraTotal,estimated_complete_g:report.estimated_complete_g,preferred_target_g:report.preferred_target_g,qualified_limit_g:report.qualified_limit_g,margin_to_preferred_target_g:report.estimated_margin_to_preferred_target_g,available_prints_for_target_g:report.available_print_mass_for_preferred_target_g,max_solid_material_fraction_for_target:report.required_material_fraction_for_preferred_target,capacity_limit_status:report.capacity_limit_status,status:report.status},null,2));

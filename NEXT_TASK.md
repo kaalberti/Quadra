@@ -1,14 +1,16 @@
-# MEC-168 — Simpler single-level electronics mounts
+# MEC-169 — Servo-qualified operating mass policy
 
-Check whether rotating the ESP32/PCA9685 nominal board envelopes allows all
-three boards on the existing180 x110mm deck at one level. If it fits, make
-three small insulating strap-mounted frames using existing deck slots,
-without additional M3 fasteners. Preserve clearance above chassis screw heads;
-accept that unpowered removable boards must be lifted for screwdriver access.
+Apply the user's revised requirement:2kg is a preferred complete-mass target,
+not a hard ceiling. Heavier is acceptable only within physically demonstrated
+servo load/current/duty capability; qualified maximum remains TBD.
 
-Completion: source CAD,bed-oriented closed connected meshes,assembly preview,
-independent nominal fit/strap/support/fixing clearance checks and source mass.
-Compare against the two-tier working option and prefer this arrangement if
-simpler/lighter. Do not assume actual board holes,connector layout or strap
-clearance. Keep released manufacturing and robot mass/manifest unchanged.
-No repeated joint load analysis,full structural optimization or powered test.
+Update active requirements,parameters,mass inputs/report semantics and physical
+load instructions. Preserve actual CAD/STL quantities and existing mass totals.
+Use only one brief existing-pose torque scaling comparison if it informs the
+MG996R direction; do not derive an arbitrary safe maximum from stall torque.
+
+Completion: independent mass checks still produce the same estimated totals,
+clearly separate target margin from unqualified allowable mass,and keep all
+physical measurements unset. Add regression checks for unknown/measured mass
+and target-vs-qualified semantics. Budget,servo rail and travel unchanged.
+No hardware purchase,servo upgrade,manufacturing rebuild or powered trial.

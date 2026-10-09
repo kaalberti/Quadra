@@ -67,7 +67,8 @@ MG90S is unsuitable for these load-bearing joints at the current2kg requirement.
 
 Print/support removal, servo/horn/bearing fit, unpowered assembly and gradually
 loaded strength checks are all NOT_PERFORMED. Complete robot mass is unmeasured;
-the four-leg screen is2.178kg, above the2kg limit. This pack does not release
+the four-leg screen is2.178kg, above the preferred2kg target;servo-qualified maximum remains TBD. This pack does not release
 powered motion. Follow the repository's electrical commissioning procedure
 before a later powered test. No extra actuator or electronics purchase is made
 necessary by this mechanical checkpoint.
+Current [mass policy](servo-qualified-mass.md):2kg is preferred;heavier is allowed within demonstrated servo/power duty. No physical qualification is recorded.
